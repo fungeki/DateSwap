@@ -37,8 +37,8 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TgC-KU-Pzt" customClass="JeansOrangeUIButton" customModule="DateSwap" customModuleProvider="target">
-                                <rect key="frame" x="309" y="72" width="58" height="30"/>
-                                <state key="normal" title="toprofile">
+                                <rect key="frame" x="337" y="72" width="30" height="30"/>
+                                <state key="normal" title="meo">
                                     <color key="titleColor" red="0.94136577079999995" green="0.62133409939999995" blue="0.1478117447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>

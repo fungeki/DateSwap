@@ -7,6 +7,5 @@ target 'DateSwap' do
 
   # Pods for DateSwap
 
-    pod 'SDWebImage', '~> 4.0'
-    pod use_frameworks!
+pod 'SDWebImage', '~> 4.0'
 end

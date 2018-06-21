@@ -24,10 +24,12 @@
 		8CEF6A3120D7A5C6007C39D5 /* JeansEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF6A3020D7A5C6007C39D5 /* JeansEffect.swift */; };
 		8CEF6A3320D7A9DE007C39D5 /* ConditionUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF6A3220D7A9DE007C39D5 /* ConditionUIButton.swift */; };
 		8CEF6A3520D933F6007C39D5 /* ProductOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF6A3420D933F6007C39D5 /* ProductOverviewViewController.swift */; };
+		BA4B6D5C20AB98E45DC6E894 /* Pods_DateSwap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3680421D48587E2FF1190ECE /* Pods_DateSwap.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0424395E2B652DEE286339C2 /* Pods-DateSwap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateSwap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DateSwap/Pods-DateSwap.debug.xcconfig"; sourceTree = "<group>"; };
+		3680421D48587E2FF1190ECE /* Pods_DateSwap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DateSwap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D92167A3509D274EBCE1F78 /* Pods-DateSwap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateSwap.release.xcconfig"; path = "Pods/Target Support Files/Pods-DateSwap/Pods-DateSwap.release.xcconfig"; sourceTree = "<group>"; };
 		8C7405F320D24CE700FF8E9C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		8C9A100A20CA99140077B544 /* DateSwap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateSwap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA4B6D5C20AB98E45DC6E894 /* Pods_DateSwap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +67,7 @@
 		8B0D7C44554021F99EB60C64 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3680421D48587E2FF1190ECE /* Pods_DateSwap.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

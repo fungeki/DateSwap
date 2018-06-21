@@ -37,7 +37,6 @@ class ProfileIntroViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        profileIntroUIImageView.layer.cornerRadius = profileIntroUIImageView.frame.height/2
         
     }
     

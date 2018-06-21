@@ -38,13 +38,26 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return products.count
     }
+//    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+//        let currentCell = tableView.cellForRow(at: indexPath) as! ProfileTableViewCell
+//        let product = currentCell.product
+//        currentCell.conditionUIButton.backgroundColor = UIColor.orange
+//        performSegue(withIdentifier: "masterToDetail", sender: product)
+//        return nil
+//    }
     
+    
+    
+    func tableView(_ tableView: UITableView, canFocusRowAt indexPath: IndexPath) -> Bool {
+        return false
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "profileCell") as! ProfileTableViewCell
         
         let product = products[indexPath.row]
         
         cell.product = product
+        //cell.selectionStyle = .none
         cell.itemImageView.sd_setImage(with: URL(string: product.image))
         cell.itemImageView.layer.cornerRadius = 20
         cell.itemName.text = product.title
@@ -65,6 +78,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let currentCell = tableView.cellForRow(at: indexPath) as! ProfileTableViewCell
         let product = currentCell.product
+        currentCell.conditionUIButton.backgroundColor = UIColor.orange
         performSegue(withIdentifier: "masterToDetail", sender: product)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -54,7 +54,8 @@ extension ProductOverviewViewController: UITableViewDelegate, UITableViewDataSou
         cell.titleUILabel.text = product.title
         cell.conditionUIButton.isEnabled = false
         cell.descriptionUILabel.numberOfLines = 2
-        [cell.descriptionUILabel .sizeToFit()]
+        cell.descriptionUILabel .sizeToFit()
+        
         cell.priceUIButton.isEnabled = false
         cell.priceUIButton.setTitle(product.price, for: .disabled)
         cell.priceUIButton.addJeansEffect(UIColor.black.cgColor)

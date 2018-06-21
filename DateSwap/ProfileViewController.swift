@@ -10,6 +10,7 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,7 +46,20 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
         
         cell.product = product
         cell.itemImageView.sd_setImage(with: URL(string: product.image))
+        cell.itemImageView.layer.cornerRadius = 20
         cell.itemName.text = product.title
+        cell.conditionUIButton.isEnabled = false
+        cell.conditionUIButton.setTitle(returnCondition(product.condition), for: .disabled)
+        var str = product.description
+        let start = str.startIndex
+        var end = str.endIndex
+        var suffix = ""
+        if (str.count > 100){
+          end = str.index(start, offsetBy: 100)
+            suffix = "..."
+        }        // range
+        let range = start..<end
+        cell.descriptionUILabel.text = String(str[range]) + suffix
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

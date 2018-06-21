@@ -1,21 +1,21 @@
 //
-//  ProfileTableViewCell.swift
+//  ProductOverviewTableViewCell.swift
 //  DateSwap
 //
-//  Created by Ran Loock on 14/06/2018.
+//  Created by Ran Loock on 19/06/2018.
 //  Copyright © 2018 Trisk Quality. All rights reserved.
 //
 
 import UIKit
 
-class ProfileTableViewCell: UITableViewCell {
+class ProductOverviewTableViewCell: UITableViewCell {
 
-
-    @IBOutlet weak var descriptionUILabel: UILabel!
     @IBOutlet weak var conditionUIButton: ConditionUIButton!
-    @IBOutlet weak var itemImageView: UIImageView!
-    @IBOutlet weak var itemName: UILabel!
     var product: Product!
+    @IBOutlet weak var productUIImageView: UIImageView!
+    @IBOutlet weak var titleUILabel: UILabel!
+    @IBOutlet weak var descriptionUILabel: UILabel!
+    @IBOutlet weak var priceUIButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

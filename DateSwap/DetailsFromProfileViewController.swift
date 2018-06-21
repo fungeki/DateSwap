@@ -9,7 +9,8 @@
 import UIKit
 
 class DetailsFromProfileViewController: UIViewController {
-
+    @IBOutlet weak var contButton: ConditionUIButton!
+    
     @IBOutlet weak var itemDesicriptionDetailLabel: UILabel!
     @IBOutlet weak var itemImageView: UIImageView!
     @IBOutlet weak var itemNameLabel: UILabel!
@@ -21,6 +22,9 @@ class DetailsFromProfileViewController: UIViewController {
         itemNameLabel.text = product.title
         itemDesicriptionDetailLabel.numberOfLines = 0
         [itemDesicriptionDetailLabel .sizeToFit()]
+        itemImageView.layer.cornerRadius = 20
+        contButton.isEnabled = false
+        contButton.setTitle(returnCondition(product.condition), for: .disabled)
         // Do any additional setup after loading the view.
     }
 

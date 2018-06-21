@@ -71,7 +71,7 @@ class ConditionUIButton: UIButton {
         let sz = super.intrinsicContentSize//super calc
         
         
-        let newSize = CGSize(width: sz.width + padding * 4, height: sz.height + padding * 2)
+        let newSize = CGSize(width: sz.width + padding * 6, height: sz.height + padding )
         
         return newSize
     }

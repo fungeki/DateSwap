@@ -9,8 +9,8 @@
 import UIKit
 
 extension UIView {
-    func addDashedBorder() {
-        let color = UIColor.red.cgColor
+    func addJeansEffect(_ color: CGColor) {
+        
         
         let shapeLayer:CAShapeLayer = CAShapeLayer()
         let frameSize = self.frame.size

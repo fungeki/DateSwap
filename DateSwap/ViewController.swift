@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         itemAreaLabel.text = p1.area
         itemDescriptionLabel.text = p1.description
         itemDescriptionLabel.numberOfLines = 0
-        [itemDescriptionLabel .sizeToFit()]
+        itemDescriptionLabel .sizeToFit()
         itemImageView.sd_setImage(with: URL(string: p1.image))
         conditionButton.isEnabled = false
         itemImageView.layer.cornerRadius = 20;

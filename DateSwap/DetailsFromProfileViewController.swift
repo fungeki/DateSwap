@@ -21,7 +21,7 @@ class DetailsFromProfileViewController: UIViewController {
         itemImageView.sd_setImage(with: URL(string: product.image))
         itemNameLabel.text = product.title
         itemDesicriptionDetailLabel.numberOfLines = 0
-        [itemDesicriptionDetailLabel .sizeToFit()]
+        itemDesicriptionDetailLabel .sizeToFit()
         itemImageView.layer.cornerRadius = 20
         contButton.isEnabled = false
         contButton.setTitle(returnCondition(product.condition), for: .disabled)

@@ -10,12 +10,12 @@ import UIKit
 
 class ProductOverviewTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var priceUIButton: UIButton!
     @IBOutlet weak var conditionUIButton: ConditionUIButton!
     var product: Product!
     @IBOutlet weak var productUIImageView: UIImageView!
     @IBOutlet weak var titleUILabel: UILabel!
     @IBOutlet weak var descriptionUILabel: UILabel!
-    @IBOutlet weak var priceUIButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,6 +25,11 @@ class ProductOverviewTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.contentView.layoutSubviews()
+        priceUIButton.addJeansEffect(UIColor.black.cgColor)
     }
 
 }

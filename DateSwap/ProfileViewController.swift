@@ -58,7 +58,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
         let product = products[indexPath.row]
         
         cell.product = product
-        //cell.selectionStyle = .none
+        cell.selectionStyle = .none
         cell.itemImageView.sd_setImage(with: URL(string: product.image))
         cell.itemImageView.layer.cornerRadius = 20
         cell.itemName.text = product.title

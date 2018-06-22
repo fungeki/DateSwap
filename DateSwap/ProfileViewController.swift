@@ -51,6 +51,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, canFocusRowAt indexPath: IndexPath) -> Bool {
         return false
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "profileCell") as! ProfileTableViewCell
         
@@ -78,7 +79,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let currentCell = tableView.cellForRow(at: indexPath) as! ProfileTableViewCell
         let product = currentCell.product
-        currentCell.conditionUIButton.backgroundColor = UIColor.orange
+      //  currentCell.conditionUIButton.backgroundColor = UIColor.orange
         performSegue(withIdentifier: "masterToDetail", sender: product)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

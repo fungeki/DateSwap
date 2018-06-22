@@ -27,7 +27,7 @@ extension UIView {
         
         self.layer.addSublayer(shapeLayer)
     }
-    func addJeansEffect(color: CGColor, cornerRadius: CGRect) {
+    func addJeansEffect(color: CGColor, cornerRadius: CGFloat) {
         
         
         let shapeLayer:CAShapeLayer = CAShapeLayer()

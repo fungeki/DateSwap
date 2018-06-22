@@ -53,6 +53,7 @@ extension ProductOverviewViewController: UITableViewDelegate, UITableViewDataSou
         cell.productUIImageView.sd_setImage(with: URL(string: product.image))
         cell.titleUILabel.text = product.title
         cell.conditionUIButton.isEnabled = false
+        cell.selectionStyle = .none
         cell.descriptionUILabel.numberOfLines = 2
         cell.descriptionUILabel .sizeToFit()
         cell.priceUIButton.isEnabled = false
@@ -76,7 +77,7 @@ extension ProductOverviewViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let currentCell = tableView.cellForRow(at: indexPath) as! ProductOverviewTableViewCell
         let product = currentCell.product
-        currentCell.conditionUIButton.backgroundColor = UIColor.orange
+        //currentCell.conditionUIButton.backgroundColor = UIColor.orange
         performSegue(withIdentifier: "datesProfileMasterToDetail", sender: product)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

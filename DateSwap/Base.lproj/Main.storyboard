@@ -59,7 +59,7 @@
                                     <segue destination="nE1-GP-IDx" kind="show" id="5g5-0Y-d2G"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="0.0" maxValue="305" translatesAutoresizingMaskIntoConstraints="NO" id="xSa-e9-hHR" customClass="priceUISlider" customModule="DateSwap" customModuleProvider="target">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="0.0" maxValue="305" translatesAutoresizingMaskIntoConstraints="NO" id="xSa-e9-hHR" customClass="PriceSliderUISlider" customModule="DateSwap" customModuleProvider="target">
                                 <rect key="frame" x="10" y="593" width="355" height="31"/>
                                 <color key="tintColor" red="0.94136577079999995" green="0.62133409939999995" blue="0.1478117447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="maximumTrackTintColor" red="0.85657520337425974" green="0.85657520337425974" blue="0.85657520337425974" alpha="0.82862015845070425" colorSpace="custom" customColorSpace="sRGB"/>

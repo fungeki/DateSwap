@@ -30,7 +30,7 @@ class EditMyProductsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     override func viewDidLayoutSubviews() {
-        addANewPhotoUIButton.addJeansEffect(UIColor.orange.cgColor)
+        addANewPhotoUIButton.addJeansEffect(darkOrange())
     }
     
     @IBAction func onclickDropdownConditionUIButton(_ sender: ConditionUIButton) {

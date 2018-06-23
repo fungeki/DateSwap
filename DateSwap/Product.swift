@@ -39,7 +39,9 @@ func returnCondition(_ condition: ProductCondition)->String{
         return "Used"
     }
 }
-
+func returnConditionArray()->[String]{
+    return ["New", "Like New", "Renewed", "Damaged", "Used"]
+}
 let p1 = Product(title: "Cat", image: "https://i.imgflip.com/q633e.jpg", description: "A meow (American English) or miaow (British English; /miˈaʊ/),[1] is a vocalization of cats. They have diverse tones and are sometimes chattered, murmured or whispered. Adult cats rarely meow to each other, so an adult cat meowing to human beings is probably a post-domestication extension of meowing by kittens, a call for attention.", lastUpdate: "02/01/2001", area: "far", condition: .Damaged, price: "500$")
 let p2 = Product(title: "Plane", image: "https://media.defense.gov/2005/Dec/22/2000574703/780/780/0/050308-F-1234P-011.JPG", description: "wooooooooshes in the sky", lastUpdate: "02/05/2003", area: "sky", condition: .Renewed, price: "1942$")
 let p3 = Product(title: "China", image: "https://cdn4.iconfinder.com/data/icons/china-travel/512/as_288-512.png", description: "a country", lastUpdate: "14/06/2018", area: "asia", condition: .Used, price: "1,403,500,365$")

@@ -10,6 +10,8 @@ import UIKit
 
 class EditMyProductsViewController: UIViewController {
 
+    @IBOutlet weak var productTitleUITextField: UITextField!
+    @IBOutlet weak var dropDownMenu: UIStackView!
     @IBOutlet weak var conditionSelectionTableView: UITableView!
     @IBOutlet weak var dropDownConditionUIButton: ConditionUIButton!
     @IBOutlet weak var addANewPhotoUIButton: UIButton!
@@ -22,6 +24,8 @@ class EditMyProductsViewController: UIViewController {
         super.viewDidLoad()
         headerLabel.text = pageHeader
         conditionSelectionTableView.isHidden = true
+        
+        
         // Do any additional setup after loading the view.
     }
     
@@ -31,6 +35,8 @@ class EditMyProductsViewController: UIViewController {
     }
     override func viewDidLayoutSubviews() {
         addANewPhotoUIButton.addJeansEffect(darkOrange())
+        
+        
     }
     
     @IBAction func onclickDropdownConditionUIButton(_ sender: ConditionUIButton) {
@@ -64,10 +70,10 @@ extension EditMyProductsViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = conditionSelectionTableView.dequeueReusableCell(withIdentifier: "conditionChoiceCell", for: indexPath)
-        cell.textLabel?.text = conditionListing[indexPath.row]
+        let cell = conditionSelectionTableView.dequeueReusableCell(withIdentifier: "conditionChoiceCell", for: indexPath) as! ConditionSelectionTableViewCell
         cell.selectionStyle = .none
-        cell.layer.cornerRadius = 10
+        cell.conditionNameUIButton.isEnabled = false
+        cell.conditionNameUIButton.setTitle("\(conditionListing[indexPath.row])",for: .disabled)
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -314,22 +314,19 @@
                                 </state>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uXk-LH-vTS">
-                                <rect key="frame" x="24" y="205.5" width="327" height="331"/>
+                                <rect key="frame" x="24" y="205.5" width="327" height="375"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wv7-sh-0iv" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="TKt-0s-AOt"/>
                                         </constraints>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="Condition">
                                             <color key="titleColor" red="0.28905671830000002" green="0.63317435980000003" blue="0.20536994929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.28905671830000002" green="0.63317435980000003" blue="0.20536994929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="padding">
                                                 <real key="value" value="0.0"/>
@@ -343,31 +340,48 @@
                                         </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ege-US-MIx">
-                                        <rect key="frame" x="0.0" y="75" width="327" height="256"/>
+                                        <rect key="frame" x="0.0" y="75" width="327" height="300"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="256" id="PBy-Un-1Qj"/>
+                                            <constraint firstAttribute="height" constant="300" id="PBy-Un-1Qj"/>
                                         </constraints>
                                         <color key="separatorColor" red="0.94136577079999995" green="0.62133409939999995" blue="0.1478117447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="conditionChoiceCell" textLabel="nPc-Bd-J8B" rowHeight="52" style="IBUITableViewCellStyleDefault" id="4iB-ZI-S4n">
-                                                <rect key="frame" x="0.0" y="28" width="327" height="52"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="conditionChoiceCell" rowHeight="54" id="4iB-ZI-S4n" customClass="ConditionSelectionTableViewCell" customModule="DateSwap" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="327" height="54"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4iB-ZI-S4n" id="DaL-Vr-YFg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="52"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="54"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nPc-Bd-J8B">
-                                                            <rect key="frame" x="15" y="0.0" width="297" height="52"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <color key="backgroundColor" red="0.98431372549999996" green="0.80077177720000003" blue="0.4268952654" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" red="0.28905671830000002" green="0.63317435980000003" blue="0.20536994929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaT-Bc-Sgb" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
+                                                            <rect key="frame" x="17" y="13" width="293" height="28"/>
+                                                            <state key="normal" title="Button">
+                                                                <color key="titleColor" red="0.28905671830000002" green="0.63317435980000003" blue="0.20536994929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="10"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="4"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" red="0.28905671830000002" green="0.63317435980000003" blue="0.20536994929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.98431372549999996" green="0.80077177720000003" blue="0.4268952654" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="LaT-Bc-Sgb" firstAttribute="top" secondItem="DaL-Vr-YFg" secondAttribute="topMargin" constant="2" id="13f-Ev-dqk"/>
+                                                        <constraint firstItem="LaT-Bc-Sgb" firstAttribute="leading" secondItem="DaL-Vr-YFg" secondAttribute="leadingMargin" constant="2" id="qMd-vT-m8n"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="LaT-Bc-Sgb" secondAttribute="bottom" constant="2" id="smR-B9-eJ3"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="LaT-Bc-Sgb" secondAttribute="trailing" constant="2" id="uRs-se-RWd"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="conditionNameUIButton" destination="LaT-Bc-Sgb" id="VyZ-yZ-5T6"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                         <connections>
@@ -386,9 +400,19 @@
                                     <constraint firstAttribute="trailing" secondItem="Wv7-sh-0iv" secondAttribute="trailing" id="dHa-U8-qAe"/>
                                 </constraints>
                             </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Main Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bdb-qa-Uzj">
+                                <rect key="frame" x="24" y="588.5" width="327" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="QTg-M9-SGd"/>
+                                </constraints>
+                                <color key="textColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="bdb-qa-Uzj" secondAttribute="trailing" constant="24" id="1uh-4l-NTC"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="gMH-Ls-QgS" secondAttribute="trailing" constant="24" id="8bL-EB-K6U"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="bnB-n6-K60" secondAttribute="trailing" id="F3y-xt-oE2"/>
                             <constraint firstItem="gMH-Ls-QgS" firstAttribute="top" secondItem="bnB-n6-K60" secondAttribute="bottom" constant="24" id="Oox-du-cQZ"/>
@@ -397,6 +421,8 @@
                             <constraint firstItem="bnB-n6-K60" firstAttribute="top" secondItem="434-lb-zsh" secondAttribute="bottom" constant="4" id="UWP-3o-ERG"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="uXk-LH-vTS" secondAttribute="trailing" constant="24" id="Y9t-90-4Xh"/>
                             <constraint firstItem="434-lb-zsh" firstAttribute="centerX" secondItem="N9s-eb-Yau" secondAttribute="centerX" id="gLo-e7-2Hl"/>
+                            <constraint firstItem="bdb-qa-Uzj" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="n6G-sM-8vd"/>
+                            <constraint firstItem="bdb-qa-Uzj" firstAttribute="top" secondItem="uXk-LH-vTS" secondAttribute="bottom" constant="8" id="oPM-k6-4wd"/>
                             <constraint firstItem="bnB-n6-K60" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" id="qEn-jx-kqW"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="Mcd-T8-spc" secondAttribute="trailing" constant="24" id="uVi-vb-eQe"/>
                             <constraint firstItem="gMH-Ls-QgS" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="vs1-I5-IFF"/>
@@ -409,7 +435,9 @@
                         <outlet property="addANewPhotoUIButton" destination="gMH-Ls-QgS" id="piP-uS-BQQ"/>
                         <outlet property="conditionSelectionTableView" destination="ege-US-MIx" id="6MX-7L-AFd"/>
                         <outlet property="dropDownConditionUIButton" destination="Wv7-sh-0iv" id="UID-O6-7NA"/>
+                        <outlet property="dropDownMenu" destination="uXk-LH-vTS" id="6F5-n6-qB8"/>
                         <outlet property="headerLabel" destination="434-lb-zsh" id="dlh-c5-Z7c"/>
+                        <outlet property="productTitleUITextField" destination="bdb-qa-Uzj" id="Ije-GE-vXT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ash-Ua-HFc" userLabel="First Responder" sceneMemberID="firstResponder"/>

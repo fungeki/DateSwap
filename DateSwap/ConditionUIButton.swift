@@ -63,7 +63,7 @@ class ConditionUIButton: UIButton {
     var padding: CGFloat = 8{
         didSet{
             let p = padding
-            titleEdgeInsets = UIEdgeInsets(top: p, left: p, bottom: p, right: p)
+            titleEdgeInsets = UIEdgeInsets(top: 0, left: p, bottom: 0, right: p)
         }
     }
     

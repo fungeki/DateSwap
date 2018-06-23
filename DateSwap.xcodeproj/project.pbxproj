@@ -16,6 +16,8 @@
 		8C9A101820CA99140077B544 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C9A101720CA99140077B544 /* Assets.xcassets */; };
 		8C9A101B20CA99140077B544 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9A101920CA99140077B544 /* LaunchScreen.storyboard */; };
 		8CBA6A6720DEA708008CD18B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBA6A6620DEA708008CD18B /* Colors.swift */; };
+		8CBA6A6920DEADDB008CD18B /* ConditionSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBA6A6820DEADDB008CD18B /* ConditionSelectionTableViewCell.swift */; };
+		8CBA6A6B20DEBDF0008CD18B /* ProductEditTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBA6A6A20DEBDF0008CD18B /* ProductEditTextfield.swift */; };
 		8CD4202820D2824C006101A1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD4202720D2824C006101A1 /* ProfileViewController.swift */; };
 		8CD4202C20D2827A006101A1 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD4202B20D2827A006101A1 /* ProfileTableViewCell.swift */; };
 		8CE62D0720D93D4900AA167D /* ProductOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE62D0620D93D4900AA167D /* ProductOverviewTableViewCell.swift */; };
@@ -44,6 +46,8 @@
 		8C9A101A20CA99140077B544 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C9A101C20CA99140077B544 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CBA6A6620DEA708008CD18B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		8CBA6A6820DEADDB008CD18B /* ConditionSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionSelectionTableViewCell.swift; sourceTree = "<group>"; };
+		8CBA6A6A20DEBDF0008CD18B /* ProductEditTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEditTextfield.swift; sourceTree = "<group>"; };
 		8CD4202720D2824C006101A1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8CD4202B20D2827A006101A1 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		8CE62D0620D93D4900AA167D /* ProductOverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductOverviewTableViewCell.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 				8CE62D0C20DB8B0000AA167D /* priceUISlider.swift */,
 				8C89A27D20DBD29200F900F5 /* EditMyProductsViewController.swift */,
 				8CBA6A6620DEA708008CD18B /* Colors.swift */,
+				8CBA6A6820DEADDB008CD18B /* ConditionSelectionTableViewCell.swift */,
+				8CBA6A6A20DEBDF0008CD18B /* ProductEditTextfield.swift */,
 			);
 			path = DateSwap;
 			sourceTree = "<group>";
@@ -244,12 +250,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CBA6A6920DEADDB008CD18B /* ConditionSelectionTableViewCell.swift in Sources */,
 				8CE62D0720D93D4900AA167D /* ProductOverviewTableViewCell.swift in Sources */,
 				8CBA6A6720DEA708008CD18B /* Colors.swift in Sources */,
 				8CE62D0D20DB8B0000AA167D /* priceUISlider.swift in Sources */,
 				8CD4202C20D2827A006101A1 /* ProfileTableViewCell.swift in Sources */,
 				8C9A101020CA99140077B544 /* ViewController.swift in Sources */,
 				8CEF6A3320D7A9DE007C39D5 /* ConditionUIButton.swift in Sources */,
+				8CBA6A6B20DEBDF0008CD18B /* ProductEditTextfield.swift in Sources */,
 				8CEF6A2120D28793007C39D5 /* DetailsFromProfileViewController.swift in Sources */,
 				8C7405F420D24CE700FF8E9C /* Product.swift in Sources */,
 				8CE62D0920DB830200AA167D /* ProfileIntroViewController.swift in Sources */,

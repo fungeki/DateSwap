@@ -9,8 +9,7 @@
 import UIKit
 
 class ProfileIntroViewController: UIViewController {
-
-    @IBAction func postChange(_ sender: priceUISlider) {
+    @IBAction func distanceChanged(_ sender: PriceSliderUISlider) {
         let currentValue = Int(sender.value)
         switch currentValue {
         case 301, 302, 303, 304, 305:
@@ -18,14 +17,12 @@ class ProfileIntroViewController: UIViewController {
         default:
             distanceUILabel.text = "\(currentValue) KM."
         }
-//        if currentValue > 300 (
-//            distanceUILabel.text = "Unlimited"
-//            ) else {
-//        distanceUILabel.text = "\(currentValue) KM."
-//        }
     }
+
     @IBOutlet weak var distanceUILabel: UILabel!
-    @IBOutlet weak var distanceUISlider: priceUISlider!
+
+    @IBOutlet weak var distanceUISlider: PriceSliderUISlider!
+    
     @IBOutlet weak var profileIntroUIImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()

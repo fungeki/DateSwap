@@ -17,5 +17,44 @@ class ProductEditTextfield: UITextField {
         // Drawing code
     }
     */
+    
+    @IBInspectable
+    var cornerRadius: CGFloat = 10{
+        didSet{
+            layer.cornerRadius = cornerRadius
+        }
+    }
+    @IBInspectable
+    var borderWidth: CGFloat = 10{
+        didSet{
+            layer.borderWidth = borderWidth
+        }
+    }
+    @IBInspectable
+    var borderColor: UIColor = UIColor.black{
+        didSet{
+            layer.borderColor = borderColor.cgColor
+        }
+    }
+    @IBInspectable
+    var paddingCorners: CGFloat = 10{
+        didSet{
+            padding = UIEdgeInsetsMake(0, paddingCorners, 0, paddingCorners)
+        }
+    }
+    
+    var padding = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+    
+    override open func textRect(forBounds bounds: CGRect) -> CGRect {
+        return UIEdgeInsetsInsetRect(bounds, padding)
+    }
+    
+    override open func placeholderRect(forBounds bounds: CGRect) -> CGRect {
+        return UIEdgeInsetsInsetRect(bounds, padding)
+    }
+    
+    override open func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return UIEdgeInsetsInsetRect(bounds, padding)
+    }
 
 }

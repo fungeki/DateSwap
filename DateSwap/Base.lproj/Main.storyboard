@@ -70,7 +70,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="postChange:" destination="ADP-5w-IKA" eventType="valueChanged" id="CIF-3V-3RQ"/>
+                                    <action selector="distanceChanged:" destination="ADP-5w-IKA" eventType="valueChanged" id="Lf3-zC-QNl"/>
                                 </connections>
                             </slider>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ugly_cats_06.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="y0R-hc-9Ka">
@@ -109,7 +109,7 @@
                     </view>
                     <connections>
                         <outlet property="distanceUILabel" destination="P8r-dp-jd6" id="drh-8a-Jje"/>
-                        <outlet property="distanceUISlider" destination="xSa-e9-hHR" id="dqG-tH-SdQ"/>
+                        <outlet property="distanceUISlider" destination="xSa-e9-hHR" id="D9B-oW-K8e"/>
                         <outlet property="profileIntroUIImageView" destination="y0R-hc-9Ka" id="ujG-hA-s5s"/>
                     </connections>
                 </viewController>
@@ -403,7 +403,7 @@
                                     <constraint firstAttribute="trailing" secondItem="Wv7-sh-0iv" secondAttribute="trailing" id="dHa-U8-qAe"/>
                                 </constraints>
                             </stackView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Main Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bdb-qa-Uzj">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Main Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bdb-qa-Uzj" customClass="ProductEditTextfield" customModule="DateSwap" customModuleProvider="target">
                                 <rect key="frame" x="24" y="588.5" width="327" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="QTg-M9-SGd"/>
@@ -411,6 +411,20 @@
                                 <color key="textColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingCorners">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

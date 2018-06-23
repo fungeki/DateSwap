@@ -314,7 +314,7 @@
                                 </state>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uXk-LH-vTS">
-                                <rect key="frame" x="24" y="205.5" width="327" height="250"/>
+                                <rect key="frame" x="24" y="205.5" width="327" height="331"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wv7-sh-0iv" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="75"/>
@@ -342,25 +342,27 @@
                                             <action selector="onclickDropdownConditionUIButton:" destination="8ec-TZ-yJL" eventType="touchUpInside" id="0Co-2H-Cgt"/>
                                         </connections>
                                     </button>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ege-US-MIx">
-                                        <rect key="frame" x="0.0" y="75" width="327" height="175"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ege-US-MIx">
+                                        <rect key="frame" x="0.0" y="75" width="327" height="256"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="175" id="PBy-Un-1Qj"/>
+                                            <constraint firstAttribute="height" constant="256" id="PBy-Un-1Qj"/>
                                         </constraints>
+                                        <color key="separatorColor" red="0.94136577079999995" green="0.62133409939999995" blue="0.1478117447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="conditionChoiceCell" textLabel="nPc-Bd-J8B" style="IBUITableViewCellStyleDefault" id="4iB-ZI-S4n">
-                                                <rect key="frame" x="0.0" y="28" width="327" height="44"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="conditionChoiceCell" textLabel="nPc-Bd-J8B" rowHeight="52" style="IBUITableViewCellStyleDefault" id="4iB-ZI-S4n">
+                                                <rect key="frame" x="0.0" y="28" width="327" height="52"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4iB-ZI-S4n" id="DaL-Vr-YFg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="52"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nPc-Bd-J8B">
-                                                            <rect key="frame" x="15" y="0.0" width="297" height="43.5"/>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nPc-Bd-J8B">
+                                                            <rect key="frame" x="15" y="0.0" width="297" height="52"/>
                                                             <autoresizingMask key="autoresizingMask"/>
+                                                            <color key="backgroundColor" red="0.98431372549999996" green="0.80077177720000003" blue="0.4268952654" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" red="0.28905671830000002" green="0.63317435980000003" blue="0.20536994929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -405,7 +407,7 @@
                     </view>
                     <connections>
                         <outlet property="addANewPhotoUIButton" destination="gMH-Ls-QgS" id="piP-uS-BQQ"/>
-                        <outlet property="conditonSelectionTableView" destination="ege-US-MIx" id="6MX-7L-AFd"/>
+                        <outlet property="conditionSelectionTableView" destination="ege-US-MIx" id="6MX-7L-AFd"/>
                         <outlet property="dropDownConditionUIButton" destination="Wv7-sh-0iv" id="UID-O6-7NA"/>
                         <outlet property="headerLabel" destination="434-lb-zsh" id="dlh-c5-Z7c"/>
                     </connections>

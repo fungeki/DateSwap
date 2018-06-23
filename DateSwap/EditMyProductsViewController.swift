@@ -10,7 +10,7 @@ import UIKit
 
 class EditMyProductsViewController: UIViewController {
 
-    @IBOutlet weak var conditonSelectionTableView: UITableView!
+    @IBOutlet weak var conditionSelectionTableView: UITableView!
     @IBOutlet weak var dropDownConditionUIButton: ConditionUIButton!
     @IBOutlet weak var addANewPhotoUIButton: UIButton!
     @IBOutlet weak var headerLabel: UILabel!
@@ -21,6 +21,7 @@ class EditMyProductsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         headerLabel.text = pageHeader
+        conditionSelectionTableView.isHidden = true
         // Do any additional setup after loading the view.
     }
     
@@ -33,6 +34,7 @@ class EditMyProductsViewController: UIViewController {
     }
     
     @IBAction func onclickDropdownConditionUIButton(_ sender: ConditionUIButton) {
+            dropdownAnimation(toggle: conditionSelectionTableView.isHidden)
     }
     /*
     // MARK: - Navigation
@@ -44,6 +46,17 @@ class EditMyProductsViewController: UIViewController {
     }
     */
 
+    func dropdownAnimation(toggle: Bool){
+        if toggle{
+            UIView.animate(withDuration: 0.3) {
+                self.conditionSelectionTableView.isHidden = false
+            }
+        } else {
+            UIView.animate(withDuration: 0.3) {
+                self.conditionSelectionTableView.isHidden = true
+            }
+        }
+    }
 }
 extension EditMyProductsViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,11 +64,15 @@ extension EditMyProductsViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = conditonSelectionTableView.dequeueReusableCell(withIdentifier: "conditionChoiceCell", for: indexPath)
+        let cell = conditionSelectionTableView.dequeueReusableCell(withIdentifier: "conditionChoiceCell", for: indexPath)
         cell.textLabel?.text = conditionListing[indexPath.row]
-        cell.backgroundColor = UIColor.orange
+        cell.selectionStyle = .none
+        cell.layer.cornerRadius = 10
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        dropDownConditionUIButton.setTitle("\(conditionListing[indexPath.row])", for: .normal)
+        dropdownAnimation(toggle: conditionSelectionTableView.isHidden)
+    }
     
 }

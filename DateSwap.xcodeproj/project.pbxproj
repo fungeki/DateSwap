@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		773871FF20DEBFF600493C69 /* PhotosEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773871FE20DEBFF600493C69 /* PhotosEditorViewController.swift */; };
 		8C7405F420D24CE700FF8E9C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7405F320D24CE700FF8E9C /* Product.swift */; };
 		8C89A27E20DBD29200F900F5 /* EditMyProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C89A27D20DBD29200F900F5 /* EditMyProductsViewController.swift */; };
 		8C9A100E20CA99140077B544 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A100D20CA99140077B544 /* AppDelegate.swift */; };
@@ -35,6 +36,7 @@
 		0424395E2B652DEE286339C2 /* Pods-DateSwap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateSwap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DateSwap/Pods-DateSwap.debug.xcconfig"; sourceTree = "<group>"; };
 		3680421D48587E2FF1190ECE /* Pods_DateSwap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DateSwap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D92167A3509D274EBCE1F78 /* Pods-DateSwap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateSwap.release.xcconfig"; path = "Pods/Target Support Files/Pods-DateSwap/Pods-DateSwap.release.xcconfig"; sourceTree = "<group>"; };
+		773871FE20DEBFF600493C69 /* PhotosEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosEditorViewController.swift; sourceTree = "<group>"; };
 		8C7405F320D24CE700FF8E9C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		8C89A27D20DBD29200F900F5 /* EditMyProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMyProductsViewController.swift; sourceTree = "<group>"; };
 		8C9A100A20CA99140077B544 /* DateSwap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateSwap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +121,7 @@
 				8CE62D0620D93D4900AA167D /* ProductOverviewTableViewCell.swift */,
 				8CE62D0820DB830200AA167D /* ProfileIntroViewController.swift */,
 				8C89A27D20DBD29200F900F5 /* EditMyProductsViewController.swift */,
+				773871FE20DEBFF600493C69 /* PhotosEditorViewController.swift */,
 				8CBA6A6620DEA708008CD18B /* Colors.swift */,
 				8CBA6A6820DEADDB008CD18B /* ConditionSelectionTableViewCell.swift */,
 				8CBA6A6A20DEBDF0008CD18B /* ProductEditTextfield.swift */,
@@ -263,6 +266,7 @@
 				8C89A27E20DBD29200F900F5 /* EditMyProductsViewController.swift in Sources */,
 				8CD4202820D2824C006101A1 /* ProfileViewController.swift in Sources */,
 				8CEF6A3520D933F6007C39D5 /* ProductOverviewViewController.swift in Sources */,
+				773871FF20DEBFF600493C69 /* PhotosEditorViewController.swift in Sources */,
 				8C9A100E20CA99140077B544 /* AppDelegate.swift in Sources */,
 				8CEF6A3120D7A5C6007C39D5 /* JeansEffect.swift in Sources */,
 				8C9A101620CA99140077B544 /* DateSwap.xcdatamodeld in Sources */,

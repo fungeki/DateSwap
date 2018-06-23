@@ -1,22 +1,22 @@
 //
-//  priceUISlider.swift
+//  PriceSliderUISlider.swift
 //  DateSwap
 //
-//  Created by Ran Loock on 21/06/2018.
+//  Created by Ran Loock on 23/06/2018.
 //  Copyright © 2018 Trisk Quality. All rights reserved.
 //
 
 import UIKit
 
-class priceUISlider: UISlider {
-    
+class PriceSliderUISlider: UISlider {
+
     /*
-     // Only override draw() if you perform custom drawing.
-     // An empty implementation adversely affects performance during animation.
-     override func draw(_ rect: CGRect) {
-     // Drawing code
-     }
-     */
+    // Only override draw() if you perform custom drawing.
+    // An empty implementation adversely affects performance during animation.
+    override func draw(_ rect: CGRect) {
+        // Drawing code
+    }
+    */
     @IBInspectable
     var trackHeight: CGFloat = 8
     

@@ -18,12 +18,12 @@
 		8CBA6A6720DEA708008CD18B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBA6A6620DEA708008CD18B /* Colors.swift */; };
 		8CBA6A6920DEADDB008CD18B /* ConditionSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBA6A6820DEADDB008CD18B /* ConditionSelectionTableViewCell.swift */; };
 		8CBA6A6B20DEBDF0008CD18B /* ProductEditTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBA6A6A20DEBDF0008CD18B /* ProductEditTextfield.swift */; };
+		8CBA6A6F20DEC2A2008CD18B /* PriceSliderUISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBA6A6E20DEC2A2008CD18B /* PriceSliderUISlider.swift */; };
 		8CD4202820D2824C006101A1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD4202720D2824C006101A1 /* ProfileViewController.swift */; };
 		8CD4202C20D2827A006101A1 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD4202B20D2827A006101A1 /* ProfileTableViewCell.swift */; };
 		8CE62D0720D93D4900AA167D /* ProductOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE62D0620D93D4900AA167D /* ProductOverviewTableViewCell.swift */; };
 		8CE62D0920DB830200AA167D /* ProfileIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE62D0820DB830200AA167D /* ProfileIntroViewController.swift */; };
 		8CE62D0B20DB84C000AA167D /* ugly_cats_06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8CE62D0A20DB84C000AA167D /* ugly_cats_06.jpg */; };
-		8CE62D0D20DB8B0000AA167D /* priceUISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE62D0C20DB8B0000AA167D /* priceUISlider.swift */; };
 		8CEF6A2120D28793007C39D5 /* DetailsFromProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF6A2020D28793007C39D5 /* DetailsFromProfileViewController.swift */; };
 		8CEF6A3120D7A5C6007C39D5 /* JeansEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF6A3020D7A5C6007C39D5 /* JeansEffect.swift */; };
 		8CEF6A3320D7A9DE007C39D5 /* ConditionUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF6A3220D7A9DE007C39D5 /* ConditionUIButton.swift */; };
@@ -48,12 +48,12 @@
 		8CBA6A6620DEA708008CD18B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8CBA6A6820DEADDB008CD18B /* ConditionSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionSelectionTableViewCell.swift; sourceTree = "<group>"; };
 		8CBA6A6A20DEBDF0008CD18B /* ProductEditTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEditTextfield.swift; sourceTree = "<group>"; };
+		8CBA6A6E20DEC2A2008CD18B /* PriceSliderUISlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceSliderUISlider.swift; sourceTree = "<group>"; };
 		8CD4202720D2824C006101A1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8CD4202B20D2827A006101A1 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		8CE62D0620D93D4900AA167D /* ProductOverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductOverviewTableViewCell.swift; sourceTree = "<group>"; };
 		8CE62D0820DB830200AA167D /* ProfileIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIntroViewController.swift; sourceTree = "<group>"; };
 		8CE62D0A20DB84C000AA167D /* ugly_cats_06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ugly_cats_06.jpg; sourceTree = "<group>"; };
-		8CE62D0C20DB8B0000AA167D /* priceUISlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = priceUISlider.swift; sourceTree = "<group>"; };
 		8CEF6A2020D28793007C39D5 /* DetailsFromProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsFromProfileViewController.swift; sourceTree = "<group>"; };
 		8CEF6A3020D7A5C6007C39D5 /* JeansEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeansEffect.swift; sourceTree = "<group>"; };
 		8CEF6A3220D7A9DE007C39D5 /* ConditionUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionUIButton.swift; sourceTree = "<group>"; };
@@ -118,11 +118,11 @@
 				8CE62D0A20DB84C000AA167D /* ugly_cats_06.jpg */,
 				8CE62D0620D93D4900AA167D /* ProductOverviewTableViewCell.swift */,
 				8CE62D0820DB830200AA167D /* ProfileIntroViewController.swift */,
-				8CE62D0C20DB8B0000AA167D /* priceUISlider.swift */,
 				8C89A27D20DBD29200F900F5 /* EditMyProductsViewController.swift */,
 				8CBA6A6620DEA708008CD18B /* Colors.swift */,
 				8CBA6A6820DEADDB008CD18B /* ConditionSelectionTableViewCell.swift */,
 				8CBA6A6A20DEBDF0008CD18B /* ProductEditTextfield.swift */,
+				8CBA6A6E20DEC2A2008CD18B /* PriceSliderUISlider.swift */,
 			);
 			path = DateSwap;
 			sourceTree = "<group>";
@@ -253,7 +253,6 @@
 				8CBA6A6920DEADDB008CD18B /* ConditionSelectionTableViewCell.swift in Sources */,
 				8CE62D0720D93D4900AA167D /* ProductOverviewTableViewCell.swift in Sources */,
 				8CBA6A6720DEA708008CD18B /* Colors.swift in Sources */,
-				8CE62D0D20DB8B0000AA167D /* priceUISlider.swift in Sources */,
 				8CD4202C20D2827A006101A1 /* ProfileTableViewCell.swift in Sources */,
 				8C9A101020CA99140077B544 /* ViewController.swift in Sources */,
 				8CEF6A3320D7A9DE007C39D5 /* ConditionUIButton.swift in Sources */,
@@ -267,6 +266,7 @@
 				8C9A100E20CA99140077B544 /* AppDelegate.swift in Sources */,
 				8CEF6A3120D7A5C6007C39D5 /* JeansEffect.swift in Sources */,
 				8C9A101620CA99140077B544 /* DateSwap.xcdatamodeld in Sources */,
+				8CBA6A6F20DEC2A2008CD18B /* PriceSliderUISlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

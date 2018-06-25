@@ -453,7 +453,7 @@
                                 </userDefinedRuntimeAttributes>
                             </slider>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Estimated Price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3pE-Ua-ZvA" customClass="ProductEditTextfield" customModule="DateSwap" customModuleProvider="target">
-                                <rect key="frame" x="95" y="926" width="185" height="30"/>
+                                <rect key="frame" x="95" y="925" width="185" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="185" id="JVb-Ab-ugo"/>
                                     <constraint firstAttribute="height" constant="30" id="NDa-hy-t4a"/>
@@ -486,7 +486,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRZ-ay-5Od" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
-                                <rect key="frame" x="172" y="866" width="30" height="30"/>
+                                <rect key="frame" x="172" y="865" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="qRU-SC-BMD"/>
                                     <constraint firstAttribute="height" constant="30" id="r1E-iC-XS2"/>
@@ -502,7 +502,7 @@
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="padding">
-                                        <real key="value" value="0.0"/>
+                                        <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
@@ -548,7 +548,7 @@
                             <constraint firstItem="281-Aw-EXo" firstAttribute="centerX" secondItem="N9s-eb-Yau" secondAttribute="centerX" id="BfY-LE-p6t"/>
                             <constraint firstItem="atk-fi-ZX6" firstAttribute="top" secondItem="ZFZ-yh-ExD" secondAttribute="bottom" constant="16" id="EmJ-O2-v86"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="bnB-n6-K60" secondAttribute="trailing" id="F3y-xt-oE2"/>
-                            <constraint firstItem="dRZ-ay-5Od" firstAttribute="top" secondItem="ZFZ-yh-ExD" secondAttribute="bottom" constant="22" id="FHU-QV-fBr"/>
+                            <constraint firstItem="dRZ-ay-5Od" firstAttribute="top" secondItem="ZFZ-yh-ExD" secondAttribute="bottom" constant="21" id="FHU-QV-fBr"/>
                             <constraint firstItem="ZFZ-yh-ExD" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="IBU-xb-R60"/>
                             <constraint firstItem="281-Aw-EXo" firstAttribute="leading" secondItem="atk-fi-ZX6" secondAttribute="trailing" id="O6u-wk-DPE"/>
                             <constraint firstItem="gMH-Ls-QgS" firstAttribute="top" secondItem="bnB-n6-K60" secondAttribute="bottom" constant="24" id="Oox-du-cQZ"/>
@@ -586,6 +586,7 @@
                         <outlet property="dropDownMenu" destination="uXk-LH-vTS" id="6F5-n6-qB8"/>
                         <outlet property="estimatedPriceUITextField" destination="3pE-Ua-ZvA" id="lJp-XY-vR1"/>
                         <outlet property="headerLabel" destination="434-lb-zsh" id="dlh-c5-Z7c"/>
+                        <outlet property="maxPriceUISlider" destination="LiV-f0-fvs" id="sAr-Zn-QIL"/>
                         <outlet property="productDescriptionUITextView" destination="YYu-C3-eld" id="RQM-7R-SPU"/>
                         <outlet property="productTitleUITextField" destination="bdb-qa-Uzj" id="Ije-GE-vXT"/>
                     </connections>

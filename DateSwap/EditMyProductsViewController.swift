@@ -9,7 +9,8 @@
 import UIKit
 
 class EditMyProductsViewController: UIViewController {
-
+    @IBOutlet weak var maxPriceUISlider: PriceSliderUISlider!
+    
     @IBOutlet weak var estimatedPriceUITextField: ProductEditTextfield!
     
     @IBOutlet weak var productDescriptionUITextView: DescriptionUITextView!
@@ -26,16 +27,9 @@ class EditMyProductsViewController: UIViewController {
     var conditionListing = returnConditionArray()
     override func viewDidLoad() {
         super.viewDidLoad()
-        headerLabel.text = pageHeader
-        conditionSelectionTableView.isHidden = true
-        guard let inputThisProduct = product else {return}
-        productTitleUITextField.text = inputThisProduct.title
-        estimatedPriceUITextField.text = inputThisProduct.price
-       productDescriptionUITextView.text = inputThisProduct.description
-        dropDownConditionUIButton.setTitle(returnCondition(inputThisProduct.condition), for: .normal)
-        addANewPhotoUIButton.setTitle("", for: .normal)
-        addANewPhotoUIButton.sd_setImage(with: URL(string: inputThisProduct.image), for: UIControlState.normal)
-        productDescriptionUITextView.textColor = UIColor.brown
+        
+        initialize()
+        
         // Do any additional setup after loading the view.
     }
     
@@ -48,6 +42,24 @@ class EditMyProductsViewController: UIViewController {
        
         
     }
+   
+    //change colors HERE
+    func initialize (){
+        maxPriceUISlider.maximumTrackTintColor  = UIColor.init(cgColor: grayTwo())
+        maxPriceUISlider.minimumTrackTintColor = UIColor.init(cgColor: mediumOrange())
+        maxPriceUISlider.thumbTintColor = UIColor.init(cgColor: mediumOrange())
+        headerLabel.text = pageHeader
+        conditionSelectionTableView.isHidden = true
+        guard let inputThisProduct = product else {return}
+        productTitleUITextField.text = inputThisProduct.title
+        estimatedPriceUITextField.text = inputThisProduct.price
+        productDescriptionUITextView.text = inputThisProduct.description
+        dropDownConditionUIButton.setTitle(returnCondition(inputThisProduct.condition), for: .normal)
+        addANewPhotoUIButton.setTitle("", for: .normal)
+        addANewPhotoUIButton.sd_setImage(with: URL(string: inputThisProduct.image), for: UIControlState.normal)
+        productDescriptionUITextView.textColor = UIColor.brown
+    }
+    
     
     @IBAction func onclickDropdownConditionUIButton(_ sender: ConditionUIButton) {
             dropdownAnimation(toggle: conditionSelectionTableView.isHidden)

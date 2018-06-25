@@ -12,6 +12,9 @@ class EditMyProductsViewController: UIViewController {
     @IBOutlet weak var maxPriceUISlider: PriceSliderUISlider!
     @IBOutlet weak var minPriceUISlider: PriceSliderUISlider!
     
+    
+    @IBOutlet weak var maxPriceRangeUILabel: UILabel!
+    @IBOutlet weak var minPriceRangeUILabel: UILabel!
     @IBOutlet weak var estimatedPriceUITextField: ProductEditTextfield!
     
     @IBOutlet weak var productDescriptionUITextView: DescriptionUITextView!
@@ -24,7 +27,6 @@ class EditMyProductsViewController: UIViewController {
     @IBOutlet weak var headerLabel: UILabel!
     var product: Product?
     var pageHeader: String!
-    
     var conditionListing = returnConditionArray()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +35,10 @@ class EditMyProductsViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-    
+    @IBAction func maxSliderChangeAction(_ sender: PriceSliderUISlider) {
+
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

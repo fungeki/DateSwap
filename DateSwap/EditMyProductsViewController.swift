@@ -33,7 +33,9 @@ class EditMyProductsViewController: UIViewController {
         estimatedPriceUITextField.text = inputThisProduct.price
        productDescriptionUITextView.text = inputThisProduct.description
         dropDownConditionUIButton.setTitle(returnCondition(inputThisProduct.condition), for: .normal)
-        
+        addANewPhotoUIButton.setTitle("", for: .normal)
+        addANewPhotoUIButton.sd_setImage(with: URL(string: inputThisProduct.image), for: UIControlState.normal)
+        productDescriptionUITextView.textColor = UIColor.brown
         // Do any additional setup after loading the view.
     }
     
@@ -72,7 +74,7 @@ class EditMyProductsViewController: UIViewController {
         }
     }
 }
-extension EditMyProductsViewController: UITableViewDelegate, UITableViewDataSource{
+extension EditMyProductsViewController: UITableViewDelegate, UITableViewDataSource, UITextViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return conditionListing.count
     }
@@ -88,5 +90,23 @@ extension EditMyProductsViewController: UITableViewDelegate, UITableViewDataSour
         dropDownConditionUIButton.setTitle("\(conditionListing[indexPath.row])", for: .normal)
         dropdownAnimation(toggle: conditionSelectionTableView.isHidden)
     }
+    func textViewDidBeginEditing(_ textView: UITextView)
+    {
+        if (textView.text == "Enter your date (product) description here...")
+        {
+            textView.text = ""
+            textView.textColor = .black
+        }
+        textView.becomeFirstResponder() //Optional
+    }
     
+    func textViewDidEndEditing(_ textView: UITextView)
+    {
+        if (textView.text == "")
+        {
+            textView.text = "Enter your date (product) description here..."
+            textView.textColor = .lightGray
+        }
+        textView.resignFirstResponder()
+    }
 }

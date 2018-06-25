@@ -36,9 +36,9 @@ class ProductEditTextfield: UITextField {
         }
     }
     @IBInspectable
-    var paddingCorners: CGFloat = 10{
+    var paddingLeftRight: CGFloat = 10{
         didSet{
-            padding = UIEdgeInsetsMake(0, paddingCorners, 0, paddingCorners)
+            padding = UIEdgeInsetsMake(0, paddingLeftRight, 0, paddingLeftRight)
         }
     }
     

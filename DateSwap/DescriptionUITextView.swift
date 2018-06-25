@@ -17,6 +17,7 @@ class DescriptionUITextView: UITextView {
         // Drawing code
     }
     */
+    
     @IBInspectable
     var cornerRadius: CGFloat = 10{
         didSet{
@@ -47,5 +48,30 @@ class DescriptionUITextView: UITextView {
             textContainerInset = UIEdgeInsets(top: paddingTop, left: paddingCorners, bottom: 0, right: paddingCorners)
         }
     }
-    
+    @IBInspectable
+    var placeHolderText: String = ""{
+        didSet{
+            text = placeHolderText
+            textColor = UIColor.lightGray
+        }
+    }
+//    func textViewDidBeginEditing(_ textView: UITextView)
+//    {
+//        if (textView.text == placeHolderText)
+//        {
+//            textView.text = ""
+//            textView.textColor = .black
+//        }
+//        textView.becomeFirstResponder() //Optional
+//    }
+//    
+//    func textViewDidEndEditing(_ textView: UITextView)
+//    {
+//        if (textView.text == "")
+//        {
+//            textView.text = placeHolderText
+//            textView.textColor = .lightGray
+//        }
+//        textView.resignFirstResponder()
+//    }
 }

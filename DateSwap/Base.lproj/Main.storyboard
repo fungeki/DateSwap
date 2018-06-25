@@ -704,6 +704,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CD0-UH-z25"/>
                     </view>
+                    <connections>
+                        <outlet property="MainPhotoEditorPhotosUIbutton" destination="TMy-9m-Ynv" id="VAD-1d-z7m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZG-tW-u6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

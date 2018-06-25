@@ -10,10 +10,12 @@ import UIKit
 
 class PhotosEditorViewController: UIViewController {
 
-   
+    @IBOutlet weak var MainPhotoEditorPhotosUIbutton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        MainPhotoEditorPhotosUIbutton.addJeansEffect(color: lightOrange(), cornerRadius: 20, lineWidth: 2, lineDashPattern: [16,10])
         // Do any additional setup after loading the view.
     }
 

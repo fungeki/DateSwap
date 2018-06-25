@@ -432,8 +432,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="305" translatesAutoresizingMaskIntoConstraints="NO" id="LiV-f0-fvs" customClass="PriceSliderUISlider" customModule="DateSwap" customModuleProvider="target">
-                                <rect key="frame" x="185" y="860" width="168" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="105" translatesAutoresizingMaskIntoConstraints="NO" id="LiV-f0-fvs" customClass="PriceSliderUISlider" customModule="DateSwap" customModuleProvider="target">
+                                <rect key="frame" x="185" y="868" width="168" height="31"/>
                                 <color key="minimumTrackTintColor" red="0.94136577079999995" green="0.62133409939999995" blue="0.1478117447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="maximumTrackTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -441,9 +441,12 @@
                                         <real key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="maxSliderChangeAction:" destination="8ec-TZ-yJL" eventType="valueChanged" id="oxa-U1-NG8"/>
+                                </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="200" minValue="0.0" maxValue="305" translatesAutoresizingMaskIntoConstraints="NO" id="atk-fi-ZX6" customClass="PriceSliderUISlider" customModule="DateSwap" customModuleProvider="target">
-                                <rect key="frame" x="22" y="860" width="167" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="80" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="atk-fi-ZX6" customClass="PriceSliderUISlider" customModule="DateSwap" customModuleProvider="target">
+                                <rect key="frame" x="22" y="868" width="167" height="31"/>
                                 <color key="minimumTrackTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="maximumTrackTintColor" red="0.94136577079999995" green="0.62133409939999995" blue="0.1478117447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
@@ -493,7 +496,7 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
+                                        <real key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="bg">
                                         <color key="value" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -537,16 +540,30 @@
                                     <outlet property="delegate" destination="8ec-TZ-yJL" id="KEk-jY-QL2"/>
                                 </connections>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2x-ZS-L01">
+                                <rect key="frame" x="319" y="847.5" width="32" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DI8-18-KVL">
+                                <rect key="frame" x="24" y="847.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="LiV-f0-fvs" firstAttribute="top" secondItem="ZFZ-yh-ExD" secondAttribute="bottom" constant="24" id="0BT-os-YBX"/>
                             <constraint firstItem="3pE-Ua-ZvA" firstAttribute="centerX" secondItem="N9s-eb-Yau" secondAttribute="centerX" id="1KO-bj-eYw"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="bdb-qa-Uzj" secondAttribute="trailing" constant="24" id="1uh-4l-NTC"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="LiV-f0-fvs" secondAttribute="trailing" constant="24" id="4Mz-73-RiH"/>
+                            <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="c2x-ZS-L01" secondAttribute="trailing" constant="24" id="7Tk-Ii-g9a"/>
+                            <constraint firstItem="atk-fi-ZX6" firstAttribute="top" secondItem="DI8-18-KVL" secondAttribute="bottom" id="8Zx-7I-0Jp"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="gMH-Ls-QgS" secondAttribute="trailing" constant="24" id="8bL-EB-K6U"/>
                             <constraint firstItem="LiV-f0-fvs" firstAttribute="leading" secondItem="281-Aw-EXo" secondAttribute="trailing" id="AO9-Qe-SrT"/>
                             <constraint firstItem="281-Aw-EXo" firstAttribute="centerX" secondItem="N9s-eb-Yau" secondAttribute="centerX" id="BfY-LE-p6t"/>
-                            <constraint firstItem="atk-fi-ZX6" firstAttribute="top" secondItem="ZFZ-yh-ExD" secondAttribute="bottom" constant="16" id="EmJ-O2-v86"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="bnB-n6-K60" secondAttribute="trailing" id="F3y-xt-oE2"/>
                             <constraint firstItem="dRZ-ay-5Od" firstAttribute="top" secondItem="ZFZ-yh-ExD" secondAttribute="bottom" constant="21" id="FHU-QV-fBr"/>
                             <constraint firstItem="ZFZ-yh-ExD" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="IBU-xb-R60"/>
@@ -557,14 +574,15 @@
                             <constraint firstItem="uXk-LH-vTS" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="Tyw-vn-V1G"/>
                             <constraint firstItem="bnB-n6-K60" firstAttribute="top" secondItem="434-lb-zsh" secondAttribute="bottom" constant="4" id="UWP-3o-ERG"/>
                             <constraint firstItem="281-Aw-EXo" firstAttribute="top" secondItem="N9s-eb-Yau" secondAttribute="top" id="Wx3-Pp-N2e"/>
+                            <constraint firstItem="atk-fi-ZX6" firstAttribute="top" secondItem="ZFZ-yh-ExD" secondAttribute="bottom" constant="24" id="X3b-sm-c5t"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="uXk-LH-vTS" secondAttribute="trailing" constant="24" id="Y9t-90-4Xh"/>
                             <constraint firstItem="YYu-C3-eld" firstAttribute="top" secondItem="bdb-qa-Uzj" secondAttribute="bottom" constant="8" id="ea9-Qa-3gJ"/>
                             <constraint firstItem="434-lb-zsh" firstAttribute="centerX" secondItem="N9s-eb-Yau" secondAttribute="centerX" id="gLo-e7-2Hl"/>
                             <constraint firstItem="YYu-C3-eld" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="hwF-E0-CQc"/>
-                            <constraint firstItem="LiV-f0-fvs" firstAttribute="top" secondItem="ZFZ-yh-ExD" secondAttribute="bottom" constant="16" id="iFL-md-tRV"/>
                             <constraint firstItem="bdb-qa-Uzj" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="n6G-sM-8vd"/>
                             <constraint firstItem="bdb-qa-Uzj" firstAttribute="top" secondItem="uXk-LH-vTS" secondAttribute="bottom" constant="8" id="oPM-k6-4wd"/>
                             <constraint firstItem="ZFZ-yh-ExD" firstAttribute="top" secondItem="YYu-C3-eld" secondAttribute="bottom" constant="12" id="oeZ-df-cI8"/>
+                            <constraint firstItem="LiV-f0-fvs" firstAttribute="top" secondItem="c2x-ZS-L01" secondAttribute="bottom" id="pfh-0U-DPl"/>
                             <constraint firstItem="3pE-Ua-ZvA" firstAttribute="top" secondItem="dRZ-ay-5Od" secondAttribute="bottom" constant="30" id="q1h-Cc-SPP"/>
                             <constraint firstItem="bnB-n6-K60" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" id="qEn-jx-kqW"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="bottom" secondItem="281-Aw-EXo" secondAttribute="bottom" id="rkj-GC-VAh"/>
@@ -586,7 +604,9 @@
                         <outlet property="dropDownMenu" destination="uXk-LH-vTS" id="6F5-n6-qB8"/>
                         <outlet property="estimatedPriceUITextField" destination="3pE-Ua-ZvA" id="lJp-XY-vR1"/>
                         <outlet property="headerLabel" destination="434-lb-zsh" id="dlh-c5-Z7c"/>
+                        <outlet property="maxPriceRangeUILabel" destination="c2x-ZS-L01" id="QKX-Td-TQX"/>
                         <outlet property="maxPriceUISlider" destination="LiV-f0-fvs" id="sAr-Zn-QIL"/>
+                        <outlet property="minPriceRangeUILabel" destination="DI8-18-KVL" id="0a7-Z9-pja"/>
                         <outlet property="minPriceUISlider" destination="atk-fi-ZX6" id="lgy-eB-5Jv"/>
                         <outlet property="productDescriptionUITextView" destination="YYu-C3-eld" id="RQM-7R-SPU"/>
                         <outlet property="productTitleUITextField" destination="bdb-qa-Uzj" id="Ije-GE-vXT"/>

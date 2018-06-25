@@ -587,6 +587,7 @@
                         <outlet property="estimatedPriceUITextField" destination="3pE-Ua-ZvA" id="lJp-XY-vR1"/>
                         <outlet property="headerLabel" destination="434-lb-zsh" id="dlh-c5-Z7c"/>
                         <outlet property="maxPriceUISlider" destination="LiV-f0-fvs" id="sAr-Zn-QIL"/>
+                        <outlet property="minPriceUISlider" destination="atk-fi-ZX6" id="lgy-eB-5Jv"/>
                         <outlet property="productDescriptionUITextView" destination="YYu-C3-eld" id="RQM-7R-SPU"/>
                         <outlet property="productTitleUITextField" destination="bdb-qa-Uzj" id="Ije-GE-vXT"/>
                     </connections>
@@ -705,6 +706,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CD0-UH-z25"/>
                     </view>
+                    <connections>
+                        <outlet property="MainPhotoEditorPhotosUIbutton" destination="TMy-9m-Ynv" id="VAD-1d-z7m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZG-tW-u6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

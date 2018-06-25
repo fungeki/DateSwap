@@ -10,6 +10,7 @@ import UIKit
 
 class EditMyProductsViewController: UIViewController {
     @IBOutlet weak var maxPriceUISlider: PriceSliderUISlider!
+    @IBOutlet weak var minPriceUISlider: PriceSliderUISlider!
     
     @IBOutlet weak var estimatedPriceUITextField: ProductEditTextfield!
     
@@ -43,9 +44,12 @@ class EditMyProductsViewController: UIViewController {
         
     }
    
-    //change colors HERE
+    //change colors HERE //and the initialize
     func initialize (){
         maxPriceUISlider.maximumTrackTintColor  = UIColor.init(cgColor: grayTwo())
+        minPriceUISlider.minimumTrackTintColor = UIColor.init(cgColor: grayTwo())
+        minPriceUISlider.maximumTrackTintColor = UIColor.init(cgColor: mediumOrange())
+        minPriceUISlider.thumbTintColor = UIColor.init(cgColor: mediumOrange())
         maxPriceUISlider.minimumTrackTintColor = UIColor.init(cgColor: mediumOrange())
         maxPriceUISlider.thumbTintColor = UIColor.init(cgColor: mediumOrange())
         headerLabel.text = pageHeader

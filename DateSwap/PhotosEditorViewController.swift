@@ -15,7 +15,13 @@ class PhotosEditorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        MainPhotoEditorPhotosUIbutton.addJeansEffect(color: lightOrange(), cornerRadius: 20, lineWidth: 2, lineDashPattern: [16,10])
+        let a = UIScreen.main.bounds
+        let b = UIScreen.main.scale
+        let c = a.size.width * b
+        let d = a.size.height * b
+        MainPhotoEditorPhotosUIbutton.frame = CGRect(x: 0, y: 0, width: MainPhotoEditorPhotosUIbutton.frame.width, height:  582.303 / 1334.0 * d)
+
+        
         // Do any additional setup after loading the view.
     }
 
@@ -23,7 +29,16 @@ class PhotosEditorViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    override func viewDidLayoutSubviews() {
+       
+        
+        MainPhotoEditorPhotosUIbutton.addJeansEffect(color: lightOrange(), cornerRadius: 20, lineWidth: 2, lineDashPattern: [16,10])
+        
+        
+        
+        MainPhotoEditorPhotosUIbutton.setTitleColor(UIColor.init(cgColor: lightOrange()), for: .normal)
+       // MainPhotoEditorPhotosUIbutton.frame.size = CGSize(width: MainPhotoEditorPhotosUIbutton.frame.width, height: 582.303 / UIScreen.main.scale)
+    }
 
     /*
     // MARK: - Navigation

@@ -10,7 +10,11 @@ import UIKit
 
 class EditMyProductsViewController: UIViewController {
 
+    @IBOutlet weak var estimatedPriceUITextField: ProductEditTextfield!
+    
+    @IBOutlet weak var productDescriptionUITextView: DescriptionUITextView!
     @IBOutlet weak var productTitleUITextField: UITextField!
+
     @IBOutlet weak var dropDownMenu: UIStackView!
     @IBOutlet weak var conditionSelectionTableView: UITableView!
     @IBOutlet weak var dropDownConditionUIButton: ConditionUIButton!
@@ -24,7 +28,11 @@ class EditMyProductsViewController: UIViewController {
         super.viewDidLoad()
         headerLabel.text = pageHeader
         conditionSelectionTableView.isHidden = true
-        
+        guard let inputThisProduct = product else {return}
+        productTitleUITextField.text = inputThisProduct.title
+        estimatedPriceUITextField.text = inputThisProduct.price
+       productDescriptionUITextView.text = inputThisProduct.description
+        dropDownConditionUIButton.setTitle(returnCondition(inputThisProduct.condition), for: .normal)
         
         // Do any additional setup after loading the view.
     }
@@ -35,7 +43,7 @@ class EditMyProductsViewController: UIViewController {
     }
     override func viewDidLayoutSubviews() {
         addANewPhotoUIButton.addJeansEffect(darkOrange())
-        
+       
         
     }
     

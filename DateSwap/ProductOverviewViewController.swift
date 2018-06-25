@@ -97,8 +97,21 @@ extension ProductOverviewViewController: UITableViewDelegate, UITableViewDataSou
 //        }
 //        detailsVC.pageHeader = "Editing Date"
 //        detailsVC.product = product
-        
+//        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//            let currentCell = tableView.cellForRow(at: indexPath) as! ProfileTableViewCell
+//            let product = currentCell.product
+//            //  currentCell.conditionUIButton.backgroundColor = UIColor.orange
+//            performSegue(withIdentifier: "masterToDetail", sender: product)
+//        }
+//        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//            guard let detailsVC =  segue.destination as? DetailsFromProfileViewController,
+//                let product = sender as? Product else {return}
+//
+//            detailsVC.product = product
+//        }
     }
+    
+   
     
     
 }

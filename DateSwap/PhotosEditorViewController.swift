@@ -11,17 +11,18 @@ import UIKit
 class PhotosEditorViewController: UIViewController {
 
     @IBOutlet weak var MainPhotoEditorPhotosUIbutton: UIButton!
+  
+    @IBOutlet weak var SubPhotoTopLeftUIbutton: UIButton!
+    @IBOutlet weak var SubPhotoTopMiddleUIbutton: UIButton!
+    @IBOutlet weak var SubPhotoTopRightUIbutton: UIButton!
+    @IBOutlet weak var SubPhotoBottomLeftUIbutton: UIButton!
+    @IBOutlet weak var SubPhotoBottomMiddleUIbutton: UIButton!
+    @IBOutlet weak var SubPhotoBottomRightUIbutton: UIButton!
     
+    @IBOutlet weak var heightForMainPhotoNSLayoutConstraint: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let a = UIScreen.main.bounds
-        let b = UIScreen.main.scale
-        let c = a.size.width * b
-        let d = a.size.height * b
-        MainPhotoEditorPhotosUIbutton.frame = CGRect(x: 0, y: 0, width: MainPhotoEditorPhotosUIbutton.frame.width, height:  582.303 / 1334.0 * d)
-
-        
+       // heightForMainPhotoNSLayoutConstraint.constant = 583.0 / 1.83
         // Do any additional setup after loading the view.
     }
 
@@ -32,7 +33,21 @@ class PhotosEditorViewController: UIViewController {
     override func viewDidLayoutSubviews() {
        
         
-        MainPhotoEditorPhotosUIbutton.addJeansEffect(color: lightOrange(), cornerRadius: 20, lineWidth: 2, lineDashPattern: [16,10])
+        MainPhotoEditorPhotosUIbutton.addJeansEffect(color: lightOrange(), cornerRadius: 20, lineWidth: 2, lineDashPattern: [9,9])
+        
+        SubPhotoTopLeftUIbutton.addJeansEffect(color: lightOrange(), cornerRadius: 20, lineWidth: 2, lineDashPattern: [9,9])
+        
+        SubPhotoTopMiddleUIbutton.addJeansEffect(color: lightOrange(), cornerRadius: 20, lineWidth: 2, lineDashPattern: [9,9])
+        
+         SubPhotoTopRightUIbutton.addJeansEffect(color: lightOrange(), cornerRadius: 20, lineWidth: 2, lineDashPattern: [9,9])
+        
+        SubPhotoBottomLeftUIbutton.addJeansEffect(color: lightOrange(), cornerRadius: 20, lineWidth: 2, lineDashPattern: [9,9])
+        
+           SubPhotoBottomMiddleUIbutton.addJeansEffect(color: lightOrange(), cornerRadius: 20, lineWidth: 2, lineDashPattern: [9,9])
+        
+            SubPhotoBottomRightUIbutton.addJeansEffect(color: lightOrange(), cornerRadius: 20, lineWidth: 2, lineDashPattern: [9,9])
+        
+        
         
         
         

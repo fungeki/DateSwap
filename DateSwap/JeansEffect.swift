@@ -67,7 +67,6 @@ extension UIView {
     }
     
     func changeRectHeight(forHeight: CGFloat){
-        let shapeLayer:CAShapeLayer = CAShapeLayer()
         let frameSize = self.frame.size
         let newHeight = forHeight/1.81
         self.frame = CGRect(x: 0, y: 0, width: frameSize.width, height: newHeight)

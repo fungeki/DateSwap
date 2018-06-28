@@ -11,6 +11,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Andale Mono.ttf">
+            <string>AndaleMono</string>
+        </array>
         <array key="HelveticaNeue.ttc">
             <string>HelveticaNeue</string>
         </array>
@@ -25,17 +28,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dV-F5-fLR">
-                                <rect key="frame" x="8" y="368" width="359" height="30"/>
+                                <rect key="frame" x="8" y="456" width="359" height="30"/>
                                 <state key="normal" title="Add / Edit Dates"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kitten McKeathe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4f-Jc-CqG">
-                                <rect key="frame" x="8" y="252" width="359" height="21"/>
+                                <rect key="frame" x="8" y="340" width="359" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RATING OF Kitten McKeathe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdn-ee-yxv">
-                                <rect key="frame" x="8" y="281" width="359" height="21"/>
+                                <rect key="frame" x="8" y="369" width="359" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -53,7 +56,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ju-gb-Y2E">
-                                <rect key="frame" x="100" y="314" width="175" height="30"/>
+                                <rect key="frame" x="100" y="402" width="175" height="30"/>
                                 <state key="normal" title="To My Products Overview"/>
                                 <connections>
                                     <segue destination="nE1-GP-IDx" kind="show" id="5g5-0Y-d2G"/>
@@ -74,20 +77,24 @@
                                 </connections>
                             </slider>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ugly_cats_06.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="y0R-hc-9Ka">
-                                <rect key="frame" x="117.5" y="88" width="140" height="140"/>
+                                <rect key="frame" x="118" y="176" width="140" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="5Py-NG-Quu"/>
                                     <constraint firstAttribute="width" constant="140" id="ZMx-Xt-xVl"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGP-6H-Vd0">
+                                <rect key="frame" x="155" y="107" width="34" height="36"/>
+                                <state key="normal" image="ic_profile_color"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Xuv-ZJ-ZKM" firstAttribute="trailing" secondItem="r4f-Jc-CqG" secondAttribute="trailing" constant="8" id="1IG-Ra-QrH"/>
                             <constraint firstItem="Xuv-ZJ-ZKM" firstAttribute="trailing" secondItem="vdn-ee-yxv" secondAttribute="trailing" constant="8" id="2NT-O4-JFI"/>
-                            <constraint firstItem="y0R-hc-9Ka" firstAttribute="top" secondItem="Xuv-ZJ-ZKM" secondAttribute="top" constant="24" id="3Q2-9f-tdc"/>
                             <constraint firstItem="0dV-F5-fLR" firstAttribute="top" secondItem="2ju-gb-Y2E" secondAttribute="bottom" constant="24" id="3dn-NT-3AN"/>
                             <constraint firstItem="Xuv-ZJ-ZKM" firstAttribute="trailing" secondItem="xSa-e9-hHR" secondAttribute="trailing" constant="12" id="5GN-t8-a8S"/>
+                            <constraint firstItem="kGP-6H-Vd0" firstAttribute="top" secondItem="Xuv-ZJ-ZKM" secondAttribute="top" constant="12" id="8zG-Kx-NuH"/>
                             <constraint firstItem="0dV-F5-fLR" firstAttribute="leading" secondItem="Xuv-ZJ-ZKM" secondAttribute="leading" constant="8" id="A4t-cl-PE7"/>
                             <constraint firstItem="J71-Ha-wLW" firstAttribute="leading" secondItem="Xuv-ZJ-ZKM" secondAttribute="leading" constant="12" id="AKN-1t-cQZ"/>
                             <constraint firstItem="2ju-gb-Y2E" firstAttribute="centerX" secondItem="y0R-hc-9Ka" secondAttribute="centerX" id="Cir-aH-3VB"/>
@@ -98,6 +105,8 @@
                             <constraint firstItem="Xuv-ZJ-ZKM" firstAttribute="trailing" secondItem="P8r-dp-jd6" secondAttribute="trailing" constant="12" id="QCf-LR-JNa"/>
                             <constraint firstItem="vdn-ee-yxv" firstAttribute="top" secondItem="r4f-Jc-CqG" secondAttribute="bottom" constant="8" id="QqX-d6-stK"/>
                             <constraint firstItem="xSa-e9-hHR" firstAttribute="top" secondItem="J71-Ha-wLW" secondAttribute="bottom" constant="8" id="SKp-uc-2t1"/>
+                            <constraint firstItem="kGP-6H-Vd0" firstAttribute="centerX" secondItem="Xuv-ZJ-ZKM" secondAttribute="centerX" id="bYG-kj-YN0"/>
+                            <constraint firstItem="y0R-hc-9Ka" firstAttribute="top" secondItem="kGP-6H-Vd0" secondAttribute="bottom" constant="31" id="dJY-xD-BR8"/>
                             <constraint firstItem="xSa-e9-hHR" firstAttribute="top" secondItem="P8r-dp-jd6" secondAttribute="bottom" constant="8" id="huF-xa-uRt"/>
                             <constraint firstItem="vdn-ee-yxv" firstAttribute="leading" secondItem="Xuv-ZJ-ZKM" secondAttribute="leading" constant="8" id="pCH-iZ-Pkh"/>
                             <constraint firstItem="xSa-e9-hHR" firstAttribute="leading" secondItem="Xuv-ZJ-ZKM" secondAttribute="leading" constant="12" id="wse-mm-Osc"/>
@@ -372,7 +381,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="dbM-GS-a02"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="26"/>
                                 <state key="normal" title="+ Add / Edit Photos">
                                     <color key="titleColor" red="0.94136577079999995" green="0.62133409939999995" blue="0.1478117447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -711,46 +720,60 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMy-9m-Ynv">
-                                <rect key="frame" x="12" y="114" width="351" height="264"/>
-                                <color key="backgroundColor" red="0.94509803920000002" green="0.35294117650000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="12" y="114" width="351" height="320"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="264" id="KuH-D3-Ior"/>
+                                    <constraint firstAttribute="height" constant="320" id="KuH-D3-Ior"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nap-ng-p8c">
-                                <rect key="frame" x="12" y="398" width="98" height="79"/>
-                                <color key="backgroundColor" red="0.94509803920000002" green="0.35294117650000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="98" id="aFy-bl-jb7"/>
-                                    <constraint firstAttribute="height" constant="79" id="zEQ-lh-ss7"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.99215686274509807" green="0.72156862745098038" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbs-Z4-qmG">
-                                <rect key="frame" x="12" y="502" width="98" height="79"/>
-                                <color key="backgroundColor" red="0.94509803920000002" green="0.35294117650000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="12" y="564" width="98" height="85"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.99215686274509807" green="0.72156862745098038" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DX-wV-rhI">
-                                <rect key="frame" x="138.5" y="398" width="98" height="79"/>
-                                <color key="backgroundColor" red="0.94509803920000002" green="0.35294117650000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="138.5" y="454" width="98" height="85"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.99215686274509807" green="0.72156862745098038" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13F-Y0-X1L">
-                                <rect key="frame" x="138.5" y="502" width="98" height="79"/>
-                                <color key="backgroundColor" red="0.94509803920000002" green="0.35294117650000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="138.5" y="564" width="98" height="85"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.99215686274509807" green="0.72156862745098038" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkS-zW-crQ">
-                                <rect key="frame" x="265" y="398" width="98" height="79"/>
-                                <color key="backgroundColor" red="0.94509803920000002" green="0.35294117650000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="265" y="454" width="98" height="85"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.99215686274509807" green="0.72156862745098038" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGN-nE-E2F">
-                                <rect key="frame" x="265" y="502" width="98" height="79"/>
-                                <color key="backgroundColor" red="0.94509803920000002" green="0.35294117650000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="265" y="564" width="98" height="85"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.99215686274509807" green="0.72156862745098038" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nap-ng-p8c">
+                                <rect key="frame" x="12" y="454" width="98" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="aFy-bl-jb7"/>
+                                    <constraint firstAttribute="height" constant="85" id="zEQ-lh-ss7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.99215686274509807" green="0.72156862745098038" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -792,6 +815,12 @@
                     </view>
                     <connections>
                         <outlet property="MainPhotoEditorPhotosUIbutton" destination="TMy-9m-Ynv" id="VAD-1d-z7m"/>
+                        <outlet property="SubPhotoBottomLeftUIbutton" destination="xbs-Z4-qmG" id="00e-r6-oKf"/>
+                        <outlet property="SubPhotoBottomMiddleUIbutton" destination="13F-Y0-X1L" id="ne1-Dj-3Ge"/>
+                        <outlet property="SubPhotoBottomRightUIbutton" destination="xGN-nE-E2F" id="aR1-1U-ura"/>
+                        <outlet property="SubPhotoTopLeftUIbutton" destination="nap-ng-p8c" id="Jjl-Mu-9V2"/>
+                        <outlet property="SubPhotoTopMiddleUIbutton" destination="2DX-wV-rhI" id="qjw-fA-XW2"/>
+                        <outlet property="SubPhotoTopRightUIbutton" destination="jkS-zW-crQ" id="zVD-XX-Us5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZG-tW-u6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1166,6 +1195,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_profile_color" width="66" height="69"/>
         <image name="icons8-gift" width="64" height="64"/>
         <image name="ugly_cats_06.jpg" width="550" height="365"/>
     </resources>

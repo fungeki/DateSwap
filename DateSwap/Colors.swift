@@ -19,7 +19,7 @@ func darkOrange()-> CGColor{
 }
 
 func lightOrange()-> CGColor{
-    let color = UIColor(red: 253.0 / 255.0, green: 156.0 / 255.0, blue: 34.0 / 255.0, alpha: 1.0).cgColor
+    let color = UIColor(red: 253.0 / 255.0, green: 184.0 / 255.0, blue: 39.0 / 255.0, alpha: 1.0).cgColor
     return color
 }
 

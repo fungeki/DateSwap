@@ -44,7 +44,7 @@ class EditMyProductsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     override func viewDidLayoutSubviews() {
-        addANewPhotoUIButton.addJeansEffect(darkOrange())
+        addANewPhotoUIButton.addJeansEffect(color: lightOrange(), cornerRadius: 20, lineWidth: 2, lineDashPattern: [9,9])
        
         
     }

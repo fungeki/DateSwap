@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Andale Mono.ttf">
+        <array key="AndaleMono.ttf">
             <string>AndaleMono</string>
         </array>
         <array key="HelveticaNeue.ttc">
@@ -381,7 +381,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="dbM-GS-a02"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="17"/>
                                 <state key="normal" title="+ Add / Edit Photos">
                                     <color key="titleColor" red="0.94136577079999995" green="0.62133409939999995" blue="0.1478117447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -619,8 +619,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DI8-18-KVL">
-                                <rect key="frame" x="24" y="847.5" width="42" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DI8-18-KVL">
+                                <rect key="frame" x="24" y="847.5" width="28" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -651,6 +651,7 @@
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="uXk-LH-vTS" secondAttribute="trailing" constant="24" id="Y9t-90-4Xh"/>
                             <constraint firstItem="YYu-C3-eld" firstAttribute="top" secondItem="bdb-qa-Uzj" secondAttribute="bottom" constant="8" id="ea9-Qa-3gJ"/>
                             <constraint firstItem="434-lb-zsh" firstAttribute="centerX" secondItem="N9s-eb-Yau" secondAttribute="centerX" id="gLo-e7-2Hl"/>
+                            <constraint firstItem="atk-fi-ZX6" firstAttribute="top" secondItem="DI8-18-KVL" secondAttribute="bottom" id="hjb-JR-qFa"/>
                             <constraint firstItem="YYu-C3-eld" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="hwF-E0-CQc"/>
                             <constraint firstItem="bdb-qa-Uzj" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="n6G-sM-8vd"/>
                             <constraint firstItem="bdb-qa-Uzj" firstAttribute="top" secondItem="uXk-LH-vTS" secondAttribute="bottom" constant="8" id="oPM-k6-4wd"/>
@@ -665,6 +666,7 @@
                             <constraint firstItem="gMH-Ls-QgS" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="vs1-I5-IFF"/>
                             <constraint firstItem="434-lb-zsh" firstAttribute="top" secondItem="N9s-eb-Yau" secondAttribute="top" constant="4" id="vtY-Qg-ZvB"/>
                             <constraint firstItem="uXk-LH-vTS" firstAttribute="top" secondItem="gMH-Ls-QgS" secondAttribute="bottom" constant="12" id="z1u-IN-kHz"/>
+                            <constraint firstItem="DI8-18-KVL" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="zWw-Hy-brS"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="ZFZ-yh-ExD" secondAttribute="trailing" constant="24" id="zyb-Xk-4b9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N9s-eb-Yau"/>

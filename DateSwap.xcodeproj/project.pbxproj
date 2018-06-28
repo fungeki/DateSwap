@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		772EBC7A20E4300300BA762B /* Andale Mono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 772EBC7820E42E6C00BA762B /* Andale Mono.ttf */; };
 		773871FF20DEBFF600493C69 /* PhotosEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773871FE20DEBFF600493C69 /* PhotosEditorViewController.swift */; };
+		8C4321ED20E4D3740027FDA1 /* AndaleMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C4321EB20E4D3730027FDA1 /* AndaleMono.ttf */; };
 		8C7405F420D24CE700FF8E9C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7405F320D24CE700FF8E9C /* Product.swift */; };
 		8C89A27E20DBD29200F900F5 /* EditMyProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C89A27D20DBD29200F900F5 /* EditMyProductsViewController.swift */; };
 		8C9A100E20CA99140077B544 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A100D20CA99140077B544 /* AppDelegate.swift */; };
@@ -42,6 +42,7 @@
 		5D92167A3509D274EBCE1F78 /* Pods-DateSwap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateSwap.release.xcconfig"; path = "Pods/Target Support Files/Pods-DateSwap/Pods-DateSwap.release.xcconfig"; sourceTree = "<group>"; };
 		772EBC7820E42E6C00BA762B /* Andale Mono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Andale Mono.ttf"; sourceTree = "<group>"; };
 		773871FE20DEBFF600493C69 /* PhotosEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosEditorViewController.swift; sourceTree = "<group>"; };
+		8C4321EB20E4D3730027FDA1 /* AndaleMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AndaleMono.ttf; sourceTree = "<group>"; };
 		8C7405F320D24CE700FF8E9C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		8C89A27D20DBD29200F900F5 /* EditMyProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMyProductsViewController.swift; sourceTree = "<group>"; };
 		8C9A100A20CA99140077B544 /* DateSwap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateSwap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,20 +83,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		772EBC7720E42E6300BA762B /* Font */ = {
-			isa = PBXGroup;
-			children = (
-				772EBC7820E42E6C00BA762B /* Andale Mono.ttf */,
-			);
-			path = Font;
-			sourceTree = "<group>";
-		};
 		8B0D7C44554021F99EB60C64 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				3680421D48587E2FF1190ECE /* Pods_DateSwap.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C4321E820E4D3410027FDA1 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				772EBC7820E42E6C00BA762B /* Andale Mono.ttf */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		8C4321E920E4D3730027FDA1 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				8C4321EB20E4D3730027FDA1 /* AndaleMono.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		8C9A100120CA99140077B544 = {
@@ -105,6 +114,7 @@
 				8C9A100B20CA99140077B544 /* Products */,
 				A80EBDB51CA566EF2B44C45D /* Pods */,
 				8B0D7C44554021F99EB60C64 /* Frameworks */,
+				8C4321E820E4D3410027FDA1 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +129,7 @@
 		8C9A100C20CA99140077B544 /* DateSwap */ = {
 			isa = PBXGroup;
 			children = (
+				8C4321E920E4D3730027FDA1 /* Font */,
 				8C9A100D20CA99140077B544 /* AppDelegate.swift */,
 				8C9A100F20CA99140077B544 /* ViewController.swift */,
 				8CD4202B20D2827A006101A1 /* ProfileTableViewCell.swift */,
@@ -220,9 +231,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C9A101B20CA99140077B544 /* LaunchScreen.storyboard in Resources */,
-				772EBC7A20E4300300BA762B /* Andale Mono.ttf in Resources */,
 				8C9A101820CA99140077B544 /* Assets.xcassets in Resources */,
 				8C9A101320CA99140077B544 /* Main.storyboard in Resources */,
+				8C4321ED20E4D3740027FDA1 /* AndaleMono.ttf in Resources */,
 				8CE62D0B20DB84C000AA167D /* ugly_cats_06.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

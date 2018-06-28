@@ -11,7 +11,12 @@ import UIKit
 class EditMyProductsViewController: UIViewController {
     @IBOutlet weak var maxPriceUISlider: PriceSliderUISlider!
     @IBOutlet weak var minPriceUISlider: PriceSliderUISlider!
-    
+    var price: Int = 0
+    @IBAction func toPrice(_ sender: ProductEditTextfield) {
+        guard let newPrice = sender.text else {return}
+        price = (newPrice as NSString).integerValue
+        sender.text = "\(sender.text)$"
+    }
     
     @IBOutlet weak var maxPriceRangeUILabel: UILabel!
     @IBOutlet weak var minPriceRangeUILabel: UILabel!
@@ -30,7 +35,6 @@ class EditMyProductsViewController: UIViewController {
     var conditionListing = returnConditionArray()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         initialize()
         
         // Do any additional setup after loading the view.
@@ -66,6 +70,7 @@ class EditMyProductsViewController: UIViewController {
         dropDownConditionUIButton.setTitle(returnCondition(inputThisProduct.condition), for: .normal)
         addANewPhotoUIButton.setTitle("", for: .normal)
         addANewPhotoUIButton.sd_setImage(with: URL(string: inputThisProduct.image), for: UIControlState.normal)
+        price = (inputThisProduct.price as NSString).integerValue
         productDescriptionUITextView.textColor = UIColor.brown
     }
     
@@ -94,7 +99,20 @@ class EditMyProductsViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func maxPriceChangeAction(_ sender: PriceSliderUISlider) {
+    
+        
+        let newPrice = Double(price)
+        let newValue = Double(sender.value)
+        let maxDisplay = Int(newPrice + (newValue * newPrice))
+        maxPriceRangeUILabel.text = "max \(maxDisplay)$"
+        
+    }
+    
+    
 }
+
 extension EditMyProductsViewController: UITableViewDelegate, UITableViewDataSource, UITextViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return conditionListing.count

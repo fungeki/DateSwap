@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		773871FF20DEBFF600493C69 /* PhotosEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773871FE20DEBFF600493C69 /* PhotosEditorViewController.swift */; };
-		77E09E1020E66DCD00C3CEDE /* theRobertko.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 77E09E0F20E66DCD00C3CEDE /* theRobertko.jpg */; };
+		77E09E1220E67A5400C3CEDE /* the_rob.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 77E09E1120E67A5400C3CEDE /* the_rob.jpg */; };
 		8C4321ED20E4D3740027FDA1 /* AndaleMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C4321EB20E4D3730027FDA1 /* AndaleMono.ttf */; };
 		8C7405F420D24CE700FF8E9C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7405F320D24CE700FF8E9C /* Product.swift */; };
 		8C89A27E20DBD29200F900F5 /* EditMyProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C89A27D20DBD29200F900F5 /* EditMyProductsViewController.swift */; };
@@ -43,7 +43,7 @@
 		5D92167A3509D274EBCE1F78 /* Pods-DateSwap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateSwap.release.xcconfig"; path = "Pods/Target Support Files/Pods-DateSwap/Pods-DateSwap.release.xcconfig"; sourceTree = "<group>"; };
 		772EBC7820E42E6C00BA762B /* Andale Mono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Andale Mono.ttf"; sourceTree = "<group>"; };
 		773871FE20DEBFF600493C69 /* PhotosEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosEditorViewController.swift; sourceTree = "<group>"; };
-		77E09E0F20E66DCD00C3CEDE /* theRobertko.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = theRobertko.jpg; path = "../../../Desktop/My project/Dateswape/images/theRobertko.jpg"; sourceTree = "<group>"; };
+		77E09E1120E67A5400C3CEDE /* the_rob.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = the_rob.jpg; sourceTree = "<group>"; };
 		8C4321EB20E4D3730027FDA1 /* AndaleMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AndaleMono.ttf; sourceTree = "<group>"; };
 		8C7405F320D24CE700FF8E9C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		8C89A27D20DBD29200F900F5 /* EditMyProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMyProductsViewController.swift; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 				8CEF6A3020D7A5C6007C39D5 /* JeansEffect.swift */,
 				8CEF6A3220D7A9DE007C39D5 /* ConditionUIButton.swift */,
 				8CEF6A3420D933F6007C39D5 /* ProductOverviewViewController.swift */,
-				77E09E0F20E66DCD00C3CEDE /* theRobertko.jpg */,
+				77E09E1120E67A5400C3CEDE /* the_rob.jpg */,
 				8CE62D0A20DB84C000AA167D /* ugly_cats_06.jpg */,
 				8CE62D0620D93D4900AA167D /* ProductOverviewTableViewCell.swift */,
 				8CE62D0820DB830200AA167D /* ProfileIntroViewController.swift */,
@@ -234,11 +234,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C9A101B20CA99140077B544 /* LaunchScreen.storyboard in Resources */,
-				77E09E1020E66DCD00C3CEDE /* theRobertko.jpg in Resources */,
 				8C9A101820CA99140077B544 /* Assets.xcassets in Resources */,
 				8C9A101320CA99140077B544 /* Main.storyboard in Resources */,
 				8C4321ED20E4D3740027FDA1 /* AndaleMono.ttf in Resources */,
 				8CE62D0B20DB84C000AA167D /* ugly_cats_06.jpg in Resources */,
+				77E09E1220E67A5400C3CEDE /* the_rob.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,16 +11,33 @@ import UIKit
 class SwipeToLikeUIViewController: UIViewController {
     @IBOutlet weak var factionIndicatorUIImage: UIImageView!
     @IBOutlet weak var productCardUIView: ProductCardUIView!
-
- 
+    var displayProduct: Product = p1
+    @IBOutlet weak var conditionMainImageUIButton: ConditionUIButton!
+    
+    @IBOutlet weak var mainTitleMainImageUIButton: UILabel!
     
     @IBOutlet weak var mainImageUIImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialize()
+        
+        
+        
+        
 
         // Do any additional setup after loading the view.
     }
 
+    func initialize(){
+        mainImageUIImageView.sd_setImage(with: URL(string: displayProduct.image))
+        
+        conditionMainImageUIButton.isEnabled = false
+        
+        mainTitleMainImageUIButton.text = displayProduct.title
+        conditionMainImageUIButton.setTitle(returnCondition(displayProduct.condition), for: .disabled)
+        conditionMainImageUIButton.bg = UIColor(cgColor: mediumOrange())
+        conditionMainImageUIButton.borderColor = UIColor(cgColor: lightOrange())
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -28,6 +45,10 @@ class SwipeToLikeUIViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         mainImageUIImageView.layer.cornerRadius = productCardUIView.cornerRadius
     }
+    
+    
+    
+    
     @IBAction func panCard(_ sender: UIPanGestureRecognizer) {
         let card = sender.view!
         let point = sender.translation(in: view)
@@ -75,10 +96,13 @@ class SwipeToLikeUIViewController: UIViewController {
                 card.center.x = self.view.center.x
                 card.center.y = self.view.center.y
                 sender.isEnabled = false
+                self.displayProduct = p2
+                self.initialize()
                 UIView.animate(withDuration: 0.2, animations: {
                     card.alpha = 1
                     sender.isEnabled = true
-                })
+                }
+                )
             })
 
             

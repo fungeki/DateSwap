@@ -238,6 +238,10 @@
                                 </constraints>
                                 <state key="normal" image="ic_chatMatch_grey"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwY-3o-NAk">
+                                <rect key="frame" x="165" y="576" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -249,6 +253,7 @@
                             <constraint firstItem="JbA-0C-mjw" firstAttribute="top" secondItem="v6s-Oo-Iok" secondAttribute="top" constant="12" id="dvb-MI-gj4"/>
                             <constraint firstItem="tiu-vA-MmV" firstAttribute="trailing" secondItem="ECs-TD-jWm" secondAttribute="trailing" constant="12" id="e3b-jf-bTE"/>
                             <constraint firstItem="JbA-0C-mjw" firstAttribute="width" secondItem="v6s-Oo-Iok" secondAttribute="width" multiplier="0.1" id="i2p-DM-wEt"/>
+                            <constraint firstItem="VwY-3o-NAk" firstAttribute="width" secondItem="v6s-Oo-Iok" secondAttribute="width" id="oJ8-D0-cDr"/>
                             <constraint firstItem="JbA-0C-mjw" firstAttribute="leading" secondItem="tiu-vA-MmV" secondAttribute="leading" constant="12" id="tjO-3a-xnG"/>
                             <constraint firstItem="ECs-TD-jWm" firstAttribute="width" secondItem="v6s-Oo-Iok" secondAttribute="width" multiplier="0.1" id="uCs-5K-t84"/>
                             <constraint firstItem="aYk-f7-4AM" firstAttribute="top" secondItem="tiu-vA-MmV" secondAttribute="top" constant="70" id="vbS-Xb-TTw"/>

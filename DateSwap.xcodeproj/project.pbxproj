@@ -10,6 +10,7 @@
 		773871FF20DEBFF600493C69 /* PhotosEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773871FE20DEBFF600493C69 /* PhotosEditorViewController.swift */; };
 		77E09E1220E67A5400C3CEDE /* the_rob.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 77E09E1120E67A5400C3CEDE /* the_rob.jpg */; };
 		8C4321ED20E4D3740027FDA1 /* AndaleMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C4321EB20E4D3730027FDA1 /* AndaleMono.ttf */; };
+		8C43223420E67AD60027FDA1 /* RelationUISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43223320E67AD60027FDA1 /* RelationUISlider.swift */; };
 		8C7405F420D24CE700FF8E9C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7405F320D24CE700FF8E9C /* Product.swift */; };
 		8C89A27E20DBD29200F900F5 /* EditMyProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C89A27D20DBD29200F900F5 /* EditMyProductsViewController.swift */; };
 		8C9A100E20CA99140077B544 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A100D20CA99140077B544 /* AppDelegate.swift */; };
@@ -45,6 +46,7 @@
 		773871FE20DEBFF600493C69 /* PhotosEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosEditorViewController.swift; sourceTree = "<group>"; };
 		77E09E1120E67A5400C3CEDE /* the_rob.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = the_rob.jpg; sourceTree = "<group>"; };
 		8C4321EB20E4D3730027FDA1 /* AndaleMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AndaleMono.ttf; sourceTree = "<group>"; };
+		8C43223320E67AD60027FDA1 /* RelationUISlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationUISlider.swift; sourceTree = "<group>"; };
 		8C7405F320D24CE700FF8E9C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		8C89A27D20DBD29200F900F5 /* EditMyProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMyProductsViewController.swift; sourceTree = "<group>"; };
 		8C9A100A20CA99140077B544 /* DateSwap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateSwap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +161,7 @@
 				8CBA6A6E20DEC2A2008CD18B /* PriceSliderUISlider.swift */,
 				8CBA6A7220E4C383008CD18B /* ProductCardUIView.swift */,
 				8CBA6A7020E0E75C008CD18B /* DescriptionUITextView.swift */,
+				8C43223320E67AD60027FDA1 /* RelationUISlider.swift */,
 			);
 			path = DateSwap;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				773871FF20DEBFF600493C69 /* PhotosEditorViewController.swift in Sources */,
 				8C9A100E20CA99140077B544 /* AppDelegate.swift in Sources */,
 				8CEF6A3120D7A5C6007C39D5 /* JeansEffect.swift in Sources */,
+				8C43223420E67AD60027FDA1 /* RelationUISlider.swift in Sources */,
 				8CBA6A7520E4C7C6008CD18B /* SwipeToLikeUIViewController.swift in Sources */,
 				8C9A101620CA99140077B544 /* DateSwap.xcdatamodeld in Sources */,
 				8CBA6A6F20DEC2A2008CD18B /* PriceSliderUISlider.swift in Sources */,

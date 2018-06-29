@@ -35,11 +35,11 @@ class SwipeToLikeUIViewController: UIViewController {
         let percOff = abs(xFromCenter) / view.center.x
         
         if xFromCenter < 0.0{
-            factionIndicatorUIImage.image = #imageLiteral(resourceName: "left")
+            factionIndicatorUIImage.image = #imageLiteral(resourceName: "ic_no_like_date")
             factionIndicatorUIImage.tintColor = UIColor.red
         }
         else{
-            factionIndicatorUIImage.image = #imageLiteral(resourceName: "right")
+            factionIndicatorUIImage.image = #imageLiteral(resourceName: "ic_like_date")
             factionIndicatorUIImage.tintColor = UIColor.green
         }
         card.center = CGPoint(x: view.center.x + point.x, y: view.center.y + point.y)

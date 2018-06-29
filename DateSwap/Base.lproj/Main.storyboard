@@ -176,15 +176,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aYk-f7-4AM" customClass="ProductCardUIView" customModule="DateSwap" customModuleProvider="target">
-                                <rect key="frame" x="48" y="160" width="279" height="367"/>
+                                <rect key="frame" x="12" y="90" width="351" height="437"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ugly_cats_06.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uGx-yF-Ln9">
-                                        <rect key="frame" x="0.0" y="0.0" width="279" height="270"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="351" height="270"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="270" id="OLf-zg-WXG"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qWh-y1-8Ik">
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qWh-y1-8Ik">
                                         <rect key="frame" x="19" y="139" width="240" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -199,9 +199,6 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                         <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -220,30 +217,27 @@
                                     <outletCollection property="gestureRecognizers" destination="Rmy-Yg-lTL" appends="YES" id="RgM-73-1EF"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFv-lc-efR">
-                                <rect key="frame" x="0.0" y="609" width="375" height="122"/>
-                                <subviews>
-                                    <button opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JAF-Xg-hsE">
-                                        <rect key="frame" x="165" y="8" width="44" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="up"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JbA-0C-mjw">
+                                <rect key="frame" x="12" y="12" width="37.5" height="40.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="122" id="ghn-fW-rdb"/>
+                                    <constraint firstAttribute="width" secondItem="JbA-0C-mjw" secondAttribute="height" multiplier="66:71" id="Ovy-1t-dOM"/>
                                 </constraints>
-                            </view>
+                                <state key="normal" image="ic_profile_grey"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xh-Jz-3fh">
+                                <rect key="frame" x="164" y="17" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.94136577079999995" green="0.62133409939999995" blue="0.1478117447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="tiu-vA-MmV" firstAttribute="trailing" secondItem="aYk-f7-4AM" secondAttribute="trailing" constant="48" id="UVO-wD-kMK"/>
-                            <constraint firstItem="aYk-f7-4AM" firstAttribute="leading" secondItem="tiu-vA-MmV" secondAttribute="leading" constant="48" id="Z02-q7-h4K"/>
-                            <constraint firstItem="RFv-lc-efR" firstAttribute="leading" secondItem="tiu-vA-MmV" secondAttribute="leading" id="fwN-zE-Kjg"/>
-                            <constraint firstItem="RFv-lc-efR" firstAttribute="trailing" secondItem="tiu-vA-MmV" secondAttribute="trailing" id="gYC-Hh-hFo"/>
-                            <constraint firstItem="aYk-f7-4AM" firstAttribute="top" secondItem="tiu-vA-MmV" secondAttribute="top" constant="140" id="vbS-Xb-TTw"/>
+                            <constraint firstItem="tiu-vA-MmV" firstAttribute="trailing" secondItem="aYk-f7-4AM" secondAttribute="trailing" constant="12" id="UVO-wD-kMK"/>
+                            <constraint firstItem="aYk-f7-4AM" firstAttribute="leading" secondItem="tiu-vA-MmV" secondAttribute="leading" constant="12" id="Z02-q7-h4K"/>
+                            <constraint firstItem="JbA-0C-mjw" firstAttribute="top" secondItem="v6s-Oo-Iok" secondAttribute="top" constant="12" id="dvb-MI-gj4"/>
+                            <constraint firstItem="JbA-0C-mjw" firstAttribute="width" secondItem="v6s-Oo-Iok" secondAttribute="width" multiplier="0.1" id="i2p-DM-wEt"/>
+                            <constraint firstItem="JbA-0C-mjw" firstAttribute="leading" secondItem="tiu-vA-MmV" secondAttribute="leading" constant="12" id="tjO-3a-xnG"/>
+                            <constraint firstItem="aYk-f7-4AM" firstAttribute="top" secondItem="tiu-vA-MmV" secondAttribute="top" constant="70" id="vbS-Xb-TTw"/>
                             <constraint firstItem="tiu-vA-MmV" firstAttribute="bottom" secondItem="aYk-f7-4AM" secondAttribute="bottom" constant="140" id="xHr-Ya-dc4"/>
-                            <constraint firstAttribute="bottom" secondItem="RFv-lc-efR" secondAttribute="bottom" constant="-64" id="xbr-Zl-CjN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tiu-vA-MmV"/>
                     </view>
@@ -1283,10 +1277,10 @@
     <resources>
         <image name="ic_logo_grey" width="68" height="62"/>
         <image name="ic_profile_color" width="66" height="69"/>
+        <image name="ic_profile_grey" width="61" height="64"/>
         <image name="ic_settings_grey" width="61" height="59"/>
         <image name="icons8-gift" width="64" height="64"/>
         <image name="ugly_cats_06.jpg" width="550" height="365"/>
-        <image name="up" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="piS-Lz-SQv"/>

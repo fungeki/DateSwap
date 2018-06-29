@@ -24,7 +24,7 @@ class EditMyProductsViewController: UIViewController {
     
     @IBOutlet weak var productDescriptionUITextView: DescriptionUITextView!
     @IBOutlet weak var productTitleUITextField: UITextField!
-
+    
     @IBOutlet weak var dropDownMenu: UIStackView!
     @IBOutlet weak var conditionSelectionTableView: UITableView!
     @IBOutlet weak var dropDownConditionUIButton: ConditionUIButton!
@@ -40,7 +40,7 @@ class EditMyProductsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func maxSliderChangeAction(_ sender: PriceSliderUISlider) {
-
+        
         
     }
     override func didReceiveMemoryWarning() {
@@ -49,10 +49,10 @@ class EditMyProductsViewController: UIViewController {
     }
     override func viewDidLayoutSubviews() {
         addANewPhotoUIButton.addJeansEffect(color: lightOrange(), cornerRadius: 20, lineWidth: 2, lineDashPattern: [9,9])
-       
+        
         
     }
-   
+    
     //change colors HERE //and the initialize
     func initialize (){
         maxPriceUISlider.maximumTrackTintColor  = UIColor.init(cgColor: grayTwo())
@@ -76,18 +76,18 @@ class EditMyProductsViewController: UIViewController {
     
     
     @IBAction func onclickDropdownConditionUIButton(_ sender: ConditionUIButton) {
-            dropdownAnimation(toggle: conditionSelectionTableView.isHidden)
+        dropdownAnimation(toggle: conditionSelectionTableView.isHidden)
     }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
     func dropdownAnimation(toggle: Bool){
         if toggle{
             UIView.animate(withDuration: 0.3) {
@@ -101,15 +101,34 @@ class EditMyProductsViewController: UIViewController {
     }
     
     @IBAction func maxPriceChangeAction(_ sender: PriceSliderUISlider) {
-    
         
         let newPrice = Double(price)
         let newValue = Double(sender.value)
+        if newValue < 0.0 {
+            maxPriceRangeUILabel.text = "max \(price)$"
+            return
+        } else if newValue > 1.0 {
+            maxPriceRangeUILabel.text = "Unlimited"
+return
+        }
         let maxDisplay = Int(newPrice + (newValue * newPrice))
         maxPriceRangeUILabel.text = "max \(maxDisplay)$"
         
     }
     
+    @IBAction func minPriceChangeAction(_ sender: PriceSliderUISlider) {
+        let newPrice = Double(price)
+        let newValue = Double(sender.value)
+        if newValue < 0.0{
+            minPriceRangeUILabel.text = "any price"
+            return
+        } else if newValue > 1.0 {
+            minPriceRangeUILabel.text = "min \(price)$"
+            return
+        }
+        let maxDisplay = Int(newPrice * newValue)
+        minPriceRangeUILabel.text = "min \(maxDisplay)$"
+    }
     
 }
 
@@ -138,6 +157,7 @@ extension EditMyProductsViewController: UITableViewDelegate, UITableViewDataSour
         }
         textView.becomeFirstResponder() //Optional
     }
+    
     
     func textViewDidEndEditing(_ textView: UITextView)
     {

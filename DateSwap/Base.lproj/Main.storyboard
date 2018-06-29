@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SMG-pH-Jaq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VcW-Hm-Jf1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -134,8 +134,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aYk-f7-4AM" customClass="ProductCardUIView" customModule="DateSwap" customModuleProvider="target">
-                                <rect key="frame" x="48" y="140" width="279" height="407"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aYk-f7-4AM" customClass="ProductCardUIView" customModule="DateSwap" customModuleProvider="target">
+                                <rect key="frame" x="48" y="160" width="279" height="367"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ugly_cats_06.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uGx-yF-Ln9">
                                         <rect key="frame" x="0.0" y="0.0" width="279" height="270"/>
@@ -143,8 +143,13 @@
                                             <constraint firstAttribute="height" constant="270" id="OLf-zg-WXG"/>
                                         </constraints>
                                     </imageView>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qWh-y1-8Ik">
+                                        <rect key="frame" x="19" y="139" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="uGx-yF-Ln9" firstAttribute="leading" secondItem="aYk-f7-4AM" secondAttribute="leading" id="CSr-5p-1cZ"/>
                                     <constraint firstItem="uGx-yF-Ln9" firstAttribute="top" secondItem="aYk-f7-4AM" secondAttribute="top" id="KLt-Kj-fz4"/>
@@ -161,34 +166,60 @@
                                         <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="0.69999999999999996"/>
+                                        <real key="value" value="0.80000000000000004"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOffset">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Rmy-Yg-lTL" appends="YES" id="RgM-73-1EF"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFv-lc-efR">
+                                <rect key="frame" x="0.0" y="609" width="375" height="122"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JAF-Xg-hsE">
+                                        <rect key="frame" x="165" y="8" width="44" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="up"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="122" id="ghn-fW-rdb"/>
+                                </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.94136577079999995" green="0.62133409939999995" blue="0.1478117447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tiu-vA-MmV" firstAttribute="trailing" secondItem="aYk-f7-4AM" secondAttribute="trailing" constant="48" id="UVO-wD-kMK"/>
                             <constraint firstItem="aYk-f7-4AM" firstAttribute="leading" secondItem="tiu-vA-MmV" secondAttribute="leading" constant="48" id="Z02-q7-h4K"/>
-                            <constraint firstItem="aYk-f7-4AM" firstAttribute="top" secondItem="tiu-vA-MmV" secondAttribute="top" constant="120" id="vbS-Xb-TTw"/>
-                            <constraint firstItem="tiu-vA-MmV" firstAttribute="bottom" secondItem="aYk-f7-4AM" secondAttribute="bottom" constant="120" id="xHr-Ya-dc4"/>
+                            <constraint firstItem="RFv-lc-efR" firstAttribute="leading" secondItem="tiu-vA-MmV" secondAttribute="leading" id="fwN-zE-Kjg"/>
+                            <constraint firstItem="RFv-lc-efR" firstAttribute="trailing" secondItem="tiu-vA-MmV" secondAttribute="trailing" id="gYC-Hh-hFo"/>
+                            <constraint firstItem="aYk-f7-4AM" firstAttribute="top" secondItem="tiu-vA-MmV" secondAttribute="top" constant="140" id="vbS-Xb-TTw"/>
+                            <constraint firstItem="tiu-vA-MmV" firstAttribute="bottom" secondItem="aYk-f7-4AM" secondAttribute="bottom" constant="140" id="xHr-Ya-dc4"/>
+                            <constraint firstAttribute="bottom" secondItem="RFv-lc-efR" secondAttribute="bottom" constant="-64" id="xbr-Zl-CjN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tiu-vA-MmV"/>
                     </view>
                     <connections>
+                        <outlet property="factionIndicatorUIImage" destination="qWh-y1-8Ik" id="Pyh-Wr-xTH"/>
                         <outlet property="mainImageUIImageView" destination="uGx-yF-Ln9" id="o9q-2C-5N9"/>
                         <outlet property="productCardUIView" destination="aYk-f7-4AM" id="4N7-EP-BSh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Hs-dA-09s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Rmy-Yg-lTL">
+                    <connections>
+                        <action selector="panCard:" destination="VcW-Hm-Jf1" id="YJz-Ul-vME"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1184.8" y="-1267.0164917541231"/>
+            <point key="canvasLocation" x="857" y="-1512"/>
         </scene>
         <!--Product Overview View Controller-->
         <scene sceneID="fXP-fV-DCt">
@@ -879,7 +910,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="fvG-F8-Iwe" kind="show" id="rjH-BY-ywM"/>
+                                    <segue destination="fvG-F8-Iwe" kind="show" identifier="goToStall" id="rjH-BY-ywM"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="1" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2YD-Si-n5z">
@@ -1210,6 +1241,7 @@
         <image name="ic_profile_color" width="66" height="69"/>
         <image name="icons8-gift" width="64" height="64"/>
         <image name="ugly_cats_06.jpg" width="550" height="365"/>
+        <image name="up" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="piS-Lz-SQv"/>

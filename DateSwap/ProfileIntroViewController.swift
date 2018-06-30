@@ -56,6 +56,8 @@ class ProfileIntroViewController: UIViewController {
         // editProfileUIButton.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
         editProfileUIButton.titleLabel?.textAlignment = .center
         editProfileUIButton.setTitle("Edit Profile\nmore text", for: .normal)
+
+        
         profileIntroUIImageView.layer.cornerRadius = profileIntroUIImageView.frame.height/2
     }
     /*

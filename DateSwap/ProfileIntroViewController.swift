@@ -45,9 +45,8 @@ class ProfileIntroViewController: UIViewController {
     
 
     override func viewDidLayoutSubviews() {
-        editProfileUIButton.addJeansEffect(color: mediumOrange(), cornerRadius: 15, lineWidth: 2, lineDashPattern: [9,9])
         
-        editProfileUIButton.addJeansEffect(color: mediumOrange(), cornerRadius: 15, lineWidth: 2, lineDashPattern: [9,9], position: CGPoint(x: editProfileUIButton.frame.width/2, y: editProfileUIButton.frame.height/2))
+        editProfileUIButton.addJeansEffect(color: mediumOrange(), cornerRadius: 15, lineWidth: 2, lineDashPattern: [9,9], distanceTop: 10,distanceSides: 20)
         editProfileUIButton.backgroundColor = UIColor(cgColor: lightOrangeOpacity())
         
         editProfileUIButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)

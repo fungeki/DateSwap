@@ -46,7 +46,23 @@ extension UIView {
         shapeLayer.path = UIBezierPath(roundedRect: shapeRect, cornerRadius: cornerRadius).cgPath
         self.layer.addSublayer(shapeLayer)
     }
-    
+    func addJeansEffect(color: CGColor, cornerRadius: CGFloat, lineWidth: CGFloat, lineDashPattern: [NSNumber], distanceTop: CGFloat, distanceSides: CGFloat) {
+        
+        
+        let shapeLayer:CAShapeLayer = CAShapeLayer()
+        let frameSize = self.frame.size
+        let shapeRect = CGRect(x: 0, y: 0, width: frameSize.width - distanceSides * 2, height: frameSize.height - distanceTop * 2)
+        
+        shapeLayer.bounds = shapeRect
+        shapeLayer.position = CGPoint(x: frameSize.width / 2, y: frameSize.height / 2)
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.strokeColor = color
+        shapeLayer.lineWidth = lineWidth
+        shapeLayer.lineJoin = kCALineJoinRound
+        shapeLayer.lineDashPattern = lineDashPattern
+        shapeLayer.path = UIBezierPath(roundedRect: shapeRect, cornerRadius: cornerRadius).cgPath
+        self.layer.addSublayer(shapeLayer)
+    }
     //position the Jeans
     func addJeansEffect(color: CGColor, cornerRadius: CGFloat, lineWidth: CGFloat, lineDashPattern: [NSNumber], position: CGPoint) {
         

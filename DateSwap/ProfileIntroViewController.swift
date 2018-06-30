@@ -17,8 +17,11 @@ class ProfileIntroViewController: UIViewController {
         default:
             distanceUILabel.text = "\(currentValue) KM."
         }
+        
+        
     }
-
+    @IBOutlet weak var editProfileUIButton: UIButton!
+    
     @IBOutlet weak var distanceUILabel: UILabel!
 
     @IBOutlet weak var distanceUISlider: PriceSliderUISlider!
@@ -26,6 +29,9 @@ class ProfileIntroViewController: UIViewController {
     @IBOutlet weak var profileIntroUIImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+     
+        
+        
         
         
         // Do any additional setup after loading the view.
@@ -39,6 +45,17 @@ class ProfileIntroViewController: UIViewController {
     
 
     override func viewDidLayoutSubviews() {
+        editProfileUIButton.addJeansEffect(color: mediumOrange(), cornerRadius: 15, lineWidth: 2, lineDashPattern: [9,9])
+        
+        editProfileUIButton.addJeansEffect(color: mediumOrange(), cornerRadius: 15, lineWidth: 2, lineDashPattern: [9,9], position: CGPoint(x: editProfileUIButton.frame.width/2, y: editProfileUIButton.frame.height/2))
+        editProfileUIButton.backgroundColor = UIColor(cgColor: lightOrangeOpacity())
+        
+        editProfileUIButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        editProfileUIButton.layer.cornerRadius = 15
+        
+        // editProfileUIButton.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
+        editProfileUIButton.titleLabel?.textAlignment = .center
+        editProfileUIButton.setTitle("Edit Profile\nmore text", for: .normal)
         profileIntroUIImageView.layer.cornerRadius = profileIntroUIImageView.frame.height/2
     }
     /*

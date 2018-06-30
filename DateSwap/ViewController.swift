@@ -9,12 +9,16 @@
 import UIKit
 import SDWebImage
 class ViewController: UIViewController {
-
+    let thumbImageLike = #imageLiteral(resourceName: "ic_love_color").resize(size: CGSize(width: 55, height: 55))
+    let thumbImageDislike = #imageLiteral(resourceName: "ic_x_color").resize(size: CGSize(width: 55, height: 55))
+    let thumbBack = #imageLiteral(resourceName: "ic_backMatch_color").resize(size: CGSize(width: 55, height: 55))
     @IBOutlet weak var relationUISlider: RelationUISlider!
+    @IBOutlet weak var likeUIImageView: UIImageView!
     @IBOutlet weak var conditionButton: ConditionUIButton!
     @IBOutlet weak var itemImageView: UIImageView!
     @IBOutlet weak var itemAreaLabel: UILabel!
     @IBOutlet weak var itemDescriptionLabel: UILabel!
+    @IBOutlet weak var dislikeUIImageView: UIImageView!
     @IBOutlet weak var itemPictureImageView: UIImageView!
     @IBOutlet weak var itemNameLabel: UILabel!
     override func viewDidLoad() {
@@ -32,6 +36,19 @@ class ViewController: UIViewController {
         relationUISlider.maximumTrackTintColor = UIColor(cgColor: grayFour())
         relationUISlider.minimumTrackTintColor = UIColor(cgColor: grayFour())
         relationUISlider.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
+    
+        relationUISlider.setThumbImage(thumbBack, for: .normal)
+//        let thumbSize = CGRect(x: 0, y: 0, width: 24, height: 24)
+//        var thumbImage = #imageLiteral(resourceName: "ic_backMatch_color")
+//
+//        relationUISlider.setThumbImage(thumbImage, for: .normal)
+        
+//        let centerPoint = CGPoint(x: relationUISlider.frame.midX, y: relationUISlider.frame.midY)
+//        relationUISlider.thumbImage(for: .normal)?.draw(in: CGRect(origin: centerPoint, size: CGSize(width: 4, height: 4)))//       relationUISlider.setThumbImage(#imageLiteral(resourceName: "ic_backMatch_color"), for: .normal)
+//        
+//        var thumbImage : UIImage = #imageLiteral(resourceName: "ic_backMatch_color")
+       
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -45,15 +62,22 @@ class ViewController: UIViewController {
                 if slider.value > 0.5{
                     relationUISlider.maximumTrackTintColor = UIColor(cgColor: darkOrange())
                     relationUISlider.minimumTrackTintColor = UIColor(cgColor: grayFour())
-                    
-                    
+                    relationUISlider.setThumbImage(thumbImageLike, for: .normal)
+                    likeUIImageView.alpha = CGFloat(slider.value * 1.2)
+                    dislikeUIImageView.alpha = 0
                 } else if slider.value < 0.5 {
                     relationUISlider.minimumTrackTintColor = UIColor(cgColor: brown())
                     relationUISlider.maximumTrackTintColor = UIColor(cgColor: grayFour())
+                    relationUISlider.setThumbImage(thumbImageDislike, for: .normal)
+                    dislikeUIImageView.alpha = CGFloat(1 - slider.value * 1.2)
+                    likeUIImageView.alpha = 0
                 }
                 break
             // handle drag moved
             case .ended:
+                dislikeUIImageView.alpha = 0
+                likeUIImageView.alpha = 0
+                relationUISlider.setThumbImage(thumbBack, for: .normal)
                 UIView.animate(withDuration: 0.3, animations: {
                     self.relationUISlider.setValue(0.5, animated: true)
                     self.relationUISlider.maximumTrackTintColor = UIColor(cgColor: grayFour())
@@ -80,7 +104,6 @@ class ViewController: UIViewController {
 //        }
         
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

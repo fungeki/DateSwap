@@ -21,6 +21,7 @@ class ProfileIntroViewController: UIViewController {
         
     }
     @IBOutlet weak var editProfileUIButton: UIButton!
+    @IBOutlet weak var addEditDatesUIButton: UIButton!
     
     @IBOutlet weak var distanceUILabel: UILabel!
 
@@ -45,16 +46,27 @@ class ProfileIntroViewController: UIViewController {
     
 
     override func viewDidLayoutSubviews() {
+        //Edit Profile - Button
         
-        editProfileUIButton.addJeansEffect(color: mediumOrange(), cornerRadius: 15, lineWidth: 2, lineDashPattern: [9,9], distanceTop: 10,distanceSides: 20)
+        editProfileUIButton.addJeansEffect(color: mediumOrange(), cornerRadius: 15, lineWidth: 2, lineDashPattern: [9,9], distanceTop: 5,distanceSides: 5)
         editProfileUIButton.backgroundColor = UIColor(cgColor: lightOrangeOpacity())
-        
         editProfileUIButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         editProfileUIButton.layer.cornerRadius = 15
         
+        //Add/Edit Dates - Button
+        
+        addEditDatesUIButton.addJeansEffect(color: lightOrange(), cornerRadius: 15, lineWidth: 2, lineDashPattern: [9,9], distanceTop: 5,distanceSides: 5)
+        addEditDatesUIButton.backgroundColor = UIColor(cgColor: mediumOrange())
+        addEditDatesUIButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        addEditDatesUIButton.layer.cornerRadius = 15
+        
+        
+        
+        
+        
         // editProfileUIButton.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
-        editProfileUIButton.titleLabel?.textAlignment = .center
-        editProfileUIButton.setTitle("Edit Profile\nmore text", for: .normal)
+       // editProfileUIButton.titleLabel?.textAlignment = .center
+      //  editProfileUIButton.setTitle("Edit Profile\nmore text", for: .normal)
 
         
         profileIntroUIImageView.layer.cornerRadius = profileIntroUIImageView.frame.height/2

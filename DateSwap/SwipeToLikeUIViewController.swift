@@ -34,6 +34,7 @@ class SwipeToLikeUIViewController: UIViewController {
         conditionMainImageUIButton.isEnabled = false
         
         mainTitleMainImageUIButton.text = displayProduct.title
+        mainTitleMainImageUIButton.textColor = UIColor(cgColor: brown())
         conditionMainImageUIButton.setTitle(returnCondition(displayProduct.condition), for: .disabled)
         conditionMainImageUIButton.bg = UIColor(cgColor: mediumOrange())
         conditionMainImageUIButton.borderColor = UIColor(cgColor: lightOrange())

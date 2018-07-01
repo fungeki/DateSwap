@@ -29,7 +29,7 @@ class ProductOverviewTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         self.contentView.layoutSubviews()
-        priceUIButton.addJeansEffect(UIColor.black.cgColor)
+        priceUIButton.addJeansEffect(color: lightBlack(), cornerRadius: 20, lineWidth: 4, lineDashPattern: [9,9])
     }
 
 }

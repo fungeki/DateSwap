@@ -10,6 +10,7 @@ import UIKit
 
 class ProductOverviewViewController: UIViewController {
 
+    @IBOutlet weak var addDateUITableView: UITableView!
     @IBAction func addANewProductAction(_ sender: UIButton) {
         performSegue(withIdentifier: "addANewDateSegue", sender: nil)
     }
@@ -25,8 +26,12 @@ class ProductOverviewViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     override func viewDidLayoutSubviews() {
-        addADateUIButton.addJeansEffect(UIColor.orange.cgColor)
+        addADateUIButton.addJeansEffect(color: lightOrange(), cornerRadius: 15, lineWidth: 2, lineDashPattern: [9,9])
+        
+        addDateUITableView.rowHeight = 170
     }
+    
+    
 
     /*
     // MARK: - Navigation
@@ -79,6 +84,7 @@ extension ProductOverviewViewController: UITableViewDelegate, UITableViewDataSou
         let product = currentCell.product
         //currentCell.conditionUIButton.backgroundColor = UIColor.orange
         performSegue(withIdentifier: "datesProfileMasterToDetail", sender: product)
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailsVC =  segue.destination as? EditMyProductsViewController else {return}

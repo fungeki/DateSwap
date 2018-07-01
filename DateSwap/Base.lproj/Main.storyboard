@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ADP-5w-IKA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VcW-Hm-Jf1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -106,6 +106,9 @@
                                     <constraint firstAttribute="width" secondItem="UzZ-Ll-yZl" secondAttribute="height" multiplier="34:31" id="ecc-Dh-jPe"/>
                                 </constraints>
                                 <state key="normal" image="ic_logo_grey"/>
+                                <connections>
+                                    <segue destination="VcW-Hm-Jf1" kind="show" id="8Qp-WE-9jt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srZ-RP-nBQ">
                                 <rect key="frame" x="112.5" y="300" width="150" height="30.5"/>
@@ -187,6 +190,9 @@
                                     <constraint firstAttribute="width" secondItem="JbA-0C-mjw" secondAttribute="height" multiplier="66:71" id="Ovy-1t-dOM"/>
                                 </constraints>
                                 <state key="normal" image="ic_profile_grey"/>
+                                <connections>
+                                    <segue destination="ADP-5w-IKA" kind="show" id="Tqg-uX-ssM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMM-pJ-rx9">
                                 <rect key="frame" x="169" y="32" width="37.5" height="34"/>
@@ -202,18 +208,58 @@
                                 </constraints>
                                 <state key="normal" image="ic_chatMatch_grey"/>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-0.05000000074505806" maxValue="1.0499999523162842" translatesAutoresizingMaskIntoConstraints="NO" id="1ue-xi-wp2" customClass="RelationUISlider" customModule="DateSwap" customModuleProvider="target">
+                                <rect key="frame" x="32" y="568" width="327" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="d91-VJ-V9p"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="maximumTrackTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="trackHeight">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="slidingRelationValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="fPY-ST-d0Z"/>
+                                </connections>
+                            </slider>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_love_grey" translatesAutoresizingMaskIntoConstraints="NO" id="GlP-qP-rjG">
+                                <rect key="frame" x="315" y="603" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="cue-O7-TfP"/>
+                                    <constraint firstAttribute="height" constant="50" id="qwE-NB-vtd"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_x_grey" translatesAutoresizingMaskIntoConstraints="NO" id="Fkr-Xh-iSr">
+                                <rect key="frame" x="10" y="603" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="TfC-Bq-liO"/>
+                                    <constraint firstAttribute="height" constant="50" id="ges-cE-VVk"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_love_color" translatesAutoresizingMaskIntoConstraints="NO" id="g3k-rn-m1g">
+                                <rect key="frame" x="315" y="603" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="CKM-3K-bzh"/>
+                                    <constraint firstAttribute="height" constant="50" id="FPQ-5G-451"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_x_color" translatesAutoresizingMaskIntoConstraints="NO" id="V7H-vK-N7a">
+                                <rect key="frame" x="10" y="603" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="78U-XQ-hrX"/>
+                                    <constraint firstAttribute="width" constant="50" id="Wby-wa-2Ik"/>
+                                </constraints>
+                            </imageView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aYk-f7-4AM" customClass="ProductCardUIView" customModule="DateSwap" customModuleProvider="target">
-                                <rect key="frame" x="12" y="90" width="351" height="477"/>
+                                <rect key="frame" x="12" y="90" width="351" height="466"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="the_rob.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uGx-yF-Ln9">
-                                        <rect key="frame" x="0.0" y="0.0" width="351" height="447"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qWh-y1-8Ik">
-                                        <rect key="frame" x="55" y="139" width="240" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="351" height="436"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRm-7s-KPP" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
-                                        <rect key="frame" x="276" y="411" width="76" height="36"/>
+                                        <rect key="frame" x="276" y="400" width="76" height="36"/>
                                         <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="21"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -237,11 +283,15 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiG-na-fal">
-                                        <rect key="frame" x="145" y="455" width="60.5" height="22.5"/>
+                                        <rect key="frame" x="145" y="444" width="60.5" height="22.5"/>
                                         <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qWh-y1-8Ik">
+                                        <rect key="frame" x="77" y="154" width="155" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
@@ -279,28 +329,42 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="tiu-vA-MmV" firstAttribute="bottom" secondItem="g3k-rn-m1g" secondAttribute="bottom" constant="14" id="0fh-Io-5Nk"/>
                             <constraint firstItem="ECs-TD-jWm" firstAttribute="top" secondItem="tiu-vA-MmV" secondAttribute="top" constant="12" id="0vi-yA-zVa"/>
+                            <constraint firstItem="tiu-vA-MmV" firstAttribute="trailing" secondItem="g3k-rn-m1g" secondAttribute="trailing" constant="10" id="9mR-uA-v9V"/>
                             <constraint firstItem="rMM-pJ-rx9" firstAttribute="top" secondItem="tiu-vA-MmV" secondAttribute="top" constant="12" id="GVk-jl-Oi7"/>
+                            <constraint firstItem="1ue-xi-wp2" firstAttribute="top" secondItem="aYk-f7-4AM" secondAttribute="bottom" constant="12" id="Gtu-hR-czm"/>
                             <constraint firstItem="rMM-pJ-rx9" firstAttribute="width" secondItem="v6s-Oo-Iok" secondAttribute="width" multiplier="0.1" id="MaW-ta-d90"/>
+                            <constraint firstItem="tiu-vA-MmV" firstAttribute="trailing" secondItem="1ue-xi-wp2" secondAttribute="trailing" constant="18" id="N7a-EY-k2h"/>
                             <constraint firstItem="tiu-vA-MmV" firstAttribute="trailing" secondItem="aYk-f7-4AM" secondAttribute="trailing" constant="12" id="UVO-wD-kMK"/>
+                            <constraint firstItem="tiu-vA-MmV" firstAttribute="bottom" secondItem="Fkr-Xh-iSr" secondAttribute="bottom" constant="14" id="Y6c-KK-APg"/>
                             <constraint firstItem="aYk-f7-4AM" firstAttribute="leading" secondItem="tiu-vA-MmV" secondAttribute="leading" constant="12" id="Z02-q7-h4K"/>
                             <constraint firstItem="JbA-0C-mjw" firstAttribute="top" secondItem="tiu-vA-MmV" secondAttribute="top" constant="12" id="dvb-MI-gj4"/>
                             <constraint firstItem="tiu-vA-MmV" firstAttribute="trailing" secondItem="ECs-TD-jWm" secondAttribute="trailing" constant="12" id="e3b-jf-bTE"/>
+                            <constraint firstItem="tiu-vA-MmV" firstAttribute="bottom" secondItem="V7H-vK-N7a" secondAttribute="bottom" constant="14" id="epP-ik-iHo"/>
+                            <constraint firstItem="tiu-vA-MmV" firstAttribute="trailing" secondItem="GlP-qP-rjG" secondAttribute="trailing" constant="10" id="ha6-Lq-7jh"/>
                             <constraint firstItem="JbA-0C-mjw" firstAttribute="width" secondItem="v6s-Oo-Iok" secondAttribute="width" multiplier="0.08" id="i2p-DM-wEt"/>
+                            <constraint firstItem="tiu-vA-MmV" firstAttribute="bottom" secondItem="GlP-qP-rjG" secondAttribute="bottom" constant="14" id="jVf-kS-JKX"/>
+                            <constraint firstItem="tiu-vA-MmV" firstAttribute="bottom" secondItem="1ue-xi-wp2" secondAttribute="bottom" constant="17" id="law-uP-CVV"/>
+                            <constraint firstItem="Fkr-Xh-iSr" firstAttribute="leading" secondItem="tiu-vA-MmV" secondAttribute="leading" constant="10" id="qKu-Jz-R7M"/>
+                            <constraint firstItem="V7H-vK-N7a" firstAttribute="leading" secondItem="tiu-vA-MmV" secondAttribute="leading" constant="10" id="rdz-FT-lOj"/>
                             <constraint firstItem="JbA-0C-mjw" firstAttribute="leading" secondItem="tiu-vA-MmV" secondAttribute="leading" constant="12" id="tjO-3a-xnG"/>
                             <constraint firstItem="ECs-TD-jWm" firstAttribute="width" secondItem="v6s-Oo-Iok" secondAttribute="width" multiplier="0.08" id="uCs-5K-t84"/>
                             <constraint firstItem="aYk-f7-4AM" firstAttribute="top" secondItem="tiu-vA-MmV" secondAttribute="top" constant="70" id="vbS-Xb-TTw"/>
-                            <constraint firstItem="tiu-vA-MmV" firstAttribute="bottom" secondItem="aYk-f7-4AM" secondAttribute="bottom" constant="100" id="xHr-Ya-dc4"/>
                             <constraint firstItem="rMM-pJ-rx9" firstAttribute="centerX" secondItem="tiu-vA-MmV" secondAttribute="centerX" id="xdg-mD-AMI"/>
+                            <constraint firstItem="1ue-xi-wp2" firstAttribute="leading" secondItem="v6s-Oo-Iok" secondAttribute="leadingMargin" constant="18" id="y2w-Cj-WH3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tiu-vA-MmV"/>
                     </view>
                     <connections>
                         <outlet property="conditionMainImageUIButton" destination="LRm-7s-KPP" id="9mI-zm-WaS"/>
+                        <outlet property="dislikeUIImageView" destination="V7H-vK-N7a" id="ZP3-YK-SqZ"/>
                         <outlet property="factionIndicatorUIImage" destination="qWh-y1-8Ik" id="Pyh-Wr-xTH"/>
+                        <outlet property="likeUIImageView" destination="g3k-rn-m1g" id="qRZ-h0-RSm"/>
                         <outlet property="mainImageUIImageView" destination="uGx-yF-Ln9" id="o9q-2C-5N9"/>
                         <outlet property="mainTitleMainImageUIButton" destination="JiG-na-fal" id="78j-x0-x1J"/>
                         <outlet property="productCardUIView" destination="aYk-f7-4AM" id="4N7-EP-BSh"/>
+                        <outlet property="relationUISlider" destination="1ue-xi-wp2" id="wMk-ZZ-vMf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Hs-dA-09s" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -310,7 +374,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="856.79999999999995" y="-1512.5937031484259"/>
+            <point key="canvasLocation" x="1653.5999999999999" y="-595.05247376311854"/>
         </scene>
         <!--Product Overview View Controller-->
         <scene sceneID="fXP-fV-DCt">
@@ -466,7 +530,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pjl-rd-8ev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1532" y="-575.26236881559225"/>
+            <point key="canvasLocation" x="1522" y="-1720"/>
         </scene>
         <!--Edit My Products View Controller-->
         <scene sceneID="ajp-Xq-rCL">
@@ -823,7 +887,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ash-Ua-HFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2256.8000000000002" y="-691.75412293853083"/>
+            <point key="canvasLocation" x="2364" y="-1634"/>
         </scene>
         <!--Photos Editor View Controller-->
         <scene sceneID="0we-og-8sn">
@@ -961,7 +1025,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZG-tW-u6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2980" y="-575.26236881559225"/>
+            <point key="canvasLocation" x="3182" y="-1720"/>
         </scene>
         <!--Product Detail-->
         <scene sceneID="tne-QT-ifu">
@@ -1154,7 +1218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="476" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-9" y="-595"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="PeL-iv-ZWX">
@@ -1376,5 +1440,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="piS-Lz-SQv"/>
+        <segue reference="Tqg-uX-ssM"/>
     </inferredMetricsTieBreakers>
 </document>

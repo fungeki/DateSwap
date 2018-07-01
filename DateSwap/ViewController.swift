@@ -9,9 +9,9 @@
 import UIKit
 import SDWebImage
 class ViewController: UIViewController {
-    let thumbImageLike = #imageLiteral(resourceName: "ic_love_color").resize(size: CGSize(width: 55, height: 55))
-    let thumbImageDislike = #imageLiteral(resourceName: "ic_x_color").resize(size: CGSize(width: 55, height: 55))
-    let thumbBack = #imageLiteral(resourceName: "ic_backMatch_color").resize(size: CGSize(width: 55, height: 55))
+    let thumbImageLike = imageResizeForSlider(#imageLiteral(resourceName: "ic_love_color"))
+    let thumbImageDislike = imageResizeForSlider(#imageLiteral(resourceName: "ic_x_color"))
+    let thumbBack = imageResizeForSlider(#imageLiteral(resourceName: "ic_backMatch_color"))
     @IBOutlet weak var relationUISlider: RelationUISlider!
     @IBOutlet weak var likeUIImageView: UIImageView!
     @IBOutlet weak var conditionButton: ConditionUIButton!

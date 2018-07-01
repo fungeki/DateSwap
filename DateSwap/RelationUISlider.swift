@@ -49,3 +49,8 @@ class RelationUISlider: UISlider {
 //        return newSize
 //    }
 }
+
+func imageResizeForSlider(_ myImage: UIImage)-> UIImage{
+    let resizedImage = myImage.resize(size: CGSize(width: 55, height: 55))
+    return resizedImage
+}

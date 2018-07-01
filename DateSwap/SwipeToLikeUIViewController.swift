@@ -66,9 +66,7 @@ class SwipeToLikeUIViewController: UIViewController {
                 break
             // handle drag began
             case .moved:
-                if slider.value > 0.95{
-                   
-                }
+                
                 if slider.value > 0.5{
                     relationUISlider.maximumTrackTintColor = UIColor(cgColor: darkOrange())
                     relationUISlider.minimumTrackTintColor = UIColor(cgColor: grayFour())
@@ -77,21 +75,33 @@ class SwipeToLikeUIViewController: UIViewController {
                     factionIndicatorUIImage.alpha = sliderPosition * 2.0
                     factionIndicatorUIImage.image = #imageLiteral(resourceName: "ic_like_date")
                     dislikeUIImageView.alpha = 0
+                    likeUIImageView.transform = CGAffineTransform(scaleX: 1 + sliderPosition * 0.5, y: 1 + sliderPosition * 0.5)
                     let translate = CGAffineTransform(translationX: CGFloat(UIScreen.main.bounds.width * sliderPosition * 1.05 ), y: 0)
                     let rotate = CGAffineTransform(rotationAngle: sliderPosition * 0.45)
                     productCardUIView.transform = translate.concatenating(rotate)
+//                    if slider.value > 1.048999 {
+//                        let newThumbImage = thumbImageLike.resize(size: CGSize(width: 55 * (sliderPosition + 0.3), height: 55 * (sliderPosition + 0.3)))
+//                        slider.setThumbImage(newThumbImage, for: .normal)
+//                    }
+            
+                   
                 } else if slider.value < 0.5 {
                     relationUISlider.minimumTrackTintColor = UIColor(cgColor: brown())
                     relationUISlider.maximumTrackTintColor = UIColor(cgColor: grayFour())
                     relationUISlider.setThumbImage(thumbImageDislike, for: .normal)
-                    dislikeUIImageView.alpha = CGFloat(1.0 - slider.value * 1.2)
+                    dislikeUIImageView.alpha = 1
                     factionIndicatorUIImage.alpha = sliderPosition * 2.0
                     likeUIImageView.alpha = 0
                     factionIndicatorUIImage.image = #imageLiteral(resourceName: "ic_no_like_date")
+                    dislikeUIImageView.transform = CGAffineTransform(scaleX: 1 - sliderPosition * 0.5, y: 1 - sliderPosition * 0.5)
                     factionIndicatorUIImage.alpha = CGFloat(1.0 - slider.value * 1.05)
                     let translate = CGAffineTransform(translationX: CGFloat(UIScreen.main.bounds.width * sliderPosition * 1.05 ), y: 0)
                     let rotate = CGAffineTransform(rotationAngle: sliderPosition * 0.45)
                     productCardUIView.transform = translate.concatenating(rotate)
+//                    if slider.value < -0.04999 {
+//                        let newThumbImage = thumbImageLike.resize(size: CGSize(width: 55 * 0.5, height: 55 * 0.5))
+//                        slider.setThumbImage(newThumbImage, for: .normal)
+//                    }
                     
                 }
                 break
@@ -106,6 +116,9 @@ class SwipeToLikeUIViewController: UIViewController {
                     self.relationUISlider.maximumTrackTintColor = UIColor(cgColor: grayFour())
                     self.relationUISlider.minimumTrackTintColor = UIColor(cgColor: grayFour())
                     self.productCardUIView.transform = CGAffineTransform(translationX: 0, y: 0)
+                    self.likeUIImageView.transform = CGAffineTransform(translationX: 0, y: 0)
+                    self.dislikeUIImageView.transform = CGAffineTransform(translationX: 0, y: 0)
+                  
                 })
                 break
             // handle drag ended
@@ -133,10 +146,16 @@ class SwipeToLikeUIViewController: UIViewController {
         
         if xFromCenter < 0.0{
             factionIndicatorUIImage.image = #imageLiteral(resourceName: "ic_no_like_date")
+           // relationUISlider.setValue(Float(0.5 - percOff * 0.9), animated: false)
         }
         else{
+           // relationUISlider.maximumTrackTintColor = UIColor(cgColor: darkOrange())
+         //   relationUISlider.minimumTrackTintColor = UIColor(cgColor: grayFour())
             factionIndicatorUIImage.image = #imageLiteral(resourceName: "ic_like_date")
+          //  relationUISlider.setValue(Float(0.9 * percOff + 0.5), animated: true)
+           //relationUISlider.setThumbImage(thumbImageLike, for: .disabled)
         }
+        
         card.center = CGPoint(x: view.center.x + point.x, y: view.center.y + point.y)
         card.transform = CGAffineTransform(rotationAngle: 0.45 * xFromCenter / view.center.x)
         factionIndicatorUIImage.alpha = percOff
@@ -171,6 +190,7 @@ class SwipeToLikeUIViewController: UIViewController {
                 card.center.y = self.view.center.y
                 sender.isEnabled = false
                 self.displayProduct = p2
+                self.relationUISlider.setValue(0.5, animated: true)
                 self.initialize()
                 UIView.animate(withDuration: 0.2, animations: {
                     card.alpha = 1
@@ -185,11 +205,13 @@ class SwipeToLikeUIViewController: UIViewController {
         
         //let go
         if sender.state == UIGestureRecognizerState.ended{
+            relationUISlider.isEnabled = true
             UIView.animate(withDuration: 0.1, animations: {
                 card.transform = CGAffineTransform(rotationAngle: 0)
             })
             UIView.animate(withDuration: 0.3, animations: {
                 self.factionIndicatorUIImage.alpha = 0
+                self.relationUISlider.setValue(0.5, animated: true)
                 
             })
         UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 4, options: .curveLinear, animations: {

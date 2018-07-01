@@ -10,6 +10,7 @@ import UIKit
 
 class ProductOverviewViewController: UIViewController {
 
+    @IBOutlet weak var tablemeow: UITableView!
     @IBAction func addANewProductAction(_ sender: UIButton) {
         performSegue(withIdentifier: "addANewDateSegue", sender: nil)
     }
@@ -26,6 +27,7 @@ class ProductOverviewViewController: UIViewController {
     }
     override func viewDidLayoutSubviews() {
         addADateUIButton.addJeansEffect(UIColor.orange.cgColor)
+        
     }
 
     /*

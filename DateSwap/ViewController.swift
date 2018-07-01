@@ -53,6 +53,7 @@ class ViewController: UIViewController {
     }
     
     @objc func onSliderValChanged(slider: UISlider, event: UIEvent) {
+        let sliderPosition: CGFloat = CGFloat(slider.value - 0.5)
         if let touchEvent = event.allTouches?.first {
             switch touchEvent.phase {
             case .began:
@@ -65,13 +66,41 @@ class ViewController: UIViewController {
                     relationUISlider.setThumbImage(thumbImageLike, for: .normal)
                     likeUIImageView.alpha = CGFloat(slider.value * 1.2)
                     dislikeUIImageView.alpha = 0
+                    likeUIImageView.transform = CGAffineTransform(scaleX: 1 + sliderPosition * 0.5, y: 1 + sliderPosition * 0.5)
+                    
+                    //                    if slider.value > 1.048999 {
+                    //                        let newThumbImage = thumbImageLike.resize(size: CGSize(width: 55 * (sliderPosition + 0.3), height: 55 * (sliderPosition + 0.3)))
+                    //                        slider.setThumbImage(newThumbImage, for: .normal)
+                    //                    }
+                    
+                    
                 } else if slider.value < 0.5 {
                     relationUISlider.minimumTrackTintColor = UIColor(cgColor: brown())
                     relationUISlider.maximumTrackTintColor = UIColor(cgColor: grayFour())
                     relationUISlider.setThumbImage(thumbImageDislike, for: .normal)
-                    dislikeUIImageView.alpha = CGFloat(1 - slider.value * 1.2)
+                    dislikeUIImageView.alpha = 1
                     likeUIImageView.alpha = 0
+                    
+                    dislikeUIImageView.transform = CGAffineTransform(scaleX: 1 - sliderPosition * 0.5, y: 1 - sliderPosition * 0.5)
                 }
+                    
+                    //                    if slider.value < -0.04999 {
+                    //                        let newThumbImage = thumbImageLike.resize(size: CGSize(width: 55 * 0.5, height: 55 * 0.5))
+                    //                        slider.setThumbImage(newThumbImage, for: .normal)
+                    //                    }
+//                if slider.value > 0.5{
+//                    relationUISlider.maximumTrackTintColor = UIColor(cgColor: darkOrange())
+//                    relationUISlider.minimumTrackTintColor = UIColor(cgColor: grayFour())
+//                    relationUISlider.setThumbImage(thumbImageLike, for: .normal)
+//                    likeUIImageView.alpha = CGFloat(slider.value * 1.2)
+//                    dislikeUIImageView.alpha = 0
+//                } else if slider.value < 0.5 {
+//                    relationUISlider.minimumTrackTintColor = UIColor(cgColor: brown())
+//                    relationUISlider.maximumTrackTintColor = UIColor(cgColor: grayFour())
+//                    relationUISlider.setThumbImage(thumbImageDislike, for: .normal)
+//                    dislikeUIImageView.alpha = CGFloat(1 - slider.value * 1.2)
+//                    likeUIImageView.alpha = 0
+//                }
                 break
             // handle drag moved
             case .ended:

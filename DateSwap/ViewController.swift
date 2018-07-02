@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var dislikeUIImageView: UIImageView!
     @IBOutlet weak var itemPictureImageView: UIImageView!
     @IBOutlet weak var userStallUIButton: UIButton!
+    @IBOutlet weak var userProfileImageUIImageView: UIImageView!
     @IBOutlet weak var itemNameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +59,11 @@ class ViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         userStallUIButton.addJeansEffect(color: lightOrange(), cornerRadius: 15, lineWidth: 2, lineDashPattern: [9,9], distanceTop: 5,distanceSides: 5)
+        
+        userProfileImageUIImageView.layer.cornerRadius = userProfileImageUIImageView.frame.height/2
+        userProfileImageUIImageView.layer.borderWidth = 2
+        userProfileImageUIImageView.layer.borderColor = UIColor.white.cgColor
+        
         
     }
     

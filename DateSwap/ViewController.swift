@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var itemDescriptionLabel: UILabel!
     @IBOutlet weak var dislikeUIImageView: UIImageView!
     @IBOutlet weak var itemPictureImageView: UIImageView!
+    @IBOutlet weak var userStallUIButton: UIButton!
     @IBOutlet weak var itemNameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +51,14 @@ class ViewController: UIViewController {
         
         
         // Do any additional setup after loading the view, typically from a nib.
+        userStallUIButton.backgroundColor = UIColor(cgColor: mediumOrange())
+        userStallUIButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        userStallUIButton.layer.cornerRadius = 15
+    }
+    
+    override func viewDidLayoutSubviews() {
+        userStallUIButton.addJeansEffect(color: lightOrange(), cornerRadius: 15, lineWidth: 2, lineDashPattern: [9,9], distanceTop: 5,distanceSides: 5)
+        
     }
     
     @objc func onSliderValChanged(slider: UISlider, event: UIEvent) {

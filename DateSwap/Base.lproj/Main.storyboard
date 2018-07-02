@@ -103,6 +103,9 @@
                                     <constraint firstAttribute="width" secondItem="UzZ-Ll-yZl" secondAttribute="height" multiplier="34:31" id="ecc-Dh-jPe"/>
                                 </constraints>
                                 <state key="normal" image="ic_logo_grey"/>
+                                <connections>
+                                    <segue destination="VcW-Hm-Jf1" kind="show" id="aog-RI-IjN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srZ-RP-nBQ">
                                 <rect key="frame" x="112.5" y="300" width="150" height="30.5"/>
@@ -168,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cg4-4Z-WHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="815.20000000000005" y="-575.26236881559225"/>
+            <point key="canvasLocation" x="796" y="-1506"/>
         </scene>
         <!--Swipe To LikeUI View Controller-->
         <scene sceneID="pgI-gD-AxS">
@@ -362,7 +365,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="856.79999999999995" y="-1512.5937031484259"/>
+            <point key="canvasLocation" x="1630" y="-1506"/>
         </scene>
         <!--Product Overview View Controller-->
         <scene sceneID="fXP-fV-DCt">
@@ -549,7 +552,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pjl-rd-8ev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1532" y="-575.26236881559225"/>
+            <point key="canvasLocation" x="796" y="-750"/>
         </scene>
         <!--Edit My Products View Controller-->
         <scene sceneID="ajp-Xq-rCL">
@@ -906,7 +909,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ash-Ua-HFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2256.8000000000002" y="-691.75412293853083"/>
+            <point key="canvasLocation" x="1630" y="-601"/>
         </scene>
         <!--Photos Editor View Controller-->
         <scene sceneID="0we-og-8sn">
@@ -1044,7 +1047,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZG-tW-u6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2980" y="-575.26236881559225"/>
+            <point key="canvasLocation" x="2543" y="-751"/>
         </scene>
         <!--Product Detail-->
         <scene sceneID="tne-QT-ifu">
@@ -1237,7 +1240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="476" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-175" y="-1506"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="PeL-iv-ZWX">
@@ -1354,7 +1357,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iw7-Xe-XKs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1192.8" y="131.78410794602701"/>
+            <point key="canvasLocation" x="-175" y="-719"/>
         </scene>
         <!--Details From Profile View Controller-->
         <scene sceneID="7Ko-UG-5o2">
@@ -1493,7 +1496,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WnL-mR-qvU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1917.5999999999999" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-175" y="132"/>
         </scene>
     </scenes>
     <resources>

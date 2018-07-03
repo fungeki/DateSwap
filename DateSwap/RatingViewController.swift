@@ -10,11 +10,24 @@ import UIKit
 
 class RatingViewController: UIViewController {
 
+    
+    
+    
+
+    @IBOutlet weak var starsUIStackView: UIStackView!
+    @IBOutlet weak var oneStarUIButton: UIButton!
+    @IBOutlet weak var chainsawUIImageView: UIImageView!
+    @IBOutlet weak var twoStarUIButton: UIButton!
+    @IBOutlet weak var threeStarUIButton: UIButton!
+    @IBOutlet weak var fourStarUIButton: UIButton!
+    @IBOutlet weak var fiveStarUIButton: UIButton!
     @IBOutlet weak var ratingUIView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        ratingUIView.layer.cornerRadius = 20
+ 
+        
+        
         ratingUIView.isHidden = true
         // Do any additional setup after loading the view.
     }
@@ -25,16 +38,18 @@ class RatingViewController: UIViewController {
     }
     
 
-    @IBAction func rateThisProfileUIButton(_ sender: UIButton) {
-        dropdownAnimation(toggle: ratingUIView.isHidden)
-    }
     override func viewDidLayoutSubviews() {
-        ratingUIView.addJeansEffect(color: darkOrange(), cornerRadius: 20, lineWidth: 2, lineDashPattern: [6,3], distanceTop: 8, distanceSides: 8)
+//        ratingUIView.addJeansEffect(color: darkOrange(), cornerRadius: 20, lineWidth: 2, lineDashPattern: [6,3], distanceTop: 8, distanceSides: 8)
+        ratingUIView.layer.cornerRadius = 20
+        chainsawUIImageView.layer.zPosition = .greatestFiniteMagnitude - 1
+        starsUIStackView.layer.zPosition = .greatestFiniteMagnitude
     }
     func dropdownAnimation(toggle: Bool){
-        self.ratingUIView.isHidden = false
+        ratingUIView.addJeansEffect(color: darkOrange(), cornerRadius: 20, lineWidth: 2, lineDashPattern: [6,3], distanceTop: 8, distanceSides: 8)
+        
         
         if toggle{
+            self.ratingUIView.isHidden = false
             let sizeTransform = CGAffineTransform(scaleX: 0.1, y: 0.2)
             let translateMove = CGAffineTransform(translationX: -140, y: -160)
             let translateMove2 = CGAffineTransform(translationX: 0, y: -130)
@@ -66,6 +81,85 @@ class RatingViewController: UIViewController {
                 })
         }
     }
+    @IBAction func ratingSelection(_ sender: UIButton) {
+        switch sender.tag {
+        case 1:
+            lightOneStar()
+            dropdownAnimation(toggle: true)
+            disableStars()
+            break
+        case 2:
+            lightTwoStars()
+            dropdownAnimation(toggle: true)
+            disableStars()
+            break
+        case 3:
+            lightThreeStars()
+            dropdownAnimation(toggle: true)
+            disableStars()
+            break
+        case 4:
+            lightFourStars()
+            dropdownAnimation(toggle: true)
+            disableStars()
+            break
+        case 5:
+            lightFiveStars()
+            dropdownAnimation(toggle: true)
+            disableStars()
+            break
+        default:
+            return
+            
+        }
+        
+    }
+    func disableStars(){
+        oneStarUIButton.isEnabled = false
+        twoStarUIButton.isEnabled = false
+        threeStarUIButton.isEnabled = false
+        fourStarUIButton.isEnabled = false
+        fiveStarUIButton.isEnabled = false
+    }
+    func enableStars(){
+        oneStarUIButton.isEnabled = true
+        twoStarUIButton.isEnabled = true
+        threeStarUIButton.isEnabled = true
+        fourStarUIButton.isEnabled = true
+        fiveStarUIButton.isEnabled = true
+    }
+    func lightOneStar(){
+//        oneStarUIButton.setBackgroundImage(#imageLiteral(resourceName: "ic_rating_star_full"), for: .normal)
+        oneStarUIButton.setBackgroundImage(#imageLiteral(resourceName: "ic_rating_star_full"), for: .disabled)
+    }
+    func lightTwoStars(){
+        lightOneStar()
+//        twoStarUIButton.setBackgroundImage(#imageLiteral(resourceName: "ic_rating_star_full"), for: .normal)
+        twoStarUIButton.setBackgroundImage(#imageLiteral(resourceName: "ic_rating_star_full"), for: .disabled)
+    }
+    func lightThreeStars(){
+        lightTwoStars()
+//        threeStarUIButton.setBackgroundImage(#imageLiteral(resourceName: "ic_rating_star_full"), for: .normal)
+        threeStarUIButton.setBackgroundImage(#imageLiteral(resourceName: "ic_rating_star_full"), for: .disabled)
+    }
+    func lightFourStars(){
+        lightThreeStars()
+//        fourStarUIButton.setBackgroundImage(#imageLiteral(resourceName: "ic_rating_star_full"), for: .normal)
+        fourStarUIButton.setBackgroundImage(#imageLiteral(resourceName: "ic_rating_star_full"), for: .disabled)
+    }
+    func lightFiveStars(){
+        lightFourStars()
+//        fiveStarUIButton.setBackgroundImage(#imageLiteral(resourceName: "ic_rating_star_full"), for: .normal)
+        fiveStarUIButton.setBackgroundImage(#imageLiteral(resourceName: "ic_rating_star_full"), for: .disabled)
+    }
+    
+    @IBAction func rolldownRatingAction(_ sender: UIButton) {
+        dropdownAnimation(toggle: false)
+    }
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 
@@ -76,4 +170,27 @@ class RatingViewController: UIViewController {
     }
     */
 
+}
+extension RatingViewController: UITextViewDelegate{
+    func textViewDidBeginEditing(_ textView: UITextView)
+    {
+        if (textView.text == "Leave a review here :)")
+        {
+            textView.text = ""
+            textView.textColor = UIColor(cgColor: mediumOrange())
+            
+        }
+        textView.becomeFirstResponder() //Optional
+    }
+    
+    
+    func textViewDidEndEditing(_ textView: UITextView)
+    {
+        if (textView.text == "")
+        {
+            textView.text = "Leave a review here :)"
+            textView.textColor = .lightGray
+        }
+        textView.resignFirstResponder()
+    }
 }

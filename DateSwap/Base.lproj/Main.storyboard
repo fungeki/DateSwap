@@ -1057,23 +1057,111 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_rating_flag_tail_empty" translatesAutoresizingMaskIntoConstraints="NO" id="qWh-hN-Kyt">
+                                <rect key="frame" x="12" y="32" width="212" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="212" id="WLw-Tn-CSe"/>
+                                    <constraint firstAttribute="height" constant="43" id="mLY-Rp-Hwb"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x30-iP-4nb">
+                                <rect key="frame" x="76" y="39.5" width="140" height="28"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="861-fz-bh1">
+                                        <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="28" id="7sZ-rn-dTb"/>
+                                            <constraint firstAttribute="height" constant="28" id="bfs-MS-tPV"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_rating_star_empty"/>
+                                        <connections>
+                                            <action selector="ratingSelection:" destination="MZd-Vt-Aet" eventType="touchUpInside" id="KVL-xU-RAn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3q-Ea-1Cj">
+                                        <rect key="frame" x="28" y="0.0" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="QpS-RV-nSs"/>
+                                            <constraint firstAttribute="width" constant="28" id="y0f-oN-NxF"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_rating_star_empty"/>
+                                        <connections>
+                                            <action selector="ratingSelection:" destination="MZd-Vt-Aet" eventType="touchUpInside" id="6na-II-qtH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ug-sh-g0s">
+                                        <rect key="frame" x="56" y="0.0" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="ia6-lo-6dv"/>
+                                            <constraint firstAttribute="width" constant="28" id="uza-nH-eMP"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_rating_star_empty"/>
+                                        <connections>
+                                            <action selector="ratingSelection:" destination="MZd-Vt-Aet" eventType="touchUpInside" id="aLS-ec-NrC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpN-y9-5lr">
+                                        <rect key="frame" x="84" y="0.0" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="559-9S-PFg"/>
+                                            <constraint firstAttribute="width" constant="28" id="itr-jh-aIe"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_rating_star_empty"/>
+                                        <connections>
+                                            <action selector="ratingSelection:" destination="MZd-Vt-Aet" eventType="touchUpInside" id="B31-xr-QfP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KvE-i5-cTX">
+                                        <rect key="frame" x="112" y="0.0" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="VxK-3f-D4I"/>
+                                            <constraint firstAttribute="width" constant="28" id="o1N-5H-Xry"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_rating_star_empty"/>
+                                        <connections>
+                                            <action selector="ratingSelection:" destination="MZd-Vt-Aet" eventType="touchUpInside" id="HMc-wH-jVb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzB-se-gGV">
                                 <rect key="frame" x="12" y="59" width="351" height="320"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="add your rating here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lX3-Af-cBY">
-                                        <rect key="frame" x="8" y="8" width="335" height="262"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lX3-Af-cBY" customClass="DescriptionUITextView" customModule="DateSwap" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="18" width="335" height="252"/>
                                         <color key="textColor" red="1" green="0.72549019607843135" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeHolderText" value="Leave a review here :)"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingTop">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingCorners">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="MZd-Vt-Aet" id="diP-nX-azv"/>
+                                        </connections>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Sg-hu-MJy">
                                         <rect key="frame" x="291" y="278" width="36" height="30"/>
                                         <state key="normal" title="Send"/>
+                                        <connections>
+                                            <action selector="rolldownRatingAction:" destination="MZd-Vt-Aet" eventType="touchUpInside" id="czk-oL-kCD"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.19215686274509805" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="lX3-Af-cBY" firstAttribute="top" secondItem="bzB-se-gGV" secondAttribute="top" constant="8" id="JfD-Ph-clR"/>
+                                    <constraint firstItem="lX3-Af-cBY" firstAttribute="top" secondItem="bzB-se-gGV" secondAttribute="top" constant="18" id="JfD-Ph-clR"/>
                                     <constraint firstAttribute="trailing" secondItem="4Sg-hu-MJy" secondAttribute="trailing" constant="24" id="Kla-fF-6K6"/>
                                     <constraint firstAttribute="height" constant="320" id="L1f-9M-Wmv"/>
                                     <constraint firstItem="lX3-Af-cBY" firstAttribute="leading" secondItem="bzB-se-gGV" secondAttribute="leading" constant="8" id="WSb-93-iLg"/>
@@ -1082,37 +1170,28 @@
                                     <constraint firstAttribute="bottom" secondItem="4Sg-hu-MJy" secondAttribute="bottom" constant="12" id="mxn-Mn-RCl"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmw-Nb-me9">
-                                <rect key="frame" x="12" y="32" width="212" height="43"/>
-                                <state key="normal" image="ic_rating_flag_tail_empty"/>
-                                <connections>
-                                    <action selector="rateThisProfileUIButton:" destination="MZd-Vt-Aet" eventType="touchUpInside" id="qWr-qo-I1n"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWn-9o-fOv">
-                                <rect key="frame" x="125" y="0.0" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3q-Ea-1Cj">
-                                <rect key="frame" x="250" y="6" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="QpS-RV-nSs"/>
-                                    <constraint firstAttribute="width" constant="28" id="y0f-oN-NxF"/>
-                                </constraints>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="hmw-Nb-me9" firstAttribute="top" secondItem="PiF-sA-cOT" secondAttribute="top" constant="12" id="2le-ha-F2v"/>
-                            <constraint firstItem="bzB-se-gGV" firstAttribute="top" secondItem="hmw-Nb-me9" secondAttribute="bottom" constant="-16" id="4BX-tp-D4x"/>
+                            <constraint firstItem="x30-iP-4nb" firstAttribute="leading" secondItem="PiF-sA-cOT" secondAttribute="leading" constant="76" id="2xo-Zb-odw"/>
+                            <constraint firstItem="bzB-se-gGV" firstAttribute="top" secondItem="qWh-hN-Kyt" secondAttribute="bottom" constant="-16" id="8DK-Kx-Ykk"/>
                             <constraint firstItem="bzB-se-gGV" firstAttribute="leading" secondItem="PiF-sA-cOT" secondAttribute="leading" constant="12" id="F4x-D9-FIj"/>
+                            <constraint firstItem="qWh-hN-Kyt" firstAttribute="leading" secondItem="PiF-sA-cOT" secondAttribute="leading" constant="12" id="FN7-Rg-e1T"/>
+                            <constraint firstItem="qWh-hN-Kyt" firstAttribute="top" secondItem="PiF-sA-cOT" secondAttribute="top" constant="12" id="HWo-E0-tZJ"/>
                             <constraint firstItem="PiF-sA-cOT" firstAttribute="trailing" secondItem="bzB-se-gGV" secondAttribute="trailing" constant="12" id="WSv-ZL-U9r"/>
-                            <constraint firstItem="hmw-Nb-me9" firstAttribute="leading" secondItem="PiF-sA-cOT" secondAttribute="leading" constant="12" id="x9N-6n-SQs"/>
+                            <constraint firstItem="x30-iP-4nb" firstAttribute="centerY" secondItem="qWh-hN-Kyt" secondAttribute="centerY" id="Zrs-Sq-f3a"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PiF-sA-cOT"/>
                     </view>
                     <connections>
+                        <outlet property="chainsawUIImageView" destination="qWh-hN-Kyt" id="iLF-Ct-LAb"/>
+                        <outlet property="fiveStarUIButton" destination="KvE-i5-cTX" id="bIw-iT-ik7"/>
+                        <outlet property="fourStarUIButton" destination="rpN-y9-5lr" id="x1p-3N-wQw"/>
+                        <outlet property="oneStarUIButton" destination="861-fz-bh1" id="nYE-kl-m1n"/>
                         <outlet property="ratingUIView" destination="bzB-se-gGV" id="cfX-pV-MWr"/>
+                        <outlet property="starsUIStackView" destination="x30-iP-4nb" id="eLg-HJ-2wI"/>
+                        <outlet property="threeStarUIButton" destination="8ug-sh-g0s" id="EfS-vm-rff"/>
+                        <outlet property="twoStarUIButton" destination="l3q-Ea-1Cj" id="Ujs-sT-Qxx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ogj-AH-L59" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1580,6 +1659,7 @@
         <image name="ic_rating_flag_tail_empty" width="212" height="43"/>
         <image name="ic_rating_fourAndaHalf" width="212" height="43"/>
         <image name="ic_rating_long_tail_empty" width="246" height="43"/>
+        <image name="ic_rating_star_empty" width="21" height="20"/>
         <image name="ic_settings_grey" width="61" height="59"/>
         <image name="ic_userStall_color" width="69" height="69"/>
         <image name="ic_x_color" width="124" height="124"/>

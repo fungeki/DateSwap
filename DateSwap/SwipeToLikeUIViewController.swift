@@ -156,6 +156,12 @@ class SwipeToLikeUIViewController: UIViewController {
         else{
             // relationUISlider.maximumTrackTintColor = UIColor(cgColor: darkOrange())
             //   relationUISlider.minimumTrackTintColor = UIColor(cgColor: grayFour())
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+//                self.relationUISlider.minimumTrackTintColor = UIColor(cgColor: grayFour())
+//                self.relationUISlider.maximumTrackTintColor = UIColor(cgColor: darkOrange())
+//                self.relationUISlider.setValue(Float(0.9 * percOff + 0.5), animated: false)
+//            })
+            
             factionIndicatorUIImage.image = #imageLiteral(resourceName: "ic_like_date")
             //  relationUISlider.setValue(Float(0.9 * percOff + 0.5), animated: true)
             //relationUISlider.setThumbImage(thumbImageLike, for: .disabled)

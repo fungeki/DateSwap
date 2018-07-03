@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         userStallUIButton.addJeansEffect(color: lightOrange(), cornerRadius: 15, lineWidth: 2, lineDashPattern: [9,9], distanceTop: 5,distanceSides: 5)
         
         userProfileImageUIImageView.layer.cornerRadius = userProfileImageUIImageView.frame.height/2
-        userProfileImageUIImageView.layer.borderWidth = 2
+        userProfileImageUIImageView.layer.borderWidth = 3
         userProfileImageUIImageView.layer.borderColor = UIColor.white.cgColor
         
         

@@ -121,7 +121,7 @@ return
         let newValue = Double(sender.value)
         if newValue < 0.0{
             minPriceRangeUILabel.text = "any price"
-            return
+return
         } else if newValue > 1.0 {
             minPriceRangeUILabel.text = "min \(price)$"
             return

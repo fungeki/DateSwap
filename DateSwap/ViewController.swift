@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var likeUIImageView: UIImageView!
     @IBOutlet weak var conditionButton: ConditionUIButton!
     @IBOutlet weak var itemImageView: UIImageView!
-    @IBOutlet weak var itemAreaLabel: UILabel!
+    
     @IBOutlet weak var itemDescriptionLabel: UILabel!
     @IBOutlet weak var dislikeUIImageView: UIImageView!
     @IBOutlet weak var itemPictureImageView: UIImageView!
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         itemNameLabel.text = p1.title
-        itemAreaLabel.text = p1.area
+        
         itemDescriptionLabel.text = p1.description
         itemDescriptionLabel.numberOfLines = 0
         itemDescriptionLabel .sizeToFit()

@@ -141,7 +141,8 @@ class SwipeToLikeUIViewController: UIViewController {
     }
     
     
-    
+    var direction = 0
+    var didGo = true
     
     @IBAction func panCard(_ sender: UIPanGestureRecognizer) {
         let card = sender.view!
@@ -149,14 +150,46 @@ class SwipeToLikeUIViewController: UIViewController {
         let xFromCenter = card.center.x - view.center.x
         let percOff = abs(xFromCenter) / view.center.x
         
+        
         if xFromCenter < 0.0{
             factionIndicatorUIImage.image = #imageLiteral(resourceName: "ic_no_like_date")
+//             relationUISlider.setValue(Float(0.5 - percOff * 0.9), animated: false)
+            
+//            if self.direction >= 0 && didGo{
+//                self.direction = -1
+//                    self.didGo = false
+//                    self.likeUIImageView.alpha = 0
+//                    self.dislikeUIImageView.alpha = 1
+//                    self.relationUISlider.minimumTrackTintColor = UIColor(cgColor: brown())
+//                    self.relationUISlider.maximumTrackTintColor = UIColor(cgColor: grayFour())
+//                    self.relationUISlider.setThumbImage(self.thumbImageLike, for: .normal)
+//
+//            }
             // relationUISlider.setValue(Float(0.5 - percOff * 0.9), animated: false)
         }
         else{
             // relationUISlider.maximumTrackTintColor = UIColor(cgColor: darkOrange())
             //   relationUISlider.minimumTrackTintColor = UIColor(cgColor: grayFour())
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+//                self.relationUISlider.minimumTrackTintColor = UIColor(cgColor: grayFour())
+//                self.relationUISlider.maximumTrackTintColor = UIColor(cgColor: darkOrange())
+//                self.relationUISlider.setValue(Float(0.9 * percOff + 0.5), animated: false)
+//            })
+            
             factionIndicatorUIImage.image = #imageLiteral(resourceName: "ic_like_date")
+//             relationUISlider.setValue(Float(percOff * 0.9 + 0.5), animated: false)
+//            if self.direction <= 0 {
+//                self.direction = 1
+//                DispatchQueue.main.async {
+//                    if percOff > 0.05{
+//                self.didGo = true
+//                    }
+//                self.likeUIImageView.alpha = 1
+//                self.relationUISlider.minimumTrackTintColor = UIColor(cgColor: grayFour())
+//                self.relationUISlider.maximumTrackTintColor = UIColor(cgColor: darkOrange())
+//                self.relationUISlider.setThumbImage(self.thumbImageLike, for: .normal)
+//                }
+//            }
             //  relationUISlider.setValue(Float(0.9 * percOff + 0.5), animated: true)
             //relationUISlider.setThumbImage(thumbImageLike, for: .disabled)
         }

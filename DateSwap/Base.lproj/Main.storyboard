@@ -1413,8 +1413,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oXO-uu-UKN">
-                                <rect key="frame" x="0.0" y="216" width="375" height="386"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oXO-uu-UKN">
+                                <rect key="frame" x="0.0" y="152" width="375" height="515"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="profileCell" rowHeight="278" id="nDd-tO-sXT" customClass="ProfileTableViewCell" customModule="DateSwap" customModuleProvider="target">
@@ -1496,35 +1496,35 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3V8-PC-Say">
-                                <rect key="frame" x="12" y="12" width="30" height="27"/>
+                                <rect key="frame" x="12" y="28" width="30" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="3V8-PC-Say" secondAttribute="height" multiplier="68:61" id="dbr-U3-bUU"/>
                                 </constraints>
                                 <state key="normal" image="ic_back_grey"/>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcF-l3-tkh">
-                                <rect key="frame" x="172.5" y="12" width="30" height="30"/>
+                                <rect key="frame" x="172.5" y="28" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LcF-l3-tkh" secondAttribute="height" multiplier="1:1" id="Txe-jP-Cqi"/>
                                 </constraints>
                                 <state key="normal" image="ic_userStall_color"/>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIh-nG-eKm">
-                                <rect key="frame" x="333" y="12" width="30" height="32"/>
+                                <rect key="frame" x="333" y="28" width="30" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="yIh-nG-eKm" secondAttribute="height" multiplier="29:31" id="HVS-SY-HeS"/>
                                 </constraints>
                                 <state key="normal" image="ic_chatMatch_grey"/>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDi-xZ-Fdr">
-                                <rect key="frame" x="40" y="88.5" width="168" height="29.5"/>
+                                <rect key="frame" x="40" y="102.5" width="168" height="29.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="SDi-xZ-Fdr" secondAttribute="height" multiplier="246:43" id="fyP-Nh-7cs"/>
                                 </constraints>
                                 <state key="normal" image="ic_rating_long_tail_fourAndaHalf"/>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ugly_cats_06.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6bh-aF-CQS">
-                                <rect key="frame" x="12" y="58" width="60" height="60"/>
+                                <rect key="frame" x="12" y="74" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="6bh-aF-CQS" secondAttribute="height" multiplier="1:1" id="z9V-MO-j5e"/>
                                 </constraints>
@@ -1539,21 +1539,23 @@
                             <constraint firstItem="3V8-PC-Say" firstAttribute="width" secondItem="aUO-Um-L71" secondAttribute="width" multiplier="0.08" id="CJj-9c-fx4"/>
                             <constraint firstItem="LcF-l3-tkh" firstAttribute="centerX" secondItem="U9H-oA-Ocv" secondAttribute="centerX" id="EkR-FK-g3H"/>
                             <constraint firstItem="U9H-oA-Ocv" firstAttribute="trailing" secondItem="oXO-uu-UKN" secondAttribute="trailing" id="Ftk-7R-ApM"/>
-                            <constraint firstItem="SDi-xZ-Fdr" firstAttribute="bottom" secondItem="6bh-aF-CQS" secondAttribute="bottom" id="IxL-ZT-x8w"/>
+                            <constraint firstItem="SDi-xZ-Fdr" firstAttribute="bottom" secondItem="6bh-aF-CQS" secondAttribute="bottom" constant="-2" id="IxL-ZT-x8w"/>
                             <constraint firstItem="6bh-aF-CQS" firstAttribute="width" secondItem="aUO-Um-L71" secondAttribute="width" multiplier="0.16" id="MMS-Hn-q7O"/>
                             <constraint firstItem="U9H-oA-Ocv" firstAttribute="trailing" secondItem="yIh-nG-eKm" secondAttribute="trailing" constant="12" id="R9C-EX-4eC"/>
                             <constraint firstItem="yIh-nG-eKm" firstAttribute="width" secondItem="aUO-Um-L71" secondAttribute="width" multiplier="0.08" id="UZn-tJ-PwP"/>
-                            <constraint firstItem="3V8-PC-Say" firstAttribute="top" secondItem="aUO-Um-L71" secondAttribute="top" constant="12" id="WoJ-G8-pTd"/>
-                            <constraint firstItem="LcF-l3-tkh" firstAttribute="top" secondItem="aUO-Um-L71" secondAttribute="top" constant="12" id="aBd-Rh-KNb"/>
+                            <constraint firstItem="3V8-PC-Say" firstAttribute="top" secondItem="U9H-oA-Ocv" secondAttribute="top" constant="8" id="WoJ-G8-pTd"/>
+                            <constraint firstItem="LcF-l3-tkh" firstAttribute="top" secondItem="U9H-oA-Ocv" secondAttribute="top" constant="8" id="aBd-Rh-KNb"/>
                             <constraint firstItem="LcF-l3-tkh" firstAttribute="width" secondItem="aUO-Um-L71" secondAttribute="width" multiplier="0.08" id="gvd-lk-iPx"/>
-                            <constraint firstItem="yIh-nG-eKm" firstAttribute="top" secondItem="aUO-Um-L71" secondAttribute="top" constant="12" id="iDg-4E-eaH"/>
+                            <constraint firstItem="yIh-nG-eKm" firstAttribute="top" secondItem="U9H-oA-Ocv" secondAttribute="top" constant="8" id="iDg-4E-eaH"/>
                             <constraint firstItem="oXO-uu-UKN" firstAttribute="leading" secondItem="U9H-oA-Ocv" secondAttribute="leading" id="ji3-uU-zdq"/>
                             <constraint firstItem="U9H-oA-Ocv" firstAttribute="bottom" secondItem="oXO-uu-UKN" secondAttribute="bottom" id="nlk-UU-ACw"/>
                             <constraint firstItem="6bh-aF-CQS" firstAttribute="leading" secondItem="aUO-Um-L71" secondAttribute="leading" constant="12" id="vEn-mH-7Rq"/>
+                            <constraint firstItem="oXO-uu-UKN" firstAttribute="top" secondItem="SDi-xZ-Fdr" secondAttribute="bottom" constant="20" id="y6Z-5K-o26"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="U9H-oA-Ocv"/>
                     </view>
                     <connections>
+                        <outlet property="userImageStallPageUIImageView" destination="6bh-aF-CQS" id="DLz-P2-xQb"/>
                         <segue destination="njD-gA-UIc" kind="show" identifier="masterToDetail" id="QVH-aC-Owa"/>
                     </connections>
                 </viewController>

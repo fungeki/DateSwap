@@ -10,11 +10,18 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var userImageStallPageUIImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidLayoutSubviews() {
+        userImageStallPageUIImageView.layer.cornerRadius = userImageStallPageUIImageView.frame.height/2
+        userImageStallPageUIImageView.layer.borderWidth = 3
+        userImageStallPageUIImageView.layer.borderColor = UIColor.white.cgColor
     }
 
     override func didReceiveMemoryWarning() {

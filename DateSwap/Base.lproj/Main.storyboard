@@ -1544,12 +1544,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eilana rotbert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sd-wV-Nyb">
+                                <rect key="frame" x="75" y="82" width="126.5" height="17"/>
+                                <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="SDi-xZ-Fdr" firstAttribute="leading" secondItem="6bh-aF-CQS" secondAttribute="leading" constant="28" id="1yv-Qe-sXf"/>
                             <constraint firstItem="3V8-PC-Say" firstAttribute="leading" secondItem="U9H-oA-Ocv" secondAttribute="leading" constant="12" id="23G-ZZ-hAa"/>
                             <constraint firstItem="6bh-aF-CQS" firstAttribute="top" secondItem="3V8-PC-Say" secondAttribute="bottom" constant="19" id="30f-fp-ydL"/>
+                            <constraint firstItem="SDi-xZ-Fdr" firstAttribute="top" secondItem="4sd-wV-Nyb" secondAttribute="bottom" constant="3.5" id="6t9-cI-Lhh"/>
                             <constraint firstItem="SDi-xZ-Fdr" firstAttribute="width" secondItem="aUO-Um-L71" secondAttribute="width" multiplier="0.448" id="93a-Jh-1tH"/>
                             <constraint firstItem="3V8-PC-Say" firstAttribute="width" secondItem="aUO-Um-L71" secondAttribute="width" multiplier="0.08" id="CJj-9c-fx4"/>
                             <constraint firstItem="LcF-l3-tkh" firstAttribute="centerX" secondItem="U9H-oA-Ocv" secondAttribute="centerX" id="EkR-FK-g3H"/>
@@ -1561,6 +1568,7 @@
                             <constraint firstItem="yIh-nG-eKm" firstAttribute="width" secondItem="aUO-Um-L71" secondAttribute="width" multiplier="0.08" id="UZn-tJ-PwP"/>
                             <constraint firstItem="3V8-PC-Say" firstAttribute="top" secondItem="U9H-oA-Ocv" secondAttribute="top" constant="8" id="WoJ-G8-pTd"/>
                             <constraint firstItem="LcF-l3-tkh" firstAttribute="top" secondItem="U9H-oA-Ocv" secondAttribute="top" constant="8" id="aBd-Rh-KNb"/>
+                            <constraint firstItem="4sd-wV-Nyb" firstAttribute="leading" secondItem="6bh-aF-CQS" secondAttribute="trailing" constant="3" id="ahF-yr-cDI"/>
                             <constraint firstItem="zmc-Hg-yoz" firstAttribute="leading" secondItem="6bh-aF-CQS" secondAttribute="trailing" constant="3" id="f6O-0N-5rO"/>
                             <constraint firstItem="zmc-Hg-yoz" firstAttribute="bottom" secondItem="SDi-xZ-Fdr" secondAttribute="bottom" constant="-4" id="fCB-fS-fEU"/>
                             <constraint firstItem="4Sx-vV-m92" firstAttribute="centerY" secondItem="6bh-aF-CQS" secondAttribute="centerY" id="fho-Lt-Twq"/>

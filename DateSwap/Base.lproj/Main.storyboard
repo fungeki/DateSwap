@@ -1529,6 +1529,15 @@
                                     <constraint firstAttribute="width" secondItem="6bh-aF-CQS" secondAttribute="height" multiplier="1:1" id="z9V-MO-j5e"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmc-Hg-yoz">
+                                <rect key="frame" x="75" y="107" width="24.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_kilometers_away_color" translatesAutoresizingMaskIntoConstraints="NO" id="4Sx-vV-m92">
+                                <rect key="frame" x="217" y="84" width="43" height="40"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1545,11 +1554,17 @@
                             <constraint firstItem="yIh-nG-eKm" firstAttribute="width" secondItem="aUO-Um-L71" secondAttribute="width" multiplier="0.08" id="UZn-tJ-PwP"/>
                             <constraint firstItem="3V8-PC-Say" firstAttribute="top" secondItem="U9H-oA-Ocv" secondAttribute="top" constant="8" id="WoJ-G8-pTd"/>
                             <constraint firstItem="LcF-l3-tkh" firstAttribute="top" secondItem="U9H-oA-Ocv" secondAttribute="top" constant="8" id="aBd-Rh-KNb"/>
+                            <constraint firstItem="zmc-Hg-yoz" firstAttribute="leading" secondItem="6bh-aF-CQS" secondAttribute="trailing" constant="3" id="f6O-0N-5rO"/>
+                            <constraint firstItem="zmc-Hg-yoz" firstAttribute="bottom" secondItem="SDi-xZ-Fdr" secondAttribute="bottom" constant="-4" id="fCB-fS-fEU"/>
+                            <constraint firstItem="4Sx-vV-m92" firstAttribute="centerY" secondItem="6bh-aF-CQS" secondAttribute="centerY" id="fho-Lt-Twq"/>
                             <constraint firstItem="LcF-l3-tkh" firstAttribute="width" secondItem="aUO-Um-L71" secondAttribute="width" multiplier="0.08" id="gvd-lk-iPx"/>
+                            <constraint firstItem="zmc-Hg-yoz" firstAttribute="top" secondItem="SDi-xZ-Fdr" secondAttribute="top" constant="4" id="hph-ND-YmG"/>
                             <constraint firstItem="yIh-nG-eKm" firstAttribute="top" secondItem="U9H-oA-Ocv" secondAttribute="top" constant="8" id="iDg-4E-eaH"/>
                             <constraint firstItem="oXO-uu-UKN" firstAttribute="leading" secondItem="U9H-oA-Ocv" secondAttribute="leading" id="ji3-uU-zdq"/>
                             <constraint firstItem="U9H-oA-Ocv" firstAttribute="bottom" secondItem="oXO-uu-UKN" secondAttribute="bottom" id="nlk-UU-ACw"/>
                             <constraint firstItem="6bh-aF-CQS" firstAttribute="leading" secondItem="aUO-Um-L71" secondAttribute="leading" constant="12" id="vEn-mH-7Rq"/>
+                            <constraint firstItem="4Sx-vV-m92" firstAttribute="leading" secondItem="SDi-xZ-Fdr" secondAttribute="trailing" constant="9" id="wA7-0h-bmE"/>
+                            <constraint firstItem="4Sx-vV-m92" firstAttribute="height" secondItem="aUO-Um-L71" secondAttribute="height" multiplier="0.06" id="x5g-ay-6OU"/>
                             <constraint firstItem="oXO-uu-UKN" firstAttribute="top" secondItem="SDi-xZ-Fdr" secondAttribute="bottom" constant="20" id="y6Z-5K-o26"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="U9H-oA-Ocv"/>

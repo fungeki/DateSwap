@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		773871FF20DEBFF600493C69 /* PhotosEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773871FE20DEBFF600493C69 /* PhotosEditorViewController.swift */; };
+		77BB152220F8D2A200E3EF87 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77BB152120F8D2A200E3EF87 /* GoogleService-Info.plist */; };
 		77E09E1220E67A5400C3CEDE /* the_rob.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 77E09E1120E67A5400C3CEDE /* the_rob.jpg */; };
 		8C2EB2FC20EA926900527D6F /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB2FB20EA926900527D6F /* RatingViewController.swift */; };
 		8C2EB30220EBA91200527D6F /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB30120EBA91200527D6F /* Profile.swift */; };
-		8C2EB30820F8D0EE00527D6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C2EB30720F8D0EE00527D6F /* GoogleService-Info.plist */; };
 		8C4321ED20E4D3740027FDA1 /* AndaleMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C4321EB20E4D3730027FDA1 /* AndaleMono.ttf */; };
 		8C43223420E67AD60027FDA1 /* RelationUISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43223320E67AD60027FDA1 /* RelationUISlider.swift */; };
 		8C43223620E77FC60027FDA1 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43223520E77FC60027FDA1 /* UIImageExtension.swift */; };
@@ -48,10 +48,10 @@
 		5D92167A3509D274EBCE1F78 /* Pods-DateSwap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateSwap.release.xcconfig"; path = "Pods/Target Support Files/Pods-DateSwap/Pods-DateSwap.release.xcconfig"; sourceTree = "<group>"; };
 		772EBC7820E42E6C00BA762B /* Andale Mono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Andale Mono.ttf"; sourceTree = "<group>"; };
 		773871FE20DEBFF600493C69 /* PhotosEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosEditorViewController.swift; sourceTree = "<group>"; };
+		77BB152120F8D2A200E3EF87 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		77E09E1120E67A5400C3CEDE /* the_rob.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = the_rob.jpg; sourceTree = "<group>"; };
 		8C2EB2FB20EA926900527D6F /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		8C2EB30120EBA91200527D6F /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		8C2EB30720F8D0EE00527D6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../DateSwap/DateSwap/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8C4321EB20E4D3730027FDA1 /* AndaleMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AndaleMono.ttf; sourceTree = "<group>"; };
 		8C43223320E67AD60027FDA1 /* RelationUISlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationUISlider.swift; sourceTree = "<group>"; };
 		8C43223520E77FC60027FDA1 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
@@ -145,7 +145,7 @@
 				8C9A100D20CA99140077B544 /* AppDelegate.swift */,
 				8C9A100F20CA99140077B544 /* ViewController.swift */,
 				8CD4202B20D2827A006101A1 /* ProfileTableViewCell.swift */,
-				8C2EB30720F8D0EE00527D6F /* GoogleService-Info.plist */,
+				77BB152120F8D2A200E3EF87 /* GoogleService-Info.plist */,
 				8C9A101120CA99140077B544 /* Main.storyboard */,
 				8CBA6A7420E4C7C6008CD18B /* SwipeToLikeUIViewController.swift */,
 				8C9A101720CA99140077B544 /* Assets.xcassets */,
@@ -250,12 +250,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C9A101B20CA99140077B544 /* LaunchScreen.storyboard in Resources */,
+				77BB152220F8D2A200E3EF87 /* GoogleService-Info.plist in Resources */,
 				8C9A101820CA99140077B544 /* Assets.xcassets in Resources */,
 				8C9A101320CA99140077B544 /* Main.storyboard in Resources */,
 				8C4321ED20E4D3740027FDA1 /* AndaleMono.ttf in Resources */,
 				8CE62D0B20DB84C000AA167D /* ugly_cats_06.jpg in Resources */,
 				77E09E1220E67A5400C3CEDE /* the_rob.jpg in Resources */,
-				8C2EB30820F8D0EE00527D6F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

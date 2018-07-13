@@ -11,6 +11,7 @@
 		77E09E1220E67A5400C3CEDE /* the_rob.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 77E09E1120E67A5400C3CEDE /* the_rob.jpg */; };
 		8C2EB2FC20EA926900527D6F /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB2FB20EA926900527D6F /* RatingViewController.swift */; };
 		8C2EB30220EBA91200527D6F /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB30120EBA91200527D6F /* Profile.swift */; };
+		8C2EB30620F8CF1800527D6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C2EB30520F8CF1700527D6F /* GoogleService-Info.plist */; };
 		8C4321ED20E4D3740027FDA1 /* AndaleMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C4321EB20E4D3730027FDA1 /* AndaleMono.ttf */; };
 		8C43223420E67AD60027FDA1 /* RelationUISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43223320E67AD60027FDA1 /* RelationUISlider.swift */; };
 		8C43223620E77FC60027FDA1 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43223520E77FC60027FDA1 /* UIImageExtension.swift */; };
@@ -50,6 +51,7 @@
 		77E09E1120E67A5400C3CEDE /* the_rob.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = the_rob.jpg; sourceTree = "<group>"; };
 		8C2EB2FB20EA926900527D6F /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		8C2EB30120EBA91200527D6F /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		8C2EB30520F8CF1700527D6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8C4321EB20E4D3730027FDA1 /* AndaleMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AndaleMono.ttf; sourceTree = "<group>"; };
 		8C43223320E67AD60027FDA1 /* RelationUISlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationUISlider.swift; sourceTree = "<group>"; };
 		8C43223520E77FC60027FDA1 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				8C9A100F20CA99140077B544 /* ViewController.swift */,
 				8CD4202B20D2827A006101A1 /* ProfileTableViewCell.swift */,
 				8C9A101120CA99140077B544 /* Main.storyboard */,
+				8C2EB30520F8CF1700527D6F /* GoogleService-Info.plist */,
 				8CBA6A7420E4C7C6008CD18B /* SwipeToLikeUIViewController.swift */,
 				8C9A101720CA99140077B544 /* Assets.xcassets */,
 				8C9A101920CA99140077B544 /* LaunchScreen.storyboard */,
@@ -252,6 +255,7 @@
 				8C4321ED20E4D3740027FDA1 /* AndaleMono.ttf in Resources */,
 				8CE62D0B20DB84C000AA167D /* ugly_cats_06.jpg in Resources */,
 				77E09E1220E67A5400C3CEDE /* the_rob.jpg in Resources */,
+				8C2EB30620F8CF1800527D6F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

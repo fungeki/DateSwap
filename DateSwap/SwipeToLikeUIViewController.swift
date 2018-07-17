@@ -68,6 +68,7 @@ class SwipeToLikeUIViewController: UIViewController {
         if let touchEvent = event.allTouches?.first {
             switch touchEvent.phase {
             case .began:
+                
                 break
             // handle drag began
             case .moved:
@@ -116,6 +117,7 @@ class SwipeToLikeUIViewController: UIViewController {
                 likeUIImageView.alpha = 0
                 relationUISlider.setThumbImage(thumbBack, for: .normal)
                 UIView.animate(withDuration: 0.3, animations: {
+                    
                     self.relationUISlider.setValue(0.5, animated: true)
                     self.factionIndicatorUIImage.alpha = 0
                     self.relationUISlider.maximumTrackTintColor = UIColor(cgColor: grayFour())
@@ -150,7 +152,7 @@ class SwipeToLikeUIViewController: UIViewController {
         let xFromCenter = card.center.x - view.center.x
         let percOff = abs(xFromCenter) / view.center.x
         
-        
+        productCardUIView.layer.zPosition = .greatestFiniteMagnitude
         if xFromCenter < 0.0{
             factionIndicatorUIImage.image = #imageLiteral(resourceName: "ic_no_like_date")
 //             relationUISlider.setValue(Float(0.5 - percOff * 0.9), animated: false)
@@ -243,6 +245,7 @@ class SwipeToLikeUIViewController: UIViewController {
         
         //let go
         if sender.state == UIGestureRecognizerState.ended{
+            self.productCardUIView.layer.zPosition = .leastNormalMagnitude
             relationUISlider.isEnabled = true
             UIView.animate(withDuration: 0.1, animations: {
                 card.transform = CGAffineTransform(rotationAngle: 0)

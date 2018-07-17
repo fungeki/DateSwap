@@ -13,6 +13,10 @@
 		8C2EB2FC20EA926900527D6F /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB2FB20EA926900527D6F /* RatingViewController.swift */; };
 		8C2EB30220EBA91200527D6F /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB30120EBA91200527D6F /* Profile.swift */; };
 		8C2EB30A20F8D36F00527D6F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB30920F8D36F00527D6F /* LoginViewController.swift */; };
+		8C2EB30C20FDEE8000527D6F /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB30B20FDEE7F00527D6F /* Messages.swift */; };
+		8C2EB30E20FE2C1500527D6F /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB30D20FE2C1500527D6F /* Rating.swift */; };
+		8C2EB31020FE2CE900527D6F /* KeyWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB30F20FE2CE900527D6F /* KeyWords.swift */; };
+		8C2EB31220FE2D4800527D6F /* UserLikes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB31120FE2D4800527D6F /* UserLikes.swift */; };
 		8C4321ED20E4D3740027FDA1 /* AndaleMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C4321EB20E4D3730027FDA1 /* AndaleMono.ttf */; };
 		8C43223420E67AD60027FDA1 /* RelationUISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43223320E67AD60027FDA1 /* RelationUISlider.swift */; };
 		8C43223620E77FC60027FDA1 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43223520E77FC60027FDA1 /* UIImageExtension.swift */; };
@@ -54,6 +58,10 @@
 		8C2EB2FB20EA926900527D6F /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		8C2EB30120EBA91200527D6F /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		8C2EB30920F8D36F00527D6F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8C2EB30B20FDEE7F00527D6F /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		8C2EB30D20FE2C1500527D6F /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
+		8C2EB30F20FE2CE900527D6F /* KeyWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyWords.swift; sourceTree = "<group>"; };
+		8C2EB31120FE2D4800527D6F /* UserLikes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLikes.swift; sourceTree = "<group>"; };
 		8C4321EB20E4D3730027FDA1 /* AndaleMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AndaleMono.ttf; sourceTree = "<group>"; };
 		8C43223320E67AD60027FDA1 /* RelationUISlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationUISlider.swift; sourceTree = "<group>"; };
 		8C43223520E77FC60027FDA1 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
@@ -176,6 +184,10 @@
 				8C43223520E77FC60027FDA1 /* UIImageExtension.swift */,
 				8C2EB2FB20EA926900527D6F /* RatingViewController.swift */,
 				8C2EB30120EBA91200527D6F /* Profile.swift */,
+				8C2EB30B20FDEE7F00527D6F /* Messages.swift */,
+				8C2EB30D20FE2C1500527D6F /* Rating.swift */,
+				8C2EB30F20FE2CE900527D6F /* KeyWords.swift */,
+				8C2EB31120FE2D4800527D6F /* UserLikes.swift */,
 				8C2EB30920F8D36F00527D6F /* LoginViewController.swift */,
 			);
 			path = DateSwap;
@@ -350,15 +362,19 @@
 				8CEF6A3320D7A9DE007C39D5 /* ConditionUIButton.swift in Sources */,
 				8CBA6A7120E0E75C008CD18B /* DescriptionUITextView.swift in Sources */,
 				8C2EB2FC20EA926900527D6F /* RatingViewController.swift in Sources */,
+				8C2EB30C20FDEE8000527D6F /* Messages.swift in Sources */,
 				8CBA6A6B20DEBDF0008CD18B /* ProductEditTextfield.swift in Sources */,
 				8CEF6A2120D28793007C39D5 /* DetailsFromProfileViewController.swift in Sources */,
 				8C7405F420D24CE700FF8E9C /* Product.swift in Sources */,
 				8CE62D0920DB830200AA167D /* ProfileIntroViewController.swift in Sources */,
 				8C89A27E20DBD29200F900F5 /* EditMyProductsViewController.swift in Sources */,
+				8C2EB31020FE2CE900527D6F /* KeyWords.swift in Sources */,
+				8C2EB31220FE2D4800527D6F /* UserLikes.swift in Sources */,
 				8CD4202820D2824C006101A1 /* ProfileViewController.swift in Sources */,
 				8C2EB30220EBA91200527D6F /* Profile.swift in Sources */,
 				8CEF6A3520D933F6007C39D5 /* ProductOverviewViewController.swift in Sources */,
 				773871FF20DEBFF600493C69 /* PhotosEditorViewController.swift in Sources */,
+				8C2EB30E20FE2C1500527D6F /* Rating.swift in Sources */,
 				8C9A100E20CA99140077B544 /* AppDelegate.swift in Sources */,
 				8CEF6A3120D7A5C6007C39D5 /* JeansEffect.swift in Sources */,
 				8C43223420E67AD60027FDA1 /* RelationUISlider.swift in Sources */,

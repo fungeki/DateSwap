@@ -12,6 +12,7 @@
 		77E09E1220E67A5400C3CEDE /* the_rob.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 77E09E1120E67A5400C3CEDE /* the_rob.jpg */; };
 		8C2EB2FC20EA926900527D6F /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB2FB20EA926900527D6F /* RatingViewController.swift */; };
 		8C2EB30220EBA91200527D6F /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB30120EBA91200527D6F /* Profile.swift */; };
+		8C2EB30A20F8D36F00527D6F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB30920F8D36F00527D6F /* LoginViewController.swift */; };
 		8C4321ED20E4D3740027FDA1 /* AndaleMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C4321EB20E4D3730027FDA1 /* AndaleMono.ttf */; };
 		8C43223420E67AD60027FDA1 /* RelationUISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43223320E67AD60027FDA1 /* RelationUISlider.swift */; };
 		8C43223620E77FC60027FDA1 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43223520E77FC60027FDA1 /* UIImageExtension.swift */; };
@@ -52,6 +53,7 @@
 		77E09E1120E67A5400C3CEDE /* the_rob.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = the_rob.jpg; sourceTree = "<group>"; };
 		8C2EB2FB20EA926900527D6F /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		8C2EB30120EBA91200527D6F /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		8C2EB30920F8D36F00527D6F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8C4321EB20E4D3730027FDA1 /* AndaleMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AndaleMono.ttf; sourceTree = "<group>"; };
 		8C43223320E67AD60027FDA1 /* RelationUISlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationUISlider.swift; sourceTree = "<group>"; };
 		8C43223520E77FC60027FDA1 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				8C43223520E77FC60027FDA1 /* UIImageExtension.swift */,
 				8C2EB2FB20EA926900527D6F /* RatingViewController.swift */,
 				8C2EB30120EBA91200527D6F /* Profile.swift */,
+				8C2EB30920F8D36F00527D6F /* LoginViewController.swift */,
 			);
 			path = DateSwap;
 			sourceTree = "<group>";
@@ -287,6 +290,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DateSwap/Pods-DateSwap-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
@@ -294,6 +301,10 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
@@ -353,6 +364,7 @@
 				8C43223420E67AD60027FDA1 /* RelationUISlider.swift in Sources */,
 				8CBA6A7520E4C7C6008CD18B /* SwipeToLikeUIViewController.swift in Sources */,
 				8C9A101620CA99140077B544 /* DateSwap.xcdatamodeld in Sources */,
+				8C2EB30A20F8D36F00527D6F /* LoginViewController.swift in Sources */,
 				8CBA6A6F20DEC2A2008CD18B /* PriceSliderUISlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

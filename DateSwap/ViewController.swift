@@ -9,6 +9,8 @@
 import UIKit
 import SDWebImage
 class ViewController: UIViewController {
+   
+    
     let thumbImageLike = imageResizeForSlider(#imageLiteral(resourceName: "ic_love_color"))
     let thumbImageDislike = imageResizeForSlider(#imageLiteral(resourceName: "ic_x_color"))
     let thumbBack = imageResizeForSlider(#imageLiteral(resourceName: "ic_backMatch_color"))

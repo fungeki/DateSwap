@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		773871FF20DEBFF600493C69 /* PhotosEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773871FE20DEBFF600493C69 /* PhotosEditorViewController.swift */; };
+		777051DD20FE3AA800D7F54D /* NewMatchesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777051DC20FE3AA800D7F54D /* NewMatchesCollectionViewCell.swift */; };
+		777051DF20FE46B000D7F54D /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777051DE20FE46B000D7F54D /* MatchesViewController.swift */; };
 		77BB152220F8D2A200E3EF87 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77BB152120F8D2A200E3EF87 /* GoogleService-Info.plist */; };
 		77E09E1220E67A5400C3CEDE /* the_rob.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 77E09E1120E67A5400C3CEDE /* the_rob.jpg */; };
 		8C2EB2FC20EA926900527D6F /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB2FB20EA926900527D6F /* RatingViewController.swift */; };
@@ -49,6 +51,8 @@
 		5D92167A3509D274EBCE1F78 /* Pods-DateSwap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateSwap.release.xcconfig"; path = "Pods/Target Support Files/Pods-DateSwap/Pods-DateSwap.release.xcconfig"; sourceTree = "<group>"; };
 		772EBC7820E42E6C00BA762B /* Andale Mono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Andale Mono.ttf"; sourceTree = "<group>"; };
 		773871FE20DEBFF600493C69 /* PhotosEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosEditorViewController.swift; sourceTree = "<group>"; };
+		777051DC20FE3AA800D7F54D /* NewMatchesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMatchesCollectionViewCell.swift; sourceTree = "<group>"; };
+		777051DE20FE46B000D7F54D /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		77BB152120F8D2A200E3EF87 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		77E09E1120E67A5400C3CEDE /* the_rob.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = the_rob.jpg; sourceTree = "<group>"; };
 		8C2EB2FB20EA926900527D6F /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 				8CD4202B20D2827A006101A1 /* ProfileTableViewCell.swift */,
 				77BB152120F8D2A200E3EF87 /* GoogleService-Info.plist */,
 				8C9A101120CA99140077B544 /* Main.storyboard */,
+				777051DC20FE3AA800D7F54D /* NewMatchesCollectionViewCell.swift */,
 				8CBA6A7420E4C7C6008CD18B /* SwipeToLikeUIViewController.swift */,
 				8C9A101720CA99140077B544 /* Assets.xcassets */,
 				8C9A101920CA99140077B544 /* LaunchScreen.storyboard */,
@@ -156,6 +161,7 @@
 				8C9A101420CA99140077B544 /* DateSwap.xcdatamodeld */,
 				8C7405F320D24CE700FF8E9C /* Product.swift */,
 				8CD4202720D2824C006101A1 /* ProfileViewController.swift */,
+				777051DE20FE46B000D7F54D /* MatchesViewController.swift */,
 				8CEF6A2020D28793007C39D5 /* DetailsFromProfileViewController.swift */,
 				8CEF6A3020D7A5C6007C39D5 /* JeansEffect.swift */,
 				8CEF6A3220D7A9DE007C39D5 /* ConditionUIButton.swift */,
@@ -354,12 +360,14 @@
 				8CEF6A2120D28793007C39D5 /* DetailsFromProfileViewController.swift in Sources */,
 				8C7405F420D24CE700FF8E9C /* Product.swift in Sources */,
 				8CE62D0920DB830200AA167D /* ProfileIntroViewController.swift in Sources */,
+				777051DF20FE46B000D7F54D /* MatchesViewController.swift in Sources */,
 				8C89A27E20DBD29200F900F5 /* EditMyProductsViewController.swift in Sources */,
 				8CD4202820D2824C006101A1 /* ProfileViewController.swift in Sources */,
 				8C2EB30220EBA91200527D6F /* Profile.swift in Sources */,
 				8CEF6A3520D933F6007C39D5 /* ProductOverviewViewController.swift in Sources */,
 				773871FF20DEBFF600493C69 /* PhotosEditorViewController.swift in Sources */,
 				8C9A100E20CA99140077B544 /* AppDelegate.swift in Sources */,
+				777051DD20FE3AA800D7F54D /* NewMatchesCollectionViewCell.swift in Sources */,
 				8CEF6A3120D7A5C6007C39D5 /* JeansEffect.swift in Sources */,
 				8C43223420E67AD60027FDA1 /* RelationUISlider.swift in Sources */,
 				8CBA6A7520E4C7C6008CD18B /* SwipeToLikeUIViewController.swift in Sources */,

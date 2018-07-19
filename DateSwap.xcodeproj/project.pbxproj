@@ -17,6 +17,8 @@
 		8C2EB30E20FE2C1500527D6F /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB30D20FE2C1500527D6F /* Rating.swift */; };
 		8C2EB31020FE2CE900527D6F /* KeyWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB30F20FE2CE900527D6F /* KeyWords.swift */; };
 		8C2EB31220FE2D4800527D6F /* UserLikes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB31120FE2D4800527D6F /* UserLikes.swift */; };
+		8C2EB31420FE30BE00527D6F /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB31320FE30BE00527D6F /* ReviewViewController.swift */; };
+		8C2EB31620FE4AD200527D6F /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB31520FE4AD200527D6F /* ReviewTableViewCell.swift */; };
 		8C4321ED20E4D3740027FDA1 /* AndaleMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C4321EB20E4D3730027FDA1 /* AndaleMono.ttf */; };
 		8C43223420E67AD60027FDA1 /* RelationUISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43223320E67AD60027FDA1 /* RelationUISlider.swift */; };
 		8C43223620E77FC60027FDA1 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43223520E77FC60027FDA1 /* UIImageExtension.swift */; };
@@ -62,6 +64,8 @@
 		8C2EB30D20FE2C1500527D6F /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		8C2EB30F20FE2CE900527D6F /* KeyWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyWords.swift; sourceTree = "<group>"; };
 		8C2EB31120FE2D4800527D6F /* UserLikes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLikes.swift; sourceTree = "<group>"; };
+		8C2EB31320FE30BE00527D6F /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		8C2EB31520FE4AD200527D6F /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		8C4321EB20E4D3730027FDA1 /* AndaleMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AndaleMono.ttf; sourceTree = "<group>"; };
 		8C43223320E67AD60027FDA1 /* RelationUISlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationUISlider.swift; sourceTree = "<group>"; };
 		8C43223520E77FC60027FDA1 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
@@ -189,6 +193,8 @@
 				8C2EB30F20FE2CE900527D6F /* KeyWords.swift */,
 				8C2EB31120FE2D4800527D6F /* UserLikes.swift */,
 				8C2EB30920F8D36F00527D6F /* LoginViewController.swift */,
+				8C2EB31320FE30BE00527D6F /* ReviewViewController.swift */,
+				8C2EB31520FE4AD200527D6F /* ReviewTableViewCell.swift */,
 			);
 			path = DateSwap;
 			sourceTree = "<group>";
@@ -361,6 +367,7 @@
 				8C9A101020CA99140077B544 /* ViewController.swift in Sources */,
 				8CEF6A3320D7A9DE007C39D5 /* ConditionUIButton.swift in Sources */,
 				8CBA6A7120E0E75C008CD18B /* DescriptionUITextView.swift in Sources */,
+				8C2EB31620FE4AD200527D6F /* ReviewTableViewCell.swift in Sources */,
 				8C2EB2FC20EA926900527D6F /* RatingViewController.swift in Sources */,
 				8C2EB30C20FDEE8000527D6F /* Messages.swift in Sources */,
 				8CBA6A6B20DEBDF0008CD18B /* ProductEditTextfield.swift in Sources */,
@@ -380,6 +387,7 @@
 				8C43223420E67AD60027FDA1 /* RelationUISlider.swift in Sources */,
 				8CBA6A7520E4C7C6008CD18B /* SwipeToLikeUIViewController.swift in Sources */,
 				8C9A101620CA99140077B544 /* DateSwap.xcdatamodeld in Sources */,
+				8C2EB31420FE30BE00527D6F /* ReviewViewController.swift in Sources */,
 				8C2EB30A20F8D36F00527D6F /* LoginViewController.swift in Sources */,
 				8CBA6A6F20DEC2A2008CD18B /* PriceSliderUISlider.swift in Sources */,
 			);

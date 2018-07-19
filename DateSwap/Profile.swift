@@ -20,4 +20,4 @@ let u2 = Profile(ID: 2, nickname: "Silly McSeal", pic: "https://media.tenor.com/
 let u3 = Profile(ID: 3, nickname: "Afro Sloth", pic: "https://img.clipartxtras.com/12a60f9fed276debec3b909f83f23074_nope-funny-derpy-sloth-drawing_600-450.jpeg", rating: 3)
 let u4 = Profile(ID: 4, nickname: "Afro", pic: "https://img.clipartxtras.com/12a60f9fed276debec3b909f83f23074_nope-funny-derpy-sloth-drawing_600-450.jpeg", rating: 3)
 let u5 = Profile(ID: 5, nickname: "Ouchstriche", pic: "https://aminus3.s3.amazonaws.com/image/g0005/u00004960/i00214121/6d2f4fce2d8dea77054a68c4fdab906f_large.jpg", rating: 4.5)
-var profiles: [Profile] = [u1, u2, u3]
+var profiles: [Profile] = [u1, u2, u3, u4, u5]

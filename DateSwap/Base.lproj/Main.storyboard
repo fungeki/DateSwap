@@ -547,7 +547,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6V-s7-7Ao" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2485.5999999999999" y="-1518.8905547226389"/>
+            <point key="canvasLocation" x="1630" y="-2475"/>
         </scene>
         <!--Product Overview View Controller-->
         <scene sceneID="fXP-fV-DCt">
@@ -1955,7 +1955,6 @@
     <resources>
         <image name="ic_back_circle" width="95" height="95"/>
         <image name="ic_back_grey" width="68" height="61"/>
-        <image name="ic_chatMatch_color" width="66" height="71"/>
         <image name="ic_chatMatch_grey" width="58" height="62"/>
         <image name="ic_kilometers_away_color" width="43" height="63"/>
         <image name="ic_logo_color" width="78" height="71"/>

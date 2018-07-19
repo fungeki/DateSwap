@@ -51,7 +51,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
 //        currentCell.conditionUIButton.backgroundColor = UIColor.orange
 //        performSegue(withIdentifier: "masterToDetail", sender: product)
 //        return nil
-//    }
+// }
     
     
     

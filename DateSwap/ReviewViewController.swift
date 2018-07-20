@@ -12,6 +12,7 @@ class ReviewViewController: UIViewController {
     
     
     
+    @IBOutlet weak var writtenTextUITextView: DescriptionUITextView!
     @IBOutlet weak var r5UIButton: UIButton!
     @IBOutlet weak var r4UIButton: UIButton!
     @IBOutlet weak var r3UIButton: UIButton!
@@ -65,6 +66,8 @@ class ReviewViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     @IBAction func sendReview(_ sender: UIButton) {
          dropdownAnimation(toggle: ratingCardUIView.isHidden)
     }
@@ -97,6 +100,7 @@ class ReviewViewController: UIViewController {
         profileUIImageView.layer.borderWidth = 6
         profileUIImageView.layer.borderColor = UIColor.white.cgColor
         usernameUILabel.adjustsFontSizeToFitWidth = true
+      
     }
 
     func dropdownAnimation(toggle: Bool){
@@ -113,6 +117,7 @@ class ReviewViewController: UIViewController {
         let moveDown = CGAffineTransform(translationX: 0, y: 0)
         if toggle{
             self.ratingCardUIView.isHidden = false
+              writtenTextUITextView.addJeansEffect(color: darkOrange(), cornerRadius: 10, lineWidth: 2, lineDashPattern: [6,3], distanceTop: 8, distanceSides: 8)
 //            let sizeTransform = CGAffineTransform(scaleX: 0.1, y: 0.2)
 //            let translateMove = CGAffineTransform(translationX: ratingCardUIView.frame.width / 2, y: 150 )
 //            let translateMove2 = CGAffineTransform(translationX: 0, y: -100)
@@ -238,4 +243,28 @@ extension ReviewViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     
+}
+
+extension ReviewViewController: UITextViewDelegate{
+    func textViewDidBeginEditing(_ textView: UITextView)
+    {
+        if (textView.text == "Type your experience here :)")
+        {
+            textView.text = ""
+            textView.textColor = UIColor(cgColor: mediumOrange())
+            
+        }
+        textView.becomeFirstResponder() //Optional
+    }
+    
+    
+    func textViewDidEndEditing(_ textView: UITextView)
+    {
+        if (textView.text == "")
+        {
+            textView.text = "Type your experience here :)"
+            textView.textColor = .lightGray
+        }
+        textView.resignFirstResponder()
+    }
 }

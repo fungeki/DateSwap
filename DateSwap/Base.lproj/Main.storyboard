@@ -413,7 +413,7 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XMG-9U-z33">
-                                <rect key="frame" x="0.0" y="102" width="375" height="505"/>
+                                <rect key="frame" x="0.0" y="102" width="375" height="565"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reviewCell" rowHeight="173" id="hTC-kv-RiQ" customClass="ReviewTableViewCell" customModule="DateSwap" customModuleProvider="target">
@@ -527,11 +527,17 @@
                                         <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="placeHolderText" value="why not leave a few words? :)"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="20"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeHolderText" value="Type your experience here :)"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingCorners">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingTop">
+                                                <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="xyx-UF-lvf" id="R6d-CI-DHz"/>
+                                        </connections>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxf-gP-16y">
                                         <rect key="frame" x="321" y="142" width="46" height="30"/>
@@ -673,10 +679,10 @@
                             <constraint firstItem="XMG-9U-z33" firstAttribute="top" secondItem="IRL-Zk-5GE" secondAttribute="bottom" id="hZe-7x-BjJ"/>
                             <constraint firstItem="ECv-ui-Vd5" firstAttribute="leading" secondItem="kHQ-8B-swT" secondAttribute="trailing" constant="36" id="j77-cw-vwb"/>
                             <constraint firstItem="kHQ-8B-swT" firstAttribute="leading" secondItem="1HP-k2-4an" secondAttribute="leading" constant="24" id="jIl-5F-YfK"/>
+                            <constraint firstItem="1HP-k2-4an" firstAttribute="bottom" secondItem="XMG-9U-z33" secondAttribute="bottom" id="jYq-CA-Asc"/>
                             <constraint firstItem="4Wl-Fc-ODq" firstAttribute="top" secondItem="UXy-dk-qN3" secondAttribute="top" constant="16" id="k8i-Ua-AG7"/>
                             <constraint firstItem="kHQ-8B-swT" firstAttribute="width" secondItem="UXy-dk-qN3" secondAttribute="width" multiplier="0.08" id="uwt-34-4SL"/>
                             <constraint firstItem="IRL-Zk-5GE" firstAttribute="top" secondItem="It5-1v-RUl" secondAttribute="bottom" constant="12" id="vrE-MJ-KcR"/>
-                            <constraint firstItem="4MG-2c-ggX" firstAttribute="top" secondItem="XMG-9U-z33" secondAttribute="bottom" id="ynQ-Ll-dwx"/>
                             <constraint firstItem="4Wl-Fc-ODq" firstAttribute="trailing" secondItem="It5-1v-RUl" secondAttribute="trailing" id="zhw-JB-vCd"/>
                             <constraint firstItem="1HP-k2-4an" firstAttribute="bottom" secondItem="4MG-2c-ggX" secondAttribute="bottom" constant="-120" id="zyS-x2-9HT"/>
                         </constraints>
@@ -693,6 +699,7 @@
                         <outlet property="rateUIView" destination="kga-re-elj" id="Qdb-l4-nIJ"/>
                         <outlet property="ratingCardUIView" destination="4MG-2c-ggX" id="bCy-Om-j13"/>
                         <outlet property="usernameUILabel" destination="4Wl-Fc-ODq" id="qKA-YX-yuZ"/>
+                        <outlet property="writtenTextUITextView" destination="59X-bu-EPR" id="UpT-Gx-yJj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6V-s7-7Ao" userLabel="First Responder" sceneMemberID="firstResponder"/>

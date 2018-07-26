@@ -368,6 +368,75 @@
             </objects>
             <point key="canvasLocation" x="1630" y="-1506"/>
         </scene>
+        <!--Matches View Controller-->
+        <scene sceneID="f2t-Nl-D89">
+            <objects>
+                <viewController id="v9L-E3-TXj" customClass="MatchesViewController" customModule="DateSwap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EFc-aR-skw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="77J-sX-vLB">
+                                <rect key="frame" x="0.0" y="76" width="375" height="145"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Btg-vT-Sf6">
+                                    <size key="itemSize" width="121" height="147"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="doL-dB-2BQ" customClass="NewMatchesCollectionViewCell" customModule="DateSwap" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="121" height="147"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="121" height="147"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uHe-QT-1hX">
+                                                    <rect key="frame" x="8" y="8" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="Gwh-BJ-6cg"/>
+                                                        <constraint firstAttribute="width" constant="100" id="tg0-vd-OEK"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibS-5w-cVW">
+                                                    <rect key="frame" x="16" y="116" width="89" height="15"/>
+                                                    <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="ibS-5w-cVW" secondAttribute="trailing" constant="8" id="04u-Is-eJv"/>
+                                            <constraint firstItem="uHe-QT-1hX" firstAttribute="top" secondItem="doL-dB-2BQ" secondAttribute="topMargin" id="3wQ-xA-aHH"/>
+                                            <constraint firstItem="ibS-5w-cVW" firstAttribute="top" secondItem="uHe-QT-1hX" secondAttribute="bottom" constant="8" id="GI4-VY-ZNE"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="ibS-5w-cVW" secondAttribute="bottom" constant="8" id="Q4u-rH-p7c"/>
+                                            <constraint firstItem="uHe-QT-1hX" firstAttribute="leading" secondItem="doL-dB-2BQ" secondAttribute="leadingMargin" id="o5K-Zd-mKk"/>
+                                            <constraint firstItem="ibS-5w-cVW" firstAttribute="leading" secondItem="doL-dB-2BQ" secondAttribute="leadingMargin" constant="8" id="oPa-v1-0Vy"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="newMatchNickNameUILabel" destination="ibS-5w-cVW" id="gvQ-Tr-m9i"/>
+                                            <outlet property="newMatchUIImageView" destination="uHe-QT-1hX" id="4fL-9L-oBu"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="v9L-E3-TXj" id="DL1-KG-EXY"/>
+                                    <outlet property="delegate" destination="v9L-E3-TXj" id="L5Y-1Q-3nS"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="gOC-IT-gIz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3B0-Ac-gAE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2496.8000000000002" y="-1506.296851574213"/>
+        </scene>
         <!--Chat View Controller-->
         <scene sceneID="8Cb-EN-j2e">
             <objects>
@@ -437,7 +506,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9T8-ny-5du" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-175.19999999999999" y="-2287.1064467766118"/>
+            <point key="canvasLocation" x="3361" y="-1506"/>
         </scene>
         <!--Review View Controller-->
         <scene sceneID="mQr-aN-DeD">

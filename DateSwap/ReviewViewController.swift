@@ -117,7 +117,7 @@ class ReviewViewController: UIViewController {
         let moveDown = CGAffineTransform(translationX: 0, y: 0)
         if toggle{
             self.ratingCardUIView.isHidden = false
-              writtenTextUITextView.addJeansEffect(color: darkOrange(), cornerRadius: 10, lineWidth: 2, lineDashPattern: [6,3], distanceTop: 8, distanceSides: 8)
+              writtenTextUITextView.addJeansEffect(color: darkOrange(), cornerRadius: 10, lineWidth: 2, lineDashPattern: [6,3], distanceTop: 0c, distanceSides: 8)
 //            let sizeTransform = CGAffineTransform(scaleX: 0.1, y: 0.2)
 //            let translateMove = CGAffineTransform(translationX: ratingCardUIView.frame.width / 2, y: 150 )
 //            let translateMove2 = CGAffineTransform(translationX: 0, y: -100)

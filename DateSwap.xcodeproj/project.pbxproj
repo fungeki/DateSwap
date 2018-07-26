@@ -12,6 +12,8 @@
 		777051DF20FE46B000D7F54D /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777051DE20FE46B000D7F54D /* MatchesViewController.swift */; };
 		77BB152220F8D2A200E3EF87 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77BB152120F8D2A200E3EF87 /* GoogleService-Info.plist */; };
 		77E09E1220E67A5400C3CEDE /* the_rob.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 77E09E1120E67A5400C3CEDE /* the_rob.jpg */; };
+		8C0986EA2101B4A40032B874 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0986E92101B4A40032B874 /* ChatViewController.swift */; };
+		8C0C238B2101EF4C0021D055 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C238A2101EF4C0021D055 /* ChatTableViewCell.swift */; };
 		8C2EB2FC20EA926900527D6F /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB2FB20EA926900527D6F /* RatingViewController.swift */; };
 		8C2EB30220EBA91200527D6F /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB30120EBA91200527D6F /* Profile.swift */; };
 		8C2EB30A20F8D36F00527D6F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB30920F8D36F00527D6F /* LoginViewController.swift */; };
@@ -61,6 +63,8 @@
 		777051DE20FE46B000D7F54D /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		77BB152120F8D2A200E3EF87 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		77E09E1120E67A5400C3CEDE /* the_rob.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = the_rob.jpg; sourceTree = "<group>"; };
+		8C0986E92101B4A40032B874 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		8C0C238A2101EF4C0021D055 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		8C2EB2FB20EA926900527D6F /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		8C2EB30120EBA91200527D6F /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		8C2EB30920F8D36F00527D6F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +205,8 @@
 				8C2EB30920F8D36F00527D6F /* LoginViewController.swift */,
 				8C2EB31320FE30BE00527D6F /* ReviewViewController.swift */,
 				8C2EB31520FE4AD200527D6F /* ReviewTableViewCell.swift */,
+				8C0986E92101B4A40032B874 /* ChatViewController.swift */,
+				8C0C238A2101EF4C0021D055 /* ChatTableViewCell.swift */,
 			);
 			path = DateSwap;
 			sourceTree = "<group>";
@@ -367,6 +373,7 @@
 				8CBA6A6920DEADDB008CD18B /* ConditionSelectionTableViewCell.swift in Sources */,
 				8CE62D0720D93D4900AA167D /* ProductOverviewTableViewCell.swift in Sources */,
 				8C43223620E77FC60027FDA1 /* UIImageExtension.swift in Sources */,
+				8C0986EA2101B4A40032B874 /* ChatViewController.swift in Sources */,
 				8CBA6A7320E4C383008CD18B /* ProductCardUIView.swift in Sources */,
 				8CBA6A6720DEA708008CD18B /* Colors.swift in Sources */,
 				8CD4202C20D2827A006101A1 /* ProfileTableViewCell.swift in Sources */,
@@ -384,6 +391,7 @@
 				8C89A27E20DBD29200F900F5 /* EditMyProductsViewController.swift in Sources */,
 				8C2EB31020FE2CE900527D6F /* KeyWords.swift in Sources */,
 				8C2EB31220FE2D4800527D6F /* UserLikes.swift in Sources */,
+				8C0C238B2101EF4C0021D055 /* ChatTableViewCell.swift in Sources */,
 				8CD4202820D2824C006101A1 /* ProfileViewController.swift in Sources */,
 				8C2EB30220EBA91200527D6F /* Profile.swift in Sources */,
 				8CEF6A3520D933F6007C39D5 /* ProductOverviewViewController.swift in Sources */,

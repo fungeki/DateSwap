@@ -11,6 +11,7 @@
 		777051DD20FE3AA800D7F54D /* NewMatchesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777051DC20FE3AA800D7F54D /* NewMatchesCollectionViewCell.swift */; };
 		777051DF20FE46B000D7F54D /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777051DE20FE46B000D7F54D /* MatchesViewController.swift */; };
 		77BB152220F8D2A200E3EF87 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77BB152120F8D2A200E3EF87 /* GoogleService-Info.plist */; };
+		77DDDC2B210138B800C0B13D /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDDC2A210138B800C0B13D /* MessagesTableViewCell.swift */; };
 		77E09E1220E67A5400C3CEDE /* the_rob.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 77E09E1120E67A5400C3CEDE /* the_rob.jpg */; };
 		8C0986EA2101B4A40032B874 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0986E92101B4A40032B874 /* ChatViewController.swift */; };
 		8C0C238B2101EF4C0021D055 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C238A2101EF4C0021D055 /* ChatTableViewCell.swift */; };
@@ -62,6 +63,7 @@
 		777051DC20FE3AA800D7F54D /* NewMatchesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMatchesCollectionViewCell.swift; sourceTree = "<group>"; };
 		777051DE20FE46B000D7F54D /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		77BB152120F8D2A200E3EF87 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		77DDDC2A210138B800C0B13D /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
 		77E09E1120E67A5400C3CEDE /* the_rob.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = the_rob.jpg; sourceTree = "<group>"; };
 		8C0986E92101B4A40032B874 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		8C0C238A2101EF4C0021D055 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				8CD4202B20D2827A006101A1 /* ProfileTableViewCell.swift */,
 				77BB152120F8D2A200E3EF87 /* GoogleService-Info.plist */,
 				8C9A101120CA99140077B544 /* Main.storyboard */,
+				77DDDC2A210138B800C0B13D /* MessagesTableViewCell.swift */,
 				777051DC20FE3AA800D7F54D /* NewMatchesCollectionViewCell.swift */,
 				777051DE20FE46B000D7F54D /* MatchesViewController.swift */,
 				8CBA6A7420E4C7C6008CD18B /* SwipeToLikeUIViewController.swift */,
@@ -383,6 +386,7 @@
 				8C2EB31620FE4AD200527D6F /* ReviewTableViewCell.swift in Sources */,
 				8C2EB2FC20EA926900527D6F /* RatingViewController.swift in Sources */,
 				8C2EB30C20FDEE8000527D6F /* Messages.swift in Sources */,
+				77DDDC2B210138B800C0B13D /* MessagesTableViewCell.swift in Sources */,
 				8CBA6A6B20DEBDF0008CD18B /* ProductEditTextfield.swift in Sources */,
 				8CEF6A2120D28793007C39D5 /* DetailsFromProfileViewController.swift in Sources */,
 				8C7405F420D24CE700FF8E9C /* Product.swift in Sources */,

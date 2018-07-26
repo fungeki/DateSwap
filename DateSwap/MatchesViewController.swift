@@ -8,22 +8,8 @@
 
 import UIKit
 
-class MatchesViewController: UIViewController, UICollectionViewDataSource,UICollectionViewDelegate{
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return profiles.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewMatchesCollectionViewCell", for: indexPath)
-        as! NewMatchesCollectionViewCell
-        let profile = profiles[indexPath.row]
-        
-        
-        cell.newMatchUIImageView.sd_setImage(with: URL(string: profiles[indexPath.row].pic))
-        cell.newMatchUIImageView.layer.cornerRadius = 20
-        cell.newMatchNickNameUILabel.text = profile.nickname
-        return cell
-    }
+class MatchesViewController: UIViewController {
+
     
 
     override func viewDidLoad() {
@@ -49,3 +35,43 @@ class MatchesViewController: UIViewController, UICollectionViewDataSource,UIColl
     */
 
 }
+
+extension MessagesTableViewCell: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return products.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MessagesTableViewCell") as! MessagesTableViewCell
+        
+        let product = products[indexPath.row]
+        cell.itemUserMessagesUIImageView.sd_setImage(with: URL(string: product.image))
+        cell.itemUserMessagesUIImageView.layer.cornerRadius = 20
+      
+        cell.messagesConditionUIButton.isEnabled = false
+        cell.messagesConditionUIButton.setTitle(returnCondition(product.condition), for: .disabled)
+        return cell
+    }
+}
+
+extension NewMatchesCollectionViewCell: UICollectionViewDataSource, UITableViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return profiles.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewMatchesCollectionViewCell", for: indexPath)
+            as! NewMatchesCollectionViewCell
+        let profile = profiles[indexPath.row]
+        
+        
+        cell.newMatchUIImageView.sd_setImage(with: URL(string: profiles[indexPath.row].pic))
+        cell.newMatchUIImageView.layer.cornerRadius = 20
+        cell.newMatchNickNameUILabel.text = profile.nickname
+        return cell
+    }
+    
+    
+}
+
+

@@ -10,6 +10,8 @@ import UIKit
 
 class MessagesTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var descriptionUILabel: UILabel!
+    @IBOutlet weak var headerUILabel: UILabel!
     @IBOutlet weak var itemUserMessagesUIImageView: UIImageView!
     @IBOutlet weak var messagesConditionUIButton: ConditionUIButton!
     override func awakeFromNib() {

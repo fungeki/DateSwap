@@ -33,31 +33,31 @@ class ReviewViewController: UIViewController {
         profileUIImageView.sd_setImage(with: URL(string: profile.pic))
         switch profile.rating {
         case 1:
-            chainsawUIImageView.image = #imageLiteral(resourceName: "ic_rating_one")
+            chainsawUIImageView.image = #imageLiteral(resourceName: "ic_rating_long_tail_one")
             break
         case 1.5:
-            chainsawUIImageView.image=#imageLiteral(resourceName: "ic_rating_oneAndaHalf")
+            chainsawUIImageView.image = #imageLiteral(resourceName: "ic_rating_long_tail_oneAndaHalf")
             break
         case 2:
-            chainsawUIImageView.image = #imageLiteral(resourceName: "ic_rating_two")
+            chainsawUIImageView.image = #imageLiteral(resourceName: "ic_rating_long_tail_two")
             break
         case 2.5:
-            chainsawUIImageView.image = #imageLiteral(resourceName: "ic_rating_twoAndaHalf")
+            chainsawUIImageView.image = #imageLiteral(resourceName: "ic_rating_long_tail_twoAndaHalf")
             break
         case 3:
-            chainsawUIImageView.image = #imageLiteral(resourceName: "ic_rating_three")
+            chainsawUIImageView.image = #imageLiteral(resourceName: "ic_rating_long_tail_three")
             break
         case 3.5:
-            chainsawUIImageView.image = #imageLiteral(resourceName: "ic_rating_threeAndaHalf")
+            chainsawUIImageView.image = #imageLiteral(resourceName: "ic_rating_long_tail_threeAndaHalf")
             break
         case 4:
-            chainsawUIImageView.image = #imageLiteral(resourceName: "ic_rating_four")
+            chainsawUIImageView.image = #imageLiteral(resourceName: "ic_rating_long_tail_four")
             break
         case 4.5:
-            chainsawUIImageView.image = #imageLiteral(resourceName: "ic_rating_fourAndaHalf")
+            chainsawUIImageView.image = #imageLiteral(resourceName: "ic_rating_long_tail_fourAndaHalf")
             break
         default:
-            chainsawUIImageView.image = #imageLiteral(resourceName: "ic_rating_five")
+            chainsawUIImageView.image = #imageLiteral(resourceName: "ic_rating_long_tail_five")
         }
         // Do any additional setup after loading the view.
     }

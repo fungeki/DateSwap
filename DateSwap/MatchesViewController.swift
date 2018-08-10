@@ -48,6 +48,8 @@ extension MatchesViewController: UITableViewDelegate, UITableViewDataSource{
         let product = products[indexPath.row]
         cell.headerUILabel.text = product.title
         cell.descriptionUILabel.text = msg.text
+        
+        cell.descriptionUILabel.clipsToBounds = true
         cell.itemUserMessagesUIImageView.sd_setImage(with: URL(string: product.image))
         cell.itemUserMessagesUIImageView.layer.cornerRadius = 20
         cell.itemUserMessagesUIImageView.clipsToBounds = true

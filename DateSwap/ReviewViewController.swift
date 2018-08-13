@@ -97,7 +97,7 @@ class ReviewViewController: UIViewController {
     }
     override func viewDidLayoutSubviews() {
         profileUIImageView.layer.cornerRadius = profileUIImageView.frame.height / 2
-        profileUIImageView.layer.borderWidth = 6
+        profileUIImageView.layer.borderWidth = 3
         profileUIImageView.layer.borderColor = UIColor.white.cgColor
         usernameUILabel.adjustsFontSizeToFitWidth = true
       

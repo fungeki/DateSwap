@@ -9,7 +9,8 @@
 import UIKit
 
 class ProductOverviewViewController: UIViewController {
-
+    
+    var displayProducts = [Product]()
     @IBOutlet weak var addDateUITableView: UITableView!
     @IBAction func addANewProductAction(_ sender: UIButton) {
         performSegue(withIdentifier: "addANewDateSegue", sender: nil)
@@ -17,7 +18,38 @@ class ProductOverviewViewController: UIViewController {
     @IBOutlet weak var addADateUIButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let url = "http://dateswap.herokuapp.com/userproductdb?userid=1"
+        guard let urlObj = URL(string: url) else {return}
         
+        URLSession.shared.dataTask(with: urlObj) { (data, response, ic_user) in
+            DispatchQueue.main.async {
+                
+            
+            guard let data = data else {return}
+//            let dataAsString = String(data: data, encoding: .utf8)
+//
+//            print("\(dataAsString) my data!!!!!!!!!!!!!!!")
+            do{
+                let mProducts = try JSONDecoder().decode([ProductExpSQL].self, from: data)
+                self.displayProducts = arrayProductsSQL2Local(array: mProducts)
+                self.addDateUITableView.reloadData()
+                }catch {
+                    print(error)
+                }
+            }
+        }.resume()
+        
+//        URLSession.shared.dataTask(with: urlObj!){(data, response, error) in
+//            do{
+//                let mProducts = try JSONDecoder().decode([ProductExpSQL], from: data!)
+//                for pro in mProducts{
+//                    print(pro.title)
+//                }
+//            }catch {
+//                print("error")
+//            }
+//
+//        }.resume()
         // Do any additional setup after loading the view.
     }
 
@@ -46,13 +78,13 @@ class ProductOverviewViewController: UIViewController {
 }
 extension ProductOverviewViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return products.count
+        return displayProducts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "productOverviewCell") as! ProductOverviewTableViewCell
         
-        let product = products[indexPath.row]
+        let product = displayProducts[indexPath.row]
         cell.product = product
         cell.productUIImageView.layer.cornerRadius = 20
         cell.productUIImageView.sd_setImage(with: URL(string: product.image))

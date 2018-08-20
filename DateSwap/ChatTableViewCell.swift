@@ -2,7 +2,7 @@
 //  ChatTableViewCell.swift
 //  DateSwap
 //
-//  Created by Ran Loock on 20/07/2018.
+//  Created by Dor tzemach on 20/08/2018.
 //  Copyright © 2018 Trisk Quality. All rights reserved.
 //
 
@@ -10,7 +10,10 @@ import UIKit
 
 class ChatTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var messageUITextView: UITextView!
+    @IBOutlet weak var rightSideNSLayoutConstraint: NSLayoutConstraint!
+    @IBOutlet weak var leftSideTextNSLayoutConstraint: NSLayoutConstraint!
+    @IBOutlet weak var profileImageConditionButton: ConditionUIButton!
+    @IBOutlet weak var chatTextConditionUIButton: ConditionUIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

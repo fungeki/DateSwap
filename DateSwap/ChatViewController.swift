@@ -2,7 +2,7 @@
 //  ChatViewController.swift
 //  DateSwap
 //
-//  Created by Ran Loock on 20/07/2018.
+//  Created by Dor tzemach on 20/08/2018.
 //  Copyright © 2018 Trisk Quality. All rights reserved.
 //
 
@@ -20,6 +20,23 @@ class ChatViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+}
+extension ChatViewController : UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell") as! ChatTableViewCell
+        
+        let modelMsg = messages[indexPath.row]
+        cell.chatTextConditionUIButton.isEnabled = false
+        cell.chatTextConditionUIButton.setTitle(modelMsg.text, for: .disabled)
+        return cell
+    }
+    
+        
+    }
     
 
     /*
@@ -32,25 +49,4 @@ class ChatViewController: UIViewController {
     }
     */
 
-}
 
-extension ChatViewController: UITableViewDelegate, UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return messages.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell") as! ChatTableViewCell
-        let msg = messages[indexPath.row]
-        cell.messageUITextView.text = msg.text
-        var mColor = UIColor.blue
-        if msg.senderID == "1"{
-            let mColor = UIColor.green
-        }
-        cell.messageUITextView.backgroundColor = mColor
-        cell.messageUITextView.layer.cornerRadius = 20
-        return cell
-    }
-    
-    
-}

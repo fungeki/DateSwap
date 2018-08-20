@@ -12,13 +12,14 @@ class SwipeToLikeUIViewController: UIViewController {
     
     
     
-    
+    var displayProducts = [Product]()
+    var currentProduct = 0
+    var displayProduct = p1
     let thumbImageLike = imageResizeForSlider(#imageLiteral(resourceName: "ic_love_color"))
     let thumbImageDislike = imageResizeForSlider( #imageLiteral(resourceName: "ic_x_color"))
     let thumbBack = imageResizeForSlider( #imageLiteral(resourceName: "ic_backMatch_color"))
     @IBOutlet weak var factionIndicatorUIImage: UIImageView!
     @IBOutlet weak var productCardUIView: ProductCardUIView!
-    var displayProduct: Product = p1
     @IBOutlet weak var conditionMainImageUIButton: ConditionUIButton!
     
     @IBOutlet weak var relationUISlider: RelationUISlider!
@@ -30,13 +31,28 @@ class SwipeToLikeUIViewController: UIViewController {
     @IBOutlet weak var mainImageUIImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        prepareSlider()
-        initialize()
         
+        let url = "http://dateswap.herokuapp.com/userproductdb?userid=1"
+        guard let urlObj = URL(string: url) else {return}
         
-        
-        
-
+        URLSession.shared.dataTask(with: urlObj) { (data, response, ic_user) in
+            DispatchQueue.main.async {
+                
+                
+                guard let data = data else {return}
+                //            let dataAsString = String(data: data, encoding: .utf8)
+                //
+                //            print("\(dataAsString) my data!!!!!!!!!!!!!!!")
+                do{
+                    let mProducts = try JSONDecoder().decode([ProductExpSQL].self, from: data)
+                    self.displayProducts = arrayProductsSQL2Local(array: mProducts)
+                    self.prepareSlider()
+                    self.initialize()
+                }catch {
+                    print(error)
+                }
+            }
+        }.resume()
         // Do any additional setup after loading the view.
     }
 
@@ -44,6 +60,9 @@ class SwipeToLikeUIViewController: UIViewController {
     
     
     func initialize(){
+        
+        displayProduct = displayProducts[currentProduct]
+        
         mainImageUIImageView.sd_setImage(with: URL(string: displayProduct.image))
         
         conditionMainImageUIButton.isEnabled = false

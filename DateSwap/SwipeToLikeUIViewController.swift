@@ -14,7 +14,8 @@ class SwipeToLikeUIViewController: UIViewController {
     
     var displayProducts = [Product]()
     var currentProduct = 0
-    var displayProduct = p1
+    var display = p4
+    var skipped = false
     let thumbImageLike = imageResizeForSlider(#imageLiteral(resourceName: "ic_love_color"))
     let thumbImageDislike = imageResizeForSlider( #imageLiteral(resourceName: "ic_x_color"))
     let thumbBack = imageResizeForSlider( #imageLiteral(resourceName: "ic_backMatch_color"))
@@ -32,7 +33,7 @@ class SwipeToLikeUIViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = "http://dateswap.herokuapp.com/userproductdb?userid=1"
+        let url = "http://dateswap.herokuapp.com/productsdb"
         guard let urlObj = URL(string: url) else {return}
         
         URLSession.shared.dataTask(with: urlObj) { (data, response, ic_user) in
@@ -46,6 +47,7 @@ class SwipeToLikeUIViewController: UIViewController {
                 do{
                     let mProducts = try JSONDecoder().decode([ProductExpSQL].self, from: data)
                     self.displayProducts = arrayProductsSQL2Local(array: mProducts)
+                    self.display = self.displayProducts[self.currentProduct]
                     self.prepareSlider()
                     self.initialize()
                 }catch {
@@ -58,29 +60,41 @@ class SwipeToLikeUIViewController: UIViewController {
 
     
     
-    
+    /*
+     When the user swipes the card, perOff shoots off twice,
+     hence a flag exists, so that initialize would happen only once.
+     flag name = skipped.
+     */
     func initialize(){
+        skipped = !skipped
+        if !skipped {return}
+        if currentProduct == displayProducts.count{
+            currentProduct = 0
+        }
+        display = displayProducts[currentProduct]
         
-        displayProduct = displayProducts[currentProduct]
-        
-        mainImageUIImageView.sd_setImage(with: URL(string: displayProduct.image))
+        mainImageUIImageView.sd_setImage(with: URL(string: display.image))
         
         conditionMainImageUIButton.isEnabled = false
         
-        mainTitleMainImageUIButton.text = displayProduct.title
+        mainTitleMainImageUIButton.text = display.title
         mainTitleMainImageUIButton.textColor = UIColor(cgColor: brown())
-        conditionMainImageUIButton.setTitle(returnCondition(displayProduct.condition), for: .disabled)
+        conditionMainImageUIButton.setTitle(returnCondition(display.condition), for: .disabled)
         conditionMainImageUIButton.bg = UIColor(cgColor: mediumOrange())
         conditionMainImageUIButton.borderColor = UIColor(cgColor: lightOrange())
         
-        
+        currentProduct += 1
+
     }
+    
+    
     func prepareSlider(){
         relationUISlider.maximumTrackTintColor = UIColor(cgColor: grayFour())
         relationUISlider.minimumTrackTintColor = UIColor(cgColor: grayFour())
         relationUISlider.setThumbImage(thumbBack, for: .normal)
         relationUISlider.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
     }
+    
     
     @objc func onSliderValChanged(slider: UISlider, event: UIEvent) {
         let sliderPosition: CGFloat = CGFloat(slider.value - 0.5)
@@ -248,22 +262,49 @@ class SwipeToLikeUIViewController: UIViewController {
                 card.center.x = self.view.center.x
                 card.center.y = self.view.center.y
                 sender.isEnabled = false
-                self.displayProduct = p2
+//                let next = self.currentProduct + 1
+//                if next >= self.displayProducts.count {
+// //                   self.currentProduct = 0
+//                } else {
+//                    self.currentProduct = next
+//                }
+//                self.initialize()
                 self.relationUISlider.setValue(0.5, animated: true)
+//                let next = self.currentProduct + 1
+//                if next >= self.displayProducts.count {
+//                    self.currentProduct = 0
+//                } else {
+//                    self.initialize()
+//                }
                 self.initialize()
                 UIView.animate(withDuration: 0.2, animations: {
                     card.alpha = 1
                     sender.isEnabled = true
                 }
                 )
+//                UIView.animate(withDuration: 0.2, animations: {
+//                                        card.alpha = 1
+//                                        sender.isEnabled = true
+//                }, completion: { (true) in
+//
+//                })
             })
             
             
         }
-        
+
         
         //let go
         if sender.state == UIGestureRecognizerState.ended{
+//            if self.toInit{
+//                            let next = self.currentProduct + 1
+//                            if next >= self.displayProducts.count {
+//                                self.currentProduct = 0
+//                            } else {
+//                                self.currentProduct = next
+//                            }
+//            }
+
             self.productCardUIView.layer.zPosition = .leastNormalMagnitude
             relationUISlider.isEnabled = true
             UIView.animate(withDuration: 0.1, animations: {

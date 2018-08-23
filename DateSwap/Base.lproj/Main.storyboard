@@ -748,7 +748,7 @@
                                     <constraint firstAttribute="width" secondItem="fs4-PK-ZOn" secondAttribute="height" multiplier="243:40" id="KFp-S9-72u"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="its-EL-ClG">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_love_color" translatesAutoresizingMaskIntoConstraints="NO" id="its-EL-ClG">
                                 <rect key="frame" x="78" y="27" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="its-EL-ClG" secondAttribute="height" multiplier="1:1" id="TjW-lx-4me"/>
@@ -760,53 +760,46 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mPB-WC-BfU">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mPB-WC-BfU">
                                 <rect key="frame" x="0.0" y="102" width="375" height="565"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="chatCell" rowHeight="90" id="wQU-61-BwJ" customClass="ChatTableViewCell" customModule="DateSwap" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="chatCell" id="wQU-61-BwJ" customClass="ChatTableViewCell" customModule="DateSwap" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wQU-61-BwJ" id="GoI-gH-pL0">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6P-b2-hVj" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="48" width="42" height="42"/>
+                                                    <rect key="frame" x="0.0" y="2" width="42" height="42"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="E6P-b2-hVj" secondAttribute="height" multiplier="1:1" id="fJL-bK-nRe"/>
                                                     </constraints>
                                                     <state key="normal" image="ugly_cats_06.jpg"/>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QbN-eV-oBm" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
-                                                    <rect key="frame" x="50" y="55.5" width="317" height="30"/>
-                                                    <state key="normal" title="Hi, my name is Noki">
-                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </state>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="bg">
-                                                            <color key="value" red="0.84936989249999995" green="0.84936989249999995" blue="0.84936989249999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="padding">
-                                                            <real key="value" value="8"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMR-PE-qwV">
+                                                    <rect key="frame" x="171" y="4" width="200" height="21"/>
+                                                    <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="h1j-7z-aww"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="QbN-eV-oBm" secondAttribute="bottom" constant="4" id="4bG-Ls-Lk5"/>
-                                                <constraint firstItem="QbN-eV-oBm" firstAttribute="leading" secondItem="GoI-gH-pL0" secondAttribute="leading" constant="50" id="59z-cl-NmK"/>
-                                                <constraint firstAttribute="trailing" secondItem="QbN-eV-oBm" secondAttribute="trailing" constant="8" id="BGZ-ft-AS8"/>
+                                                <constraint firstAttribute="trailing" secondItem="bMR-PE-qwV" secondAttribute="trailing" constant="4" id="1h5-Bi-Uyv"/>
                                                 <constraint firstItem="E6P-b2-hVj" firstAttribute="leading" secondItem="GoI-gH-pL0" secondAttribute="leading" id="DYt-nb-P7Y"/>
                                                 <constraint firstAttribute="bottom" secondItem="E6P-b2-hVj" secondAttribute="bottom" id="PEJ-B9-8Uf"/>
+                                                <constraint firstItem="bMR-PE-qwV" firstAttribute="top" secondItem="GoI-gH-pL0" secondAttribute="top" constant="4" id="iom-eG-AUU"/>
                                                 <constraint firstItem="E6P-b2-hVj" firstAttribute="width" secondItem="GoI-gH-pL0" secondAttribute="width" multiplier="0.112" id="udJ-sP-lC3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="chatTextConditionUIButton" destination="QbN-eV-oBm" id="i5V-Kz-ZOM"/>
-                                            <outlet property="leftSideTextNSLayoutConstraint" destination="59z-cl-NmK" id="0BF-lb-jKP"/>
+                                            <outlet property="chatTextUILabel" destination="bMR-PE-qwV" id="OQ4-dq-FZB"/>
                                             <outlet property="profileImageConditionButton" destination="E6P-b2-hVj" id="ESh-hW-DAc"/>
-                                            <outlet property="rightSideNSLayoutConstraint" destination="BGZ-ft-AS8" id="4S1-sB-6mv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -839,10 +832,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MGO-ef-iB8"/>
                     </view>
+                    <connections>
+                        <outlet property="tableChatUITableView" destination="mPB-WC-BfU" id="3hT-08-kCZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NFU-5f-Wo9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3281" y="-2273"/>
+            <point key="canvasLocation" x="3280.8000000000002" y="-2274.5127436281859"/>
         </scene>
         <!--Product Overview View Controller-->
         <scene sceneID="fXP-fV-DCt">

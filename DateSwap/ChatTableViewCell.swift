@@ -10,10 +10,10 @@ import UIKit
 
 class ChatTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var rightSideNSLayoutConstraint: NSLayoutConstraint!
-    @IBOutlet weak var leftSideTextNSLayoutConstraint: NSLayoutConstraint!
+//    @IBOutlet weak var rightSideNSLayoutConstraint: NSLayoutConstraint!
+//    @IBOutlet weak var leftSideNSLayoutConstraint: NSLayoutConstraint!
     @IBOutlet weak var profileImageConditionButton: ConditionUIButton!
-    @IBOutlet weak var chatTextConditionUIButton: ConditionUIButton!
+    @IBOutlet weak var chatTextUILabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

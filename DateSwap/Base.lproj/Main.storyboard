@@ -764,7 +764,7 @@
                                 <rect key="frame" x="0.0" y="102" width="375" height="565"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="chatCell" id="wQU-61-BwJ" customClass="ChatTableViewCell" customModule="DateSwap" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="chatCell" rowHeight="44" id="wQU-61-BwJ" customClass="ChatTableViewCell" customModule="DateSwap" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wQU-61-BwJ" id="GoI-gH-pL0">
@@ -779,27 +779,29 @@
                                                     <state key="normal" image="ugly_cats_06.jpg"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMR-PE-qwV">
-                                                    <rect key="frame" x="171" y="4" width="200" height="21"/>
+                                                    <rect key="frame" x="92" y="11" width="42" height="21.5"/>
                                                     <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="200" id="h1j-7z-aww"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="bMR-PE-qwV" secondAttribute="trailing" constant="4" id="1h5-Bi-Uyv"/>
+                                                <constraint firstItem="bMR-PE-qwV" firstAttribute="leading" secondItem="E6P-b2-hVj" secondAttribute="trailing" constant="50" id="0JZ-05-l0g"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="bMR-PE-qwV" secondAttribute="bottom" id="7Z7-yv-eMn"/>
                                                 <constraint firstItem="E6P-b2-hVj" firstAttribute="leading" secondItem="GoI-gH-pL0" secondAttribute="leading" id="DYt-nb-P7Y"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="bMR-PE-qwV" secondAttribute="trailing" constant="14" id="Hm4-JQ-B0a"/>
                                                 <constraint firstAttribute="bottom" secondItem="E6P-b2-hVj" secondAttribute="bottom" id="PEJ-B9-8Uf"/>
-                                                <constraint firstItem="bMR-PE-qwV" firstAttribute="top" secondItem="GoI-gH-pL0" secondAttribute="top" constant="4" id="iom-eG-AUU"/>
+                                                <constraint firstItem="bMR-PE-qwV" firstAttribute="top" secondItem="GoI-gH-pL0" secondAttribute="topMargin" id="VNd-ae-Ug9"/>
+                                                <constraint firstItem="bMR-PE-qwV" firstAttribute="centerY" secondItem="GoI-gH-pL0" secondAttribute="centerY" id="kkS-Q4-c5p"/>
                                                 <constraint firstItem="E6P-b2-hVj" firstAttribute="width" secondItem="GoI-gH-pL0" secondAttribute="width" multiplier="0.112" id="udJ-sP-lC3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="chatTextUILabel" destination="bMR-PE-qwV" id="OQ4-dq-FZB"/>
+                                            <outlet property="leftSideNSLayoutConstraint" destination="0JZ-05-l0g" id="ta3-rU-n0c"/>
                                             <outlet property="profileImageConditionButton" destination="E6P-b2-hVj" id="ESh-hW-DAc"/>
+                                            <outlet property="rightSideNSLayoutConstraint" destination="Hm4-JQ-B0a" id="78b-ag-gaz"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -838,7 +840,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NFU-5f-Wo9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3280.8000000000002" y="-2274.5127436281859"/>
+            <point key="canvasLocation" x="3281" y="-2273"/>
         </scene>
         <!--Product Overview View Controller-->
         <scene sceneID="fXP-fV-DCt">

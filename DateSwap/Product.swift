@@ -26,7 +26,7 @@ func productSQL2Local(product: ProductExpSQL)->Product{
     let sqlDate = product.lastupdate
     var date = ""
     if let mDate = dateFormatter.date(from: sqlDate) {
-        dateFormatter.dateFormat = "dd MMM yyyy HH:mm"
+        dateFormatter.dateFormat = "E, MMM d, HH:mm"
         let temp = dateFormatter.string(from: mDate)
 
         date = temp

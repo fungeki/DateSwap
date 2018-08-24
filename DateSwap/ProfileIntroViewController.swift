@@ -74,7 +74,8 @@ class ProfileIntroViewController: UIViewController {
 //                    break
 //                default:
 //                    profilechainsawUIButton.image = #imageLiteral(resourceName: "ic_rating_long_tail_five")
-                default:
+                default: break
+                    
                     
                 }
                 

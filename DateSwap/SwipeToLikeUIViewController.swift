@@ -72,7 +72,7 @@ class SwipeToLikeUIViewController: UIViewController {
             currentProduct = 0
         }
         display = displayProducts[currentProduct]
-        
+        print(display.lastUpdate)
         mainImageUIImageView.sd_setImage(with: URL(string: display.image))
         
         conditionMainImageUIButton.isEnabled = false

@@ -47,7 +47,11 @@ class ProfileIntroViewController: UIViewController {
                 guard let picURL = URL(string: mProfile.pic) else {return}
                 self.profileIntroUIImageView.sd_setImage(with: picURL)
                 self.userNameUILabel.text = mProfile.nickname
-                switch mProfile.rating {
+               // print(mProfile)
+                print(profileSQL)
+                //mProfile.rating
+                var test = 5.0
+                switch test {
                 case 1:
                     self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_one"), for: .disabled)
                     break
@@ -69,15 +73,14 @@ class ProfileIntroViewController: UIViewController {
                 case 4:
                     self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_four"), for: .normal)
                     break
-//                case 4.5:
-//                    profilechainsawUIButton.image = #imageLiteral(resourceName: "ic_rating_long_tail_fourAndaHalf")
-//                    break
-//                default:
-//                    profilechainsawUIButton.image = #imageLiteral(resourceName: "ic_rating_long_tail_five")
-                default: break
-                    
-                    
+                case 4.5:
+                    self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_fourAndaHalf"), for: .normal)
+                    break
+                default:
+                    self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_five"), for: .normal)
+                    break
                 }
+                self.profileratingUILabel.text = String(mProfile.rating)
                 
                 
                 

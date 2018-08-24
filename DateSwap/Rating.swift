@@ -38,6 +38,7 @@ func updateUserRating(userid: Int){
         var sum = 0
                         guard let data = data else {return}
                         do{
+                            
                             let mRatings = try JSONDecoder().decode([tallyRating].self, from: data)
                             for curr in mRatings{
                                 sum += curr.stars

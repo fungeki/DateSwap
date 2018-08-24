@@ -10,11 +10,106 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/Profile.swift"
-            timestampString = "556453079.845226"
+            timestampString = "556728974.9788769"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24">
+            startingLineNumber = "35"
+            endingLineNumber = "35">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DateSwap/SwipeToLikeUIViewController.swift"
+            timestampString = "556728974.979671"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "initialize()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DateSwap/SwipeToLikeUIViewController.swift"
+            timestampString = "556728974.979795"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DateSwap/Rating.swift"
+            timestampString = "556728974.979884"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "updateUserRating(userid:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__ObjC.URLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DateSwap.showUserRating(userid: Swift.Int) -&gt; ()"
+                  moduleName = "DateSwap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ranloock/Desktop/Swift/DateSwap/DateSwap/Rating.swift"
+                  timestampString = "556720932.966428"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "1961">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__ObjC.URLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DateSwap.showUserRating(userid: Swift.Int) -&gt; ()"
+                  moduleName = "DateSwap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ranloock/Desktop/Swift/DateSwap/DateSwap/Rating.swift"
+                  timestampString = "556720932.970017"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "2445">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__ObjC.URLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DateSwap.showUserRating(userid: Swift.Int) -&gt; ()"
+                  moduleName = "DateSwap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ranloock/Desktop/Swift/DateSwap/DateSwap/Rating.swift"
+                  timestampString = "556720932.972345"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "2476">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

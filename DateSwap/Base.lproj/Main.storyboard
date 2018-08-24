@@ -168,6 +168,9 @@
                         <outlet property="distanceUISlider" destination="xSa-e9-hHR" id="D9B-oW-K8e"/>
                         <outlet property="editProfileUIButton" destination="2ju-gb-Y2E" id="WLJ-Et-zIb"/>
                         <outlet property="profileIntroUIImageView" destination="y0R-hc-9Ka" id="ujG-hA-s5s"/>
+                        <outlet property="profilechainsawUIButton" destination="srZ-RP-nBQ" id="NZL-wc-Pxm"/>
+                        <outlet property="profileratingUILabel" destination="v63-PU-a7n" id="W8m-O5-VEb"/>
+                        <outlet property="userNameUILabel" destination="r4f-Jc-CqG" id="ENR-xe-Tb8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cg4-4Z-WHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2547,7 +2550,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="kt3-VZ-zyo"/>
-        <segue reference="U1M-Gc-J2N"/>
-        <segue reference="KK8-xE-AKp"/>
+        <segue reference="d4X-wV-EW6"/>
+        <segue reference="mgI-3R-LDK"/>
     </inferredMetricsTieBreakers>
 </document>

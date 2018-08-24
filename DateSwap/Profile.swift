@@ -8,6 +8,17 @@
 
 import Foundation
 
+struct ProfileSQL: Decodable {
+    var id: Int
+    var nickname: String
+    var pic: String
+    var rating: Float
+}
+
+func profileSQL2internal(profileSQL: ProfileSQL) -> Profile{
+    return Profile(ID: profileSQL.id, nickname: profileSQL.nickname, pic: profileSQL.pic, rating: Double(profileSQL.rating))
+}
+
 struct Profile {
     var ID: Int
     var nickname: String

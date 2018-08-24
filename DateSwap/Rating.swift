@@ -8,11 +8,66 @@
 
 import Foundation
 
+struct tallyRating: Decodable {
+    var id: Int
+    var stars: Int
+}
+
+func roundToHalves(_ number: Double)->Double{
+    let divider = modf(number)
+    var above = divider.0
+    var below = divider.1
+    if below <= 0.25{
+        below = 0.0
+    } else if below > 0.25 && below < 0.75 {
+            below = 0.5
+    } else {
+        below = 0
+        above += 1
+    }
+    let result = below + above
+    //print("divider \(divider), above \(above), below \(below), result \(result)")
+    return result
+}
+
+func updateUserRating(userid: Int){
+    let urlRating = "http://dateswap.herokuapp.com/profilerating?receiverid=\(userid)"
+    guard let urlObjRating = URL(string: urlRating) else {return}
+    URLSession.shared.dataTask(with: urlObjRating) { (data, response, error) in
+        DispatchQueue.main.async {
+        var sum = 0
+                        guard let data = data else {return}
+                        do{
+                            let mRatings = try JSONDecoder().decode([tallyRating].self, from: data)
+                            for curr in mRatings{
+                                sum += curr.stars
+                            }
+                            let ratingShow = Double(sum) / Double(mRatings.count)
+                          //  print(ratingShow)
+                            let ratingRounded = roundToHalves(ratingShow)
+                            let urlUpdate = "http://dateswap.herokuapp.com/updateratingforprofile?id=\(userid)&rating=\(ratingRounded)"
+                            
+                            print(ratingRounded)
+                            print(ratingShow)
+                            guard let urlObjUpdate = URL(string: urlUpdate) else {return}
+                            URLSession.shared.dataTask(with: urlObjUpdate, completionHandler: { (data, response, error) in
+                                print("done")
+                            }).resume()
+                        }catch {
+                            print(error)
+                        }
+            }
+        
+    }.resume()
+    
+}
+
 struct reviewSQL{
     var id: Int
     var stars: Int
     var text: String
     var productid: Int
+    var authorid: Int
     var userid: Int
     var time: String
 }

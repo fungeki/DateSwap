@@ -40,7 +40,7 @@ extension ChatViewController : UITableViewDelegate, UITableViewDataSource {
         cell.chatTextUILabel.numberOfLines = 0
         cell.chatTextUILabel.layer.masksToBounds = true
         cell.chatTextUILabel.layer.cornerRadius = 20
-        
+        cell.chatTextUILabel.drawText(in: UIEdgeInsetsMake(9, 9, 9, 9))
         
         //cell.chatTextUILabel.setTitle(modelMsg.text, for: .disabled)
         //cell.leftSideTextNSLayoutConstraint.constant = 80

@@ -1,5 +1,5 @@
 //
-//  editableLableUILabel.swift
+//  EditableLableUILabel.swift
 //  DateSwap
 //
 //  Created by Ran Loock on 25/08/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class editableLableUILabel: UILabel {
+class EditableLableUILabel: UILabel {
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -31,6 +31,6 @@ class editableLableUILabel: UILabel {
     override var intrinsicContentSize: CGSize {
         let size = super.intrinsicContentSize
         return CGSize(width: size.width + padding * 2,
-                      height: size.height + padding * 2 + additionToTopDown)
+                      height: size.height + padding * 2 + additionToTopDown * 2)
     }
 }

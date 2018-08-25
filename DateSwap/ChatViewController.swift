@@ -39,8 +39,16 @@ extension ChatViewController : UITableViewDelegate, UITableViewDataSource {
         cell.chatTextUILabel.text = modelMsg.text
         cell.chatTextUILabel.numberOfLines = 0
         cell.chatTextUILabel.layer.masksToBounds = true
+        cell.profileImageConditionButton.layer.masksToBounds = true
         cell.chatTextUILabel.layer.cornerRadius = 20
+        cell.profileImageConditionButton.layer.cornerRadius = cell.profileImageConditionButton.frame.height/2
+        if ( messages.filter{$0.senderID == "5"}.count > 0){
+            cell.chatTextUILabel.layer.backgroundColor = lightOrangeOpacityManual(alphaColor: 0.4)
+        }else{
+             cell.chatTextUILabel.layer.backgroundColor = lightOrangeOpacityManual(alphaColor: 1)
+        }
         
+
         
         //cell.chatTextUILabel.setTitle(modelMsg.text, for: .disabled)
         //cell.leftSideTextNSLayoutConstraint.constant = 80

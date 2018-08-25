@@ -32,7 +32,20 @@ class SwipeToLikeUIViewController: UIViewController {
     @IBOutlet weak var mainImageUIImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        prepareSlider()
+        var tapGesture = UITapGestureRecognizer(target: self, action: #selector(SwipeToLikeUIViewController.myviewTapped(_:)))
+        tapGesture.numberOfTapsRequired = 1
+        tapGesture.numberOfTouchesRequired = 1
+        self.mainImageUIImageView.isUserInteractionEnabled = true
+        self.mainImageUIImageView.addGestureRecognizer(tapGesture)
+        getProduct()
+        // Do any additional setup after loading the view.
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailsVC =  segue.destination as? ViewController else {return}
+        detailsVC.displayProduct = sender as! Product
+    }
+    func getProduct(){
         let url = "http://dateswap.herokuapp.com/productsdb"
         guard let urlObj = URL(string: url) else {return}
         
@@ -48,18 +61,14 @@ class SwipeToLikeUIViewController: UIViewController {
                     let mProducts = try JSONDecoder().decode([ProductExpSQL].self, from: data)
                     self.displayProducts = arrayProductsSQL2Local(array: mProducts)
                     self.display = self.displayProducts[self.currentProduct]
-                    self.prepareSlider()
                     self.initialize()
                 }catch {
                     print(error)
                 }
             }
             }.resume()
-        // Do any additional setup after loading the view.
     }
-    
-    
-    
+
     /*
      When the user swipes the card, perOff shoots off twice,
      hence a flag exists, so that initialize would happen only once.
@@ -86,6 +95,11 @@ class SwipeToLikeUIViewController: UIViewController {
         currentProduct += 1
         
     }
+    
+    @objc func myviewTapped(_ sender: UITapGestureRecognizer) {
+        self.performSegue(withIdentifier: "detailsSegue", sender: display)
+    }
+    
     func prepareSlider(){
         relationUISlider.maximumTrackTintColor = UIColor(cgColor: grayFour())
         relationUISlider.minimumTrackTintColor = UIColor(cgColor: grayFour())
@@ -142,6 +156,7 @@ class SwipeToLikeUIViewController: UIViewController {
                             self.productCardUIView.center.x = self.view.center.x
                             self.productCardUIView.center.y = self.view.center.y
                             self.relationUISlider.setValue(0.5, animated: true)
+                            self.skipped = !self.skipped
                             self.initialize()
                             UIView.animate(withDuration: 0.2, animations: {
                                 self.productCardUIView.alpha = 1
@@ -206,6 +221,7 @@ class SwipeToLikeUIViewController: UIViewController {
                             self.productCardUIView.center.x = self.view.center.x
                             self.productCardUIView.center.y = self.view.center.y
                             self.relationUISlider.setValue(0.5, animated: true)
+                            self.skipped = !self.skipped
                             self.initialize()
                             UIView.animate(withDuration: 0.2, animations: {
                                 self.productCardUIView.alpha = 1
@@ -373,7 +389,6 @@ class SwipeToLikeUIViewController: UIViewController {
             
         }
         
-        
         //let go
         if sender.state == UIGestureRecognizerState.ended{
             //            if self.toInit{
@@ -400,5 +415,8 @@ class SwipeToLikeUIViewController: UIViewController {
                 
             })
         }
+        
     }
 }
+
+

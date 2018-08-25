@@ -247,7 +247,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiG-na-fal">
-                                        <rect key="frame" x="145.5" y="425.5" width="60.5" height="22.5"/>
+                                        <rect key="frame" x="146" y="425.5" width="60.5" height="22.5"/>
                                         <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -283,7 +283,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Rmy-Yg-lTL" appends="YES" id="RgM-73-1EF"/>
+                                    <outletCollection property="gestureRecognizers" destination="Rmy-Yg-lTL" appends="YES" id="OdI-US-NYJ"/>
                                 </connections>
                             </view>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-0.05000000074505806" maxValue="1.0499999523162842" translatesAutoresizingMaskIntoConstraints="NO" id="d5D-i9-BXj" customClass="RelationUISlider" customModule="DateSwap" customModuleProvider="target">
@@ -366,6 +366,7 @@
                         <outlet property="mainTitleMainImageUIButton" destination="JiG-na-fal" id="78j-x0-x1J"/>
                         <outlet property="productCardUIView" destination="aYk-f7-4AM" id="4N7-EP-BSh"/>
                         <outlet property="relationUISlider" destination="d5D-i9-BXj" id="itz-hd-Es4"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="detailsSegue" id="T9f-jv-ihH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Hs-dA-09s" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1827,7 +1828,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1QX-f3-IPg" secondAttribute="height" multiplier="246:43" id="59g-Rf-7DO"/>
                                 </constraints>
-                                <state key="normal" image="ic_rating_long_tail_fourAndaHalf"/>
+                                <state key="normal" image="ic_rating_long_tail_three"/>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ugly_cats_06.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wtw-RP-UbP">
                                 <rect key="frame" x="12" y="32" width="60" height="60"/>
@@ -1841,6 +1842,9 @@
                                     <constraint firstAttribute="width" secondItem="RPN-Cy-BRJ" secondAttribute="height" multiplier="1:1" id="9Pr-Bv-sET"/>
                                 </constraints>
                                 <state key="normal" image="ic_back_circle"/>
+                                <connections>
+                                    <segue destination="VcW-Hm-Jf1" kind="show" id="sfZ-yK-a3Y"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="1" text="This is list of the best performing, " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2YD-Si-n5z">
                                 <rect key="frame" x="12" y="483" width="351" height="69"/>
@@ -1934,7 +1938,10 @@
                         <outlet property="itemPictureImageView" destination="WPh-JR-LHW" id="PE2-Ie-xc8"/>
                         <outlet property="likeUIImageView" destination="4dH-pg-nbn" id="quj-wL-nHb"/>
                         <outlet property="relationUISlider" destination="aYk-lx-U2b" id="sdg-H4-k5M"/>
+                        <outlet property="userChainsawUIButton" destination="1QX-f3-IPg" id="pG0-og-SZs"/>
+                        <outlet property="userNameUILabel" destination="Rtw-Og-XUB" id="B43-EM-Hcp"/>
                         <outlet property="userProfileImageUIImageView" destination="wtw-RP-UbP" id="UnJ-gf-MSa"/>
+                        <outlet property="userRatingUILabel" destination="0bP-qx-Aqx" id="zPe-RH-jyg"/>
                         <outlet property="userStallUIButton" destination="Kw0-fU-wM8" id="adF-gc-2xa"/>
                     </connections>
                 </viewController>
@@ -2545,6 +2552,7 @@
         <image name="ic_rating_flag_tail_empty" width="212" height="43"/>
         <image name="ic_rating_long_tail_empty" width="246" height="43"/>
         <image name="ic_rating_long_tail_fourAndaHalf" width="246" height="43"/>
+        <image name="ic_rating_long_tail_three" width="246" height="43"/>
         <image name="ic_rating_star_empty" width="21" height="20"/>
         <image name="ic_settings_grey" width="61" height="59"/>
         <image name="ic_userStall_color" width="69" height="69"/>
@@ -2557,6 +2565,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="kt3-VZ-zyo"/>
         <segue reference="d4X-wV-EW6"/>
+        <segue reference="sfZ-yK-a3Y"/>
         <segue reference="mgI-3R-LDK"/>
     </inferredMetricsTieBreakers>
 </document>

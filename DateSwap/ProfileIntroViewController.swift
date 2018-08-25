@@ -48,10 +48,10 @@ class ProfileIntroViewController: UIViewController {
                 self.profileIntroUIImageView.sd_setImage(with: picURL)
                 self.userNameUILabel.text = mProfile.nickname
                // print(mProfile)
-                print(profileSQL)
-                //mProfile.rating
-                var test = 5.0
-                switch test {
+                //print(profileSQL)
+                
+                
+                switch mProfile.rating {
                 case 1:
                     self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_one"), for: .disabled)
                     break

@@ -10,7 +10,8 @@ import UIKit
 import SDWebImage
 class ViewController: UIViewController {
    
-    
+    var displayProduct = p1
+    var userProfile = u1
     let thumbImageLike = imageResizeForSlider(#imageLiteral(resourceName: "ic_love_color"))
     let thumbImageDislike = imageResizeForSlider(#imageLiteral(resourceName: "ic_x_color"))
     let thumbBack = imageResizeForSlider(#imageLiteral(resourceName: "ic_backMatch_color"))
@@ -18,7 +19,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var likeUIImageView: UIImageView!
     @IBOutlet weak var conditionButton: ConditionUIButton!
     @IBOutlet weak var itemImageView: UIImageView!
+    @IBOutlet weak var userNameUILabel: UILabel!
     
+    @IBOutlet weak var userChainsawUIButton: UIButton!
+    @IBOutlet weak var userRatingUILabel: UILabel!
     @IBOutlet weak var itemDescriptionLabel: UILabel!
     @IBOutlet weak var dislikeUIImageView: UIImageView!
     @IBOutlet weak var itemPictureImageView: UIImageView!
@@ -27,21 +31,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var itemNameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        itemNameLabel.text = p1.title
+        itemNameLabel.text = displayProduct.title
         
-        itemDescriptionLabel.text = p1.description
+        itemDescriptionLabel.text = displayProduct.description
         itemDescriptionLabel.numberOfLines = 0
         itemDescriptionLabel .sizeToFit()
-        itemImageView.sd_setImage(with: URL(string: p1.image))
+        itemImageView.sd_setImage(with: URL(string: displayProduct.image))
         conditionButton.isEnabled = false
         itemImageView.layer.cornerRadius = 20;
-        conditionButton.setTitle(returnCondition(p1.condition), for: .disabled)
+        conditionButton.setTitle(returnCondition(displayProduct.condition), for: .disabled)
         
         relationUISlider.maximumTrackTintColor = UIColor(cgColor: grayFour())
         relationUISlider.minimumTrackTintColor = UIColor(cgColor: grayFour())
         relationUISlider.setThumbImage(thumbBack, for: .normal)
         relationUISlider.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
-    
+        retrieveUser()
         //        let thumbSize = CGRect(x: 0, y: 0, width: 24, height: 24)
         //        var thumbImage = #imageLiteral(resourceName: "ic_backMatch_color")
         //
@@ -57,6 +61,60 @@ class ViewController: UIViewController {
         userStallUIButton.backgroundColor = UIColor(cgColor: mediumOrange())
         userStallUIButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         userStallUIButton.layer.cornerRadius = 15
+    }
+    
+    func retrieveUser(){
+        let urlString = "http://dateswap.herokuapp.com/getaprofile?id=\(displayProduct.userID)"
+        guard let urlObj = URL(string: urlString) else {return}
+        URLSession.shared.dataTask(with: urlObj) { (data, response, error) in
+            DispatchQueue.main.async {
+                guard let data = data else {return}
+                do{
+                    let profileSQL = try JSONDecoder().decode([ProfileSQL].self, from: data)
+                    self.userProfile = profileSQL2internal(profileSQL: profileSQL[0])
+                    self.userNameUILabel.text = self.userProfile.nickname
+                    // print(mProfile)
+                    //print(profileSQL)
+                    
+                    switch self.userProfile.rating {
+                    case 1:
+                        self.userChainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_one"), for: .normal)
+                        break
+                    case 1.5:
+                        self.userChainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_oneAndaHalf"), for: .normal)
+                        break
+                    case 2:
+                        self.userChainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_two"), for: .normal)
+                        break
+                    case 2.5:
+                        self.userChainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_twoAndaHalf"), for: .normal)
+                        break
+                    case 3:
+                        self.userChainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_threeAndaHalf"), for: .normal)
+                        break
+                    case 3.5:
+                        self.userChainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_threeAndaHalf"), for: .normal)
+                        break
+                    case 4:
+                        self.userChainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_four"), for: .normal)
+                        break
+                    case 4.5:
+                        self.userChainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_fourAndaHalf"), for: .normal)
+                        break
+                    default:
+                        self.userChainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_five"), for: .normal)
+                        break
+                    }
+                    self.userRatingUILabel.text = String(self.userProfile.rating)
+                    guard let tempURLImage = URL(string: self.userProfile.pic) else {return}
+                    self.userProfileImageUIImageView.sd_setImage(with: tempURLImage)
+                    
+                }catch {
+                    print(error)
+                    
+                }
+            }
+            }.resume()
     }
     
     override func viewDidLayoutSubviews() {

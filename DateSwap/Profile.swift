@@ -15,6 +15,8 @@ struct ProfileSQL: Decodable {
     var rating: Float
 }
 
+
+
 func profileSQL2internal(profileSQL: ProfileSQL) -> Profile{
     return Profile(ID: profileSQL.id, nickname: profileSQL.nickname, pic: profileSQL.pic, rating: Double(profileSQL.rating))
 }

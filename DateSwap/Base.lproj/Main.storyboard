@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ADP-5w-IKA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VcW-Hm-Jf1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -113,7 +113,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="srZ-RP-nBQ" secondAttribute="height" multiplier="212:43" id="ma7-Jd-eqp"/>
                                 </constraints>
-                                <state key="normal" image="ic_rating_fourAndaHalf"/>
+                                <state key="normal" image="ic_rating_long_tail_empty"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v63-PU-a7n">
                                 <rect key="frame" x="129.5" y="305.5" width="24.5" height="21"/>
@@ -213,17 +213,17 @@
                                 </connections>
                             </button>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aYk-f7-4AM" customClass="ProductCardUIView" customModule="DateSwap" customModuleProvider="target">
-                                <rect key="frame" x="12" y="90" width="351" height="460"/>
+                                <rect key="frame" x="12" y="90" width="351" height="448"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="the_rob.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uGx-yF-Ln9">
-                                        <rect key="frame" x="0.0" y="0.0" width="351" height="430"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="351" height="418"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qWh-y1-8Ik">
                                         <rect key="frame" x="55" y="139" width="240" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRm-7s-KPP" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
-                                        <rect key="frame" x="276" y="394" width="76" height="36"/>
+                                        <rect key="frame" x="276" y="382" width="76" height="36"/>
                                         <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="21"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -247,7 +247,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiG-na-fal">
-                                        <rect key="frame" x="145.5" y="437.5" width="60.5" height="22.5"/>
+                                        <rect key="frame" x="146" y="425.5" width="60.5" height="22.5"/>
                                         <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -283,7 +283,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Rmy-Yg-lTL" appends="YES" id="RgM-73-1EF"/>
+                                    <outletCollection property="gestureRecognizers" destination="Rmy-Yg-lTL" appends="YES" id="OdI-US-NYJ"/>
                                 </connections>
                             </view>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-0.05000000074505806" maxValue="1.0499999523162842" translatesAutoresizingMaskIntoConstraints="NO" id="d5D-i9-BXj" customClass="RelationUISlider" customModule="DateSwap" customModuleProvider="target">
@@ -339,7 +339,7 @@
                             <constraint firstItem="rMM-pJ-rx9" firstAttribute="top" secondItem="tiu-vA-MmV" secondAttribute="top" constant="12" id="GVk-jl-Oi7"/>
                             <constraint firstItem="rMM-pJ-rx9" firstAttribute="width" secondItem="v6s-Oo-Iok" secondAttribute="width" multiplier="0.1" id="MaW-ta-d90"/>
                             <constraint firstItem="tiu-vA-MmV" firstAttribute="trailing" secondItem="d5D-i9-BXj" secondAttribute="trailing" constant="20" id="NL3-KQ-Hev"/>
-                            <constraint firstItem="d5D-i9-BXj" firstAttribute="top" secondItem="aYk-f7-4AM" secondAttribute="bottom" constant="12" id="SEw-tF-eGZ"/>
+                            <constraint firstItem="d5D-i9-BXj" firstAttribute="top" secondItem="aYk-f7-4AM" secondAttribute="bottom" constant="24" id="SEw-tF-eGZ"/>
                             <constraint firstItem="tiu-vA-MmV" firstAttribute="trailing" secondItem="aYk-f7-4AM" secondAttribute="trailing" constant="12" id="UVO-wD-kMK"/>
                             <constraint firstItem="aYk-f7-4AM" firstAttribute="leading" secondItem="tiu-vA-MmV" secondAttribute="leading" constant="12" id="Z02-q7-h4K"/>
                             <constraint firstItem="tiu-vA-MmV" firstAttribute="bottom" secondItem="boV-dc-03q" secondAttribute="bottom" constant="20" id="a0B-lu-2D6"/>
@@ -366,6 +366,7 @@
                         <outlet property="mainTitleMainImageUIButton" destination="JiG-na-fal" id="78j-x0-x1J"/>
                         <outlet property="productCardUIView" destination="aYk-f7-4AM" id="4N7-EP-BSh"/>
                         <outlet property="relationUISlider" destination="d5D-i9-BXj" id="itz-hd-Es4"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="detailsSegue" id="T9f-jv-ihH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Hs-dA-09s" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1775,6 +1776,14 @@
                                 <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="24"/>
                                 <color key="textColor" red="0.37647058823529411" green="0.2196078431372549" blue="0.074509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="additionToTopDown">
+                                        <real key="value" value="200"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54m-zK-nkf" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
                                 <rect key="frame" x="271" y="402" width="92" height="32"/>
@@ -1813,7 +1822,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1QX-f3-IPg" secondAttribute="height" multiplier="246:43" id="59g-Rf-7DO"/>
                                 </constraints>
-                                <state key="normal" image="ic_rating_long_tail_fourAndaHalf"/>
+                                <state key="normal" image="ic_rating_long_tail_three"/>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ugly_cats_06.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wtw-RP-UbP">
                                 <rect key="frame" x="12" y="32" width="60" height="60"/>
@@ -1827,6 +1836,9 @@
                                     <constraint firstAttribute="width" secondItem="RPN-Cy-BRJ" secondAttribute="height" multiplier="1:1" id="9Pr-Bv-sET"/>
                                 </constraints>
                                 <state key="normal" image="ic_back_circle"/>
+                                <connections>
+                                    <segue destination="VcW-Hm-Jf1" kind="show" id="sfZ-yK-a3Y"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="1" text="This is list of the best performing, " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2YD-Si-n5z">
                                 <rect key="frame" x="12" y="483" width="351" height="69"/>
@@ -1920,7 +1932,10 @@
                         <outlet property="itemPictureImageView" destination="WPh-JR-LHW" id="PE2-Ie-xc8"/>
                         <outlet property="likeUIImageView" destination="4dH-pg-nbn" id="quj-wL-nHb"/>
                         <outlet property="relationUISlider" destination="aYk-lx-U2b" id="sdg-H4-k5M"/>
+                        <outlet property="userChainsawUIButton" destination="1QX-f3-IPg" id="pG0-og-SZs"/>
+                        <outlet property="userNameUILabel" destination="Rtw-Og-XUB" id="B43-EM-Hcp"/>
                         <outlet property="userProfileImageUIImageView" destination="wtw-RP-UbP" id="UnJ-gf-MSa"/>
+                        <outlet property="userRatingUILabel" destination="0bP-qx-Aqx" id="zPe-RH-jyg"/>
                         <outlet property="userStallUIButton" destination="Kw0-fU-wM8" id="adF-gc-2xa"/>
                     </connections>
                 </viewController>
@@ -2529,9 +2544,9 @@
         <image name="ic_profile_color" width="66" height="69"/>
         <image name="ic_profile_grey" width="61" height="64"/>
         <image name="ic_rating_flag_tail_empty" width="212" height="43"/>
-        <image name="ic_rating_fourAndaHalf" width="212" height="43"/>
         <image name="ic_rating_long_tail_empty" width="246" height="43"/>
         <image name="ic_rating_long_tail_fourAndaHalf" width="246" height="43"/>
+        <image name="ic_rating_long_tail_three" width="246" height="43"/>
         <image name="ic_rating_star_empty" width="21" height="20"/>
         <image name="ic_settings_grey" width="61" height="59"/>
         <image name="ic_userStall_color" width="69" height="69"/>
@@ -2544,6 +2559,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="kt3-VZ-zyo"/>
         <segue reference="d4X-wV-EW6"/>
+        <segue reference="sfZ-yK-a3Y"/>
         <segue reference="mgI-3R-LDK"/>
     </inferredMetricsTieBreakers>
 </document>

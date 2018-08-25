@@ -16,6 +16,7 @@
 		77DDDC2B210138B800C0B13D /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDDC2A210138B800C0B13D /* MessagesTableViewCell.swift */; };
 		77E09E1220E67A5400C3CEDE /* the_rob.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 77E09E1120E67A5400C3CEDE /* the_rob.jpg */; };
 		8C0EFEC9212B0A9200B3B8D7 /* CornerRadiusRounders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0EFEC8212B0A9200B3B8D7 /* CornerRadiusRounders.swift */; };
+		8C0EFECB2131CE0B00B3B8D7 /* editableLableUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0EFECA2131CE0B00B3B8D7 /* editableLableUILabel.swift */; };
 		8C2EB2FC20EA926900527D6F /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB2FB20EA926900527D6F /* RatingViewController.swift */; };
 		8C2EB30220EBA91200527D6F /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB30120EBA91200527D6F /* Profile.swift */; };
 		8C2EB30A20F8D36F00527D6F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB30920F8D36F00527D6F /* LoginViewController.swift */; };
@@ -71,6 +72,7 @@
 		8C0986E92101B4A40032B874 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		8C0C238A2101EF4C0021D055 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		8C0EFEC8212B0A9200B3B8D7 /* CornerRadiusRounders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusRounders.swift; sourceTree = "<group>"; };
+		8C0EFECA2131CE0B00B3B8D7 /* editableLableUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editableLableUILabel.swift; sourceTree = "<group>"; };
 		8C2EB2FB20EA926900527D6F /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		8C2EB30120EBA91200527D6F /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		8C2EB30920F8D36F00527D6F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				8C2EB30920F8D36F00527D6F /* LoginViewController.swift */,
 				8C2EB31320FE30BE00527D6F /* ReviewViewController.swift */,
 				8C2EB31520FE4AD200527D6F /* ReviewTableViewCell.swift */,
+				8C0EFECA2131CE0B00B3B8D7 /* editableLableUILabel.swift */,
 			);
 			path = DateSwap;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				8C2EB30E20FE2C1500527D6F /* Rating.swift in Sources */,
 				8C9A100E20CA99140077B544 /* AppDelegate.swift in Sources */,
 				777051DD20FE3AA800D7F54D /* NewMatchesCollectionViewCell.swift in Sources */,
+				8C0EFECB2131CE0B00B3B8D7 /* editableLableUILabel.swift in Sources */,
 				8CEF6A3120D7A5C6007C39D5 /* JeansEffect.swift in Sources */,
 				8C43223420E67AD60027FDA1 /* RelationUISlider.swift in Sources */,
 				8CBA6A7520E4C7C6008CD18B /* SwipeToLikeUIViewController.swift in Sources */,

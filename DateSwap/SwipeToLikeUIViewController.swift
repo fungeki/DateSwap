@@ -33,6 +33,7 @@ class SwipeToLikeUIViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareSlider()
+        mainTitleMainImageUIButton.numberOfLines = 0
         var tapGesture = UITapGestureRecognizer(target: self, action: #selector(SwipeToLikeUIViewController.myviewTapped(_:)))
         tapGesture.numberOfTapsRequired = 1
         tapGesture.numberOfTouchesRequired = 1

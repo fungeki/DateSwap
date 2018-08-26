@@ -1823,6 +1823,10 @@
                                 <state key="normal" title="USER STALL">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="touserStallAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1mT-vE-UsX"/>
+                                    <segue destination="fvG-F8-Iwe" kind="show" identifier="toStallSegue" id="gur-k5-ie2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1QX-f3-IPg">
                                 <rect key="frame" x="40" y="62.5" width="168" height="29.5"/>
@@ -1830,6 +1834,9 @@
                                     <constraint firstAttribute="width" secondItem="1QX-f3-IPg" secondAttribute="height" multiplier="246:43" id="59g-Rf-7DO"/>
                                 </constraints>
                                 <state key="normal" image="ic_rating_long_tail_three"/>
+                                <connections>
+                                    <segue destination="xyx-UF-lvf" kind="show" id="1do-I8-bnX"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ugly_cats_06.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wtw-RP-UbP">
                                 <rect key="frame" x="12" y="32" width="60" height="60"/>
@@ -2046,6 +2053,10 @@
                                     <constraint firstAttribute="width" secondItem="3V8-PC-Say" secondAttribute="height" multiplier="68:61" id="dbr-U3-bUU"/>
                                 </constraints>
                                 <state key="normal" image="ic_back_grey"/>
+                                <connections>
+                                    <action selector="back:" destination="fvG-F8-Iwe" eventType="touchUpInside" id="j1I-4Q-Ug2"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="backToInfoSegue" id="ets-lL-Oum"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcF-l3-tkh">
                                 <rect key="frame" x="172.5" y="28" width="30" height="30"/>
@@ -2131,13 +2142,18 @@
                         <viewLayoutGuide key="safeArea" id="U9H-oA-Ocv"/>
                     </view>
                     <connections>
+                        <outlet property="stallUITable" destination="oXO-uu-UKN" id="ncc-R5-dVc"/>
+                        <outlet property="userChainsawRatingUIButton" destination="SDi-xZ-Fdr" id="a94-uH-MBo"/>
                         <outlet property="userImageStallPageUIImageView" destination="6bh-aF-CQS" id="DLz-P2-xQb"/>
+                        <outlet property="userNameUILabel" destination="4sd-wV-Nyb" id="Tve-Rj-f0c"/>
+                        <outlet property="userPicUIImage" destination="6bh-aF-CQS" id="ngq-Gu-wWD"/>
+                        <outlet property="userRatingUILabel" destination="zmc-Hg-yoz" id="3z9-5Z-cjj"/>
                         <segue destination="njD-gA-UIc" kind="show" identifier="masterToDetail" id="QVH-aC-Owa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iw7-Xe-XKs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-175" y="-719"/>
+            <point key="canvasLocation" x="1750" y="-3063"/>
         </scene>
         <!--Details From Profile View Controller-->
         <scene sceneID="7Ko-UG-5o2">
@@ -2276,7 +2292,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WnL-mR-qvU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-175" y="132"/>
+            <point key="canvasLocation" x="2548" y="-3063"/>
         </scene>
         <!--Matches View Controller-->
         <scene sceneID="wjM-gM-8RG">
@@ -2564,6 +2580,7 @@
         <image name="ugly_cats_06.jpg" width="550" height="365"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="ets-lL-Oum"/>
         <segue reference="kt3-VZ-zyo"/>
         <segue reference="d4X-wV-EW6"/>
         <segue reference="sfZ-yK-a3Y"/>

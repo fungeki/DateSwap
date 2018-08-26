@@ -71,6 +71,7 @@ class ViewController: UIViewController {
                 guard let data = data else {return}
                 do{
                     let profileSQL = try JSONDecoder().decode([ProfileSQL].self, from: data)
+                    if profileSQL.count < 1 {return}
                     self.userProfile = profileSQL2internal(profileSQL: profileSQL[0])
                     self.userNameUILabel.text = self.userProfile.nickname
                     // print(mProfile)
@@ -125,6 +126,18 @@ class ViewController: UIViewController {
         userProfileImageUIImageView.layer.borderColor = UIColor.white.cgColor
         
         
+    }
+    
+    @IBAction func touserStallAction(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "toStallSegue", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let segueID = segue.identifier else {return}
+        print(segueID)
+        guard let detailsVC =  segue.destination as? ProfileViewController else {return}
+        detailsVC.myProfile = self.userProfile
+        detailsVC.prevItem = self.displayProduct
     }
     
     @objc func onSliderValChanged(slider: UISlider, event: UIEvent) {

@@ -127,6 +127,17 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func touserStallAction(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "toStallSegue", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let segueID = segue.identifier else {return}
+        print(segueID)
+        guard let detailsVC =  segue.destination as? ProfileViewController else {return}
+        detailsVC.myProfile = self.userProfile
+    }
+    
     @objc func onSliderValChanged(slider: UISlider, event: UIEvent) {
         let sliderPosition: CGFloat = CGFloat(slider.value - 0.5)
         if let touchEvent = event.allTouches?.first {

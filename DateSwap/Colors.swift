@@ -23,11 +23,6 @@ func lightOrange()-> CGColor{
     return color
 }
 
-func lightOrangeOpacity()-> CGColor{
-    let color = UIColor(red: 253.0 / 255.0, green: 184.0 / 255.0, blue: 39.0 / 255.0, alpha: 0.8).cgColor
-    return color
-}
-
 func lightOrangeOpacityManual(alphaColor:CGFloat)-> CGColor{
     let color = UIColor(red: 253.0 / 255.0, green: 184.0 / 255.0, blue: 39.0 / 255.0, alpha: alphaColor).cgColor
     return color

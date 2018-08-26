@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Oym-gm-lLL">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -776,14 +776,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6P-b2-hVj" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="2" width="42" height="42"/>
+                                                    <rect key="frame" x="8" y="2" width="42" height="42"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="E6P-b2-hVj" secondAttribute="height" multiplier="1:1" id="fJL-bK-nRe"/>
                                                     </constraints>
                                                     <state key="normal" image="ugly_cats_06.jpg"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMR-PE-qwV" customClass="EditableLableUILabel" customModule="DateSwap" customModuleProvider="target">
-                                                    <rect key="frame" x="92" y="11" width="42" height="21.5"/>
+                                                    <rect key="frame" x="60" y="11" width="42" height="28"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -798,13 +798,12 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="bMR-PE-qwV" firstAttribute="leading" secondItem="E6P-b2-hVj" secondAttribute="trailing" constant="50" id="0JZ-05-l0g"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="bMR-PE-qwV" secondAttribute="bottom" id="7Z7-yv-eMn"/>
-                                                <constraint firstItem="E6P-b2-hVj" firstAttribute="leading" secondItem="GoI-gH-pL0" secondAttribute="leading" id="DYt-nb-P7Y"/>
-                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="bMR-PE-qwV" secondAttribute="trailing" constant="14" id="Hm4-JQ-B0a"/>
+                                                <constraint firstItem="bMR-PE-qwV" firstAttribute="leading" secondItem="GoI-gH-pL0" secondAttribute="leading" constant="60" id="0JZ-05-l0g"/>
+                                                <constraint firstItem="bMR-PE-qwV" firstAttribute="bottom" secondItem="GoI-gH-pL0" secondAttribute="bottomMargin" constant="6" id="7Z7-yv-eMn"/>
+                                                <constraint firstItem="E6P-b2-hVj" firstAttribute="leading" secondItem="GoI-gH-pL0" secondAttribute="leading" constant="8" id="DYt-nb-P7Y"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="bMR-PE-qwV" secondAttribute="trailing" constant="8" id="Hm4-JQ-B0a"/>
                                                 <constraint firstAttribute="bottom" secondItem="E6P-b2-hVj" secondAttribute="bottom" id="PEJ-B9-8Uf"/>
                                                 <constraint firstItem="bMR-PE-qwV" firstAttribute="top" secondItem="GoI-gH-pL0" secondAttribute="topMargin" id="VNd-ae-Ug9"/>
-                                                <constraint firstItem="bMR-PE-qwV" firstAttribute="centerY" secondItem="GoI-gH-pL0" secondAttribute="centerY" id="kkS-Q4-c5p"/>
                                                 <constraint firstItem="E6P-b2-hVj" firstAttribute="width" secondItem="GoI-gH-pL0" secondAttribute="width" multiplier="0.112" id="udJ-sP-lC3"/>
                                             </constraints>
                                         </tableViewCellContentView>

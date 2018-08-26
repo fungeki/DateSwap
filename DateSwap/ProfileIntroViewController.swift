@@ -133,7 +133,7 @@ class ProfileIntroViewController: UIViewController {
         //Edit Profile - Button
         
         editProfileUIButton.addJeansEffect(color: mediumOrange(), cornerRadius: 15, lineWidth: 2, lineDashPattern: [9,9], distanceTop: 5,distanceSides: 5)
-        editProfileUIButton.backgroundColor = UIColor(cgColor: lightOrangeOpacity())
+        editProfileUIButton.backgroundColor = UIColor(cgColor: lightOrangeOpacityManual(alphaColor: 0.8))
         editProfileUIButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         editProfileUIButton.layer.cornerRadius = 15
         

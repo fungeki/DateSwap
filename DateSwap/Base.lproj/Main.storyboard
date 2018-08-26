@@ -2061,7 +2061,8 @@
                                 </constraints>
                                 <state key="normal" image="ic_back_grey"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="ets-lL-Oum"/>
+                                    <action selector="back:" destination="fvG-F8-Iwe" eventType="touchUpInside" id="j1I-4Q-Ug2"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="backToInfoSegue" id="ets-lL-Oum"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcF-l3-tkh">
@@ -2101,13 +2102,13 @@
                                 <rect key="frame" x="217" y="84" width="43" height="40"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 KM away" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifF-UE-3vs">
-                                <rect key="frame" x="265" y="94" width="85" height="20"/>
+                                <rect key="frame" x="265" y="94" width="92" height="20"/>
                                 <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eilana rotbert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sd-wV-Nyb">
-                                <rect key="frame" x="75" y="82" width="89.5" height="17"/>
+                                <rect key="frame" x="75" y="82" width="126.5" height="17"/>
                                 <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

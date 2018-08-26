@@ -17,7 +17,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var userPicUIImage: UIImageView!
     @IBOutlet weak var userChainsawRatingUIButton: UIButton!
     @IBOutlet weak var userRatingUILabel: UILabel!
-    
+    var prevItem = p1
     var myProfile = u1
     var userItems = products
     override func viewDidLoad() {
@@ -80,6 +80,11 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    @IBAction func back(_ sender: UIButton) {
+        performSegue(withIdentifier: "backToInfoSegue", sender: nil)
+    }
+    
+
     override func viewDidLayoutSubviews() {
         userImageStallPageUIImageView.layer.cornerRadius = userImageStallPageUIImageView.frame.height/2
         userImageStallPageUIImageView.layer.borderWidth = 3
@@ -152,9 +157,16 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
         performSegue(withIdentifier: "masterToDetail", sender: product)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let id = segue.identifier else {return}
+        if id == "backToInfoSegue" {
+            guard let backVC = segue.destination as? ViewController else {return}
+            backVC.userProfile = self.myProfile
+            backVC.displayProduct = self.prevItem
+            
+            
+        }
         guard let detailsVC =  segue.destination as? DetailsFromProfileViewController,
         let product = sender as? Product else {return}
-        
         detailsVC.product = product
     }
     

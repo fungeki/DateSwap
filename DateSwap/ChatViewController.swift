@@ -45,13 +45,19 @@ extension ChatViewController : UITableViewDelegate, UITableViewDataSource {
         
         if (modelMsg.senderID == "5"){
             cell.chatTextUILabel.layer.backgroundColor = lightOrangeOpacityManual(alphaColor: 0.4)
-            cell.leftSideNSLayoutConstraint.constant = 60
-            
-             cell.rightSideNSLayoutConstraint.constant >= 14
+            cell.leftSideNSLayoutConstraint.isActive = false
+            cell.rightSideNSLayoutConstraint.isActive = false
+            cell.profileImageConditionButton.isHidden = true
+       
         }else{
             cell.chatTextUILabel.layer.backgroundColor = grayTwo()
-            cell.rightSideNSLayoutConstraint.constant = 8
-            cell.leftSideNSLayoutConstraint.constant >= 60
+            cell.leftSideSenderNSLayoutConstraint.isActive = false
+            cell.rightSideSenderNSLayoutConstraint.isActive = false
+//            cell.chatTextUILabel.translatesAutoresizingMaskIntoConstraints = false
+//            cell.chatTextUILabel.trailingAnchor.constraint(greaterThanOrEqualTo: view.trailingAnchor, constant: 8)
+                
+            
+
         }
         
         //first test to change color

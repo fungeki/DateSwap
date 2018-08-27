@@ -215,7 +215,7 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aYk-f7-4AM" customClass="ProductCardUIView" customModule="DateSwap" customModuleProvider="target">
                                 <rect key="frame" x="12" y="90" width="351" height="448"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="the_rob.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uGx-yF-Ln9">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_empty_light" translatesAutoresizingMaskIntoConstraints="NO" id="uGx-yF-Ln9">
                                         <rect key="frame" x="0.0" y="0.0" width="351" height="388"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qWh-y1-8Ik">
@@ -2552,6 +2552,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="card_empty_light" width="697" height="884"/>
         <image name="ic_back_circle" width="95" height="95"/>
         <image name="ic_back_color" width="68" height="61"/>
         <image name="ic_back_grey" width="68" height="61"/>
@@ -2575,7 +2576,6 @@
         <image name="ic_x_color" width="124" height="124"/>
         <image name="ic_x_grey" width="110" height="110"/>
         <image name="icons8-gift" width="64" height="64"/>
-        <image name="the_rob.jpg" width="1000" height="600"/>
         <image name="ugly_cats_06.jpg" width="550" height="365"/>
     </resources>
     <inferredMetricsTieBreakers>

@@ -11,14 +11,11 @@ import GoogleSignIn
 import FirebaseAuth
 
 class LoginViewController: UIViewController, GIDSignInUIDelegate {
-   
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         GIDSignIn.sharedInstance().uiDelegate = self
-        GIDSignIn.sharedInstance().signIn()
         
         // Do any additional setup after loading the view.
     }
@@ -28,6 +25,9 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func signinGoogleAction(_ sender: Any) {
+        GIDSignIn.sharedInstance().signIn()
+    }
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
         // ...
         if let error = error {
@@ -44,6 +44,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
                 return
             }
             // User is signed in
+            self.performSegue(withIdentifier: "loggedInSegue", sender: nil)
             // ...
         }
         // ...

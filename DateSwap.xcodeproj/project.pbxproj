@@ -69,7 +69,6 @@
 		77BB152120F8D2A200E3EF87 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		77DDDC2A210138B800C0B13D /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
 		77E09E1120E67A5400C3CEDE /* the_rob.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = the_rob.jpg; sourceTree = "<group>"; };
-		8C0986E92101B4A40032B874 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		8C0C238A2101EF4C0021D055 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		8C0EFEC8212B0A9200B3B8D7 /* CornerRadiusRounders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusRounders.swift; sourceTree = "<group>"; };
 		8C0EFECA2131CE0B00B3B8D7 /* EditableLableUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableLableUILabel.swift; sourceTree = "<group>"; };
@@ -177,7 +176,6 @@
 				7736FF14212AD0590074DAF6 /* ChatViewController.swift */,
 				8C9A101720CA99140077B544 /* Assets.xcassets */,
 				8C0C238A2101EF4C0021D055 /* ChatTableViewCell.swift */,
-				8C0986E92101B4A40032B874 /* ChatViewController.swift */,
 				8CBA6A6620DEA708008CD18B /* Colors.swift */,
 				8CBA6A6820DEADDB008CD18B /* ConditionSelectionTableViewCell.swift */,
 				8CEF6A3220D7A9DE007C39D5 /* ConditionUIButton.swift */,

@@ -856,10 +856,10 @@
             </objects>
             <point key="canvasLocation" x="3280.8000000000002" y="-2273.6131934032987"/>
         </scene>
-        <!--View Controller-->
+        <!--Private Chat View Controller-->
         <scene sceneID="agI-tm-7dh">
             <objects>
-                <viewController id="fSL-ny-MoP" sceneMemberID="viewController">
+                <viewController id="fSL-ny-MoP" customClass="PrivateChatViewController" customModule="DateSwap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2dv-3v-JIl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -896,21 +896,63 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t5g-Ny-KeV">
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="mYX-mG-Ofb" customClass="PrivateChatTableViewCell" customModule="DateSwap" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mYX-mG-Ofb" id="ar8-Dc-kdy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHL-dH-KAr" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="1.5" width="42" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="QHL-dH-KAr" secondAttribute="height" multiplier="1:1" id="iwy-20-g4z"/>
+                                                    </constraints>
+                                                    <state key="normal" image="the_rob.jpg"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PC6-QT-wM3" customClass="EditableLableUILabel" customModule="DateSwap" customModuleProvider="target">
+                                                    <rect key="frame" x="58" y="11" width="294" height="28"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PC6-QT-wM3" firstAttribute="top" secondItem="ar8-Dc-kdy" secondAttribute="topMargin" id="0qz-4Z-VU3"/>
+                                                <constraint firstItem="QHL-dH-KAr" firstAttribute="leading" secondItem="ar8-Dc-kdy" secondAttribute="leading" constant="8" id="7fM-hH-OMg"/>
+                                                <constraint firstItem="PC6-QT-wM3" firstAttribute="leading" secondItem="QHL-dH-KAr" secondAttribute="trailing" constant="8" id="867-rW-NPd"/>
+                                                <constraint firstItem="QHL-dH-KAr" firstAttribute="width" secondItem="ar8-Dc-kdy" secondAttribute="width" multiplier="0.112" id="Wap-5G-hzQ"/>
+                                                <constraint firstItem="PC6-QT-wM3" firstAttribute="bottom" secondItem="ar8-Dc-kdy" secondAttribute="bottomMargin" constant="6" id="XNm-Gn-zDf"/>
+                                                <constraint firstAttribute="bottom" secondItem="QHL-dH-KAr" secondAttribute="bottom" id="evg-Fb-a3w"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="PC6-QT-wM3" secondAttribute="trailing" constant="8" id="waX-s5-UZb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YTI-hO-CLW" firstAttribute="width" secondItem="2dv-3v-JIl" secondAttribute="width" multiplier="0.16" id="00J-HZ-X4M"/>
+                            <constraint firstItem="t5g-Ny-KeV" firstAttribute="trailing" secondItem="Kqn-FM-y3q" secondAttribute="trailing" id="5Qy-qP-9TL"/>
                             <constraint firstItem="8KX-ph-YN8" firstAttribute="leading" secondItem="Kqn-FM-y3q" secondAttribute="leading" constant="24" id="ETh-L8-jbC"/>
                             <constraint firstItem="7yW-rn-kLN" firstAttribute="leading" secondItem="Kqn-FM-y3q" secondAttribute="leading" id="FEd-at-Q3z"/>
                             <constraint firstItem="8KX-ph-YN8" firstAttribute="width" secondItem="2dv-3v-JIl" secondAttribute="width" multiplier="0.08" id="IBc-ph-nNZ"/>
                             <constraint firstItem="8KX-ph-YN8" firstAttribute="top" secondItem="Kqn-FM-y3q" secondAttribute="top" constant="24" id="Jmo-Go-Lmt"/>
                             <constraint firstItem="7yW-rn-kLN" firstAttribute="top" secondItem="Kqn-FM-y3q" secondAttribute="top" constant="80" id="K2g-LT-3gt"/>
                             <constraint firstItem="Kqn-FM-y3q" firstAttribute="trailing" secondItem="7yW-rn-kLN" secondAttribute="trailing" id="LSR-s0-0Hd"/>
+                            <constraint firstItem="t5g-Ny-KeV" firstAttribute="bottom" secondItem="Kqn-FM-y3q" secondAttribute="bottom" id="Pef-4W-x83"/>
                             <constraint firstItem="uwd-kw-ire" firstAttribute="width" secondItem="uwd-kw-ire" secondAttribute="height" multiplier="243:40" id="QM1-gk-wOO"/>
                             <constraint firstItem="8KX-ph-YN8" firstAttribute="width" secondItem="8KX-ph-YN8" secondAttribute="height" multiplier="68:61" id="Rrw-8d-c4I"/>
+                            <constraint firstItem="t5g-Ny-KeV" firstAttribute="leading" secondItem="Kqn-FM-y3q" secondAttribute="leading" id="S7j-nN-6DS"/>
                             <constraint firstItem="YTI-hO-CLW" firstAttribute="width" secondItem="YTI-hO-CLW" secondAttribute="height" multiplier="1:1" id="U3H-pz-MZW"/>
                             <constraint firstItem="uwd-kw-ire" firstAttribute="leading" secondItem="YTI-hO-CLW" secondAttribute="centerX" id="dXC-gx-Kj2"/>
                             <constraint firstItem="uwd-kw-ire" firstAttribute="bottom" secondItem="YTI-hO-CLW" secondAttribute="bottom" id="emz-AV-z5a"/>
+                            <constraint firstItem="t5g-Ny-KeV" firstAttribute="top" secondItem="7yW-rn-kLN" secondAttribute="top" id="kZj-Gw-0bn"/>
                             <constraint firstItem="uwd-kw-ire" firstAttribute="top" secondItem="Ued-nU-5xP" secondAttribute="bottom" constant="8.5" id="m0U-NU-ZMV"/>
                             <constraint firstItem="YTI-hO-CLW" firstAttribute="leading" secondItem="8KX-ph-YN8" secondAttribute="trailing" constant="24" id="mLh-Ae-oKb"/>
                             <constraint firstItem="uwd-kw-ire" firstAttribute="width" secondItem="2dv-3v-JIl" secondAttribute="width" multiplier="0.448" id="n6t-K1-JZM"/>
@@ -922,7 +964,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NdB-kY-uR6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4074" y="-2274"/>
+            <point key="canvasLocation" x="4072.8000000000002" y="-2274.5127436281859"/>
         </scene>
         <!--Product Overview View Controller-->
         <scene sceneID="fXP-fV-DCt">

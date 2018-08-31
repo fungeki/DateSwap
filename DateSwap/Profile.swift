@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import GoogleSignIn
+import FirebaseAuth
 
 var currentUser: User?
 
@@ -23,8 +25,18 @@ struct ProfileSQL: Decodable {
     var email: String
 }
 
-func uploadProfile(user: User){
+func uploadProfileFromFirebase(){
+    guard let user = Auth.auth().currentUser else {return}
+    let nickname = user.displayName ?? ""
+    guard let defPic = URL(string: "https://i.imgur.com/puqnoGd.png") else {
+        print("pic error")
+        return
+    }
+    let picObj = user.photoURL ?? defPic
+    let pic = try! String(contentsOf: picObj)
+    let email = user.email ?? ""
     
+    let urlString = "http://dateswap.herokuapp.com/addprofile?nickname=\(nickname)&pic=\(pic)&email=\(email)"
 }
 
 func profileSQL2internal(profileSQL: ProfileSQL) -> Profile{
@@ -44,5 +56,5 @@ let u2 = Profile(ID: 2, nickname: "Silly McSeal", pic: "https://media.tenor.com/
 let u3 = Profile(ID: 3, nickname: "Afro Sloth", pic: "https://img.clipartxtras.com/12a60f9fed276debec3b909f83f23074_nope-funny-derpy-sloth-drawing_600-450.jpeg", rating: 3, email: "")
 let u4 = Profile(ID: 4, nickname: "Afro", pic: "https://img.clipartxtras.com/12a60f9fed276debec3b909f83f23074_nope-funny-derpy-sloth-drawing_600-450.jpeg", rating: 3, email: "")
 let u5 = Profile(ID: 5, nickname: "Ouchstriche", pic: "https://aminus3.s3.amazonaws.com/image/g0005/u00004960/i00214121/6d2f4fce2d8dea77054a68c4fdab906f_large.jpg", rating: 4.5, email: "")
-let u6 = Profile(ID: 5, nickname: "Mr Empty", pic: "https://aminus3.s3.amazonaws.com/image/g0005/u00004960/i00214121/6d2f4fce2d8dea77054a68c4fdab906f_large.jpg", rating: 4.5, email: "")
-var profiles: [Profile] = [u1, u2, u3, u4, u5, u6]
+let u6 = Profile(ID: 5, nickname: "Mr Empty", pic: "https://i.imgur.com/puqnoGd.png", rating: 4.5, email: "")
+var profiles: [Profile] = [u1, u2, u3, u5, u6]

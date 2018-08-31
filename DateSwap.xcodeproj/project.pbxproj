@@ -19,7 +19,6 @@
 		8C0EFECB2131CE0B00B3B8D7 /* EditableLableUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0EFECA2131CE0B00B3B8D7 /* EditableLableUILabel.swift */; };
 		8C2EB2FC20EA926900527D6F /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB2FB20EA926900527D6F /* RatingViewController.swift */; };
 		8C2EB30220EBA91200527D6F /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB30120EBA91200527D6F /* Profile.swift */; };
-		8C2EB30A20F8D36F00527D6F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB30920F8D36F00527D6F /* LoginViewController.swift */; };
 		8C2EB30C20FDEE8000527D6F /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB30B20FDEE7F00527D6F /* Messages.swift */; };
 		8C2EB30E20FE2C1500527D6F /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB30D20FE2C1500527D6F /* Rating.swift */; };
 		8C2EB31020FE2CE900527D6F /* KeyWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB30F20FE2CE900527D6F /* KeyWords.swift */; };
@@ -73,7 +72,6 @@
 		8C0EFECA2131CE0B00B3B8D7 /* EditableLableUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableLableUILabel.swift; sourceTree = "<group>"; };
 		8C2EB2FB20EA926900527D6F /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		8C2EB30120EBA91200527D6F /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		8C2EB30920F8D36F00527D6F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8C2EB30B20FDEE7F00527D6F /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		8C2EB30D20FE2C1500527D6F /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		8C2EB30F20FE2CE900527D6F /* KeyWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyWords.swift; sourceTree = "<group>"; };
@@ -212,7 +210,6 @@
 				8CE62D0A20DB84C000AA167D /* ugly_cats_06.jpg */,
 				8C43223520E77FC60027FDA1 /* UIImageExtension.swift */,
 				8C2EB31120FE2D4800527D6F /* UserLikes.swift */,
-				8C2EB30920F8D36F00527D6F /* LoginViewController.swift */,
 				8C2EB31320FE30BE00527D6F /* ReviewViewController.swift */,
 				8C2EB31520FE4AD200527D6F /* ReviewTableViewCell.swift */,
 				8C0EFECA2131CE0B00B3B8D7 /* EditableLableUILabel.swift */,
@@ -416,7 +413,6 @@
 				8CBA6A7520E4C7C6008CD18B /* SwipeToLikeUIViewController.swift in Sources */,
 				8C9A101620CA99140077B544 /* DateSwap.xcdatamodeld in Sources */,
 				8C2EB31420FE30BE00527D6F /* ReviewViewController.swift in Sources */,
-				8C2EB30A20F8D36F00527D6F /* LoginViewController.swift in Sources */,
 				8CBA6A6F20DEC2A2008CD18B /* PriceSliderUISlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

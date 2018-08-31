@@ -47,6 +47,7 @@ extension PrivateChatViewController : UITableViewDelegate, UITableViewDataSource
         if (modelMsg.senderID == "5"){
             cell.messagePrivateChatEditableLableUILable.layer.backgroundColor = lightOrangeOpacityManual(alphaColor: 0.40)
             cell.profileLeftSenderConditionUIButton.isHidden = true
+            
         }else{
             cell.messagePrivateChatEditableLableUILable.layer.backgroundColor = grayTwo()
         }

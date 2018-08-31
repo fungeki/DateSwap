@@ -10,6 +10,8 @@ import UIKit
 
 class PrivateChatTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var profileLeftSenderConditionUIButton: ConditionUIButton!
+    @IBOutlet weak var messagePrivateChatEditableLableUILable: EditableLableUILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

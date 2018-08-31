@@ -10,8 +10,14 @@ import UIKit
 
 class PrivateChatViewController: UIViewController {
 
+    @IBOutlet weak var tablePrivateChatUITableView: UITableView!
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
+        
+        tablePrivateChatUITableView.estimatedRowHeight = 44.0
+        tablePrivateChatUITableView.rowHeight = UITableViewAutomaticDimension
 
         // Do any additional setup after loading the view.
     }
@@ -20,7 +26,30 @@ class PrivateChatViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+}
+
+extension PrivateChatViewController : UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "privateChatCell") as! PrivateChatTableViewCell
+        
+        let modelMsg = messages[indexPath.row]
+        cell.messagePrivateChatEditableLableUILable.text = modelMsg.text
+        cell.messagePrivateChatEditableLableUILable.numberOfLines = 0
+        cell.messagePrivateChatEditableLableUILable.layer.masksToBounds = true
+        cell.profileLeftSenderConditionUIButton.layer.masksToBounds = true
+        cell.messagePrivateChatEditableLableUILable.layer.cornerRadius = 20
+        cell.profileLeftSenderConditionUIButton.layer.cornerRadius = cell.profileLeftSenderConditionUIButton.frame.height/1.72
+        cell.messagePrivateChatEditableLableUILable.layer.backgroundColor = grayTwo()
+        
+        return cell
+    }
+    
+    
+}
 
     /*
     // MARK: - Navigation
@@ -32,4 +61,4 @@ class PrivateChatViewController: UIViewController {
     }
     */
 
-}
+

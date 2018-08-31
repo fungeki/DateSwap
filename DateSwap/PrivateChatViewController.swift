@@ -9,6 +9,7 @@
 import UIKit
 
 class PrivateChatViewController: UIViewController {
+        var countMessage = 0
 
     @IBOutlet weak var tablePrivateChatUITableView: UITableView!
     override func viewDidLoad() {
@@ -36,22 +37,33 @@ extension PrivateChatViewController : UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "privateChatCell") as! PrivateChatTableViewCell
         
+    
+        
         let modelMsg = messages[indexPath.row]
         cell.messagePrivateChatEditableLableUILable.text = modelMsg.text
         cell.messagePrivateChatEditableLableUILable.numberOfLines = 0
         cell.messagePrivateChatEditableLableUILable.layer.masksToBounds = true
         cell.profileLeftSenderConditionUIButton.layer.masksToBounds = true
-        cell.messagePrivateChatEditableLableUILable.layer.cornerRadius = 20
+        //cell.messagePrivateChatEditableLableUILable.layer.cornerRadius = 20
         cell.profileLeftSenderConditionUIButton.layer.cornerRadius = cell.profileLeftSenderConditionUIButton.frame.height/2
         cell.selectionStyle = .none
         
         if (modelMsg.senderID == "5"){
+           
             cell.messagePrivateChatEditableLableUILable.layer.backgroundColor = lightOrangeOpacityManual(alphaColor: 0.40)
             cell.profileLeftSenderConditionUIButton.isHidden = true
+//            cell.messagePrivateChatEditableLableUILable.roundCorners(corners: [.topLeft, .topRight, .bottomLeft], radius: 20)
          
             
         }else{
+             countMessage = countMessage + 1
             cell.messagePrivateChatEditableLableUILable.layer.backgroundColor = grayTwo()
+            if (countMessage > 1  ){
+                cell.profileLeftSenderConditionUIButton.isHidden = true
+                countMessage = 0
+            }
+       
+//            cell.messagePrivateChatEditableLableUILable.roundCorners(corners: [.topLeft, .topRight, .bottomRight], radius: 20)
         }
         
         return cell

@@ -43,6 +43,7 @@ extension PrivateChatViewController : UITableViewDelegate, UITableViewDataSource
         cell.profileLeftSenderConditionUIButton.layer.masksToBounds = true
         cell.messagePrivateChatEditableLableUILable.layer.cornerRadius = 20
         cell.profileLeftSenderConditionUIButton.layer.cornerRadius = cell.profileLeftSenderConditionUIButton.frame.height/1.72
+        cell.selectionStyle = .none
         
         if (modelMsg.senderID == "5"){
             cell.messagePrivateChatEditableLableUILable.layer.backgroundColor = lightOrangeOpacityManual(alphaColor: 0.40)

@@ -19,7 +19,6 @@
 		8C0EFECB2131CE0B00B3B8D7 /* EditableLableUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0EFECA2131CE0B00B3B8D7 /* EditableLableUILabel.swift */; };
 		8C2EB2FC20EA926900527D6F /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB2FB20EA926900527D6F /* RatingViewController.swift */; };
 		8C2EB30220EBA91200527D6F /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB30120EBA91200527D6F /* Profile.swift */; };
-		8C2EB30A20F8D36F00527D6F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB30920F8D36F00527D6F /* LoginViewController.swift */; };
 		8C2EB30C20FDEE8000527D6F /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB30B20FDEE7F00527D6F /* Messages.swift */; };
 		8C2EB30E20FE2C1500527D6F /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB30D20FE2C1500527D6F /* Rating.swift */; };
 		8C2EB31020FE2CE900527D6F /* KeyWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB30F20FE2CE900527D6F /* KeyWords.swift */; };
@@ -46,6 +45,7 @@
 		8CBA6A7520E4C7C6008CD18B /* SwipeToLikeUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBA6A7420E4C7C6008CD18B /* SwipeToLikeUIViewController.swift */; };
 		8CD4202820D2824C006101A1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD4202720D2824C006101A1 /* ProfileViewController.swift */; };
 		8CD4202C20D2827A006101A1 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD4202B20D2827A006101A1 /* ProfileTableViewCell.swift */; };
+		8CDC7B1C2139524200CFADEA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDC7B1B2139524200CFADEA /* LoginViewController.swift */; };
 		8CE62D0720D93D4900AA167D /* ProductOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE62D0620D93D4900AA167D /* ProductOverviewTableViewCell.swift */; };
 		8CE62D0920DB830200AA167D /* ProfileIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE62D0820DB830200AA167D /* ProfileIntroViewController.swift */; };
 		8CE62D0B20DB84C000AA167D /* ugly_cats_06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8CE62D0A20DB84C000AA167D /* ugly_cats_06.jpg */; };
@@ -75,7 +75,6 @@
 		8C0EFECA2131CE0B00B3B8D7 /* EditableLableUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableLableUILabel.swift; sourceTree = "<group>"; };
 		8C2EB2FB20EA926900527D6F /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		8C2EB30120EBA91200527D6F /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		8C2EB30920F8D36F00527D6F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8C2EB30B20FDEE7F00527D6F /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		8C2EB30D20FE2C1500527D6F /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		8C2EB30F20FE2CE900527D6F /* KeyWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyWords.swift; sourceTree = "<group>"; };
@@ -104,6 +103,7 @@
 		8CBA6A7420E4C7C6008CD18B /* SwipeToLikeUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeToLikeUIViewController.swift; sourceTree = "<group>"; };
 		8CD4202720D2824C006101A1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8CD4202B20D2827A006101A1 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		8CDC7B1B2139524200CFADEA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8CE62D0620D93D4900AA167D /* ProductOverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductOverviewTableViewCell.swift; sourceTree = "<group>"; };
 		8CE62D0820DB830200AA167D /* ProfileIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIntroViewController.swift; sourceTree = "<group>"; };
 		8CE62D0A20DB84C000AA167D /* ugly_cats_06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ugly_cats_06.jpg; sourceTree = "<group>"; };
@@ -171,6 +171,7 @@
 		8C9A100C20CA99140077B544 /* DateSwap */ = {
 			isa = PBXGroup;
 			children = (
+				8CDC7B1A2139522700CFADEA /* Login */,
 				7736FF12212ACF4A0074DAF6 /* ChatTableViewCell.swift */,
 				8C9A100D20CA99140077B544 /* AppDelegate.swift */,
 				7736FF14212AD0590074DAF6 /* ChatViewController.swift */,
@@ -216,12 +217,19 @@
 				8CE62D0A20DB84C000AA167D /* ugly_cats_06.jpg */,
 				8C43223520E77FC60027FDA1 /* UIImageExtension.swift */,
 				8C2EB31120FE2D4800527D6F /* UserLikes.swift */,
-				8C2EB30920F8D36F00527D6F /* LoginViewController.swift */,
 				8C2EB31320FE30BE00527D6F /* ReviewViewController.swift */,
 				8C2EB31520FE4AD200527D6F /* ReviewTableViewCell.swift */,
 				8C0EFECA2131CE0B00B3B8D7 /* EditableLableUILabel.swift */,
 			);
 			path = DateSwap;
+			sourceTree = "<group>";
+		};
+		8CDC7B1A2139522700CFADEA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8CDC7B1B2139524200CFADEA /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		A80EBDB51CA566EF2B44C45D /* Pods */ = {
@@ -341,6 +349,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -352,6 +361,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -407,6 +417,7 @@
 				7736FF13212ACF4A0074DAF6 /* ChatTableViewCell.swift in Sources */,
 				8CD4202820D2824C006101A1 /* ProfileViewController.swift in Sources */,
 				8C2EB30220EBA91200527D6F /* Profile.swift in Sources */,
+				8CDC7B1C2139524200CFADEA /* LoginViewController.swift in Sources */,
 				8CEF6A3520D933F6007C39D5 /* ProductOverviewViewController.swift in Sources */,
 				8C0EFEC9212B0A9200B3B8D7 /* CornerRadiusRounders.swift in Sources */,
 				773871FF20DEBFF600493C69 /* PhotosEditorViewController.swift in Sources */,
@@ -420,7 +431,6 @@
 				8C9A101620CA99140077B544 /* DateSwap.xcdatamodeld in Sources */,
 				7736FF15212AD0590074DAF6 /* ChatViewController.swift in Sources */,
 				8C2EB31420FE30BE00527D6F /* ReviewViewController.swift in Sources */,
-				8C2EB30A20F8D36F00527D6F /* LoginViewController.swift in Sources */,
 				8CBA6A6F20DEC2A2008CD18B /* PriceSliderUISlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

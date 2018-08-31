@@ -7,7 +7,9 @@ target 'DateSwap' do
 
   # Pods for DateSwap
 
-pod 'SDWebImage', '~> 4.0'
+pod 'SDWebImage'
+pod 'Firebase/Core'
+pod 'Firebase/Auth'
 pod 'GoogleSignIn'
 pod 'FBSDKCoreKit'
 pod 'FBSDKLoginKit'

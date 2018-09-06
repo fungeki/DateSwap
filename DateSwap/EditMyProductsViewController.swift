@@ -15,7 +15,7 @@ class EditMyProductsViewController: UIViewController {
     @IBAction func toPrice(_ sender: ProductEditTextfield) {
         guard let newPrice = sender.text else {return}
         price = (newPrice as NSString).integerValue
-        sender.text = "\(sender.text)$"
+        sender.text = "\(String(describing: sender.text))$"
     }
     
     @IBOutlet weak var maxPriceRangeUILabel: UILabel!

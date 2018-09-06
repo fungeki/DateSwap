@@ -9,17 +9,12 @@
 import UIKit
 
 class EditMyProductsViewController: UIViewController {
-    @IBOutlet weak var maxPriceUISlider: PriceSliderUISlider!
-    @IBOutlet weak var minPriceUISlider: PriceSliderUISlider!
     var price: Int = 0
     @IBAction func toPrice(_ sender: ProductEditTextfield) {
         guard let newPrice = sender.text else {return}
         price = (newPrice as NSString).integerValue
         sender.text = "\(String(describing: sender.text))$"
     }
-    
-    @IBOutlet weak var maxPriceRangeUILabel: UILabel!
-    @IBOutlet weak var minPriceRangeUILabel: UILabel!
     @IBOutlet weak var estimatedPriceUITextField: ProductEditTextfield!
     
     @IBOutlet weak var productDescriptionUITextView: DescriptionUITextView!
@@ -39,10 +34,6 @@ class EditMyProductsViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-    @IBAction func maxSliderChangeAction(_ sender: PriceSliderUISlider) {
-        
-        
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -55,12 +46,12 @@ class EditMyProductsViewController: UIViewController {
     
     //change colors HERE //and the initialize
     func initialize (){
-        maxPriceUISlider.maximumTrackTintColor  = UIColor.init(cgColor: grayTwo())
-        minPriceUISlider.minimumTrackTintColor = UIColor.init(cgColor: grayTwo())
-        minPriceUISlider.maximumTrackTintColor = UIColor.init(cgColor: mediumOrange())
-        minPriceUISlider.thumbTintColor = UIColor.init(cgColor: mediumOrange())
-        maxPriceUISlider.minimumTrackTintColor = UIColor.init(cgColor: mediumOrange())
-        maxPriceUISlider.thumbTintColor = UIColor.init(cgColor: mediumOrange())
+//        maxPriceUISlider.maximumTrackTintColor  = UIColor.init(cgColor: grayTwo())
+//        minPriceUISlider.minimumTrackTintColor = UIColor.init(cgColor: grayTwo())
+//        minPriceUISlider.maximumTrackTintColor = UIColor.init(cgColor: mediumOrange())
+//        minPriceUISlider.thumbTintColor = UIColor.init(cgColor: mediumOrange())
+//        maxPriceUISlider.minimumTrackTintColor = UIColor.init(cgColor: mediumOrange())
+//        maxPriceUISlider.thumbTintColor = UIColor.init(cgColor: mediumOrange())
         headerLabel.text = pageHeader
         conditionSelectionTableView.isHidden = true
         guard let inputThisProduct = product else {return}
@@ -69,7 +60,9 @@ class EditMyProductsViewController: UIViewController {
         productDescriptionUITextView.text = inputThisProduct.description
         dropDownConditionUIButton.setTitle(returnCondition(inputThisProduct.condition), for: .normal)
         addANewPhotoUIButton.setTitle("", for: .normal)
-        addANewPhotoUIButton.sd_setImage(with: URL(string: inputThisProduct.image), for: UIControlState.normal)
+        print(inputThisProduct.image)
+        addANewPhotoUIButton.sd_setBackgroundImage(with: URL(string: inputThisProduct.image), for: .normal)
+        addANewPhotoUIButton.layer.cornerRadius = 20
         price = (inputThisProduct.price as NSString).integerValue
         productDescriptionUITextView.textColor = UIColor.brown
     }
@@ -100,35 +93,35 @@ class EditMyProductsViewController: UIViewController {
         }
     }
     
-    @IBAction func maxPriceChangeAction(_ sender: PriceSliderUISlider) {
-        
-        let newPrice = Double(price)
-        let newValue = Double(sender.value)
-        if newValue < 0.0 {
-            maxPriceRangeUILabel.text = "max \(price)$"
-            return
-        } else if newValue > 1.0 {
-            maxPriceRangeUILabel.text = "Unlimited"
-return
-        }
-        let maxDisplay = Int(newPrice + (newValue * newPrice))
-        maxPriceRangeUILabel.text = "max \(maxDisplay)$"
-        
-    }
-    
-    @IBAction func minPriceChangeAction(_ sender: PriceSliderUISlider) {
-        let newPrice = Double(price)
-        let newValue = Double(sender.value)
-        if newValue < 0.0{
-            minPriceRangeUILabel.text = "any price"
-return
-        } else if newValue > 1.0 {
-            minPriceRangeUILabel.text = "min \(price)$"
-            return
-        }
-        let maxDisplay = Int(newPrice * newValue)
-        minPriceRangeUILabel.text = "min \(maxDisplay)$"
-    }
+//    @IBAction func maxPriceChangeAction(_ sender: PriceSliderUISlider) {
+//        
+//        let newPrice = Double(price)
+//        let newValue = Double(sender.value)
+//        if newValue < 0.0 {
+//            maxPriceRangeUILabel.text = "max \(price)$"
+//            return
+//        } else if newValue > 1.0 {
+//            maxPriceRangeUILabel.text = "Unlimited"
+//return
+//        }
+//        let maxDisplay = Int(newPrice + (newValue * newPrice))
+//        maxPriceRangeUILabel.text = "max \(maxDisplay)$"
+//        
+//    }
+//    
+//    @IBAction func minPriceChangeAction(_ sender: PriceSliderUISlider) {
+//        let newPrice = Double(price)
+//        let newValue = Double(sender.value)
+//        if newValue < 0.0{
+//            minPriceRangeUILabel.text = "any price"
+//return
+//        } else if newValue > 1.0 {
+//            minPriceRangeUILabel.text = "min \(price)$"
+//            return
+//        }
+//        let maxDisplay = Int(newPrice * newValue)
+//        minPriceRangeUILabel.text = "min \(maxDisplay)$"
+//    }
     
 }
 

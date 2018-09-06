@@ -11,6 +11,7 @@ import CoreData
 import Firebase
 import GoogleSignIn
 import FacebookCore
+import FirebaseStorage
 
 var fbToken: AccessToken?
 
@@ -34,14 +35,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 // ...
                 return
             }
-              print("signed in")
-            print(Auth.auth().currentUser?.photoURL as Any)
             // User is signed in
-            
-            // ...
-            
             currentUser = Auth.auth().currentUser
-            
+           // print(firebase2ProfileSQL())
+            guard let mFireuser = firebase2ProfileSQL() else {return}
+            pushUser(profileSQL: mFireuser)
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let swipeViewController = storyBoard.instantiateViewController(withIdentifier: "swipeViewController") as! SwipeToLikeUIViewController
             self.window?.rootViewController = swipeViewController

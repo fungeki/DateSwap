@@ -69,7 +69,7 @@ class SwipeToLikeUIViewController: UIViewController {
                     print(error)
                 }
             }
-            }.resume()
+        }.resume()
     }
 
     /*

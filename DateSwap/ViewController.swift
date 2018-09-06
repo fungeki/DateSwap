@@ -65,7 +65,9 @@ class ViewController: UIViewController {
     
     func retrieveUser(){
         let urlString = "http://dateswap.herokuapp.com/getaprofile?id=\(displayProduct.userID)"
-        guard let urlObj = URL(string: urlString) else {return}
+        guard let urlObj = URL(string: urlString) else {
+            print("failed object url in profile")
+            return}
         URLSession.shared.dataTask(with: urlObj) { (data, response, error) in
             DispatchQueue.main.async {
                 guard let data = data else {return}

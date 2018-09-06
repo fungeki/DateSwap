@@ -25,8 +25,8 @@ func firebase2ProfileSQL()->ProfileSQL?{
   //  let photoURL = mUser.photoURL ??
     let nickname = mUser.displayName ?? ""
     let email = mUser.email ?? ""
-    let mURL = mUser.photoURL ?? URL(string: "https://firebasestorage.googleapis.com/v0/b/dateswap-635d7.appspot.com/o/card_empty_dark.png?alt=media&token=9d222787-eddd-49c3-abe3-268aa241a7aa")
-    let mPic = try! String(contentsOf: mURL!)
+    let mPic = mUser.photoURL?.absoluteString ?? "https://firebasestorage.googleapis.com/v0/b/dateswap-635d7.appspot.com/o/card_empty_dark.png?alt=media&token=9d222787-eddd-49c3-abe3-268aa241a7aa"
+    
     return ProfileSQL(id: 0, nickname: nickname, pic: mPic, rating: 0, email: email, activeproductid: 0)
 }
 

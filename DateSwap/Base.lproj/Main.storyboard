@@ -269,10 +269,10 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.10000000000000001"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="0.80000000000000004"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="20"/>
@@ -947,20 +947,17 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMH-Ls-QgS">
-                                <rect key="frame" x="24" y="74.5" width="327" height="65"/>
+                                <rect key="frame" x="24" y="74.5" width="327" height="230"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="dbM-GS-a02"/>
+                                    <constraint firstAttribute="height" constant="230" id="dbM-GS-a02"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="17"/>
                                 <state key="normal" title="+ Add / Edit Photos">
                                     <color key="titleColor" red="0.94136577079999995" green="0.62133409939999995" blue="0.1478117447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="IZc-hE-hlb" kind="show" id="NvW-Vk-fxf"/>
-                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uXk-LH-vTS">
-                                <rect key="frame" x="24" y="151.5" width="327" height="365"/>
+                                <rect key="frame" x="24" y="316.5" width="327" height="365"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wv7-sh-0iv" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="65"/>
@@ -1049,7 +1046,7 @@
                                 </constraints>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Date's name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bdb-qa-Uzj" customClass="ProductEditTextfield" customModule="DateSwap" customModuleProvider="target">
-                                <rect key="frame" x="24" y="524.5" width="327" height="65"/>
+                                <rect key="frame" x="24" y="689.5" width="327" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="QTg-M9-SGd"/>
                                 </constraints>
@@ -1074,41 +1071,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Enter a price and set the search range" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFZ-yh-ExD">
-                                <rect key="frame" x="24" y="779.5" width="327" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.20000000000000001" minValue="-0.10000000000000001" maxValue="1.05" translatesAutoresizingMaskIntoConstraints="NO" id="LiV-f0-fvs" customClass="PriceSliderUISlider" customModule="DateSwap" customModuleProvider="target">
-                                <rect key="frame" x="185" y="824" width="168" height="31"/>
-                                <color key="minimumTrackTintColor" red="0.94136577079999995" green="0.62133409939999995" blue="0.1478117447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="maximumTrackTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="trackHeight">
-                                        <real key="value" value="7"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="maxPriceChangeAction:" destination="8ec-TZ-yJL" eventType="valueChanged" id="QJJ-wV-lf3"/>
-                                    <action selector="maxSliderChangeAction:" destination="8ec-TZ-yJL" eventType="valueChanged" id="oxa-U1-NG8"/>
-                                </connections>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.80000000000000004" minValue="-0.050000000000000003" maxValue="1.05" translatesAutoresizingMaskIntoConstraints="NO" id="atk-fi-ZX6" customClass="PriceSliderUISlider" customModule="DateSwap" customModuleProvider="target">
-                                <rect key="frame" x="22" y="824" width="167" height="31"/>
-                                <color key="minimumTrackTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="maximumTrackTintColor" red="0.94136577079999995" green="0.62133409939999995" blue="0.1478117447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="trackHeight">
-                                        <real key="value" value="7"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="minPriceChangeAction:" destination="8ec-TZ-yJL" eventType="valueChanged" id="Ts6-d7-aEB"/>
-                                </connections>
-                            </slider>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Estimated Price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3pE-Ua-ZvA" customClass="ProductEditTextfield" customModule="DateSwap" customModuleProvider="target">
-                                <rect key="frame" x="95" y="882" width="185" height="30"/>
+                                <rect key="frame" x="95" y="970.5" width="185" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="185" id="JVb-Ab-ugo"/>
                                     <constraint firstAttribute="height" constant="30" id="NDa-hy-t4a"/>
@@ -1143,32 +1107,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRZ-ay-5Od" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
-                                <rect key="frame" x="175" y="828" width="24" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="24" id="qRU-SC-BMD"/>
-                                    <constraint firstAttribute="height" constant="24" id="r1E-iC-XS2"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="17"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="bg">
-                                        <color key="value" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YYu-C3-eld" customClass="DescriptionUITextView" customModule="DateSwap" customModuleProvider="target">
-                                <rect key="frame" x="24" y="597.5" width="327" height="170"/>
+                                <rect key="frame" x="24" y="762.5" width="327" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="cW9-oO-5Jy"/>
+                                    <constraint firstAttribute="height" constant="200" id="cW9-oO-5Jy"/>
                                 </constraints>
                                 <color key="textColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -1195,61 +1138,33 @@
                                     <outlet property="delegate" destination="8ec-TZ-yJL" id="KEk-jY-QL2"/>
                                 </connections>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2x-ZS-L01">
-                                <rect key="frame" x="319" y="803.5" width="32" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DI8-18-KVL">
-                                <rect key="frame" x="24" y="803.5" width="28" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="LiV-f0-fvs" firstAttribute="top" secondItem="ZFZ-yh-ExD" secondAttribute="bottom" constant="24" id="0BT-os-YBX"/>
                             <constraint firstItem="3pE-Ua-ZvA" firstAttribute="centerX" secondItem="N9s-eb-Yau" secondAttribute="centerX" id="1KO-bj-eYw"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="bdb-qa-Uzj" secondAttribute="trailing" constant="24" id="1uh-4l-NTC"/>
-                            <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="LiV-f0-fvs" secondAttribute="trailing" constant="24" id="4Mz-73-RiH"/>
-                            <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="c2x-ZS-L01" secondAttribute="trailing" constant="24" id="7Tk-Ii-g9a"/>
-                            <constraint firstItem="atk-fi-ZX6" firstAttribute="top" secondItem="DI8-18-KVL" secondAttribute="bottom" id="8Zx-7I-0Jp"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="gMH-Ls-QgS" secondAttribute="trailing" constant="24" id="8bL-EB-K6U"/>
-                            <constraint firstItem="LiV-f0-fvs" firstAttribute="leading" secondItem="281-Aw-EXo" secondAttribute="trailing" id="AO9-Qe-SrT"/>
                             <constraint firstItem="281-Aw-EXo" firstAttribute="centerX" secondItem="N9s-eb-Yau" secondAttribute="centerX" id="BfY-LE-p6t"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="bnB-n6-K60" secondAttribute="trailing" id="F3y-xt-oE2"/>
-                            <constraint firstItem="dRZ-ay-5Od" firstAttribute="top" secondItem="ZFZ-yh-ExD" secondAttribute="bottom" constant="28" id="FHU-QV-fBr"/>
-                            <constraint firstItem="ZFZ-yh-ExD" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="IBU-xb-R60"/>
-                            <constraint firstItem="281-Aw-EXo" firstAttribute="leading" secondItem="atk-fi-ZX6" secondAttribute="trailing" id="O6u-wk-DPE"/>
                             <constraint firstItem="gMH-Ls-QgS" firstAttribute="top" secondItem="bnB-n6-K60" secondAttribute="bottom" constant="24" id="Oox-du-cQZ"/>
                             <constraint firstItem="Mcd-T8-spc" firstAttribute="top" secondItem="N9s-eb-Yau" secondAttribute="top" id="Qyo-7B-M8r"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="YYu-C3-eld" secondAttribute="trailing" constant="24" id="TnY-n7-lxH"/>
                             <constraint firstItem="uXk-LH-vTS" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="Tyw-vn-V1G"/>
                             <constraint firstItem="bnB-n6-K60" firstAttribute="top" secondItem="434-lb-zsh" secondAttribute="bottom" constant="4" id="UWP-3o-ERG"/>
                             <constraint firstItem="281-Aw-EXo" firstAttribute="top" secondItem="N9s-eb-Yau" secondAttribute="top" id="Wx3-Pp-N2e"/>
-                            <constraint firstItem="atk-fi-ZX6" firstAttribute="top" secondItem="ZFZ-yh-ExD" secondAttribute="bottom" constant="24" id="X3b-sm-c5t"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="uXk-LH-vTS" secondAttribute="trailing" constant="24" id="Y9t-90-4Xh"/>
                             <constraint firstItem="YYu-C3-eld" firstAttribute="top" secondItem="bdb-qa-Uzj" secondAttribute="bottom" constant="8" id="ea9-Qa-3gJ"/>
                             <constraint firstItem="434-lb-zsh" firstAttribute="centerX" secondItem="N9s-eb-Yau" secondAttribute="centerX" id="gLo-e7-2Hl"/>
-                            <constraint firstItem="atk-fi-ZX6" firstAttribute="top" secondItem="DI8-18-KVL" secondAttribute="bottom" id="hjb-JR-qFa"/>
                             <constraint firstItem="YYu-C3-eld" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="hwF-E0-CQc"/>
                             <constraint firstItem="bdb-qa-Uzj" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="n6G-sM-8vd"/>
                             <constraint firstItem="bdb-qa-Uzj" firstAttribute="top" secondItem="uXk-LH-vTS" secondAttribute="bottom" constant="8" id="oPM-k6-4wd"/>
-                            <constraint firstItem="ZFZ-yh-ExD" firstAttribute="top" secondItem="YYu-C3-eld" secondAttribute="bottom" constant="12" id="oeZ-df-cI8"/>
-                            <constraint firstItem="LiV-f0-fvs" firstAttribute="top" secondItem="c2x-ZS-L01" secondAttribute="bottom" id="pfh-0U-DPl"/>
-                            <constraint firstItem="3pE-Ua-ZvA" firstAttribute="top" secondItem="dRZ-ay-5Od" secondAttribute="bottom" constant="30" id="q1h-Cc-SPP"/>
+                            <constraint firstItem="3pE-Ua-ZvA" firstAttribute="top" secondItem="YYu-C3-eld" secondAttribute="bottom" constant="8" id="pdP-UB-bDE"/>
                             <constraint firstItem="bnB-n6-K60" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" id="qEn-jx-kqW"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="bottom" secondItem="281-Aw-EXo" secondAttribute="bottom" id="rkj-GC-VAh"/>
-                            <constraint firstItem="dRZ-ay-5Od" firstAttribute="centerX" secondItem="N9s-eb-Yau" secondAttribute="centerX" id="rta-Y2-Dat"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="Mcd-T8-spc" secondAttribute="trailing" constant="24" id="uVi-vb-eQe"/>
-                            <constraint firstItem="atk-fi-ZX6" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="v4o-o2-qvt"/>
                             <constraint firstItem="gMH-Ls-QgS" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="vs1-I5-IFF"/>
                             <constraint firstItem="434-lb-zsh" firstAttribute="top" secondItem="N9s-eb-Yau" secondAttribute="top" constant="4" id="vtY-Qg-ZvB"/>
                             <constraint firstItem="uXk-LH-vTS" firstAttribute="top" secondItem="gMH-Ls-QgS" secondAttribute="bottom" constant="12" id="z1u-IN-kHz"/>
-                            <constraint firstItem="DI8-18-KVL" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="zWw-Hy-brS"/>
-                            <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="ZFZ-yh-ExD" secondAttribute="trailing" constant="24" id="zyb-Xk-4b9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N9s-eb-Yau"/>
                     </view>
@@ -1261,10 +1176,6 @@
                         <outlet property="dropDownMenu" destination="uXk-LH-vTS" id="6F5-n6-qB8"/>
                         <outlet property="estimatedPriceUITextField" destination="3pE-Ua-ZvA" id="lJp-XY-vR1"/>
                         <outlet property="headerLabel" destination="434-lb-zsh" id="dlh-c5-Z7c"/>
-                        <outlet property="maxPriceRangeUILabel" destination="c2x-ZS-L01" id="QKX-Td-TQX"/>
-                        <outlet property="maxPriceUISlider" destination="LiV-f0-fvs" id="sAr-Zn-QIL"/>
-                        <outlet property="minPriceRangeUILabel" destination="DI8-18-KVL" id="0a7-Z9-pja"/>
-                        <outlet property="minPriceUISlider" destination="atk-fi-ZX6" id="lgy-eB-5Jv"/>
                         <outlet property="productDescriptionUITextView" destination="YYu-C3-eld" id="RQM-7R-SPU"/>
                         <outlet property="productTitleUITextField" destination="bdb-qa-Uzj" id="Ije-GE-vXT"/>
                     </connections>
@@ -2579,6 +2490,7 @@
         <image name="the_rob.jpg" width="1000" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="L0L-HJ-6aG"/>
         <segue reference="T9f-jv-ihH"/>
         <segue reference="kt3-VZ-zyo"/>
         <segue reference="U1M-Gc-J2N"/>

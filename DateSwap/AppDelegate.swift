@@ -10,10 +10,9 @@ import UIKit
 import CoreData
 import Firebase
 import GoogleSignIn
-import FBSDKCoreKit
-import FBSDKLoginKit
-import FBSDKShareKit
+import FacebookCore
 
+var fbToken: AccessToken?
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -40,12 +39,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             // User is signed in
             
             // ...
+            
+            currentUser = Auth.auth().currentUser
+            
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let swipeViewController = storyBoard.instantiateViewController(withIdentifier: "swipeViewController") as! SwipeToLikeUIViewController
+            self.window?.rootViewController = swipeViewController
+            self.window?.makeKeyAndVisible()
         }
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
         // Perform any operations when the user disconnects from app here.
         // ...
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let login = storyBoard.instantiateViewController(withIdentifier: "loginViewController") as! LoginViewController
+        self.window?.rootViewController = login
+        self.window?.makeKeyAndVisible()
     }
 
     var window: UIWindow?
@@ -58,6 +68,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any])
         -> Bool {
             print("openurl")
+            if SDKApplicationDelegate.shared.application(application, open: url, options: options){
+                return true
+            }
             return GIDSignIn.sharedInstance().handle(url, sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
                                                      annotation: [:])
     }
@@ -67,7 +80,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         FirebaseApp.configure()
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
-        
+        SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+       // print(Auth.auth().currentUser?.displayName)
+        currentUser = Auth.auth().currentUser
+        fbToken = AccessToken.current
+        if currentUser != nil{
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let initialViewController = storyboard.instantiateViewController(withIdentifier: "swipeViewController")
+//            self.window?.rootViewController = initialViewController
+//            self.window?.makeKeyAndVisible()
+        }
         return true
     }
 

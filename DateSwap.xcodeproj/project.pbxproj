@@ -147,6 +147,34 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		8C5A3C0B214115D0003DC27C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8C0EFECA2131CE0B00B3B8D7 /* EditableLableUILabel.swift */,
+				8C43223320E67AD60027FDA1 /* RelationUISlider.swift */,
+				8CEF6A3220D7A9DE007C39D5 /* ConditionUIButton.swift */,
+				8C7405F320D24CE700FF8E9C /* Product.swift */,
+				8CBA6A6620DEA708008CD18B /* Colors.swift */,
+				8CE62D0A20DB84C000AA167D /* ugly_cats_06.jpg */,
+				77E09E1120E67A5400C3CEDE /* the_rob.jpg */,
+				8CEF6A3020D7A5C6007C39D5 /* JeansEffect.swift */,
+				8C43223520E77FC60027FDA1 /* UIImageExtension.swift */,
+				8CBA6A6A20DEBDF0008CD18B /* ProductEditTextfield.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8C5A3C0C214116A6003DC27C /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				8C2EB30120EBA91200527D6F /* Profile.swift */,
+				8C2EB30D20FE2C1500527D6F /* Rating.swift */,
+				8C2EB31120FE2D4800527D6F /* UserLikes.swift */,
+				8C2EB30B20FDEE7F00527D6F /* Messages.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
 		8C9A100120CA99140077B544 = {
 			isa = PBXGroup;
 			children = (
@@ -170,21 +198,20 @@
 			isa = PBXGroup;
 			children = (
 				8CDC7B1A2139522700CFADEA /* Login */,
+				8C4321E920E4D3730027FDA1 /* Font */,
+				8C5A3C0B214115D0003DC27C /* Utils */,
+				8C5A3C0C214116A6003DC27C /* Objects */,
+				8CE6897B2139ACE700208BEB /* PrivateChatViewController.swift */,
 				8C9A100D20CA99140077B544 /* AppDelegate.swift */,
 				8C9A101720CA99140077B544 /* Assets.xcassets */,
-				8CBA6A6620DEA708008CD18B /* Colors.swift */,
 				8CBA6A6820DEADDB008CD18B /* ConditionSelectionTableViewCell.swift */,
-				8CE6897B2139ACE700208BEB /* PrivateChatViewController.swift */,
 				8CE689792139ACA800208BEB /* PrivateChatTableViewCell.swift */,
-				8CEF6A3220D7A9DE007C39D5 /* ConditionUIButton.swift */,
 				8C9A101420CA99140077B544 /* DateSwap.xcdatamodeld */,
 				8CBA6A7020E0E75C008CD18B /* DescriptionUITextView.swift */,
 				8CEF6A2020D28793007C39D5 /* DetailsFromProfileViewController.swift */,
 				8C89A27D20DBD29200F900F5 /* EditMyProductsViewController.swift */,
-				8C4321E920E4D3730027FDA1 /* Font */,
 				77BB152120F8D2A200E3EF87 /* GoogleService-Info.plist */,
 				8C9A101C20CA99140077B544 /* Info.plist */,
-				8CEF6A3020D7A5C6007C39D5 /* JeansEffect.swift */,
 				8C0EFEC8212B0A9200B3B8D7 /* CornerRadiusRounders.swift */,
 				8C2EB30F20FE2CE900527D6F /* KeyWords.swift */,
 				8C9A101920CA99140077B544 /* LaunchScreen.storyboard */,
@@ -193,29 +220,18 @@
 				8C9A100F20CA99140077B544 /* ViewController.swift */,
 				8CE62D0820DB830200AA167D /* ProfileIntroViewController.swift */,
 				777051DE20FE46B000D7F54D /* MatchesViewController.swift */,
-				8C2EB30B20FDEE7F00527D6F /* Messages.swift */,
 				77DDDC2A210138B800C0B13D /* MessagesTableViewCell.swift */,
 				777051DC20FE3AA800D7F54D /* NewMatchesCollectionViewCell.swift */,
 				773871FE20DEBFF600493C69 /* PhotosEditorViewController.swift */,
 				8CBA6A6E20DEC2A2008CD18B /* PriceSliderUISlider.swift */,
-				8C7405F320D24CE700FF8E9C /* Product.swift */,
 				8CBA6A7220E4C383008CD18B /* ProductCardUIView.swift */,
-				8CBA6A6A20DEBDF0008CD18B /* ProductEditTextfield.swift */,
 				8CE62D0620D93D4900AA167D /* ProductOverviewTableViewCell.swift */,
 				8CEF6A3420D933F6007C39D5 /* ProductOverviewViewController.swift */,
-				8C2EB30120EBA91200527D6F /* Profile.swift */,
 				8CD4202B20D2827A006101A1 /* ProfileTableViewCell.swift */,
-				8C2EB30D20FE2C1500527D6F /* Rating.swift */,
 				8C2EB2FB20EA926900527D6F /* RatingViewController.swift */,
-				8C43223320E67AD60027FDA1 /* RelationUISlider.swift */,
 				8CBA6A7420E4C7C6008CD18B /* SwipeToLikeUIViewController.swift */,
-				77E09E1120E67A5400C3CEDE /* the_rob.jpg */,
-				8CE62D0A20DB84C000AA167D /* ugly_cats_06.jpg */,
-				8C43223520E77FC60027FDA1 /* UIImageExtension.swift */,
-				8C2EB31120FE2D4800527D6F /* UserLikes.swift */,
 				8C2EB31320FE30BE00527D6F /* ReviewViewController.swift */,
 				8C2EB31520FE4AD200527D6F /* ReviewTableViewCell.swift */,
-				8C0EFECA2131CE0B00B3B8D7 /* EditableLableUILabel.swift */,
 			);
 			path = DateSwap;
 			sourceTree = "<group>";
@@ -340,7 +356,8 @@
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
@@ -352,7 +369,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",

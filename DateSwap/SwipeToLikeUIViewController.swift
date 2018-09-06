@@ -63,11 +63,13 @@ class SwipeToLikeUIViewController: UIViewController {
                     self.displayProducts = arrayProductsSQL2Local(array: mProducts)
                     self.display = self.displayProducts[self.currentProduct]
                     self.initialize()
+                    guard let mResponse = response else {return}
+                    print(mResponse)
                 }catch {
                     print(error)
                 }
             }
-            }.resume()
+        }.resume()
     }
 
     /*

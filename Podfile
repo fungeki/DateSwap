@@ -10,10 +10,10 @@ target 'DateSwap' do
 pod 'SDWebImage'
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
+pod 'Firebase/Storage'
 pod 'GoogleSignIn'
-pod 'FBSDKCoreKit'
-pod 'FBSDKLoginKit'
-pod 'FBSDKShareKit'
+pod 'FacebookCore', '~> 0.3.0'
+pod 'FacebookLogin', '~> 0.3.0'
 
 
 end

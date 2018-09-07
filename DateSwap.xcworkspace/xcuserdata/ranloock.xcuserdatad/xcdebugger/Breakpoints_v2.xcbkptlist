@@ -114,5 +114,101 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DateSwap/AppDelegate.swift"
+            timestampString = "558025112.4913369"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_4C8FD79577C332AA7C6303D045A1C0A2_func0"
+                  moduleName = "DateSwap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ranloock/Desktop/Swift/DateSwap/DateSwap/AppDelegate.swift"
+                  timestampString = "558019505.105042"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "183">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DateSwap.fbToken.unsafeMutableAddressor : Swift.Optional&lt;FacebookCore.AccessToken&gt;"
+                  moduleName = "DateSwap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ranloock/Desktop/Swift/DateSwap/DateSwap/AppDelegate.swift"
+                  timestampString = "558019505.1111"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DateSwap/DBget/GetMyProfile.swift"
+            timestampString = "558025112.491519"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "getMyProfile()"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DateSwap.getMyProfile() -&gt; ()"
+                  moduleName = "DateSwap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ranloock/Desktop/Swift/DateSwap/DateSwap/DBget/GetMyProfile.swift"
+                  timestampString = "558023784.150506"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "872">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__ObjC.URLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DateSwap.getMyProfile() -&gt; ()"
+                  moduleName = "DateSwap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ranloock/Desktop/Swift/DateSwap/DateSwap/DBget/GetMyProfile.swift"
+                  timestampString = "558023784.155982"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "33">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

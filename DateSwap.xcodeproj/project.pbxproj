@@ -28,6 +28,8 @@
 		8C43223620E77FC60027FDA1 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43223520E77FC60027FDA1 /* UIImageExtension.swift */; };
 		8C5A3C1121412114003DC27C /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C1021412114003DC27C /* Storage.swift */; };
 		8C5A3C1421412668003DC27C /* PushProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C1321412668003DC27C /* PushProfile.swift */; };
+		8C5A3C172142B839003DC27C /* GetMyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C162142B839003DC27C /* GetMyProfile.swift */; };
+		8C5A3C1A2142C5E7003DC27C /* LoggedInUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C192142C5E7003DC27C /* LoggedInUsers.swift */; };
 		8C7405F420D24CE700FF8E9C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7405F320D24CE700FF8E9C /* Product.swift */; };
 		8C89A27E20DBD29200F900F5 /* EditMyProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C89A27D20DBD29200F900F5 /* EditMyProductsViewController.swift */; };
 		8C9A100E20CA99140077B544 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A100D20CA99140077B544 /* AppDelegate.swift */; };
@@ -84,6 +86,8 @@
 		8C43223520E77FC60027FDA1 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		8C5A3C1021412114003DC27C /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		8C5A3C1321412668003DC27C /* PushProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushProfile.swift; sourceTree = "<group>"; };
+		8C5A3C162142B839003DC27C /* GetMyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyProfile.swift; sourceTree = "<group>"; };
+		8C5A3C192142C5E7003DC27C /* LoggedInUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInUsers.swift; sourceTree = "<group>"; };
 		8C7405F320D24CE700FF8E9C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		8C89A27D20DBD29200F900F5 /* EditMyProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMyProductsViewController.swift; sourceTree = "<group>"; };
 		8C9A100A20CA99140077B544 /* DateSwap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateSwap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,7 +164,6 @@
 				8C0EFECA2131CE0B00B3B8D7 /* EditableLableUILabel.swift */,
 				8C43223320E67AD60027FDA1 /* RelationUISlider.swift */,
 				8CEF6A3220D7A9DE007C39D5 /* ConditionUIButton.swift */,
-				8C7405F320D24CE700FF8E9C /* Product.swift */,
 				8CBA6A6620DEA708008CD18B /* Colors.swift */,
 				8CE62D0A20DB84C000AA167D /* ugly_cats_06.jpg */,
 				77E09E1120E67A5400C3CEDE /* the_rob.jpg */,
@@ -175,6 +178,7 @@
 		8C5A3C0C214116A6003DC27C /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				8C7405F320D24CE700FF8E9C /* Product.swift */,
 				8C2EB30F20FE2CE900527D6F /* KeyWords.swift */,
 				8C2EB30120EBA91200527D6F /* Profile.swift */,
 				8C2EB30D20FE2C1500527D6F /* Rating.swift */,
@@ -190,6 +194,22 @@
 				8C5A3C1321412668003DC27C /* PushProfile.swift */,
 			);
 			path = DBpush;
+			sourceTree = "<group>";
+		};
+		8C5A3C152142B73B003DC27C /* DBget */ = {
+			isa = PBXGroup;
+			children = (
+				8C5A3C162142B839003DC27C /* GetMyProfile.swift */,
+			);
+			path = DBget;
+			sourceTree = "<group>";
+		};
+		8C5A3C182142C5CB003DC27C /* Globals */ = {
+			isa = PBXGroup;
+			children = (
+				8C5A3C192142C5E7003DC27C /* LoggedInUsers.swift */,
+			);
+			path = Globals;
 			sourceTree = "<group>";
 		};
 		8C9A100120CA99140077B544 = {
@@ -214,6 +234,8 @@
 		8C9A100C20CA99140077B544 /* DateSwap */ = {
 			isa = PBXGroup;
 			children = (
+				8C5A3C182142C5CB003DC27C /* Globals */,
+				8C5A3C152142B73B003DC27C /* DBget */,
 				8C5A3C1221412655003DC27C /* DBpush */,
 				8CDC7B1A2139522700CFADEA /* Login */,
 				8C4321E920E4D3730027FDA1 /* Font */,
@@ -367,11 +389,6 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DateSwap/Pods-DateSwap-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
@@ -380,11 +397,6 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
@@ -429,6 +441,7 @@
 				8CD4202C20D2827A006101A1 /* ProfileTableViewCell.swift in Sources */,
 				8C9A101020CA99140077B544 /* ViewController.swift in Sources */,
 				8CEF6A3320D7A9DE007C39D5 /* ConditionUIButton.swift in Sources */,
+				8C5A3C172142B839003DC27C /* GetMyProfile.swift in Sources */,
 				8CBA6A7120E0E75C008CD18B /* DescriptionUITextView.swift in Sources */,
 				8CE6897C2139ACE700208BEB /* PrivateChatViewController.swift in Sources */,
 				8C2EB31620FE4AD200527D6F /* ReviewTableViewCell.swift in Sources */,
@@ -436,6 +449,7 @@
 				8C2EB30C20FDEE8000527D6F /* Messages.swift in Sources */,
 				77DDDC2B210138B800C0B13D /* MessagesTableViewCell.swift in Sources */,
 				8CBA6A6B20DEBDF0008CD18B /* ProductEditTextfield.swift in Sources */,
+				8C5A3C1A2142C5E7003DC27C /* LoggedInUsers.swift in Sources */,
 				8C5A3C1421412668003DC27C /* PushProfile.swift in Sources */,
 				8CEF6A2120D28793007C39D5 /* DetailsFromProfileViewController.swift in Sources */,
 				8C7405F420D24CE700FF8E9C /* Product.swift in Sources */,

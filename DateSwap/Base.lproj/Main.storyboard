@@ -278,7 +278,7 @@
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOffset">
-                                        <real key="value" value="3"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -2490,11 +2490,10 @@
         <image name="the_rob.jpg" width="1000" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="L0L-HJ-6aG"/>
         <segue reference="T9f-jv-ihH"/>
         <segue reference="kt3-VZ-zyo"/>
-        <segue reference="U1M-Gc-J2N"/>
-        <segue reference="bdW-D8-QTA"/>
+        <segue reference="d4X-wV-EW6"/>
+        <segue reference="aog-RI-IjN"/>
         <segue reference="mgI-3R-LDK"/>
     </inferredMetricsTieBreakers>
 </document>

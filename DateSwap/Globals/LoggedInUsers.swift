@@ -9,4 +9,10 @@
 import Foundation
 
 //the user that is currently online.
-var onlineUser = u6
+var gOnlineUser = u6
+//products on this user's stall
+var gOnlineUserProducts = [Product]()
+//item selected:
+var gItemPlaceholder : Product?
+//user's stall
+var gUserProfile : Profile?

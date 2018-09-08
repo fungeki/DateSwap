@@ -10,7 +10,8 @@ import UIKit
 
 class SwipeToLikeUIViewController: UIViewController {
     
-    let transition = CircularTransition()
+    var transfer : Product?
+    var mItemPicked: Product?
     var displayProducts = [Product]()
     var currentProduct = 0
     var display = p4
@@ -31,25 +32,25 @@ class SwipeToLikeUIViewController: UIViewController {
     @IBOutlet weak var mainImageUIImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let mTransfer = transfer {
+            mainImageUIImageView.sd_setImage(with: URL(string: mTransfer.image))
+        }
+        getProduct()
         prepareSlider()
         mainTitleMainImageUIButton.numberOfLines = 0
-        var tapGesture = UITapGestureRecognizer(target: self, action: #selector(SwipeToLikeUIViewController.myviewTapped(_:)))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SwipeToLikeUIViewController.myviewTapped(_:)))
         tapGesture.numberOfTapsRequired = 1
         tapGesture.numberOfTouchesRequired = 1
         self.mainImageUIImageView.isUserInteractionEnabled = true
         self.mainImageUIImageView.addGestureRecognizer(tapGesture)
-        if displayProducts.count > 0{
-            initialize()
-            return
-        }
-        getProduct()
+        
+
         // Do any additional setup after loading the view.
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailsVC =  segue.destination as? ViewController else {return}
-        detailsVC.displayProduct = sender as! Product
-        detailsVC.displayProducts = self.displayProducts
-        detailsVC.current = self.currentProduct - 1
+       // detailsVC.displayProduct = sender as! Product
+        gItemPlaceholder = sender as? Product
     }
     func getProduct(){
         let url = "http://dateswap.herokuapp.com/productsdb"
@@ -66,7 +67,12 @@ class SwipeToLikeUIViewController: UIViewController {
                 do{
                     let mProducts = try JSONDecoder().decode([ProductExpSQL].self, from: data)
                     self.displayProducts = arrayProductsSQL2Local(array: mProducts)
-                    self.display = self.displayProducts[self.currentProduct]
+                    self.display = self.displayProducts[0]
+                    if let isPicked = gItemPlaceholder {
+                        self.displayProducts.insert(isPicked, at: self.displayProducts.startIndex)
+                        self.initialize()
+                        return
+                    }
                     self.initialize()
                 }catch {
                     print(error)
@@ -87,7 +93,7 @@ class SwipeToLikeUIViewController: UIViewController {
             currentProduct = 0
         }
         display = displayProducts[currentProduct]
-        
+        gItemPlaceholder = displayProducts[currentProduct]
         mainImageUIImageView.sd_setImage(with: URL(string: display.image))
         
         conditionMainImageUIButton.isEnabled = false

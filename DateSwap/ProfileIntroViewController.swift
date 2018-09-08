@@ -25,13 +25,13 @@ class ProfileIntroViewController: UIViewController {
     }
 
     func initialize(){
-        profileIntroUIImageView.sd_setImage(with: URL(string: onlineUser.pic))
-        userNameUILabel.text = onlineUser.nickname
+        profileIntroUIImageView.sd_setImage(with: URL(string: gOnlineUser.pic))
+        userNameUILabel.text = gOnlineUser.nickname
         // print(mProfile)
         //print(profileSQL)
         
         
-        switch onlineUser.rating {
+        switch gOnlineUser.rating {
         case 1:
             self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_one"), for: .disabled)
             break
@@ -63,7 +63,7 @@ class ProfileIntroViewController: UIViewController {
             self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_flag_tail_empty"), for: .normal)
             break
         }
-        profileratingUILabel.text = String(onlineUser.rating)
+        profileratingUILabel.text = String(gOnlineUser.rating)
         
     }
     override func didReceiveMemoryWarning() {

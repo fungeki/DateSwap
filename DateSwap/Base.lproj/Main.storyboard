@@ -170,7 +170,7 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aYk-f7-4AM" customClass="ProductCardUIView" customModule="DateSwap" customModuleProvider="target">
                                 <rect key="frame" x="12" y="90" width="351" height="448"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_empty_light" translatesAutoresizingMaskIntoConstraints="NO" id="uGx-yF-Ln9">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uGx-yF-Ln9">
                                         <rect key="frame" x="0.0" y="0.0" width="351" height="388"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qWh-y1-8Ik">
@@ -178,9 +178,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRm-7s-KPP" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
-                                        <rect key="frame" x="275" y="367" width="76" height="36"/>
+                                        <rect key="frame" x="321" y="367" width="30" height="36"/>
                                         <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="21"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -201,7 +201,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiG-na-fal">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiG-na-fal">
                                         <rect key="frame" x="4" y="400" width="343" height="48"/>
                                         <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="20"/>
                                         <nil key="textColor"/>
@@ -2460,7 +2460,6 @@
     </scenes>
     <resources>
         <image name="card_empty_dark" width="697" height="884"/>
-        <image name="card_empty_light" width="697" height="884"/>
         <image name="ic_back_circle" width="95" height="95"/>
         <image name="ic_back_color" width="68" height="61"/>
         <image name="ic_back_grey" width="68" height="61"/>
@@ -2485,11 +2484,10 @@
         <image name="the_rob.jpg" width="1000" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pWi-W4-7AZ"/>
         <segue reference="U1M-Gc-J2N"/>
-        <segue reference="YR3-E1-jR6"/>
+        <segue reference="VyL-Rk-V4m"/>
         <segue reference="T9f-jv-ihH"/>
         <segue reference="kt3-VZ-zyo"/>
-        <segue reference="Zwd-T0-hKu"/>
+        <segue reference="sfZ-yK-a3Y"/>
     </inferredMetricsTieBreakers>
 </document>

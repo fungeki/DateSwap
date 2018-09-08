@@ -9,11 +9,9 @@
 import UIKit
 import SDWebImage
 class ViewController: UIViewController {
-   
-    var displayProducts = [Product]()
-    var current = 0
+    
     var displayProduct = p1
-    var userProfile = u1
+    var thisUser = u1
     let thumbImageLike = imageResizeForSlider(#imageLiteral(resourceName: "ic_love_color"))
     let thumbImageDislike = imageResizeForSlider(#imageLiteral(resourceName: "ic_x_color"))
     let thumbBack = imageResizeForSlider(#imageLiteral(resourceName: "ic_backMatch_color"))
@@ -33,6 +31,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var itemNameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let temp = gItemPlaceholder else {return}
+        displayProduct = temp
         itemNameLabel.text = displayProduct.title
         
         itemDescriptionLabel.text = displayProduct.description
@@ -76,12 +76,14 @@ class ViewController: UIViewController {
                 do{
                     let profileSQL = try JSONDecoder().decode([ProfileSQL].self, from: data)
                     if profileSQL.count < 1 {return}
-                    self.userProfile = profileSQL2internal(profileSQL: profileSQL[0])
-                    self.userNameUILabel.text = self.userProfile.nickname
+                    gUserProfile = profileSQL2internal(profileSQL: profileSQL[0])
+                    guard let temp = gUserProfile else {return}
+                    self.thisUser = temp
+                    self.userNameUILabel.text = self.thisUser.nickname
                     // print(mProfile)
                     //print(profileSQL)
                     
-                    switch self.userProfile.rating {
+                    switch self.thisUser.rating {
                     case 1:
                         self.userChainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_one"), for: .normal)
                         break
@@ -110,8 +112,8 @@ class ViewController: UIViewController {
                         self.userChainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_five"), for: .normal)
                         break
                     }
-                    self.userRatingUILabel.text = String(self.userProfile.rating)
-                    guard let tempURLImage = URL(string: self.userProfile.pic) else {return}
+                    self.userRatingUILabel.text = String(self.thisUser.rating)
+                    guard let tempURLImage = URL(string: self.thisUser.pic) else {return}
                     self.userProfileImageUIImageView.sd_setImage(with: tempURLImage)
                     
                 }catch {
@@ -140,15 +142,15 @@ class ViewController: UIViewController {
         guard let segueID = segue.identifier else {return}
         if segueID == "toStallSegue" {
         guard let detailsVC =  segue.destination as? ProfileViewController else {return}
-        detailsVC.myProfile = self.userProfile
+        detailsVC.myProfile = self.thisUser
         detailsVC.prevItem = self.displayProduct
-        }else{
-        guard let detailsVC =  segue.destination as? SwipeToLikeUIViewController else {return}
-            detailsVC.displayProducts = self.displayProducts
-            detailsVC.currentProduct = self.current
+    }
+        else if segueID == "backToSwipeSegue" {
+            guard let backVC = segue.destination as? SwipeToLikeUIViewController else {return}
+            backVC.transfer = displayProduct
             
         }
-    }
+}
     
     @objc func onSliderValChanged(slider: UISlider, event: UIEvent) {
         let sliderPosition: CGFloat = CGFloat(slider.value - 0.5)

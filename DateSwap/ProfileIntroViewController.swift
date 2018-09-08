@@ -10,27 +10,12 @@ import UIKit
 
 class ProfileIntroViewController: UIViewController {
     var myRating = 0
-    @IBAction func distanceChanged(_ sender: PriceSliderUISlider) {
-        let currentValue = Int(sender.value)
-        switch currentValue {
-        case 301, 302, 303, 304, 305:
-            distanceUILabel.text = "Unlimited"
-        default:
-            distanceUILabel.text = "\(currentValue) KM."
-        }
-        
-        
-    }
+
     @IBOutlet weak var editProfileUIButton: UIButton!
     @IBOutlet weak var profileratingUILabel: UILabel!
     @IBOutlet weak var profilechainsawUIButton: UIButton!
     @IBOutlet weak var userNameUILabel: UILabel!
     @IBOutlet weak var addEditDatesUIButton: UIButton!
-    
-    @IBOutlet weak var distanceUILabel: UILabel!
-
-    @IBOutlet weak var distanceUISlider: PriceSliderUISlider!
-    
     @IBOutlet weak var profileIntroUIImageView: UIImageView!
 
     override func viewDidLoad() {
@@ -173,3 +158,13 @@ class ProfileIntroViewController: UIViewController {
 
 
 // Do any additional setup after loading the view.
+
+//    @IBAction func distanceChanged(_ sender: PriceSliderUISlider) {
+//        let currentValue = Int(sender.value)
+//        switch currentValue {
+//        case 301, 302, 303, 304, 305:
+//            distanceUILabel.text = "Unlimited"
+//        default:
+//            distanceUILabel.text = "\(currentValue) KM."
+//        }
+//}

@@ -10,8 +10,7 @@ import UIKit
 
 class SwipeToLikeUIViewController: UIViewController {
     
-    
-    
+    let transition = CircularTransition()
     var displayProducts = [Product]()
     var currentProduct = 0
     var display = p4
@@ -39,12 +38,18 @@ class SwipeToLikeUIViewController: UIViewController {
         tapGesture.numberOfTouchesRequired = 1
         self.mainImageUIImageView.isUserInteractionEnabled = true
         self.mainImageUIImageView.addGestureRecognizer(tapGesture)
+        if displayProducts.count > 0{
+            initialize()
+            return
+        }
         getProduct()
         // Do any additional setup after loading the view.
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailsVC =  segue.destination as? ViewController else {return}
         detailsVC.displayProduct = sender as! Product
+        detailsVC.displayProducts = self.displayProducts
+        detailsVC.current = self.currentProduct - 1
     }
     func getProduct(){
         let url = "http://dateswap.herokuapp.com/productsdb"
@@ -63,8 +68,6 @@ class SwipeToLikeUIViewController: UIViewController {
                     self.displayProducts = arrayProductsSQL2Local(array: mProducts)
                     self.display = self.displayProducts[self.currentProduct]
                     self.initialize()
-                    guard let mResponse = response else {return}
-                    print(mResponse)
                 }catch {
                     print(error)
                 }
@@ -421,5 +424,4 @@ class SwipeToLikeUIViewController: UIViewController {
         
     }
 }
-
 

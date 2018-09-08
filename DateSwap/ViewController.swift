@@ -10,6 +10,8 @@ import UIKit
 import SDWebImage
 class ViewController: UIViewController {
    
+    var displayProducts = [Product]()
+    var current = 0
     var displayProduct = p1
     var userProfile = u1
     let thumbImageLike = imageResizeForSlider(#imageLiteral(resourceName: "ic_love_color"))
@@ -136,10 +138,16 @@ class ViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let segueID = segue.identifier else {return}
-        print(segueID)
+        if segueID == "toStallSegue" {
         guard let detailsVC =  segue.destination as? ProfileViewController else {return}
         detailsVC.myProfile = self.userProfile
         detailsVC.prevItem = self.displayProduct
+        }else{
+        guard let detailsVC =  segue.destination as? SwipeToLikeUIViewController else {return}
+            detailsVC.displayProducts = self.displayProducts
+            detailsVC.currentProduct = self.current
+            
+        }
     }
     
     @objc func onSliderValChanged(slider: UISlider, event: UIEvent) {

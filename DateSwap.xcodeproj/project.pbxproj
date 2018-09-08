@@ -30,6 +30,8 @@
 		8C5A3C1421412668003DC27C /* PushProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C1321412668003DC27C /* PushProfile.swift */; };
 		8C5A3C172142B839003DC27C /* GetMyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C162142B839003DC27C /* GetMyProfile.swift */; };
 		8C5A3C1A2142C5E7003DC27C /* LoggedInUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C192142C5E7003DC27C /* LoggedInUsers.swift */; };
+		8C5A3C232143E324003DC27C /* SwipeInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C222143E324003DC27C /* SwipeInteractionController.swift */; };
+		8C5A3C272143F6CD003DC27C /* CicularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C262143F6CD003DC27C /* CicularTransition.swift */; };
 		8C7405F420D24CE700FF8E9C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7405F320D24CE700FF8E9C /* Product.swift */; };
 		8C89A27E20DBD29200F900F5 /* EditMyProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C89A27D20DBD29200F900F5 /* EditMyProductsViewController.swift */; };
 		8C9A100E20CA99140077B544 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A100D20CA99140077B544 /* AppDelegate.swift */; };
@@ -45,6 +47,7 @@
 		8CBA6A7120E0E75C008CD18B /* DescriptionUITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBA6A7020E0E75C008CD18B /* DescriptionUITextView.swift */; };
 		8CBA6A7320E4C383008CD18B /* ProductCardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBA6A7220E4C383008CD18B /* ProductCardUIView.swift */; };
 		8CBA6A7520E4C7C6008CD18B /* SwipeToLikeUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBA6A7420E4C7C6008CD18B /* SwipeToLikeUIViewController.swift */; };
+		8CCCCD472143F9F900D1C84F /* OHCircleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCCCD462143F9F900D1C84F /* OHCircleSegue.swift */; };
 		8CD4202820D2824C006101A1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD4202720D2824C006101A1 /* ProfileViewController.swift */; };
 		8CD4202C20D2827A006101A1 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD4202B20D2827A006101A1 /* ProfileTableViewCell.swift */; };
 		8CDC7B1C2139524200CFADEA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDC7B1B2139524200CFADEA /* LoginViewController.swift */; };
@@ -88,6 +91,8 @@
 		8C5A3C1321412668003DC27C /* PushProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushProfile.swift; sourceTree = "<group>"; };
 		8C5A3C162142B839003DC27C /* GetMyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyProfile.swift; sourceTree = "<group>"; };
 		8C5A3C192142C5E7003DC27C /* LoggedInUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInUsers.swift; sourceTree = "<group>"; };
+		8C5A3C222143E324003DC27C /* SwipeInteractionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeInteractionController.swift; sourceTree = "<group>"; };
+		8C5A3C262143F6CD003DC27C /* CicularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CicularTransition.swift; sourceTree = "<group>"; };
 		8C7405F320D24CE700FF8E9C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		8C89A27D20DBD29200F900F5 /* EditMyProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMyProductsViewController.swift; sourceTree = "<group>"; };
 		8C9A100A20CA99140077B544 /* DateSwap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateSwap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +110,7 @@
 		8CBA6A7020E0E75C008CD18B /* DescriptionUITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionUITextView.swift; sourceTree = "<group>"; };
 		8CBA6A7220E4C383008CD18B /* ProductCardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardUIView.swift; sourceTree = "<group>"; };
 		8CBA6A7420E4C7C6008CD18B /* SwipeToLikeUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeToLikeUIViewController.swift; sourceTree = "<group>"; };
+		8CCCCD462143F9F900D1C84F /* OHCircleSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OHCircleSegue.swift; sourceTree = "<group>"; };
 		8CD4202720D2824C006101A1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8CD4202B20D2827A006101A1 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		8CDC7B1B2139524200CFADEA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +218,16 @@
 			path = Globals;
 			sourceTree = "<group>";
 		};
+		8C5A3C1B2143DAAD003DC27C /* TransitionAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				8CCCCD462143F9F900D1C84F /* OHCircleSegue.swift */,
+				8C5A3C222143E324003DC27C /* SwipeInteractionController.swift */,
+				8C5A3C262143F6CD003DC27C /* CicularTransition.swift */,
+			);
+			path = TransitionAnimation;
+			sourceTree = "<group>";
+		};
 		8C9A100120CA99140077B544 = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +250,7 @@
 		8C9A100C20CA99140077B544 /* DateSwap */ = {
 			isa = PBXGroup;
 			children = (
+				8C5A3C1B2143DAAD003DC27C /* TransitionAnimation */,
 				8C5A3C182142C5CB003DC27C /* Globals */,
 				8C5A3C152142B73B003DC27C /* DBget */,
 				8C5A3C1221412655003DC27C /* DBpush */,
@@ -461,6 +478,7 @@
 				8C2EB31220FE2D4800527D6F /* UserLikes.swift in Sources */,
 				8CD4202820D2824C006101A1 /* ProfileViewController.swift in Sources */,
 				8C2EB30220EBA91200527D6F /* Profile.swift in Sources */,
+				8CCCCD472143F9F900D1C84F /* OHCircleSegue.swift in Sources */,
 				8CDC7B1C2139524200CFADEA /* LoginViewController.swift in Sources */,
 				8CEF6A3520D933F6007C39D5 /* ProductOverviewViewController.swift in Sources */,
 				8C0EFEC9212B0A9200B3B8D7 /* CornerRadiusRounders.swift in Sources */,
@@ -474,7 +492,9 @@
 				8C43223420E67AD60027FDA1 /* RelationUISlider.swift in Sources */,
 				8CBA6A7520E4C7C6008CD18B /* SwipeToLikeUIViewController.swift in Sources */,
 				8C9A101620CA99140077B544 /* DateSwap.xcdatamodeld in Sources */,
+				8C5A3C272143F6CD003DC27C /* CicularTransition.swift in Sources */,
 				8C2EB31420FE30BE00527D6F /* ReviewViewController.swift in Sources */,
+				8C5A3C232143E324003DC27C /* SwipeInteractionController.swift in Sources */,
 				8CBA6A6F20DEC2A2008CD18B /* PriceSliderUISlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

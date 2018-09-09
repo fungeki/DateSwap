@@ -23,7 +23,8 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeProfile()
-        let stringURL = "http://dateswap.herokuapp.com/userproductdb?userid=\(myProfile.ID)"
+        guard let showID = gItemPlaceholder?.userID else {return}
+        let stringURL = "http://dateswap.herokuapp.com/userproductdb?userid=\(showID)"
         guard let objURL = URL(string: stringURL) else {return}
         URLSession.shared.dataTask(with: objURL) { (data, response, error) in
             DispatchQueue.main.async {
@@ -160,8 +161,6 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
         guard let id = segue.identifier else {return}
         if id == "backToInfoSegue" {
             guard let backVC = segue.destination as? ViewController else {return}
-            backVC.userProfile = self.myProfile
-            backVC.displayProduct = self.prevItem
             
             
         }

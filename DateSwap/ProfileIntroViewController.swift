@@ -9,119 +9,63 @@
 import UIKit
 
 class ProfileIntroViewController: UIViewController {
-    var myUser = u1
     var myRating = 0
-    @IBAction func distanceChanged(_ sender: PriceSliderUISlider) {
-        let currentValue = Int(sender.value)
-        switch currentValue {
-        case 301, 302, 303, 304, 305:
-            distanceUILabel.text = "Unlimited"
-        default:
-            distanceUILabel.text = "\(currentValue) KM."
-        }
-        
-        
-    }
+
     @IBOutlet weak var editProfileUIButton: UIButton!
     @IBOutlet weak var profileratingUILabel: UILabel!
     @IBOutlet weak var profilechainsawUIButton: UIButton!
     @IBOutlet weak var userNameUILabel: UILabel!
     @IBOutlet weak var addEditDatesUIButton: UIButton!
-    
-    @IBOutlet weak var distanceUILabel: UILabel!
-
-    @IBOutlet weak var distanceUISlider: PriceSliderUISlider!
-    
     @IBOutlet weak var profileIntroUIImageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let urlString = "http://dateswap.herokuapp.com/getaprofile?id=1"
-        guard let urlObj = URL(string: urlString) else {return}
-        URLSession.shared.dataTask(with: urlObj) { (data, response, error) in
-            DispatchQueue.main.async {
-            guard let data = data else {return}
-            do{
-                let profileSQL = try JSONDecoder().decode([ProfileSQL].self, from: data)
-                let mProfile = profileSQL2internal(profileSQL: profileSQL[0])
-                guard let picURL = URL(string: mProfile.pic) else {return}
-                self.profileIntroUIImageView.sd_setImage(with: picURL)
-                self.userNameUILabel.text = mProfile.nickname
-               // print(mProfile)
-                //print(profileSQL)
-                
-                
-                switch mProfile.rating {
-                case 1:
-                    self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_one"), for: .disabled)
-                    break
-                case 1.5:
-                    self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_oneAndaHalf"), for: .normal)
-                    break
-                case 2:
-                    self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_two"), for: .normal)
-                    break
-                case 2.5:
-                    self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_twoAndaHalf"), for: .normal)
-                    break
-                case 3:
-                    self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_three"), for: .normal)
-                    break
-                case 3.5:
-                    self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_threeAndaHalf"), for: .normal)
-                    break
-                case 4:
-                    self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_four"), for: .normal)
-                    break
-                case 4.5:
-                    self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_fourAndaHalf"), for: .normal)
-                    break
-                default:
-                    self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_five"), for: .normal)
-                    break
-                }
-                self.profileratingUILabel.text = String(mProfile.rating)
-                
-                
-                
-            }catch {
-                print(error)
-            }
-            }
-        }.resume()
-//        for i in 0 ..< 5 {
-//            myGroup.enter()
-//
-//            Alamofire.request("https://httpbin.org/get", parameters: ["foo": "bar"]).responseJSON { response in
-//                print("Finished request \(i)")
-//                myGroup.leave()
-//            }
-//        }
-//
-//        myGroup.notify(queue: .main) {
-//            print("Finished all requests.")
-//        }
-//        URLSession.shared.dataTask(with: urlObj) { (data, response, error) in
-//            guard let data = data else {return}
-//            //            let dataAsString = String(data: data, encoding: .utf8)
-//            //
-//            //            print("\(dataAsString) my data!!!!!!!!!!!!!!!")
-//            do{
-//                let mProducts = try JSONDecoder().decode(ProfileSQL.self, from: data)
-//                self.myUser = arrayProductsSQL2Local(array: mProducts)
-//                self.display = self.displayProducts[self.currentProduct]
-//                self.prepareSlider()
-//                self.initialize()
-//            }catch {
-//                print(error)
-//            }
-//        }.resume()
-        
-        
-        
-        // Do any additional setup after loading the view.
+        initialize()
+
     }
 
+    func initialize(){
+        profileIntroUIImageView.sd_setImage(with: URL(string: gOnlineUser.pic))
+        userNameUILabel.text = gOnlineUser.nickname
+        // print(mProfile)
+        //print(profileSQL)
+        
+        
+        switch gOnlineUser.rating {
+        case 1:
+            self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_one"), for: .disabled)
+            break
+        case 1.5:
+            self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_oneAndaHalf"), for: .normal)
+            break
+        case 2:
+            self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_two"), for: .normal)
+            break
+        case 2.5:
+            self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_twoAndaHalf"), for: .normal)
+            break
+        case 3:
+            self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_three"), for: .normal)
+            break
+        case 3.5:
+            self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_threeAndaHalf"), for: .normal)
+            break
+        case 4:
+            self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_long_tail_four"), for: .normal)
+            break
+        case 4.5:
+            self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_fourAndaHalf"), for: .normal)
+            break
+        case 5:
+            self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_five"), for: .normal)
+            break
+        default:
+            self.profilechainsawUIButton.setImage(#imageLiteral(resourceName: "ic_rating_flag_tail_empty"), for: .normal)
+            break
+        }
+        profileratingUILabel.text = String(gOnlineUser.rating)
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -166,3 +110,61 @@ class ProfileIntroViewController: UIViewController {
     */
 
 }
+//        let urlString = "http://dateswap.herokuapp.com/getaprofile?id=1"
+//        guard let urlObj = URL(string: urlString) else {return}
+//        URLSession.shared.dataTask(with: urlObj) { (data, response, error) in
+//            DispatchQueue.main.async {
+//            guard let data = data else {return}
+//            do{
+//                let profileSQL = try JSONDecoder().decode([ProfileSQL].self, from: data)
+//                let mProfile = profileSQL2internal(profileSQL: profileSQL[0])
+//                guard let picURL = URL(string: mProfile.pic) else {return}
+
+//
+//
+//            }catch {
+//                print(error)
+//            }
+//            }
+//        }.resume()
+//        for i in 0 ..< 5 {
+//            myGroup.enter()
+//
+//            Alamofire.request("https://httpbin.org/get", parameters: ["foo": "bar"]).responseJSON { response in
+//                print("Finished request \(i)")
+//                myGroup.leave()
+//            }
+//        }
+//
+//        myGroup.notify(queue: .main) {
+//            print("Finished all requests.")
+//        }
+//        URLSession.shared.dataTask(with: urlObj) { (data, response, error) in
+//            guard let data = data else {return}
+//            //            let dataAsString = String(data: data, encoding: .utf8)
+//            //
+//            //            print("\(dataAsString) my data!!!!!!!!!!!!!!!")
+//            do{
+//                let mProducts = try JSONDecoder().decode(ProfileSQL.self, from: data)
+//                self.myUser = arrayProductsSQL2Local(array: mProducts)
+//                self.display = self.displayProducts[self.currentProduct]
+//                self.prepareSlider()
+//                self.initialize()
+//            }catch {
+//                print(error)
+//            }
+//        }.resume()
+
+
+
+// Do any additional setup after loading the view.
+
+//    @IBAction func distanceChanged(_ sender: PriceSliderUISlider) {
+//        let currentValue = Int(sender.value)
+//        switch currentValue {
+//        case 301, 302, 303, 304, 305:
+//            distanceUILabel.text = "Unlimited"
+//        default:
+//            distanceUILabel.text = "\(currentValue) KM."
+//        }
+//}

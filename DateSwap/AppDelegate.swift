@@ -10,10 +10,10 @@ import UIKit
 import CoreData
 import Firebase
 import GoogleSignIn
-import FacebookCore
+//import FacebookCore
 import FirebaseStorage
 
-var fbToken: AccessToken?
+//var fbToken: AccessToken?
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -65,10 +65,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     @available(iOS 9.0, *)
     func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any])
         -> Bool {
-            print("openurl")
-            if SDKApplicationDelegate.shared.application(application, open: url, options: options){
-                return true
-            }
+       //     print("openurl")
+     //       if SDKApplicationDelegate.shared.application(application, open: url, options: options){
+//                return true
+//            }
             return GIDSignIn.sharedInstance().handle(url, sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
                                                      annotation: [:])
     }
@@ -78,16 +78,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         FirebaseApp.configure()
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
-        SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+     //   SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
        // print(Auth.auth().currentUser?.displayName)
         currentUser = Auth.auth().currentUser
-        fbToken = AccessToken.current
-        if currentUser != nil{
+       // fbToken = AccessToken.current
+       // if currentUser != nil{
 //            let storyboard = UIStoryboard(name: "Main", bundle: nil)
 //            let initialViewController = storyboard.instantiateViewController(withIdentifier: "swipeViewController")
 //            self.window?.rootViewController = initialViewController
 //            self.window?.makeKeyAndVisible()
-        }
+     //   }
         return true
     }
 

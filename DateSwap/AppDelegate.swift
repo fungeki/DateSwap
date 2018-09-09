@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 import Firebase
 import GoogleSignIn
-//import FacebookCore
+
 import FirebaseStorage
 
 //var fbToken: AccessToken?
@@ -66,10 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     @available(iOS 9.0, *)
     func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any])
         -> Bool {
-       //     print("openurl")
-     //       if SDKApplicationDelegate.shared.application(application, open: url, options: options){
-//                return true
-//            }
+            print("openurl")
             return GIDSignIn.sharedInstance().handle(url, sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
                                                      annotation: [:])
     }
@@ -82,13 +79,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
      //   SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
        // print(Auth.auth().currentUser?.displayName)
         currentUser = Auth.auth().currentUser
-       // fbToken = AccessToken.current
-       // if currentUser != nil{
+//        if currentUser != nil{
 //            let storyboard = UIStoryboard(name: "Main", bundle: nil)
 //            let initialViewController = storyboard.instantiateViewController(withIdentifier: "swipeViewController")
 //            self.window?.rootViewController = initialViewController
 //            self.window?.makeKeyAndVisible()
-     //   }
+//        }
         return true
     }
 

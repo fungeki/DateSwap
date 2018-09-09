@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
            // print(firebase2ProfileSQL())
             guard let mFireuser = firebase2ProfileSQL() else {return}
             pushUser(profileSQL: mFireuser)
-            getMyProfile()
+            
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let swipeViewController = storyBoard.instantiateViewController(withIdentifier: "swipeViewController") as! SwipeToLikeUIViewController
             self.window?.rootViewController = swipeViewController

@@ -15,14 +15,26 @@ func pushUser(profileSQL: ProfileSQL){
     let email = profileSQL.email
     let pic = profileSQL.pic
     let urlString = "http://dateswap.herokuapp.com/addprofile?nickname=\(nickname)&pic=\(pic)&email=\(email)"
-    print(urlString)
-    guard let escapedStr = urlString.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
+//    print(urlString)
+    guard let escapedStr = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
         print("failed encoding string")
         return}
+//    print(escapedStr)
     guard let objUrl = URL(string: escapedStr) else {
         print("failed to objectify url to string")
         return
     }
-    URLSession.shared.dataTask(with: objUrl).resume()
+    print(objUrl)
+    URLSession.shared.dataTask(with: objUrl) { (data, res, err) in
+        DispatchQueue.main.async {
+            
+            do{
+                getMyProfile()
+                
+            }catch {
+                
+            }
+        }
+    }.resume()
     
 }

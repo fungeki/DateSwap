@@ -22,6 +22,7 @@ class SwipeToLikeUIViewController: UIViewController {
     @IBOutlet weak var factionIndicatorUIImage: UIImageView!
     @IBOutlet weak var productCardUIView: ProductCardUIView!
     @IBOutlet weak var conditionMainImageUIButton: ConditionUIButton!
+    @IBOutlet weak var nextProductUIImage: UIImageView!
     
     @IBOutlet weak var relationUISlider: RelationUISlider!
     @IBOutlet weak var likeUIImageView: UIImageView!
@@ -32,6 +33,7 @@ class SwipeToLikeUIViewController: UIViewController {
     @IBOutlet weak var mainImageUIImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextProductUIImage.layer.cornerRadius = 20
         if let mTransfer = transfer {
             mainImageUIImageView.sd_setImage(with: URL(string: mTransfer.image))
         }
@@ -103,6 +105,12 @@ class SwipeToLikeUIViewController: UIViewController {
         conditionMainImageUIButton.borderColor = UIColor(cgColor: lightOrange())
         
         currentProduct += 1
+        var tempProdNum = currentProduct
+        if tempProdNum == displayProducts.count{
+            tempProdNum = 0
+        }
+        let display2 = displayProducts[tempProdNum]
+        nextProductUIImage.sd_setImage(with: URL(string: display2.image))
         
     }
     

@@ -167,18 +167,25 @@
                                     <segue destination="Ndd-XS-XH6" kind="show" id="L0L-HJ-6aG"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="so5-N9-8q5">
+                                <rect key="frame" x="12" y="103.5" width="350" height="420"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="420" id="E4q-NU-V0D"/>
+                                    <constraint firstAttribute="width" constant="350" id="kYZ-P5-R6h"/>
+                                </constraints>
+                            </imageView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aYk-f7-4AM" customClass="ProductCardUIView" customModule="DateSwap" customModuleProvider="target">
-                                <rect key="frame" x="12" y="119.5" width="351" height="448"/>
+                                <rect key="frame" x="12" y="103.5" width="351" height="480"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uGx-yF-Ln9">
-                                        <rect key="frame" x="0.0" y="0.0" width="351" height="388"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="351" height="420"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qWh-y1-8Ik">
                                         <rect key="frame" x="55" y="139" width="240" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRm-7s-KPP" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
-                                        <rect key="frame" x="321" y="367" width="30" height="36"/>
+                                        <rect key="frame" x="321" y="399" width="30" height="36"/>
                                         <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="21"/>
                                         <state key="normal">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -202,7 +209,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiG-na-fal">
-                                        <rect key="frame" x="4" y="400" width="343" height="48"/>
+                                        <rect key="frame" x="4" y="432" width="343" height="48"/>
                                         <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -218,7 +225,7 @@
                                     <constraint firstItem="JiG-na-fal" firstAttribute="top" secondItem="uGx-yF-Ln9" secondAttribute="bottom" constant="12" id="Hxd-6Q-U2K"/>
                                     <constraint firstItem="uGx-yF-Ln9" firstAttribute="top" secondItem="aYk-f7-4AM" secondAttribute="top" id="KLt-Kj-fz4"/>
                                     <constraint firstAttribute="trailing" secondItem="uGx-yF-Ln9" secondAttribute="trailing" id="TCo-os-JfY"/>
-                                    <constraint firstAttribute="height" constant="448" id="fME-ca-yra"/>
+                                    <constraint firstAttribute="height" constant="480" id="fME-ca-yra"/>
                                     <constraint firstItem="JiG-na-fal" firstAttribute="leading" secondItem="aYk-f7-4AM" secondAttribute="leading" constant="4" id="olD-gF-XTS"/>
                                     <constraint firstAttribute="trailing" secondItem="LRm-7s-KPP" secondAttribute="trailing" id="uAk-3Y-NVz"/>
                                     <constraint firstAttribute="bottom" secondItem="LRm-7s-KPP" secondAttribute="bottom" constant="45" id="yvu-3l-FO9"/>
@@ -294,6 +301,7 @@
                             <constraint firstItem="rMM-pJ-rx9" firstAttribute="top" secondItem="tiu-vA-MmV" secondAttribute="top" constant="12" id="GVk-jl-Oi7"/>
                             <constraint firstItem="rMM-pJ-rx9" firstAttribute="width" secondItem="v6s-Oo-Iok" secondAttribute="width" multiplier="0.1" id="MaW-ta-d90"/>
                             <constraint firstItem="tiu-vA-MmV" firstAttribute="trailing" secondItem="d5D-i9-BXj" secondAttribute="trailing" constant="20" id="NL3-KQ-Hev"/>
+                            <constraint firstItem="so5-N9-8q5" firstAttribute="centerX" secondItem="tiu-vA-MmV" secondAttribute="centerX" id="ORj-7k-wRp"/>
                             <constraint firstItem="tiu-vA-MmV" firstAttribute="trailing" secondItem="aYk-f7-4AM" secondAttribute="trailing" constant="12" id="UVO-wD-kMK"/>
                             <constraint firstItem="aYk-f7-4AM" firstAttribute="leading" secondItem="tiu-vA-MmV" secondAttribute="leading" constant="12" id="Z02-q7-h4K"/>
                             <constraint firstItem="tiu-vA-MmV" firstAttribute="bottom" secondItem="boV-dc-03q" secondAttribute="bottom" constant="20" id="a0B-lu-2D6"/>
@@ -307,6 +315,7 @@
                             <constraint firstItem="d5D-i9-BXj" firstAttribute="leading" secondItem="tiu-vA-MmV" secondAttribute="leading" constant="20" id="ph2-KC-UKr"/>
                             <constraint firstItem="JbA-0C-mjw" firstAttribute="leading" secondItem="tiu-vA-MmV" secondAttribute="leading" constant="12" id="tjO-3a-xnG"/>
                             <constraint firstItem="ECs-TD-jWm" firstAttribute="width" secondItem="v6s-Oo-Iok" secondAttribute="width" multiplier="0.08" id="uCs-5K-t84"/>
+                            <constraint firstItem="so5-N9-8q5" firstAttribute="top" secondItem="rMM-pJ-rx9" secondAttribute="bottom" constant="37.5" id="udv-oG-JsL"/>
                             <constraint firstItem="rMM-pJ-rx9" firstAttribute="centerX" secondItem="tiu-vA-MmV" secondAttribute="centerX" id="xdg-mD-AMI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tiu-vA-MmV"/>
@@ -318,6 +327,7 @@
                         <outlet property="likeUIImageView" destination="boV-dc-03q" id="XT8-OS-Ymw"/>
                         <outlet property="mainImageUIImageView" destination="uGx-yF-Ln9" id="o9q-2C-5N9"/>
                         <outlet property="mainTitleMainImageUIButton" destination="JiG-na-fal" id="78j-x0-x1J"/>
+                        <outlet property="nextProductUIImage" destination="so5-N9-8q5" id="Xxa-Ix-y0W"/>
                         <outlet property="productCardUIView" destination="aYk-f7-4AM" id="4N7-EP-BSh"/>
                         <outlet property="relationUISlider" destination="d5D-i9-BXj" id="itz-hd-Es4"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="detailsSegue" customClass="OHCircleSegue" customModule="DateSwap" customModuleProvider="target" id="T9f-jv-ihH"/>
@@ -2473,8 +2483,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="U1M-Gc-J2N"/>
-        <segue reference="YR3-E1-jR6"/>
-        <segue reference="ets-lL-Oum"/>
+        <segue reference="VyL-Rk-V4m"/>
+        <segue reference="T9f-jv-ihH"/>
         <segue reference="kt3-VZ-zyo"/>
         <segue reference="Zwd-T0-hKu"/>
     </inferredMetricsTieBreakers>

@@ -743,7 +743,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fmp-W4-1Da">
-                                                    <rect key="frame" x="173.5" y="108" width="174.5" height="34"/>
+                                                    <rect key="frame" x="185.5" y="108" width="150.5" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <state key="normal" title="price">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -761,11 +761,11 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="fpY-gO-WGJ" secondAttribute="trailing" constant="8" id="C5v-dT-Xdq"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Fmp-W4-1Da" secondAttribute="trailing" constant="12" id="DqH-l6-dRA"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Fmp-W4-1Da" secondAttribute="trailing" constant="24" id="DqH-l6-dRA"/>
                                                 <constraint firstItem="Fmp-W4-1Da" firstAttribute="top" secondItem="ERt-tM-ccH" secondAttribute="bottom" constant="8" id="HS6-Qi-Qjk"/>
                                                 <constraint firstItem="fpY-gO-WGJ" firstAttribute="top" secondItem="JcQ-pL-tvE" secondAttribute="topMargin" constant="1" id="Peg-oc-gN0"/>
                                                 <constraint firstItem="dT8-YA-uZI" firstAttribute="width" secondItem="JcQ-pL-tvE" secondAttribute="width" multiplier="0.38" id="Q1y-hd-jVu"/>
-                                                <constraint firstItem="Fmp-W4-1Da" firstAttribute="leading" secondItem="dT8-YA-uZI" secondAttribute="trailing" constant="12" id="VHS-7X-ckc"/>
+                                                <constraint firstItem="Fmp-W4-1Da" firstAttribute="leading" secondItem="dT8-YA-uZI" secondAttribute="trailing" constant="24" id="VHS-7X-ckc"/>
                                                 <constraint firstItem="fpY-gO-WGJ" firstAttribute="leading" secondItem="dT8-YA-uZI" secondAttribute="trailing" constant="16" id="Vs6-dY-CcV"/>
                                                 <constraint firstItem="ERt-tM-ccH" firstAttribute="top" secondItem="fpY-gO-WGJ" secondAttribute="bottom" constant="4" id="WlS-dc-7A3"/>
                                                 <constraint firstItem="J3j-4I-RrL" firstAttribute="centerX" secondItem="dT8-YA-uZI" secondAttribute="centerX" id="ZiB-Xh-6Ny"/>
@@ -2472,11 +2472,10 @@
         <image name="the_rob.jpg" width="1000" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gur-k5-ie2"/>
         <segue reference="U1M-Gc-J2N"/>
-        <segue reference="VyL-Rk-V4m"/>
+        <segue reference="YR3-E1-jR6"/>
         <segue reference="ets-lL-Oum"/>
         <segue reference="kt3-VZ-zyo"/>
-        <segue reference="sfZ-yK-a3Y"/>
+        <segue reference="Zwd-T0-hKu"/>
     </inferredMetricsTieBreakers>
 </document>

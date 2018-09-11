@@ -14,5 +14,6 @@ var gOnlineUser = u6
 var gOnlineUserProducts = [Product]()
 //item selected:
 var gItemPlaceholder : Product?
-//user's stall
+//user's profile:
 var gUserProfile : Profile?
+//user's stall:

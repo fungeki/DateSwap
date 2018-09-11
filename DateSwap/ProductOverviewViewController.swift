@@ -18,26 +18,30 @@ class ProductOverviewViewController: UIViewController {
     @IBOutlet weak var addADateUIButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = "http://dateswap.herokuapp.com/userproductdb?userid=1"
-        guard let urlObj = URL(string: url) else {return}
-        
-        URLSession.shared.dataTask(with: urlObj) { (data, response, ic_user) in
-            DispatchQueue.main.async {
-                
-            
-            guard let data = data else {return}
-//            let dataAsString = String(data: data, encoding: .utf8)
+        displayProducts = gOnlineUserProducts
+        if displayProducts[0].ID == 4{
+            addDateUITableView.allowsSelection = false
+        }
+//        let url = "http://dateswap.herokuapp.com/userproductdb?userid=\()"
+//        guard let urlObj = URL(string: url) else {return}
 //
-//            print("\(dataAsString) my data!!!!!!!!!!!!!!!")
-            do{
-                let mProducts = try JSONDecoder().decode([ProductExpSQL].self, from: data)
-                self.displayProducts = arrayProductsSQL2Local(array: mProducts)
-                self.addDateUITableView.reloadData()
-                }catch {
-                    print(error)
-                }
-            }
-        }.resume()
+//        URLSession.shared.dataTask(with: urlObj) { (data, response, ic_user) in
+//            DispatchQueue.main.async {
+//
+//
+//            guard let data = data else {return}
+////            let dataAsString = String(data: data, encoding: .utf8)
+////
+////            print("\(dataAsString) my data!!!!!!!!!!!!!!!")
+//            do{
+//                let mProducts = try JSONDecoder().decode([ProductExpSQL].self, from: data)
+//                self.displayProducts = arrayProductsSQL2Local(array: mProducts)
+//                self.addDateUITableView.reloadData()
+//                }catch {
+//                    print(error)
+//                }
+//            }
+//        }.resume()
         
 //        URLSession.shared.dataTask(with: urlObj!){(data, response, error) in
 //            do{

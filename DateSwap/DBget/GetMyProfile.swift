@@ -19,7 +19,7 @@ func getMyProfile(){
             do{
                 let mProfileSQL = try JSONDecoder().decode([ProfileSQL].self, from: data)
                 gOnlineUser = profileSQL2internal(profileSQL: mProfileSQL[0])
-                print("online user: \(gOnlineUser)")
+                getMyProducts()
             } catch{
                 
             }

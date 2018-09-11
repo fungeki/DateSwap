@@ -1585,13 +1585,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_kilometers_away_color" translatesAutoresizingMaskIntoConstraints="NO" id="nck-0L-288">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_kilometers_away_color" translatesAutoresizingMaskIntoConstraints="NO" id="nck-0L-288">
                                 <rect key="frame" x="12" y="401.5" width="22.5" height="33.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nck-0L-288" secondAttribute="height" multiplier="36:55" id="arl-H2-xuH"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Kilometers away" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4w2-Oh-dAM">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Kilometers away" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4w2-Oh-dAM">
                                 <rect key="frame" x="41.5" y="416" width="163.5" height="18"/>
                                 <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="16"/>
                                 <nil key="textColor"/>
@@ -1816,10 +1816,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_kilometers_away_color" translatesAutoresizingMaskIntoConstraints="NO" id="4Sx-vV-m92">
+                            <imageView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_kilometers_away_color" translatesAutoresizingMaskIntoConstraints="NO" id="4Sx-vV-m92">
                                 <rect key="frame" x="217" y="84" width="43" height="40"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 KM away" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifF-UE-3vs">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 KM away" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifF-UE-3vs">
                                 <rect key="frame" x="265" y="94" width="92" height="20"/>
                                 <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -2472,10 +2472,11 @@
         <image name="the_rob.jpg" width="1000" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="gur-k5-ie2"/>
         <segue reference="U1M-Gc-J2N"/>
         <segue reference="VyL-Rk-V4m"/>
-        <segue reference="T9f-jv-ihH"/>
+        <segue reference="ets-lL-Oum"/>
         <segue reference="kt3-VZ-zyo"/>
-        <segue reference="Zwd-T0-hKu"/>
+        <segue reference="sfZ-yK-a3Y"/>
     </inferredMetricsTieBreakers>
 </document>

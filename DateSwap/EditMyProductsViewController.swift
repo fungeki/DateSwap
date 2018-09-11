@@ -60,7 +60,7 @@ class EditMyProductsViewController: UIViewController {
         productDescriptionUITextView.text = inputThisProduct.description
         dropDownConditionUIButton.setTitle(returnCondition(inputThisProduct.condition), for: .normal)
         addANewPhotoUIButton.setTitle("", for: .normal)
-        print(inputThisProduct.image)
+//        addANewPhotoUIButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
         addANewPhotoUIButton.sd_setBackgroundImage(with: URL(string: inputThisProduct.image), for: .normal)
         addANewPhotoUIButton.layer.cornerRadius = 20
         price = (inputThisProduct.price as NSString).integerValue

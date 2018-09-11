@@ -7,3 +7,22 @@
 //
 
 import Foundation
+
+func getMyProducts(){
+    let myID = gOnlineUser.ID
+    let myStringURL = "http://dateswap.herokuapp.com/userproductdb?userid=\(myID)"
+    guard let objURL = URL(string: myStringURL) else {return}
+    URLSession.shared.dataTask(with: objURL) { (data, res, err) in
+        guard let data = data else {return}
+        DispatchQueue.main.async {
+            do{
+            let mProducts = try JSONDecoder().decode([ProductExpSQL].self, from: data)
+            gOnlineUserProducts = arrayProductsSQL2Local(array: mProducts)
+
+            } catch {
+                guard let err = err else {return}
+                print(err)
+            }
+        }
+    }.resume()
+}

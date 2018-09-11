@@ -26,6 +26,7 @@
 		8C4321ED20E4D3740027FDA1 /* AndaleMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C4321EB20E4D3730027FDA1 /* AndaleMono.ttf */; };
 		8C43223420E67AD60027FDA1 /* RelationUISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43223320E67AD60027FDA1 /* RelationUISlider.swift */; };
 		8C43223620E77FC60027FDA1 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43223520E77FC60027FDA1 /* UIImageExtension.swift */; };
+		8C521AA02146ED4B00E081F3 /* PushProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C521A9F2146ED4B00E081F3 /* PushProduct.swift */; };
 		8C5A3C1121412114003DC27C /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C1021412114003DC27C /* Storage.swift */; };
 		8C5A3C1421412668003DC27C /* PushProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C1321412668003DC27C /* PushProfile.swift */; };
 		8C5A3C172142B839003DC27C /* GetMyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C162142B839003DC27C /* GetMyProfile.swift */; };
@@ -88,6 +89,7 @@
 		8C4321EB20E4D3730027FDA1 /* AndaleMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AndaleMono.ttf; sourceTree = "<group>"; };
 		8C43223320E67AD60027FDA1 /* RelationUISlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationUISlider.swift; sourceTree = "<group>"; };
 		8C43223520E77FC60027FDA1 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		8C521A9F2146ED4B00E081F3 /* PushProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushProduct.swift; sourceTree = "<group>"; };
 		8C5A3C1021412114003DC27C /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		8C5A3C1321412668003DC27C /* PushProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushProfile.swift; sourceTree = "<group>"; };
 		8C5A3C162142B839003DC27C /* GetMyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyProfile.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				8C5A3C1321412668003DC27C /* PushProfile.swift */,
+				8C521A9F2146ED4B00E081F3 /* PushProduct.swift */,
 			);
 			path = DBpush;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				8CD4202820D2824C006101A1 /* ProfileViewController.swift in Sources */,
 				8C2EB30220EBA91200527D6F /* Profile.swift in Sources */,
 				8CCCCD472143F9F900D1C84F /* OHCircleSegue.swift in Sources */,
+				8C521AA02146ED4B00E081F3 /* PushProduct.swift in Sources */,
 				8CDC7B1C2139524200CFADEA /* LoginViewController.swift in Sources */,
 				8CEF6A3520D933F6007C39D5 /* ProductOverviewViewController.swift in Sources */,
 				8C0EFEC9212B0A9200B3B8D7 /* CornerRadiusRounders.swift in Sources */,

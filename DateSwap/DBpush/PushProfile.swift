@@ -32,7 +32,6 @@ func pushUser(profileSQL: ProfileSQL){
                 getMyProfile()
                 
             }catch {
-                
             }
         }
     }.resume()

@@ -69,11 +69,18 @@ class SwipeToLikeUIViewController: UIViewController {
                     self.displayProducts = arrayProductsSQL2Local(array: mProducts)
                     self.display = self.displayProducts[0]
                     if let isPicked = gItemPlaceholder {
+                        self.mainImageUIImageView.sd_setImage(with: URL(string: self.displayProducts[0].image))
                         self.displayProducts.insert(isPicked, at: self.displayProducts.startIndex)
                         self.initialize()
                         return
                     }
                     self.initialize()
+                    var tempProdNum = 1
+                    if tempProdNum > self.displayProducts.count{
+                        tempProdNum = 0
+                    }
+                    let display2 = self.displayProducts[tempProdNum]
+                    self.nextProductUIImage.sd_setImage(with: URL(string: display2.image))
                 }catch {
                     print(error)
                 }
@@ -94,7 +101,6 @@ class SwipeToLikeUIViewController: UIViewController {
         }
         display = displayProducts[currentProduct]
         gItemPlaceholder = displayProducts[currentProduct]
-        mainImageUIImageView.sd_setImage(with: URL(string: display.image))
         
         conditionMainImageUIButton.isEnabled = false
         
@@ -103,14 +109,14 @@ class SwipeToLikeUIViewController: UIViewController {
         conditionMainImageUIButton.setTitle(returnCondition(display.condition), for: .disabled)
         conditionMainImageUIButton.bg = UIColor(cgColor: mediumOrange())
         conditionMainImageUIButton.borderColor = UIColor(cgColor: lightOrange())
+        mainImageUIImageView.sd_setImage(with: URL(string: display.image)) { (nil, err, type, your) in
+            self.currentProduct += 1
+            
         
-        currentProduct += 1
-        var tempProdNum = currentProduct
-        if tempProdNum == displayProducts.count{
-            tempProdNum = 0
         }
-        let display2 = displayProducts[tempProdNum]
-        nextProductUIImage.sd_setImage(with: URL(string: display2.image))
+       
+        
+        
         
     }
     
@@ -345,9 +351,19 @@ class SwipeToLikeUIViewController: UIViewController {
                     UIView.animate(withDuration: 0.2, animations: {
                         card.alpha = 1
                         sender.isEnabled = true
-                    }
-                    )
-                    
+                    }, completion: { (true) in
+                      // self.initialize()
+                        var tempProdNum = self.currentProduct
+                        if tempProdNum == self.displayProducts.count{
+                            tempProdNum = 0
+                        }
+                        let display2 = self.displayProducts[tempProdNum]
+                        self.nextProductUIImage.sd_setImage(with: URL(string: display2.image))
+                    })
+//                    UIView.animate(withDuration: 0.2, animations: {
+//                        card.alpha = 1
+//                        sender.isEnabled = true
+//                    }
                 })
                 
                 

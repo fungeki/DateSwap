@@ -300,7 +300,7 @@ class SwipeToLikeUIViewController: UIViewController {
         
         card.center = CGPoint(x: view.center.x + point.x, y: view.center.y + point.y)
         card.transform = CGAffineTransform(rotationAngle: 0.45 * xFromCenter / view.center.x)
-        factionIndicatorUIImage.alpha = percOff
+        factionIndicatorUIImage.alpha = percOff * 3
         
         
         //let go
@@ -313,7 +313,7 @@ class SwipeToLikeUIViewController: UIViewController {
             //                                self.currentProduct = next
             //                            }
             //            }
-            if percOff > 0.3{
+            if percOff > 0.333{
                 sender.isEnabled = false
                 
                 

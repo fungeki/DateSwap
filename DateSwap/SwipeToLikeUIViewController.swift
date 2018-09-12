@@ -20,10 +20,12 @@ class SwipeToLikeUIViewController: UIViewController {
     let thumbImageDislike = imageResizeForSlider( #imageLiteral(resourceName: "ic_x_color"))
     let thumbBack = imageResizeForSlider( #imageLiteral(resourceName: "ic_backMatch_color"))
     @IBOutlet weak var factionIndicatorUIImage: UIImageView!
+    @IBOutlet var generalView: UIView!
     @IBOutlet weak var productCardUIView: ProductCardUIView!
     @IBOutlet weak var conditionMainImageUIButton: ConditionUIButton!
     @IBOutlet weak var nextProductUIImage: UIImageView!
     
+    @IBOutlet weak var nextCardUIcard: UIView!
     @IBOutlet weak var relationUISlider: RelationUISlider!
     @IBOutlet weak var likeUIImageView: UIImageView!
     
@@ -378,11 +380,14 @@ class SwipeToLikeUIViewController: UIViewController {
                 self.relationUISlider.setValue(0.5, animated: true)
                 
             })
+                
             UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 4, options: .curveLinear, animations: {
-                card.center = self.view.center
+                self.productCardUIView.center = self.generalView.center
+
                 
             
                 })
+                
         }
         }
         

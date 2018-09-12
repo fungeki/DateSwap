@@ -25,6 +25,7 @@ class SwipeToLikeUIViewController: UIViewController {
     @IBOutlet weak var conditionMainImageUIButton: ConditionUIButton!
     @IBOutlet weak var nextProductUIImage: UIImageView!
     
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var nextCardUIcard: UIView!
     @IBOutlet weak var relationUISlider: RelationUISlider!
     @IBOutlet weak var likeUIImageView: UIImageView!
@@ -74,6 +75,7 @@ class SwipeToLikeUIViewController: UIViewController {
                         self.mainImageUIImageView.sd_setImage(with: URL(string: self.displayProducts[0].image))
                         self.displayProducts.insert(isPicked, at: self.displayProducts.startIndex)
                         self.initialize()
+                        self.indicator.isHidden = true
                         return
                     }
                     self.initialize()
@@ -83,6 +85,7 @@ class SwipeToLikeUIViewController: UIViewController {
                     }
                     let display2 = self.displayProducts[tempProdNum]
                     self.nextProductUIImage.sd_setImage(with: URL(string: display2.image))
+                    self.indicator.isHidden = true
                 }catch {
                     print(error)
                 }

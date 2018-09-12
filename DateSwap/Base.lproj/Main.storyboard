@@ -298,9 +298,14 @@
                                     <constraint firstAttribute="height" constant="50" id="dgY-ez-ZDK"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="bJd-ph-Vhq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="bJd-ph-Vhq" firstAttribute="top" secondItem="v6s-Oo-Iok" secondAttribute="top" id="00t-ri-anC"/>
                             <constraint firstItem="ECs-TD-jWm" firstAttribute="top" secondItem="tiu-vA-MmV" secondAttribute="top" constant="12" id="0vi-yA-zVa"/>
                             <constraint firstItem="BIY-Jd-UAa" firstAttribute="leading" secondItem="tiu-vA-MmV" secondAttribute="leading" constant="10" id="1JV-Jo-OXQ"/>
                             <constraint firstItem="tiu-vA-MmV" firstAttribute="trailing" secondItem="aUk-KG-T5B" secondAttribute="trailing" constant="10" id="2Gl-fQ-Qo3"/>
@@ -311,6 +316,7 @@
                             <constraint firstItem="rMM-pJ-rx9" firstAttribute="width" secondItem="v6s-Oo-Iok" secondAttribute="width" multiplier="0.1" id="MaW-ta-d90"/>
                             <constraint firstItem="tiu-vA-MmV" firstAttribute="trailing" secondItem="d5D-i9-BXj" secondAttribute="trailing" constant="20" id="NL3-KQ-Hev"/>
                             <constraint firstItem="gc3-kN-iaS" firstAttribute="leading" secondItem="tiu-vA-MmV" secondAttribute="leading" constant="12.5" id="TK4-lg-ApE"/>
+                            <constraint firstAttribute="bottom" secondItem="bJd-ph-Vhq" secondAttribute="bottom" id="ULS-ig-w9B"/>
                             <constraint firstItem="tiu-vA-MmV" firstAttribute="trailing" secondItem="aYk-f7-4AM" secondAttribute="trailing" constant="12" id="UVO-wD-kMK"/>
                             <constraint firstItem="aYk-f7-4AM" firstAttribute="leading" secondItem="tiu-vA-MmV" secondAttribute="leading" constant="12" id="Z02-q7-h4K"/>
                             <constraint firstItem="tiu-vA-MmV" firstAttribute="bottom" secondItem="boV-dc-03q" secondAttribute="bottom" constant="20" id="a0B-lu-2D6"/>
@@ -319,6 +325,7 @@
                             <constraint firstItem="aYk-f7-4AM" firstAttribute="centerY" secondItem="v6s-Oo-Iok" secondAttribute="centerY" id="baD-Jd-Afd"/>
                             <constraint firstItem="JbA-0C-mjw" firstAttribute="top" secondItem="tiu-vA-MmV" secondAttribute="top" constant="12" id="dvb-MI-gj4"/>
                             <constraint firstItem="tiu-vA-MmV" firstAttribute="trailing" secondItem="ECs-TD-jWm" secondAttribute="trailing" constant="12" id="e3b-jf-bTE"/>
+                            <constraint firstItem="bJd-ph-Vhq" firstAttribute="leading" secondItem="tiu-vA-MmV" secondAttribute="leading" id="eb1-9S-2iD"/>
                             <constraint firstItem="tiu-vA-MmV" firstAttribute="bottom" secondItem="qmD-jq-CoJ" secondAttribute="bottom" constant="20" id="gMz-9m-ZsY"/>
                             <constraint firstItem="JbA-0C-mjw" firstAttribute="width" secondItem="v6s-Oo-Iok" secondAttribute="width" multiplier="0.08" id="i2p-DM-wEt"/>
                             <constraint firstItem="tiu-vA-MmV" firstAttribute="trailing" secondItem="gc3-kN-iaS" secondAttribute="trailing" constant="12.5" id="mgC-eW-Pe3"/>
@@ -327,6 +334,7 @@
                             <constraint firstItem="JbA-0C-mjw" firstAttribute="leading" secondItem="tiu-vA-MmV" secondAttribute="leading" constant="12" id="tjO-3a-xnG"/>
                             <constraint firstItem="ECs-TD-jWm" firstAttribute="width" secondItem="v6s-Oo-Iok" secondAttribute="width" multiplier="0.08" id="uCs-5K-t84"/>
                             <constraint firstItem="rMM-pJ-rx9" firstAttribute="centerX" secondItem="tiu-vA-MmV" secondAttribute="centerX" id="xdg-mD-AMI"/>
+                            <constraint firstItem="bJd-ph-Vhq" firstAttribute="trailing" secondItem="tiu-vA-MmV" secondAttribute="trailing" id="zwg-FM-h5D"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tiu-vA-MmV"/>
                     </view>
@@ -335,6 +343,7 @@
                         <outlet property="dislikeUIImageView" destination="qmD-jq-CoJ" id="xmK-rF-jfE"/>
                         <outlet property="factionIndicatorUIImage" destination="qWh-y1-8Ik" id="Pyh-Wr-xTH"/>
                         <outlet property="generalView" destination="v6s-Oo-Iok" id="aS1-jH-RHj"/>
+                        <outlet property="indicator" destination="bJd-ph-Vhq" id="axH-n1-iCT"/>
                         <outlet property="likeUIImageView" destination="boV-dc-03q" id="XT8-OS-Ymw"/>
                         <outlet property="mainImageUIImageView" destination="uGx-yF-Ln9" id="o9q-2C-5N9"/>
                         <outlet property="mainTitleMainImageUIButton" destination="JiG-na-fal" id="78j-x0-x1J"/>
@@ -2494,11 +2503,10 @@
         <image name="the_rob.jpg" width="1000" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="L0L-HJ-6aG"/>
         <segue reference="U1M-Gc-J2N"/>
         <segue reference="VyL-Rk-V4m"/>
         <segue reference="T9f-jv-ihH"/>
         <segue reference="kt3-VZ-zyo"/>
-        <segue reference="bdW-D8-QTA"/>
+        <segue reference="Zwd-T0-hKu"/>
     </inferredMetricsTieBreakers>
 </document>

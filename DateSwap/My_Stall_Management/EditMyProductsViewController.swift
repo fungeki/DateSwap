@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EditMyProductsViewController: UIViewController {
+class EditMyProductsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var price: Int = 0
     @IBAction func toPrice(_ sender: ProductEditTextfield) {
         guard let newPrice = sender.text else {return}
@@ -93,6 +93,55 @@ class EditMyProductsViewController: UIViewController {
         }
     }
     
+    @IBAction func openPhotoLibrary(_ sender: Any) {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        
+        var actionSheet =  UIAlertController(title: "Photo Source", message: "Please choose which source", preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action) in
+            imagePickerController.sourceType = .camera
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            self.present(imagePickerController, animated: true, completion: nil)
+}
+}))
+        actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: { (action) in
+            imagePickerController.sourceType = .photoLibrary
+            imagePickerController.allowsEditing = true
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+            self.present(imagePickerController, animated: true, completion: nil)
+            }
+}))
+ actionSheet.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: { (action) in
+    
+}))
+        self.present(actionSheet, animated: true) {
+            
+}
+//        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+//        var imagePicker = UIImagePickerController()
+//        imagePicker.delegate = self
+//        imagePicker.sourceType = .photoLibrary;
+//        imagePicker.allowsEditing = true
+//        present(imagePicker, animated: true, completion: nil)
+    }
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+    addANewPhotoUIButton.setTitle("", for: .normal)
+    addANewPhotoUIButton.setBackgroundImage(image, for: .normal)
+        addANewPhotoUIButton.layer.cornerRadius = 20
+    picker.dismiss(animated: true, completion: nil)
+}
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+}
+
+
+    
+    
+    
+
+    
 //    @IBAction func maxPriceChangeAction(_ sender: PriceSliderUISlider) {
 //        
 //        let newPrice = Double(price)
@@ -162,3 +211,4 @@ extension EditMyProductsViewController: UITableViewDelegate, UITableViewDataSour
         textView.resignFirstResponder()
     }
 }
+

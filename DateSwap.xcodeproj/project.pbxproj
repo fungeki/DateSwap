@@ -165,6 +165,17 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		8C521ACE214A3F5E00E081F3 /* My_Stall_Management */ = {
+			isa = PBXGroup;
+			children = (
+				8CEF6A3420D933F6007C39D5 /* ProductOverviewViewController.swift */,
+				8C89A27D20DBD29200F900F5 /* EditMyProductsViewController.swift */,
+				8CBA6A6820DEADDB008CD18B /* ConditionSelectionTableViewCell.swift */,
+				8CE62D0620D93D4900AA167D /* ProductOverviewTableViewCell.swift */,
+			);
+			path = My_Stall_Management;
+			sourceTree = "<group>";
+		};
 		8C5A3C0B214115D0003DC27C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +267,7 @@
 		8C9A100C20CA99140077B544 /* DateSwap */ = {
 			isa = PBXGroup;
 			children = (
+				8C521ACE214A3F5E00E081F3 /* My_Stall_Management */,
 				8C5A3C1B2143DAAD003DC27C /* TransitionAnimation */,
 				8C5A3C182142C5CB003DC27C /* Globals */,
 				8C5A3C152142B73B003DC27C /* DBget */,
@@ -265,13 +277,11 @@
 				8C5A3C0B214115D0003DC27C /* Utils */,
 				8C5A3C0C214116A6003DC27C /* Objects */,
 				8CE6897B2139ACE700208BEB /* PrivateChatViewController.swift */,
-				8C9A100D20CA99140077B544 /* AppDelegate.swift */,
-				8CBA6A6820DEADDB008CD18B /* ConditionSelectionTableViewCell.swift */,
 				8CE689792139ACA800208BEB /* PrivateChatTableViewCell.swift */,
+				8C9A100D20CA99140077B544 /* AppDelegate.swift */,
 				8C9A101420CA99140077B544 /* DateSwap.xcdatamodeld */,
 				8CBA6A7020E0E75C008CD18B /* DescriptionUITextView.swift */,
 				8CEF6A2020D28793007C39D5 /* DetailsFromProfileViewController.swift */,
-				8C89A27D20DBD29200F900F5 /* EditMyProductsViewController.swift */,
 				8C9A101C20CA99140077B544 /* Info.plist */,
 				8C0EFEC8212B0A9200B3B8D7 /* CornerRadiusRounders.swift */,
 				8C9A101920CA99140077B544 /* LaunchScreen.storyboard */,
@@ -285,8 +295,6 @@
 				777051DC20FE3AA800D7F54D /* NewMatchesCollectionViewCell.swift */,
 				773871FE20DEBFF600493C69 /* PhotosEditorViewController.swift */,
 				8CBA6A7220E4C383008CD18B /* ProductCardUIView.swift */,
-				8CE62D0620D93D4900AA167D /* ProductOverviewTableViewCell.swift */,
-				8CEF6A3420D933F6007C39D5 /* ProductOverviewViewController.swift */,
 				8CD4202B20D2827A006101A1 /* ProfileTableViewCell.swift */,
 				8C2EB2FB20EA926900527D6F /* RatingViewController.swift */,
 				8C2EB31320FE30BE00527D6F /* ReviewViewController.swift */,

@@ -37,6 +37,7 @@ class SwipeToLikeUIViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nextProductUIImage.layer.cornerRadius = 20
+        
         if let mTransfer = transfer {
             mainImageUIImageView.sd_setImage(with: URL(string: mTransfer.image))
         }
@@ -48,7 +49,6 @@ class SwipeToLikeUIViewController: UIViewController {
         tapGesture.numberOfTouchesRequired = 1
         self.mainImageUIImageView.isUserInteractionEnabled = true
         self.mainImageUIImageView.addGestureRecognizer(tapGesture)
-        
         
         // Do any additional setup after loading the view.
     }
@@ -74,6 +74,7 @@ class SwipeToLikeUIViewController: UIViewController {
                     if let isPicked = gItemPlaceholder {
                         self.mainImageUIImageView.sd_setImage(with: URL(string: self.displayProducts[0].image))
                         self.displayProducts.insert(isPicked, at: self.displayProducts.startIndex)
+                        self.productCardUIView.layer.zPosition = .greatestFiniteMagnitude
                         self.initialize()
                         self.indicator.isHidden = true
                         return

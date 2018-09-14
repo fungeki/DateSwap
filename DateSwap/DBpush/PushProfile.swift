@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseStorage
 
 
 //injects user to DB
 func pushUser(profileSQL: ProfileSQL){
     let nickname = profileSQL.nickname
     let email = profileSQL.email
-    let pic = profileSQL.pic
+    var pic = profileSQL.pic
     let urlString = "http://dateswap.herokuapp.com/addprofile?nickname=\(nickname)&pic=\(pic)&email=\(email)"
+
 //    print(urlString)
     guard let escapedStr = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
         print("failed encoding string")
@@ -24,7 +27,7 @@ func pushUser(profileSQL: ProfileSQL){
         print("failed to objectify url to string")
         return
     }
-    print(objUrl)
+    
     URLSession.shared.dataTask(with: objUrl) { (data, res, err) in
         DispatchQueue.main.async {
             

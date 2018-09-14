@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import FirebaseStorage
 
-class EditMyProductsViewController: UIViewController {
+class EditMyProductsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var price: Int = 0
     @IBAction func toPrice(_ sender: ProductEditTextfield) {
         guard let newPrice = sender.text else {return}
@@ -17,6 +18,12 @@ class EditMyProductsViewController: UIViewController {
     }
     @IBOutlet weak var estimatedPriceUITextField: ProductEditTextfield!
     
+    var mImage2Upload : NSData?
+    var mTitle : String?
+    var mDescription: String?
+    var mCondition : Int?
+    var mPrice : Int?
+
     @IBOutlet weak var productDescriptionUITextView: DescriptionUITextView!
     @IBOutlet weak var productTitleUITextField: UITextField!
     
@@ -28,6 +35,7 @@ class EditMyProductsViewController: UIViewController {
     var product: Product?
     var pageHeader: String!
     var conditionListing = returnConditionArray()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initialize()
@@ -67,6 +75,38 @@ class EditMyProductsViewController: UIViewController {
         productDescriptionUITextView.textColor = UIColor.brown
     }
     
+    @IBAction func SaveProduct(_ sender: Any) {
+        guard let imageRefData = mImage2Upload else {
+            print("no image")
+            return
+        }
+        guard let tempTitle = productTitleUITextField.text else {
+            print("product title text field empty")
+            return
+        }
+        var trimmedString = tempTitle.trimmingCharacters(in: .whitespacesAndNewlines)
+        trimmedString = trimmedString.trimmingCharacters(in: .illegalCharacters)
+        trimmedString = trimmedString.trimmingCharacters(in: .punctuationCharacters)
+        if trimmedString.count < 3 {
+            print("name too short")
+            return
+        }
+        if trimmedString.count > 100 {
+            print("name too long")
+            return
+        }
+        mTitle = trimmedString
+        guard let upTitle = mTitle else {
+            print("no title!")
+            return
+        }
+        let metadata = StorageMetadata()
+        metadata.contentType = "image/jpg"
+        
+        let mStorageRefNow = usersStorageRef.child("products/\(gOnlineUser.ID)/\(upTitle)/pic.jpg")
+        let uploadTask = mStorageRefNow.putData(imageRefData as Data, metadata: metadata)
+        
+    }
     
     @IBAction func onclickDropdownConditionUIButton(_ sender: ConditionUIButton) {
         dropdownAnimation(toggle: conditionSelectionTableView.isHidden)
@@ -92,6 +132,57 @@ class EditMyProductsViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func openPhotoLibrary(_ sender: Any) {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        
+        var actionSheet =  UIAlertController(title: "Photo Source", message: "Please choose which source", preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action) in
+            imagePickerController.sourceType = .camera
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            self.present(imagePickerController, animated: true, completion: nil)
+}
+}))
+        actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: { (action) in
+            imagePickerController.sourceType = .photoLibrary
+            imagePickerController.allowsEditing = true
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+            self.present(imagePickerController, animated: true, completion: nil)
+            }
+}))
+ actionSheet.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: { (action) in
+    
+}))
+        self.present(actionSheet, animated: true) {
+            
+}
+//        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+//        var imagePicker = UIImagePickerController()
+//        imagePicker.delegate = self
+//        imagePicker.sourceType = .photoLibrary;
+//        imagePicker.allowsEditing = true
+//        present(imagePicker, animated: true, completion: nil)
+    }
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+    let compressedImage = resizeImage(image)
+    addANewPhotoUIButton.setTitle("", for: .normal)
+    addANewPhotoUIButton.setBackgroundImage(compressedImage, for: .normal)
+        addANewPhotoUIButton.layer.cornerRadius = 20
+    mImage2Upload = UIImageJPEGRepresentation(compressedImage, 1) as! NSData
+    picker.dismiss(animated: true, completion: nil)
+}
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+}
+
+
+    
+    
+    
+
     
 //    @IBAction func maxPriceChangeAction(_ sender: PriceSliderUISlider) {
 //        
@@ -162,3 +253,20 @@ extension EditMyProductsViewController: UITableViewDelegate, UITableViewDataSour
         textView.resignFirstResponder()
     }
 }
+
+//        if let imgUrl = info[UIImagePickerControllerImageURL] as? URL{
+//            let imgName = imgUrl.lastPathComponent
+//            let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
+//            let localPath = documentDirectory?.appending(imgName)
+//
+//            let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+//            let data = UIImagePNGRepresentation(image)! as NSData
+//            data.write(toFile: localPath!, atomically: true)
+//            //let imageData = NSData(contentsOfFile: localPath!)!
+//            let photoURL = URL.init(fileURLWithPath: localPath!)//NSURL(fileURLWithPath: localPath!)
+//            mImageURL = photoURL
+//
+//
+//        }
+
+

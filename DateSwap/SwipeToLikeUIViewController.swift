@@ -20,10 +20,13 @@ class SwipeToLikeUIViewController: UIViewController {
     let thumbImageDislike = imageResizeForSlider( #imageLiteral(resourceName: "ic_x_color"))
     let thumbBack = imageResizeForSlider( #imageLiteral(resourceName: "ic_backMatch_color"))
     @IBOutlet weak var factionIndicatorUIImage: UIImageView!
+    @IBOutlet var generalView: UIView!
     @IBOutlet weak var productCardUIView: ProductCardUIView!
     @IBOutlet weak var conditionMainImageUIButton: ConditionUIButton!
     @IBOutlet weak var nextProductUIImage: UIImageView!
     
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
+    @IBOutlet weak var nextCardUIcard: UIView!
     @IBOutlet weak var relationUISlider: RelationUISlider!
     @IBOutlet weak var likeUIImageView: UIImageView!
     
@@ -34,6 +37,7 @@ class SwipeToLikeUIViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nextProductUIImage.layer.cornerRadius = 20
+        
         if let mTransfer = transfer {
             mainImageUIImageView.sd_setImage(with: URL(string: mTransfer.image))
         }
@@ -45,7 +49,6 @@ class SwipeToLikeUIViewController: UIViewController {
         tapGesture.numberOfTouchesRequired = 1
         self.mainImageUIImageView.isUserInteractionEnabled = true
         self.mainImageUIImageView.addGestureRecognizer(tapGesture)
-        
         
         // Do any additional setup after loading the view.
     }
@@ -71,7 +74,9 @@ class SwipeToLikeUIViewController: UIViewController {
                     if let isPicked = gItemPlaceholder {
                         self.mainImageUIImageView.sd_setImage(with: URL(string: self.displayProducts[0].image))
                         self.displayProducts.insert(isPicked, at: self.displayProducts.startIndex)
+                        self.productCardUIView.layer.zPosition = .greatestFiniteMagnitude
                         self.initialize()
+                        self.indicator.isHidden = true
                         return
                     }
                     self.initialize()
@@ -81,6 +86,7 @@ class SwipeToLikeUIViewController: UIViewController {
                     }
                     let display2 = self.displayProducts[tempProdNum]
                     self.nextProductUIImage.sd_setImage(with: URL(string: display2.image))
+                    self.indicator.isHidden = true
                 }catch {
                     print(error)
                 }
@@ -378,11 +384,14 @@ class SwipeToLikeUIViewController: UIViewController {
                 self.relationUISlider.setValue(0.5, animated: true)
                 
             })
+                
             UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 4, options: .curveLinear, animations: {
-                card.center = self.view.center
+                self.productCardUIView.center = self.generalView.center
+
                 
             
                 })
+                
         }
         }
         

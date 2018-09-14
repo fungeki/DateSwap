@@ -17,7 +17,13 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         sender.text = "\(String(describing: sender.text))$"
     }
     @IBOutlet weak var estimatedPriceUITextField: ProductEditTextfield!
+    
     var mImage2Upload : NSData?
+    var mTitle : String?
+    var mDescription: String?
+    var mCondition : Int?
+    var mPrice : Int?
+
     @IBOutlet weak var productDescriptionUITextView: DescriptionUITextView!
     @IBOutlet weak var productTitleUITextField: UITextField!
     
@@ -74,12 +80,31 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
             print("no image")
             return
         }
+        guard let tempTitle = productTitleUITextField.text else {
+            print("product title text field empty")
+            return
+        }
+        var trimmedString = tempTitle.trimmingCharacters(in: .whitespacesAndNewlines)
+        trimmedString = trimmedString.trimmingCharacters(in: .illegalCharacters)
+        trimmedString = trimmedString.trimmingCharacters(in: .punctuationCharacters)
+        if trimmedString.count < 3 {
+            print("name too short")
+            return
+        }
+        if trimmedString.count > 100 {
+            print("name too long")
+            return
+        }
+        mTitle = trimmedString
+        guard let upTitle = mTitle else {
+            print("no title!")
+            return
+        }
         let metadata = StorageMetadata()
         metadata.contentType = "image/jpg"
         
-        let mStorageRefNow = usersStorageRef.child("\(gOnlineUser.email)/pic.jpg")
+        let mStorageRefNow = usersStorageRef.child("products/\(gOnlineUser.ID)/\(upTitle)/pic.jpg")
         let uploadTask = mStorageRefNow.putData(imageRefData as Data, metadata: metadata)
-        
         
     }
     

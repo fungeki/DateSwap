@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseStorage
 
 class EditMyProductsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var price: Int = 0
@@ -16,7 +17,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         sender.text = "\(String(describing: sender.text))$"
     }
     @IBOutlet weak var estimatedPriceUITextField: ProductEditTextfield!
-    
+    var mImage2Upload : NSData?
     @IBOutlet weak var productDescriptionUITextView: DescriptionUITextView!
     @IBOutlet weak var productTitleUITextField: UITextField!
     
@@ -28,6 +29,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     var product: Product?
     var pageHeader: String!
     var conditionListing = returnConditionArray()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initialize()
@@ -67,6 +69,19 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         productDescriptionUITextView.textColor = UIColor.brown
     }
     
+    @IBAction func SaveProduct(_ sender: Any) {
+        guard let imageRefData = mImage2Upload else {
+            print("no image")
+            return
+        }
+        let metadata = StorageMetadata()
+        metadata.contentType = "image/jpg"
+        
+        let mStorageRefNow = usersStorageRef.child("\(gOnlineUser.email)/pic.jpg")
+        let uploadTask = mStorageRefNow.putData(imageRefData as Data, metadata: metadata)
+        
+        
+    }
     
     @IBAction func onclickDropdownConditionUIButton(_ sender: ConditionUIButton) {
         dropdownAnimation(toggle: conditionSelectionTableView.isHidden)
@@ -127,9 +142,11 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
     let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+    let compressedImage = resizeImage(image)
     addANewPhotoUIButton.setTitle("", for: .normal)
-    addANewPhotoUIButton.setBackgroundImage(image, for: .normal)
+    addANewPhotoUIButton.setBackgroundImage(compressedImage, for: .normal)
         addANewPhotoUIButton.layer.cornerRadius = 20
+    mImage2Upload = UIImageJPEGRepresentation(compressedImage, 1) as! NSData
     picker.dismiss(animated: true, completion: nil)
 }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -211,4 +228,20 @@ extension EditMyProductsViewController: UITableViewDelegate, UITableViewDataSour
         textView.resignFirstResponder()
     }
 }
+
+//        if let imgUrl = info[UIImagePickerControllerImageURL] as? URL{
+//            let imgName = imgUrl.lastPathComponent
+//            let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
+//            let localPath = documentDirectory?.appending(imgName)
+//
+//            let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+//            let data = UIImagePNGRepresentation(image)! as NSData
+//            data.write(toFile: localPath!, atomically: true)
+//            //let imageData = NSData(contentsOfFile: localPath!)!
+//            let photoURL = URL.init(fileURLWithPath: localPath!)//NSURL(fileURLWithPath: localPath!)
+//            mImageURL = photoURL
+//
+//
+//        }
+
 

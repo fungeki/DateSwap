@@ -928,12 +928,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcd-T8-spc">
-                                <rect key="frame" x="314" y="20" width="37" height="30"/>
-                                <state key="normal" title="Done">
-                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="317" y="20" width="34" height="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.28905671830000002" green="0.63317435980000003" blue="0.20536994929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="R2Y-61-62b" kind="show" id="U1M-Gc-J2N"/>
+                                    <action selector="SaveProduct:" destination="8ec-TZ-yJL" eventType="touchUpInside" id="ZS6-M4-Tbq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMH-Ls-QgS">
@@ -1128,6 +1128,15 @@
                                     <outlet property="delegate" destination="8ec-TZ-yJL" id="KEk-jY-QL2"/>
                                 </connections>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jxx-YV-3eP">
+                                <rect key="frame" x="24" y="20" width="48" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="nE1-GP-IDx" kind="show" id="8ru-sp-3Bw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1141,6 +1150,7 @@
                             <constraint firstItem="uXk-LH-vTS" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="Tyw-vn-V1G"/>
                             <constraint firstItem="bnB-n6-K60" firstAttribute="top" secondItem="434-lb-zsh" secondAttribute="bottom" constant="4" id="UWP-3o-ERG"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="uXk-LH-vTS" secondAttribute="trailing" constant="24" id="Y9t-90-4Xh"/>
+                            <constraint firstItem="Jxx-YV-3eP" firstAttribute="centerY" secondItem="Mcd-T8-spc" secondAttribute="centerY" id="Yzj-uL-G0V"/>
                             <constraint firstItem="YYu-C3-eld" firstAttribute="top" secondItem="bdb-qa-Uzj" secondAttribute="bottom" constant="8" id="ea9-Qa-3gJ"/>
                             <constraint firstItem="434-lb-zsh" firstAttribute="centerX" secondItem="N9s-eb-Yau" secondAttribute="centerX" id="gLo-e7-2Hl"/>
                             <constraint firstItem="YYu-C3-eld" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="hwF-E0-CQc"/>
@@ -1148,6 +1158,7 @@
                             <constraint firstItem="bdb-qa-Uzj" firstAttribute="top" secondItem="uXk-LH-vTS" secondAttribute="bottom" constant="8" id="oPM-k6-4wd"/>
                             <constraint firstItem="3pE-Ua-ZvA" firstAttribute="top" secondItem="YYu-C3-eld" secondAttribute="bottom" constant="8" id="pdP-UB-bDE"/>
                             <constraint firstItem="bnB-n6-K60" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" id="qEn-jx-kqW"/>
+                            <constraint firstItem="Jxx-YV-3eP" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="rjA-CT-l50"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="Mcd-T8-spc" secondAttribute="trailing" constant="24" id="uVi-vb-eQe"/>
                             <constraint firstItem="gMH-Ls-QgS" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="vs1-I5-IFF"/>
                             <constraint firstItem="434-lb-zsh" firstAttribute="top" secondItem="N9s-eb-Yau" secondAttribute="top" constant="4" id="vtY-Qg-ZvB"/>
@@ -2512,10 +2523,10 @@
         <image name="the_rob.jpg" width="1000" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="U1M-Gc-J2N"/>
-        <segue reference="YR3-E1-jR6"/>
+        <segue reference="VyL-Rk-V4m"/>
         <segue reference="T9f-jv-ihH"/>
         <segue reference="kt3-VZ-zyo"/>
+        <segue reference="8ru-sp-3Bw"/>
         <segue reference="Zwd-T0-hKu"/>
     </inferredMetricsTieBreakers>
 </document>

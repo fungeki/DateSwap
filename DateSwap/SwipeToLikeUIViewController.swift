@@ -386,8 +386,7 @@ class SwipeToLikeUIViewController: UIViewController {
             })
                 
             UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 4, options: .curveLinear, animations: {
-                self.productCardUIView.center = self.generalView.center
-
+                self.productCardUIView.center = self.nextCardUIcard.center
                 
             
                 })

@@ -31,6 +31,7 @@
 		8C521AD3214BDB7D00E081F3 /* ImageAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C521AD2214BDB7D00E081F3 /* ImageAddress.swift */; };
 		8C521AD5214C163C00E081F3 /* ImagePush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C521AD4214C163C00E081F3 /* ImagePush.swift */; };
 		8C521AD7214C267400E081F3 /* ResizeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C521AD6214C267400E081F3 /* ResizeImage.swift */; };
+		8C521ADA214E391F00E081F3 /* EditProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C521AD9214E391F00E081F3 /* EditProduct.swift */; };
 		8C5A3C1421412668003DC27C /* PushProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C1321412668003DC27C /* PushProfile.swift */; };
 		8C5A3C172142B839003DC27C /* GetMyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C162142B839003DC27C /* GetMyProfile.swift */; };
 		8C5A3C1A2142C5E7003DC27C /* LoggedInUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C192142C5E7003DC27C /* LoggedInUsers.swift */; };
@@ -97,6 +98,7 @@
 		8C521AD2214BDB7D00E081F3 /* ImageAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAddress.swift; sourceTree = "<group>"; };
 		8C521AD4214C163C00E081F3 /* ImagePush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePush.swift; sourceTree = "<group>"; };
 		8C521AD6214C267400E081F3 /* ResizeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizeImage.swift; sourceTree = "<group>"; };
+		8C521AD9214E391F00E081F3 /* EditProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProduct.swift; sourceTree = "<group>"; };
 		8C5A3C1321412668003DC27C /* PushProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushProfile.swift; sourceTree = "<group>"; };
 		8C5A3C162142B839003DC27C /* GetMyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyProfile.swift; sourceTree = "<group>"; };
 		8C5A3C192142C5E7003DC27C /* LoggedInUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInUsers.swift; sourceTree = "<group>"; };
@@ -191,6 +193,14 @@
 			path = StorageUtils;
 			sourceTree = "<group>";
 		};
+		8C521AD8214E38FF00E081F3 /* DBEdit */ = {
+			isa = PBXGroup;
+			children = (
+				8C521AD9214E391F00E081F3 /* EditProduct.swift */,
+			);
+			path = DBEdit;
+			sourceTree = "<group>";
+		};
 		8C5A3C0B214115D0003DC27C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +293,7 @@
 		8C9A100C20CA99140077B544 /* DateSwap */ = {
 			isa = PBXGroup;
 			children = (
+				8C521AD8214E38FF00E081F3 /* DBEdit */,
 				8C521AD1214BDB5800E081F3 /* StorageUtils */,
 				8C521ACE214A3F5E00E081F3 /* My_Stall_Management */,
 				8C5A3C1B2143DAAD003DC27C /* TransitionAnimation */,
@@ -500,6 +511,7 @@
 				8C5A3C1A2142C5E7003DC27C /* LoggedInUsers.swift in Sources */,
 				8C5A3C1421412668003DC27C /* PushProfile.swift in Sources */,
 				8CEF6A2120D28793007C39D5 /* DetailsFromProfileViewController.swift in Sources */,
+				8C521ADA214E391F00E081F3 /* EditProduct.swift in Sources */,
 				8C7405F420D24CE700FF8E9C /* Product.swift in Sources */,
 				8CE62D0920DB830200AA167D /* ProfileIntroViewController.swift in Sources */,
 				777051DF20FE46B000D7F54D /* MatchesViewController.swift in Sources */,

@@ -80,7 +80,7 @@ func returnCondition(_ condition: ProductCondition)->String{
     }
 }
 func returnConditionArray()->[String]{
-    return ["New", "Like New", "Renewed", "Damaged", "Used"]
+    return ["New", "Used", "Renewed", "Like New", "Damaged"]
 }
 
 

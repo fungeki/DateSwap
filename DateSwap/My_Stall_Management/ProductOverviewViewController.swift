@@ -131,6 +131,7 @@ extension ProductOverviewViewController: UITableViewDelegate, UITableViewDataSou
             guard let product = sender as? Product else {return}
             detailsVC.pageHeader = "Editing Date"
             detailsVC.product = product
+            detailsVC.edit = true
         }
 //        guard let product = sender as? Product else {
 //            detailsVC.pageHeader = "New Date"

@@ -21,7 +21,7 @@ func pushProduct(uploadThis: ProductExpSQL){
         DispatchQueue.main.async {
             
             do{
-                
+               JustHUD.shared.hide()
             }catch {
             }
         }

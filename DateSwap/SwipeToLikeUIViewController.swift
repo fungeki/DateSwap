@@ -36,6 +36,8 @@ class SwipeToLikeUIViewController: UIViewController {
     @IBOutlet weak var mainImageUIImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        JustHUD.shared.showInView(view: generalView, withHeader: "One Moment", andFooter: "Fetching Awesome Items")
+        generalView.isUserInteractionEnabled = false
         nextProductUIImage.layer.cornerRadius = 20
         
         if let mTransfer = transfer {
@@ -76,7 +78,9 @@ class SwipeToLikeUIViewController: UIViewController {
                         self.displayProducts.insert(isPicked, at: self.displayProducts.startIndex)
                         self.productCardUIView.layer.zPosition = .greatestFiniteMagnitude
                         self.initialize()
-                        self.indicator.isHidden = true
+                        
+                        JustHUD.shared.hide()
+                        self.generalView.isUserInteractionEnabled = true
                         return
                     }
                     self.initialize()
@@ -86,7 +90,8 @@ class SwipeToLikeUIViewController: UIViewController {
                     }
                     let display2 = self.displayProducts[tempProdNum]
                     self.nextProductUIImage.sd_setImage(with: URL(string: display2.image))
-                    self.indicator.isHidden = true
+                    self.generalView.isUserInteractionEnabled = true
+                    JustHUD.shared.hide()
                 }catch {
                     print(error)
                 }
@@ -386,9 +391,7 @@ class SwipeToLikeUIViewController: UIViewController {
             })
                 
             UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 4, options: .curveLinear, animations: {
-                self.productCardUIView.center = self.generalView.center
-
-                
+                self.productCardUIView.center = self.nextCardUIcard.center
             
                 })
                 

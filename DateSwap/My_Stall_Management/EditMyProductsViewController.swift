@@ -18,11 +18,16 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     }
     @IBOutlet weak var estimatedPriceUITextField: ProductEditTextfield!
     
+    var edit = false
+    var didEditPic = false
+    
+    @IBOutlet var superviewUIView: UIView!
     var mImage2Upload : NSData?
     var mTitle : String?
     var mDescription: String?
     var mCondition : Int?
     var mPrice : Int?
+    var condition : Int?
 
     @IBOutlet weak var productDescriptionUITextView: DescriptionUITextView!
     @IBOutlet weak var productTitleUITextField: UITextField!
@@ -39,7 +44,6 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         initialize()
-        
         // Do any additional setup after loading the view.
     }
     override func didReceiveMemoryWarning() {
@@ -63,6 +67,9 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         headerLabel.text = pageHeader
         conditionSelectionTableView.isHidden = true
         guard let inputThisProduct = product else {return}
+        edit = true
+        let conditionVal = inputThisProduct.condition
+        condition = conditionVal.rawValue
         productTitleUITextField.text = inputThisProduct.title
         estimatedPriceUITextField.text = inputThisProduct.price
         productDescriptionUITextView.text = inputThisProduct.description
@@ -76,10 +83,8 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     }
     
     @IBAction func SaveProduct(_ sender: Any) {
-        guard let imageRefData = mImage2Upload else {
-            print("no image")
-            return
-        }
+
+        
         guard let tempTitle = productTitleUITextField.text else {
             print("product title text field empty")
             return
@@ -87,7 +92,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         var trimmedString = tempTitle.trimmingCharacters(in: .whitespacesAndNewlines)
         trimmedString = trimmedString.trimmingCharacters(in: .illegalCharacters)
         trimmedString = trimmedString.trimmingCharacters(in: .punctuationCharacters)
-        if trimmedString.count < 3 {
+        if trimmedString.count < 5 {
             print("name too short")
             return
         }
@@ -96,15 +101,60 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
             return
         }
         mTitle = trimmedString
-        guard let upTitle = mTitle else {
+        guard var upTitle = mTitle else {
             print("no title!")
             return
         }
+        guard var mDescription = productDescriptionUITextView.text else {
+            print("no description")
+            return
+        }
+        mDescription = mDescription.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard var mPrice = estimatedPriceUITextField.text else {
+            print("no price")
+            return
+        }
+        mPrice = mPrice.trimmingCharacters(in: .whitespacesAndNewlines)
+        mPrice = mPrice.trimmingCharacters(in: .symbols)
+        if !CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: mPrice)){
+            print("bad input in price")
+            return
+        }
+        guard let myCondition = condition else {
+            print("condition not selected")
+            return
+        }
+        superviewUIView.isUserInteractionEnabled = false
         let metadata = StorageMetadata()
         metadata.contentType = "image/jpg"
-        
-        let mStorageRefNow = usersStorageRef.child("products/\(gOnlineUser.ID)/\(upTitle)/pic.jpg")
-        let uploadTask = mStorageRefNow.putData(imageRefData as Data, metadata: metadata)
+        let mProductsStorageRefNow = productsStorageRef.child("\(gOnlineUser.ID)/\(String(upTitle.prefix(5)))/pic.jpg")
+        JustHUD.shared.showInView(view: self.superviewUIView, withHeader: "Loading", andFooter: "Please wait...")
+        if didEditPic {
+        guard let imageRefData = mImage2Upload else {
+            print("no image")
+            return
+        }
+            
+        mProductsStorageRefNow.putData(imageRefData as Data, metadata: metadata) { ( meta, err) in
+            mProductsStorageRefNow.downloadURL { (url, err) in
+                guard let upURL = url else {
+                    print("link error")
+                    return}
+                let mUpUrl =  "\(upURL)&token=397b7f94-d217-4cf6-8eef-27e4af33430e"
+                var myNewProduct = ProductExpSQL(id: 0, userid: gOnlineUser.ID, title: upTitle, image: mUpUrl, description: mDescription, lastupdate: "", area: "", condition: myCondition, price: Int(mPrice)!)
+                if self.edit {
+                    myNewProduct.id = self.product!.ID
+                    editProduct(myProductInSQL: myNewProduct)
+                } else {
+                    pushProduct(uploadThis: myNewProduct)
+                }
+            }
+        }
+        } else if edit{
+            guard let inputThisProd = self.product else {return}
+            let myEditedProduct = ProductExpSQL(id: inputThisProd.ID, userid: gOnlineUser.ID, title: upTitle, image: inputThisProd.image, description: mDescription, lastupdate: "", area: "", condition: myCondition, price: Int(mPrice)!)
+            editProduct(myProductInSQL: myEditedProduct)
+        }
         
     }
     
@@ -171,7 +221,8 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     addANewPhotoUIButton.setTitle("", for: .normal)
     addANewPhotoUIButton.setBackgroundImage(compressedImage, for: .normal)
         addANewPhotoUIButton.layer.cornerRadius = 20
-    mImage2Upload = UIImageJPEGRepresentation(compressedImage, 1) as! NSData
+        mImage2Upload = UIImageJPEGRepresentation(compressedImage, 1)! as NSData
+    didEditPic = true
     picker.dismiss(animated: true, completion: nil)
 }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -231,6 +282,7 @@ extension EditMyProductsViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         dropDownConditionUIButton.setTitle("\(conditionListing[indexPath.row])", for: .normal)
         dropdownAnimation(toggle: conditionSelectionTableView.isHidden)
+        condition = indexPath.row
     }
     func textViewDidBeginEditing(_ textView: UITextView)
     {

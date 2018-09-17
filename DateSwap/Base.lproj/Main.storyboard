@@ -700,7 +700,7 @@
         <!--Product Overview View Controller-->
         <scene sceneID="fXP-fV-DCt">
             <objects>
-                <viewController id="nE1-GP-IDx" customClass="ProductOverviewViewController" customModule="DateSwap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onlineUserStall" id="nE1-GP-IDx" customClass="ProductOverviewViewController" customModule="DateSwap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="udq-jh-T31">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1088,7 +1088,7 @@
                                     <action selector="toPrice:" destination="8ec-TZ-yJL" eventType="editingDidEnd" id="e5M-1c-rrj"/>
                                 </connections>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YYu-C3-eld" customClass="DescriptionUITextView" customModule="DateSwap" customModuleProvider="target">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YYu-C3-eld">
                                 <rect key="frame" x="24" y="682.5" width="327" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1097,6 +1097,7 @@
                                 <color key="textColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" lookupSuggestion="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
@@ -1113,7 +1114,6 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="paddingTop">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeHolderText" value="Enter your product description here..."/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="8ec-TZ-yJL" id="KEk-jY-QL2"/>
@@ -1161,11 +1161,11 @@
                     <connections>
                         <outlet property="addANewPhotoUIButton" destination="gMH-Ls-QgS" id="piP-uS-BQQ"/>
                         <outlet property="conditionSelectionTableView" destination="ege-US-MIx" id="6MX-7L-AFd"/>
+                        <outlet property="descriptionUITextView" destination="YYu-C3-eld" id="A3u-39-NzH"/>
                         <outlet property="dropDownConditionUIButton" destination="Wv7-sh-0iv" id="UID-O6-7NA"/>
                         <outlet property="dropDownMenu" destination="uXk-LH-vTS" id="6F5-n6-qB8"/>
                         <outlet property="estimatedPriceUITextField" destination="3pE-Ua-ZvA" id="lJp-XY-vR1"/>
                         <outlet property="headerLabel" destination="434-lb-zsh" id="dlh-c5-Z7c"/>
-                        <outlet property="productDescriptionUITextView" destination="YYu-C3-eld" id="RQM-7R-SPU"/>
                         <outlet property="productTitleUITextField" destination="bdb-qa-Uzj" id="Ije-GE-vXT"/>
                         <outlet property="superviewUIView" destination="60w-tW-LGx" id="liV-ZX-zSA"/>
                     </connections>
@@ -2515,7 +2515,7 @@
         <image name="the_rob.jpg" width="1000" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VyL-Rk-V4m"/>
+        <segue reference="YR3-E1-jR6"/>
         <segue reference="T9f-jv-ihH"/>
         <segue reference="kt3-VZ-zyo"/>
         <segue reference="8ru-sp-3Bw"/>

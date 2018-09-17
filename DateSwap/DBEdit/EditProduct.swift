@@ -6,9 +6,9 @@
 //  Copyright © 2018 Trisk Quality. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-func editProduct(myProductInSQL: ProductExpSQL){
+func editProduct(myProductInSQL: ProductExpSQL, controller: EditMyProductsViewController){
     let strToEdit = "http://dateswap.herokuapp.com/stallproductedit?id=\(myProductInSQL.id)&title=\(myProductInSQL.title)&image=\(myProductInSQL.image)&description=\(myProductInSQL.description)&condition=\(myProductInSQL.condition)&price=\(myProductInSQL.price)"
         guard let escapedStr = strToEdit.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
             print("failed encoding string")
@@ -21,7 +21,7 @@ func editProduct(myProductInSQL: ProductExpSQL){
             DispatchQueue.main.async {
     
                 do{
-                    JustHUD.shared.hide()
+                    getMyProducts(controller)
                 }catch {
                 }
             }

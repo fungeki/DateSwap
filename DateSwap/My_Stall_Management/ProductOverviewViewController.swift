@@ -22,6 +22,8 @@ class ProductOverviewViewController: UIViewController {
         if displayProducts[0].ID == 4{
             addDateUITableView.allowsSelection = false
         }
+        addDateUITableView.reloadData()
+        print(gOnlineUserProducts)
 //        let url = "http://dateswap.herokuapp.com/userproductdb?userid=\()"
 //        guard let urlObj = URL(string: url) else {return}
 //

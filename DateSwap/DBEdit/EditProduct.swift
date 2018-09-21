@@ -17,13 +17,17 @@ func editProduct(myProductInSQL: ProductExpSQL, controller: EditMyProductsViewCo
             print("failed to objectify url to string")
             return
         }
+    
         URLSession.shared.dataTask(with: objUrl) { (data, res, err) in
             DispatchQueue.main.async {
-    
-                do{
-                    getMyProducts(controller)
-                }catch {
+                var i = 0
+                for prod in gOnlineUserProducts {
+                    if prod.ID == myProductInSQL.id{
+                        gOnlineUserProducts[i] = productSQL2Local(product: myProductInSQL)
+                    }
+                    i += 1
                 }
+                controller.backToMyStall()
             }
             }.resume()
 //    let strToUp = "http://dateswap.herokuapp.com/addproduct?userid=\(gOnlineUser.ID)&title=\(uploadThis.title)&image=\(uploadThis.image)&description=\(uploadThis.description)&lastupdate=NOW()&condition=\(uploadThis.condition)&price=\(uploadThis.price)"

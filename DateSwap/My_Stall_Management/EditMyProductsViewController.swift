@@ -40,6 +40,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     @IBOutlet weak var addANewPhotoUIButton: UIButton!
     @IBOutlet weak var headerLabel: UILabel!
     var product: Product?
+    var locationOfProduct : Int?
     var pageHeader: String!
     var conditionListing = returnConditionArray()
     
@@ -113,13 +114,15 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         self.present(newViewController, animated: true, completion: nil)
     }
     @IBAction func SaveProduct(_ sender: Any) {
-        let pleaseFill = "Please fill all the fields"
+        let pleaseFill = "Please fill in all the fields"
+        let set =  charSetForInput.inverted
         
         guard let tempTitle = productTitleUITextField.text else {
             popAlert(title: "No Title", message: pleaseFill, view: self)
             print("product title text field empty")
             return
         }
+        
         var trimmedString = tempTitle.trimmingCharacters(in: .whitespacesAndNewlines)
         trimmedString = trimmedString.trimmingCharacters(in: .illegalCharacters)
         trimmedString = trimmedString.trimmingCharacters(in: .punctuationCharacters)
@@ -128,28 +131,35 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
             print("name too short")
             return
         }
+        
         if trimmedString.count > 100 {
             popAlert(title: "Title too long", message: "please fill in a shorter title", view: self)
             print("name too long")
             return
         }
+        
         mTitle = trimmedString
-        guard let upTitle = mTitle else {
+        guard var upTitle = mTitle else {
             popAlert(title: "No Title", message: pleaseFill, view: self)
             print("no title!")
             return
         }
+        
+        upTitle = upTitle.components(separatedBy: set).joined()
         guard var mDescription = descriptionUITextView.text else {
             popAlert(title: "No Description", message: pleaseFill, view: self)
             print("no description")
             return
         }
+
+        mDescription = mDescription.components(separatedBy: set).joined()
         mDescription = mDescription.trimmingCharacters(in: .whitespacesAndNewlines)
         guard var mPrice = estimatedPriceUITextField.text else {
             popAlert(title: "Description Too Short", message: pleaseFill, view: self)
             print("no price")
             return
         }
+
         mPrice = mPrice.trimmingCharacters(in: .whitespacesAndNewlines)
         mPrice = mPrice.trimmingCharacters(in: .symbols)
         if !CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: mPrice)){
@@ -157,11 +167,13 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
             print("bad input in price")
             return
         }
+        
         guard let myCondition = condition else {
             popAlert(title: "No Condition", message: pleaseFill, view: self)
             print("condition not selected")
             return
         }
+        
         superviewUIView.isUserInteractionEnabled = false
         let metadata = StorageMetadata()
         metadata.contentType = "image/jpg"
@@ -188,6 +200,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
                 }
             }
         }
+            
         } else if edit{
             guard let inputThisProd = self.product else {return}
             let myEditedProduct = ProductExpSQL(id: inputThisProd.ID, userid: gOnlineUser.ID, title: upTitle, image: inputThisProd.image, description: mDescription, lastupdate: "", area: "", condition: myCondition, price: Int(mPrice)!)

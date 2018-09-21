@@ -34,6 +34,9 @@
 		8C521ADA214E391F00E081F3 /* EditProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C521AD9214E391F00E081F3 /* EditProduct.swift */; };
 		8C521ADC214ECA6700E081F3 /* LoadingDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C521ADB214ECA6700E081F3 /* LoadingDialog.swift */; };
 		8C521ADE214FB30400E081F3 /* Alertdialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C521ADD214FB30400E081F3 /* Alertdialog.swift */; };
+		8C521AE0215131DD00E081F3 /* SortArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C521ADF215131DD00E081F3 /* SortArray.swift */; };
+		8C521AE22154C85400E081F3 /* GetProductID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C521AE12154C85300E081F3 /* GetProductID.swift */; };
+		8C521AE42154E70A00E081F3 /* CharSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C521AE32154E70A00E081F3 /* CharSet.swift */; };
 		8C5A3C1421412668003DC27C /* PushProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C1321412668003DC27C /* PushProfile.swift */; };
 		8C5A3C172142B839003DC27C /* GetMyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C162142B839003DC27C /* GetMyProfile.swift */; };
 		8C5A3C1A2142C5E7003DC27C /* LoggedInUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C192142C5E7003DC27C /* LoggedInUsers.swift */; };
@@ -103,6 +106,9 @@
 		8C521AD9214E391F00E081F3 /* EditProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProduct.swift; sourceTree = "<group>"; };
 		8C521ADB214ECA6700E081F3 /* LoadingDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingDialog.swift; sourceTree = "<group>"; };
 		8C521ADD214FB30400E081F3 /* Alertdialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertdialog.swift; sourceTree = "<group>"; };
+		8C521ADF215131DD00E081F3 /* SortArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortArray.swift; sourceTree = "<group>"; };
+		8C521AE12154C85300E081F3 /* GetProductID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductID.swift; sourceTree = "<group>"; };
+		8C521AE32154E70A00E081F3 /* CharSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharSet.swift; sourceTree = "<group>"; };
 		8C5A3C1321412668003DC27C /* PushProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushProfile.swift; sourceTree = "<group>"; };
 		8C5A3C162142B839003DC27C /* GetMyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyProfile.swift; sourceTree = "<group>"; };
 		8C5A3C192142C5E7003DC27C /* LoggedInUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInUsers.swift; sourceTree = "<group>"; };
@@ -223,6 +229,8 @@
 				8C521AD6214C267400E081F3 /* ResizeImage.swift */,
 				8C521ADB214ECA6700E081F3 /* LoadingDialog.swift */,
 				8C521ADD214FB30400E081F3 /* Alertdialog.swift */,
+				8C521ADF215131DD00E081F3 /* SortArray.swift */,
+				8C521AE32154E70A00E081F3 /* CharSet.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -254,6 +262,7 @@
 			children = (
 				8C5A3C162142B839003DC27C /* GetMyProfile.swift */,
 				8CCCCD48214439D800D1C84F /* GetMyProducts.swift */,
+				8C521AE12154C85300E081F3 /* GetProductID.swift */,
 			);
 			path = DBget;
 			sourceTree = "<group>";
@@ -509,6 +518,7 @@
 				8CEF6A3320D7A9DE007C39D5 /* ConditionUIButton.swift in Sources */,
 				8C5A3C172142B839003DC27C /* GetMyProfile.swift in Sources */,
 				8CBA6A7120E0E75C008CD18B /* DescriptionUITextView.swift in Sources */,
+				8C521AE22154C85400E081F3 /* GetProductID.swift in Sources */,
 				8CE6897C2139ACE700208BEB /* PrivateChatViewController.swift in Sources */,
 				8C2EB31620FE4AD200527D6F /* ReviewTableViewCell.swift in Sources */,
 				8C2EB2FC20EA926900527D6F /* RatingViewController.swift in Sources */,
@@ -522,6 +532,7 @@
 				8C7405F420D24CE700FF8E9C /* Product.swift in Sources */,
 				8CE62D0920DB830200AA167D /* ProfileIntroViewController.swift in Sources */,
 				777051DF20FE46B000D7F54D /* MatchesViewController.swift in Sources */,
+				8C521AE0215131DD00E081F3 /* SortArray.swift in Sources */,
 				8C89A27E20DBD29200F900F5 /* EditMyProductsViewController.swift in Sources */,
 				8CE6897A2139ACA900208BEB /* PrivateChatTableViewCell.swift in Sources */,
 				8C2EB31020FE2CE900527D6F /* KeyWords.swift in Sources */,
@@ -541,6 +552,7 @@
 				8C2EB30E20FE2C1500527D6F /* Rating.swift in Sources */,
 				8C9A100E20CA99140077B544 /* AppDelegate.swift in Sources */,
 				777051DD20FE3AA800D7F54D /* NewMatchesCollectionViewCell.swift in Sources */,
+				8C521AE42154E70A00E081F3 /* CharSet.swift in Sources */,
 				8C0EFECB2131CE0B00B3B8D7 /* EditableLableUILabel.swift in Sources */,
 				8CEF6A3120D7A5C6007C39D5 /* JeansEffect.swift in Sources */,
 				8C43223420E67AD60027FDA1 /* RelationUISlider.swift in Sources */,

@@ -8,7 +8,8 @@
 
 import Foundation
 
-func getMyProducts(_ controller: EditMyProductsViewController? = nil){
+func getMyProducts(){
+
     let myID = gOnlineUser.ID
     let myStringURL = "http://dateswap.herokuapp.com/userproductdb?userid=\(myID)"
     guard let objURL = URL(string: myStringURL) else {return}
@@ -21,11 +22,13 @@ func getMyProducts(_ controller: EditMyProductsViewController? = nil){
                 if JustHUD.shared.isActive{
                    JustHUD.shared.hide()
                 }
-                guard let mController = controller else {
-                    print("no controller")
-                    return
-                }
-                mController.backToMyStall()
+//                print(gOnlineUserProducts)
+//                guard let mController = controller else {
+//                    print("no controller")
+//                    return
+//                }
+//                print(mController)
+//                mController.backToMyStall()
 
             } catch {
                 guard let err = err else {return}

@@ -19,11 +19,9 @@ func pushProduct(uploadThis: ProductExpSQL, controller: EditMyProductsViewContro
     }
     URLSession.shared.dataTask(with: objUrl) { (data, res, err) in
         DispatchQueue.main.async {
-            
-            do{
-               getMyProducts(controller)
-            }catch {
-            }
+               gOnlineUserProducts.insert(productSQL2Local(product: uploadThis), at: 0)
+               getProductID(userid: gOnlineUser.ID, title: uploadThis.title, controller: controller)
+//               controller.backToMyStall()
         }
         }.resume()
 }

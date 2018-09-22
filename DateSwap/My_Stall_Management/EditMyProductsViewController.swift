@@ -61,6 +61,15 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         
     }
     
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+    //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        descriptionUITextView.endEditing(true)
+        productTitleUITextField.endEditing(true)
+        estimatedPriceUITextField.endEditing(true)
+    }
+    
+    
     //change colors HERE //and the initialize
     
     func initialize (){
@@ -68,6 +77,10 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         descriptionUITextView.layer.borderColor = brown()
         productTitleUITextField.layer.borderColor = brown()
         descriptionUITextView.layer.borderWidth = 4
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        descriptionUITextView.addGestureRecognizer(tap)
+        productTitleUITextField.addGestureRecognizer(tap)
+        estimatedPriceUITextField.addGestureRecognizer(tap)
 //        maxPriceUISlider.maximumTrackTintColor  = UIColor.init(cgColor: grayTwo())
 //        minPriceUISlider.minimumTrackTintColor = UIColor.init(cgColor: grayTwo())
 //        minPriceUISlider.maximumTrackTintColor = UIColor.init(cgColor: mediumOrange())
@@ -155,7 +168,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         mDescription = mDescription.components(separatedBy: set).joined()
         mDescription = mDescription.trimmingCharacters(in: .whitespacesAndNewlines)
         guard var mPrice = estimatedPriceUITextField.text else {
-            popAlert(title: "Description Too Short", message: pleaseFill, view: self)
+            popAlert(title: "No Price", message: pleaseFill, view: self)
             print("no price")
             return
         }
@@ -167,7 +180,11 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
             print("bad input in price")
             return
         }
-        
+        guard let mUpPrice = Int(mPrice) else {
+            popAlert(title: "Invalid Price", message: "Without a fraction", view: self)
+            print("bad input in price")
+            return
+        }
         guard let myCondition = condition else {
             popAlert(title: "No Condition", message: pleaseFill, view: self)
             print("condition not selected")
@@ -191,7 +208,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
                     print("link error")
                     return}
                 let mUpUrl =  "\(upURL)&token=397b7f94-d217-4cf6-8eef-27e4af33430e"
-                var myNewProduct = ProductExpSQL(id: 0, userid: gOnlineUser.ID, title: upTitle, image: mUpUrl, description: mDescription, lastupdate: "", area: "", condition: myCondition, price: Int(mPrice)!)
+                var myNewProduct = ProductExpSQL(id: 0, userid: gOnlineUser.ID, title: upTitle, image: mUpUrl, description: mDescription, lastupdate: "", area: "", condition: myCondition, price: mUpPrice)
                 if self.edit {
                     myNewProduct.id = self.product!.ID
                     editProduct(myProductInSQL: myNewProduct, controller: self)

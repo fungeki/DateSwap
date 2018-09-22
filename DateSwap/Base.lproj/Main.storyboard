@@ -1078,9 +1078,6 @@
                                         <real key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="toPrice:" destination="8ec-TZ-yJL" eventType="editingDidEnd" id="e5M-1c-rrj"/>
-                                </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YYu-C3-eld">
                                 <rect key="frame" x="24" y="682.5" width="327" height="200"/>

@@ -521,7 +521,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/My_Stall_Management/EditMyProductsViewController.swift"
-            timestampString = "559319150.407927"
+            timestampString = "559345639.207653"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "238"
@@ -537,7 +537,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/My_Stall_Management/EditMyProductsViewController.swift"
-            timestampString = "559319150.4080811"
+            timestampString = "559345639.20834"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "112"
@@ -716,6 +716,22 @@
             startingLineNumber = "83"
             endingLineNumber = "83"
             landmarkName = "displayActiveProduct()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DateSwap/My_Stall_Management/EditMyProductsViewController.swift"
+            timestampString = "559345639.208822"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "SaveProduct(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

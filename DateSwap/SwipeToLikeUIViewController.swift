@@ -16,35 +16,47 @@ class SwipeToLikeUIViewController: UIViewController {
     var currentProduct = 0
     var display = p4
   //  var skipped = false
-    let thumbImageLike = imageResizeForSlider(#imageLiteral(resourceName: "ic_love_color"))
-    let thumbImageDislike = imageResizeForSlider( #imageLiteral(resourceName: "ic_x_color"))
-    let thumbBack = imageResizeForSlider( #imageLiteral(resourceName: "ic_backMatch_color"))
+//    let thumbImageLike = imageResizeForSlider(#imageLiteral(resourceName: "ic_love_color"))
+//    let thumbImageDislike = imageResizeForSlider( #imageLiteral(resourceName: "ic_x_color"))
+//    let thumbBack = imageResizeForSlider( #imageLiteral(resourceName: "ic_backMatch_color"))
+
+
+    @IBOutlet weak var selectItemUIButton: UIButton!
+    @IBOutlet weak var myItemNameUIButton: UIButton!
+
+    @IBOutlet weak var myItemImageUIButton: UIButton!
     @IBOutlet weak var factionIndicatorUIImage: UIImageView!
     @IBOutlet var generalView: UIView!
     @IBOutlet weak var productCardUIView: ProductCardUIView!
     @IBOutlet weak var conditionMainImageUIButton: ConditionUIButton!
     @IBOutlet weak var nextProductUIImage: UIImageView!
     
-    @IBOutlet weak var indicator: UIActivityIndicatorView!
+//    @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var nextCardUIcard: UIView!
-    @IBOutlet weak var relationUISlider: RelationUISlider!
-    @IBOutlet weak var likeUIImageView: UIImageView!
-    
-    @IBOutlet weak var dislikeUIImageView: UIImageView!
+//    @IBOutlet weak var relationUISlider: RelationUISlider!
+//    @IBOutlet weak var likeUIImageView: UIImageView!
+//    
+//    @IBOutlet weak var dislikeUIImageView: UIImageView!
     @IBOutlet weak var mainTitleMainImageUIButton: UILabel!
     
     @IBOutlet weak var mainImageUIImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        JustHUD.shared.showInView(view: generalView, withHeader: "One Moment", andFooter: "Fetching Awesome Items")
+        JustHUD.shared.showInView(view: generalView, withHeader: "Loading", andFooter: "One Moment")
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "activeProduct"), object: nil, queue: OperationQueue.main) { (notification) in
+            self.displayActiveProduct()
+        }
+        displayActiveProduct()
+        selectItemUIButton.layer.cornerRadius = selectItemUIButton.frame.height / 2
+        myItemImageUIButton.layer.cornerRadius = myItemImageUIButton.frame.height / 2
+        myItemNameUIButton.contentHorizontalAlignment = .left
         generalView.isUserInteractionEnabled = false
         nextProductUIImage.layer.cornerRadius = 20
-        
         if let mTransfer = transfer {
             mainImageUIImageView.sd_setImage(with: URL(string: mTransfer.image))
         }
         getProduct()
-        prepareSlider()
+//        prepareSlider()
         mainTitleMainImageUIButton.numberOfLines = 0
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SwipeToLikeUIViewController.myviewTapped(_:)))
         tapGesture.numberOfTapsRequired = 1
@@ -59,6 +71,20 @@ class SwipeToLikeUIViewController: UIViewController {
         // detailsVC.displayProduct = sender as! Product
         gItemPlaceholder = sender as? Product
     }
+    
+    func displayActiveProduct(){
+        print(gActiveProduct)
+        if gActiveProduct.ID != 0 {
+            myItemImageUIButton.sd_setImage(with: URL(string: gActiveProduct.image), for: .normal, completed: { (img, err, cache, url) in
+                JustHUD.shared.hide()
+            })
+            myItemNameUIButton.setTitle(gActiveProduct.title, for: .normal)
+            
+        } else{
+            myItemNameUIButton.setTitle("Please Select what to barter", for: .normal)
+        }
+    }
+    
     func getProduct(){
         let url = "http://dateswap.herokuapp.com/productsdb"
         guard let urlObj = URL(string: url) else {return}
@@ -78,9 +104,11 @@ class SwipeToLikeUIViewController: UIViewController {
                         self.displayProducts.insert(isPicked, at: self.displayProducts.startIndex)
                         self.productCardUIView.layer.zPosition = .greatestFiniteMagnitude
                         self.initialize()
-                        
-                        JustHUD.shared.hide()
+                        if JustHUD.shared.isActive{
+                            JustHUD.shared.hide()
+                        }
                         self.generalView.isUserInteractionEnabled = true
+                        
                         return
                     }
                     self.initialize()
@@ -135,164 +163,13 @@ class SwipeToLikeUIViewController: UIViewController {
         self.performSegue(withIdentifier: "detailsSegue", sender: display)
     }
     
-    func prepareSlider(){
-        relationUISlider.maximumTrackTintColor = UIColor(cgColor: grayFour())
-        relationUISlider.minimumTrackTintColor = UIColor(cgColor: grayFour())
-        relationUISlider.setThumbImage(thumbBack, for: .normal)
-        relationUISlider.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
-    }
+//    func prepareSlider(){
+//        relationUISlider.maximumTrackTintColor = UIColor(cgColor: grayFour())
+//        relationUISlider.minimumTrackTintColor = UIColor(cgColor: grayFour())
+//        relationUISlider.setThumbImage(thumbBack, for: .normal)
+//        relationUISlider.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
+//    }
     
-    @objc func onSliderValChanged(slider: UISlider, event: UIEvent) {
-        
-        
-        let sliderPosition: CGFloat = CGFloat(slider.value - 0.5)
-        if let touchEvent = event.allTouches?.first {
-            switch touchEvent.phase {
-            case .began:
-                
-                break
-            // handle drag began
-            case .moved:
-                
-                if slider.value > 0.5{
-                    relationUISlider.maximumTrackTintColor = UIColor(cgColor: darkOrange())
-                    relationUISlider.minimumTrackTintColor = UIColor(cgColor: grayFour())
-                    relationUISlider.setThumbImage(thumbImageLike, for: .normal)
-                    likeUIImageView.alpha = CGFloat(slider.value * 1.2)
-                    factionIndicatorUIImage.alpha = sliderPosition * 2.0
-                    factionIndicatorUIImage.image = #imageLiteral(resourceName: "ic_like_date")
-                    dislikeUIImageView.alpha = 0
-                    likeUIImageView.transform = CGAffineTransform(scaleX: 1 + sliderPosition * 0.5, y: 1 + sliderPosition * 0.5)
-                    let translate = CGAffineTransform(translationX: CGFloat(UIScreen.main.bounds.width * sliderPosition * 1.05 ), y: 0)
-                    let rotate = CGAffineTransform(rotationAngle: sliderPosition * 0.45)
-                    productCardUIView.transform = translate.concatenating(rotate)
-                    if slider.value > 1.03{
-                        UIApplication.shared.beginIgnoringInteractionEvents()
-                        self.relationUISlider.isEnabled = false
-                        self.view.isUserInteractionEnabled = false
-                        self.dislikeUIImageView.alpha = 0
-                        self.likeUIImageView.alpha = 0
-                        self.relationUISlider.setThumbImage(thumbBack, for: .normal)
-                        UIView.animate(withDuration: 0.3, delay: 0, options: .allowAnimatedContent, animations: {
-                            
-                            self.relationUISlider.setValue(0.5, animated: true)
-                            self.factionIndicatorUIImage.alpha = 0
-                            self.relationUISlider.maximumTrackTintColor = UIColor(cgColor: grayFour())
-                            self.relationUISlider.minimumTrackTintColor = UIColor(cgColor: grayFour())
-                            self.productCardUIView.transform = CGAffineTransform(translationX: 0, y: 0)
-                            self.likeUIImageView.transform = CGAffineTransform(translationX: 0, y: 0)
-                            self.dislikeUIImageView.transform = CGAffineTransform(translationX: 0, y: 0)
-                            self.productCardUIView.alpha = -2
-                            self.productCardUIView.center = CGPoint(x: self.productCardUIView.center.x + 150, y: self.productCardUIView.center.y)
-                        }, completion: { (true) in
-                            self.relationUISlider.isEnabled = true
-                            self.productCardUIView.transform = CGAffineTransform(rotationAngle: 0)
-                            self.factionIndicatorUIImage.alpha = 0
-                            self.productCardUIView.center.x = self.view.center.x
-                            self.productCardUIView.center.y = self.view.center.y
-                            self.relationUISlider.setValue(0.5, animated: true)
-                      //      self.skipped = !self.skipped
-                            self.initialize()
-                            UIView.animate(withDuration: 0.2, animations: {
-                                self.productCardUIView.alpha = 1
-                            }, completion: {(true) in
-                                UIApplication.shared.endIgnoringInteractionEvents()
-                                self.view.isUserInteractionEnabled = true
-                            }
-                            )
-
-                        })
-                    }
-                    //                    if slider.value > 1.048999 {
-                    //                        let newThumbImage = thumbImageLike.resize(size: CGSize(width: 55 * (sliderPosition + 0.3), height: 55 * (sliderPosition + 0.3)))
-                    //                        slider.setThumbImage(newThumbImage, for: .normal)
-                    //                    }
-                    
-                    
-                } else if slider.value < 0.5 {
-                    relationUISlider.minimumTrackTintColor = UIColor(cgColor: brown())
-                    relationUISlider.maximumTrackTintColor = UIColor(cgColor: grayFour())
-                    relationUISlider.setThumbImage(thumbImageDislike, for: .normal)
-                    dislikeUIImageView.alpha = 1
-                    factionIndicatorUIImage.alpha = sliderPosition * 2.0
-                    likeUIImageView.alpha = 0
-                    factionIndicatorUIImage.image = #imageLiteral(resourceName: "ic_no_like_date")
-                    dislikeUIImageView.transform = CGAffineTransform(scaleX: 1 - sliderPosition * 0.5, y: 1 - sliderPosition * 0.5)
-                    factionIndicatorUIImage.alpha = CGFloat(1.0 - slider.value * 1.05)
-                    let translate = CGAffineTransform(translationX: CGFloat(UIScreen.main.bounds.width * sliderPosition * 1.05 ), y: 0)
-                    let rotate = CGAffineTransform(rotationAngle: sliderPosition * 0.45)
-                    productCardUIView.transform = translate.concatenating(rotate)
-                    //                    if slider.value < -0.04999 {
-                    //                        let newThumbImage = thumbImageLike.resize(size: CGSize(width: 55 * 0.5, height: 55 * 0.5))
-                    //                        slider.setThumbImage(newThumbImage, for: .normal)
-                    //                    }
-                    if slider.value < -0.03{
-                        UIApplication.shared.beginIgnoringInteractionEvents()
-                        self.relationUISlider.isEnabled = false
-                        self.view.isUserInteractionEnabled = false
-                        self.dislikeUIImageView.alpha = 0
-                        self.likeUIImageView.alpha = 0
-                        self.relationUISlider.setThumbImage(thumbBack, for: .normal)
-                        UIView.animate(withDuration: 0.3, delay: 0, options: .allowAnimatedContent, animations: {
-                            
-                            self.relationUISlider.setValue(0.5, animated: true)
-                            self.factionIndicatorUIImage.alpha = 0
-                            self.relationUISlider.maximumTrackTintColor = UIColor(cgColor: grayFour())
-                            self.relationUISlider.minimumTrackTintColor = UIColor(cgColor: grayFour())
-                            self.productCardUIView.transform = CGAffineTransform(translationX: 0, y: 0)
-                            self.likeUIImageView.transform = CGAffineTransform(translationX: 0, y: 0)
-                            self.dislikeUIImageView.transform = CGAffineTransform(translationX: 0, y: 0)
-                            self.productCardUIView.alpha = -2
-                            self.productCardUIView.center = CGPoint(x: self.productCardUIView.center.x - 150, y: self.productCardUIView.center.y)
-                        }, completion: { (true) in
-                            self.relationUISlider.isEnabled = true
-                            self.productCardUIView.transform = CGAffineTransform(rotationAngle: 0)
-                            self.factionIndicatorUIImage.alpha = 0
-                            self.productCardUIView.center.x = self.view.center.x
-                            self.productCardUIView.center.y = self.view.center.y
-                            self.relationUISlider.setValue(0.5, animated: true)
-                     //       self.skipped = !self.skipped
-                            self.initialize()
-                            UIView.animate(withDuration: 0.2, animations: {
-                                self.productCardUIView.alpha = 1
-                            }, completion: {(true) in
-                                UIApplication.shared.endIgnoringInteractionEvents()
-                                self.view.isUserInteractionEnabled = true
-                            }
-                            )
-                            //                UIView.animate(withDuration: 0.2, animations: {
-                            //                                        card.alpha = 1
-                            //                                        sender.isEnabled = true
-                            //                }, completion: { (true) in
-                            //
-                            //                })
-                        })
-                    }
-                }
-                break
-            // handle drag moved
-            case .ended:
-                dislikeUIImageView.alpha = 0
-                likeUIImageView.alpha = 0
-                relationUISlider.setThumbImage(thumbBack, for: .normal)
-                UIView.animate(withDuration: 0.3, animations: {
-                    
-                    self.relationUISlider.setValue(0.5, animated: true)
-                    self.factionIndicatorUIImage.alpha = 0
-                    self.relationUISlider.maximumTrackTintColor = UIColor(cgColor: grayFour())
-                    self.relationUISlider.minimumTrackTintColor = UIColor(cgColor: grayFour())
-                    self.productCardUIView.transform = CGAffineTransform(translationX: 0, y: 0)
-                    self.likeUIImageView.transform = CGAffineTransform(translationX: 0, y: 0)
-                    self.dislikeUIImageView.transform = CGAffineTransform(translationX: 0, y: 0)
-                    
-                })
-                break
-            // handle drag ended
-            default:
-                break
-            }
-        }
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -311,7 +188,7 @@ class SwipeToLikeUIViewController: UIViewController {
         let xFromCenter = card.center.x - view.center.x
         let percOff = abs(xFromCenter) / view.center.x
         
-        productCardUIView.layer.zPosition = .greatestFiniteMagnitude
+//        productCardUIView.layer.zPosition = .greatestFiniteMagnitude
         if xFromCenter < 0.0{
             factionIndicatorUIImage.image = #imageLiteral(resourceName: "ic_no_like_date")
            
@@ -356,7 +233,7 @@ class SwipeToLikeUIViewController: UIViewController {
                     card.center.y = self.view.center.y
                     sender.isEnabled = false
                     
-                    self.relationUISlider.setValue(0.5, animated: true)
+//                    self.relationUISlider.setValue(0.5, animated: true)
                     
                     self.initialize()
                     UIView.animate(withDuration: 0.2, animations: {
@@ -379,14 +256,14 @@ class SwipeToLikeUIViewController: UIViewController {
                 
                 
             } else {
-            self.productCardUIView.layer.zPosition = .leastNormalMagnitude
-            relationUISlider.isEnabled = true
+//            self.productCardUIView.layer.zPosition = .leastNormalMagnitude
+//            relationUISlider.isEnabled = true
             UIView.animate(withDuration: 0.1, animations: {
                 card.transform = CGAffineTransform(rotationAngle: 0)
             })
             UIView.animate(withDuration: 0.3, animations: {
                 self.factionIndicatorUIImage.alpha = 0
-                self.relationUISlider.setValue(0.5, animated: true)
+//                self.relationUISlider.setValue(0.5, animated: true)
                 
             })
                 
@@ -480,3 +357,154 @@ class SwipeToLikeUIViewController: UIViewController {
 //                }, completion: { (true) in
 //
 //                })
+//    @objc func onSliderValChanged(slider: UISlider, event: UIEvent) {
+//
+//
+//        let sliderPosition: CGFloat = CGFloat(slider.value - 0.5)
+//        if let touchEvent = event.allTouches?.first {
+//            switch touchEvent.phase {
+//            case .began:
+//
+//                break
+//            // handle drag began
+//            case .moved:
+//
+//                if slider.value > 0.5{
+//                    relationUISlider.maximumTrackTintColor = UIColor(cgColor: darkOrange())
+//                    relationUISlider.minimumTrackTintColor = UIColor(cgColor: grayFour())
+//                    relationUISlider.setThumbImage(thumbImageLike, for: .normal)
+//                    likeUIImageView.alpha = CGFloat(slider.value * 1.2)
+//                    factionIndicatorUIImage.alpha = sliderPosition * 2.0
+//                    factionIndicatorUIImage.image = #imageLiteral(resourceName: "ic_like_date")
+//                    dislikeUIImageView.alpha = 0
+//                    likeUIImageView.transform = CGAffineTransform(scaleX: 1 + sliderPosition * 0.5, y: 1 + sliderPosition * 0.5)
+//                    let translate = CGAffineTransform(translationX: CGFloat(UIScreen.main.bounds.width * sliderPosition * 1.05 ), y: 0)
+//                    let rotate = CGAffineTransform(rotationAngle: sliderPosition * 0.45)
+//                    productCardUIView.transform = translate.concatenating(rotate)
+//                    if slider.value > 1.03{
+//                        UIApplication.shared.beginIgnoringInteractionEvents()
+//                        self.relationUISlider.isEnabled = false
+//                        self.view.isUserInteractionEnabled = false
+//                        self.dislikeUIImageView.alpha = 0
+//                        self.likeUIImageView.alpha = 0
+//                        self.relationUISlider.setThumbImage(thumbBack, for: .normal)
+//                        UIView.animate(withDuration: 0.3, delay: 0, options: .allowAnimatedContent, animations: {
+//
+//                            self.relationUISlider.setValue(0.5, animated: true)
+//                            self.factionIndicatorUIImage.alpha = 0
+//                            self.relationUISlider.maximumTrackTintColor = UIColor(cgColor: grayFour())
+//                            self.relationUISlider.minimumTrackTintColor = UIColor(cgColor: grayFour())
+//                            self.productCardUIView.transform = CGAffineTransform(translationX: 0, y: 0)
+//                            self.likeUIImageView.transform = CGAffineTransform(translationX: 0, y: 0)
+//                            self.dislikeUIImageView.transform = CGAffineTransform(translationX: 0, y: 0)
+//                            self.productCardUIView.alpha = -2
+//                            self.productCardUIView.center = CGPoint(x: self.productCardUIView.center.x + 150, y: self.productCardUIView.center.y)
+//                        }, completion: { (true) in
+//                            self.relationUISlider.isEnabled = true
+//                            self.productCardUIView.transform = CGAffineTransform(rotationAngle: 0)
+//                            self.factionIndicatorUIImage.alpha = 0
+//                            self.productCardUIView.center.x = self.view.center.x
+//                            self.productCardUIView.center.y = self.view.center.y
+//                            self.relationUISlider.setValue(0.5, animated: true)
+//                      //      self.skipped = !self.skipped
+//                            self.initialize()
+//                            UIView.animate(withDuration: 0.2, animations: {
+//                                self.productCardUIView.alpha = 1
+//                            }, completion: {(true) in
+//                                UIApplication.shared.endIgnoringInteractionEvents()
+//                                self.view.isUserInteractionEnabled = true
+//                            }
+//                            )
+//
+//                        })
+//                    }
+//                    //                    if slider.value > 1.048999 {
+//                    //                        let newThumbImage = thumbImageLike.resize(size: CGSize(width: 55 * (sliderPosition + 0.3), height: 55 * (sliderPosition + 0.3)))
+//                    //                        slider.setThumbImage(newThumbImage, for: .normal)
+//                    //                    }
+//
+//
+//                } else if slider.value < 0.5 {
+//                    relationUISlider.minimumTrackTintColor = UIColor(cgColor: brown())
+//                    relationUISlider.maximumTrackTintColor = UIColor(cgColor: grayFour())
+//                    relationUISlider.setThumbImage(thumbImageDislike, for: .normal)
+//                    dislikeUIImageView.alpha = 1
+//                    factionIndicatorUIImage.alpha = sliderPosition * 2.0
+//                    likeUIImageView.alpha = 0
+//                    factionIndicatorUIImage.image = #imageLiteral(resourceName: "ic_no_like_date")
+//                    dislikeUIImageView.transform = CGAffineTransform(scaleX: 1 - sliderPosition * 0.5, y: 1 - sliderPosition * 0.5)
+//                    factionIndicatorUIImage.alpha = CGFloat(1.0 - slider.value * 1.05)
+//                    let translate = CGAffineTransform(translationX: CGFloat(UIScreen.main.bounds.width * sliderPosition * 1.05 ), y: 0)
+//                    let rotate = CGAffineTransform(rotationAngle: sliderPosition * 0.45)
+//                    productCardUIView.transform = translate.concatenating(rotate)
+//                    //                    if slider.value < -0.04999 {
+//                    //                        let newThumbImage = thumbImageLike.resize(size: CGSize(width: 55 * 0.5, height: 55 * 0.5))
+//                    //                        slider.setThumbImage(newThumbImage, for: .normal)
+//                    //                    }
+//                    if slider.value < -0.03{
+//                        UIApplication.shared.beginIgnoringInteractionEvents()
+//                        self.relationUISlider.isEnabled = false
+//                        self.view.isUserInteractionEnabled = false
+//                        self.dislikeUIImageView.alpha = 0
+//                        self.likeUIImageView.alpha = 0
+//                        self.relationUISlider.setThumbImage(thumbBack, for: .normal)
+//                        UIView.animate(withDuration: 0.3, delay: 0, options: .allowAnimatedContent, animations: {
+//
+//                            self.relationUISlider.setValue(0.5, animated: true)
+//                            self.factionIndicatorUIImage.alpha = 0
+//                            self.relationUISlider.maximumTrackTintColor = UIColor(cgColor: grayFour())
+//                            self.relationUISlider.minimumTrackTintColor = UIColor(cgColor: grayFour())
+//                            self.productCardUIView.transform = CGAffineTransform(translationX: 0, y: 0)
+//                            self.likeUIImageView.transform = CGAffineTransform(translationX: 0, y: 0)
+//                            self.dislikeUIImageView.transform = CGAffineTransform(translationX: 0, y: 0)
+//                            self.productCardUIView.alpha = -2
+//                            self.productCardUIView.center = CGPoint(x: self.productCardUIView.center.x - 150, y: self.productCardUIView.center.y)
+//                        }, completion: { (true) in
+//                            self.relationUISlider.isEnabled = true
+//                            self.productCardUIView.transform = CGAffineTransform(rotationAngle: 0)
+//                            self.factionIndicatorUIImage.alpha = 0
+//                            self.productCardUIView.center.x = self.view.center.x
+//                            self.productCardUIView.center.y = self.view.center.y
+//                            self.relationUISlider.setValue(0.5, animated: true)
+//                     //       self.skipped = !self.skipped
+//                            self.initialize()
+//                            UIView.animate(withDuration: 0.2, animations: {
+//                                self.productCardUIView.alpha = 1
+//                            }, completion: {(true) in
+//                                UIApplication.shared.endIgnoringInteractionEvents()
+//                                self.view.isUserInteractionEnabled = true
+//                            }
+//                            )
+//                            //                UIView.animate(withDuration: 0.2, animations: {
+//                            //                                        card.alpha = 1
+//                            //                                        sender.isEnabled = true
+//                            //                }, completion: { (true) in
+//                            //
+//                            //                })
+//                        })
+//                    }
+//                }
+//                break
+//            // handle drag moved
+//            case .ended:
+//                dislikeUIImageView.alpha = 0
+//                likeUIImageView.alpha = 0
+//                relationUISlider.setThumbImage(thumbBack, for: .normal)
+//                UIView.animate(withDuration: 0.3, animations: {
+//
+//                    self.relationUISlider.setValue(0.5, animated: true)
+//                    self.factionIndicatorUIImage.alpha = 0
+//                    self.relationUISlider.maximumTrackTintColor = UIColor(cgColor: grayFour())
+//                    self.relationUISlider.minimumTrackTintColor = UIColor(cgColor: grayFour())
+//                    self.productCardUIView.transform = CGAffineTransform(translationX: 0, y: 0)
+//                    self.likeUIImageView.transform = CGAffineTransform(translationX: 0, y: 0)
+//                    self.dislikeUIImageView.transform = CGAffineTransform(translationX: 0, y: 0)
+//
+//                })
+//                break
+//            // handle drag ended
+//            default:
+//                break
+//            }
+//        }
+//    }

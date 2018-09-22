@@ -31,11 +31,11 @@ func getProductID(userid: Int, title: String, controller: EditMyProductsViewCont
                 let mIDs = try JSONDecoder().decode([IDs].self, from: data)
                 let lastIDplace = mIDs.count - 1
                 gOnlineUserProducts[0].ID = mIDs[lastIDplace].id
-                print("my id is:")
-                print(gOnlineUserProducts[0].ID)
-                 print(gOnlineUserProducts[0].ID)
-                 print(gOnlineUserProducts[0].ID)
-                 print(gOnlineUserProducts[0].ID)
+//                print("my id is:")
+//                print(gOnlineUserProducts[0].ID)
+//                 print(gOnlineUserProducts[0].ID)
+//                 print(gOnlineUserProducts[0].ID)
+//                 print(gOnlineUserProducts[0].ID)
                 controller.backToMyStall()
             }catch {
                 guard let err = err else {return}

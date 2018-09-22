@@ -36,6 +36,19 @@ func productSQL2Local(product: ProductExpSQL)->Product{
     return Product(ID: product.id, title: product.title, userID: product.userid, image: product.image, description: product.description, lastUpdate: date, area: product.area, condition: mCondition!, price: mPrice)
 }
 
+func arrayProductsSQL2LocalForOnlineUser(array: [ProductExpSQL])->[Product]{
+    var mProducts = [Product]()
+    var i = 0
+    for pro in array{
+        mProducts.append(productSQL2Local(product: pro))
+        if pro.id == gOnlineUser.activeProductID{
+            gActiveProduct = mProducts[i]
+        }
+        i += 1
+    }
+    return mProducts
+}
+
 func arrayProductsSQL2Local(array: [ProductExpSQL])->[Product]{
     var mProducts = [Product]()
     for pro in array{
@@ -91,3 +104,6 @@ let p4 = Product(ID: 4, title: "Demogorgon", userID: 2, image: "https://vignette
 let p5 = Product(ID: 5, title: "Nachom Takom",userID: 2, image: "https://upload.wikimedia.org/wikipedia/commons/2/24/Stehaufmann.jpg", description: "A roly-poly toy, round-bottomed doll, tilting doll, tumbler or wobbly man is a round-bottomed toy,", lastUpdate: "", area: "", condition: .New, price: "free")
 
 var products:[Product] = [p1 , p2 , p3, p4, p5]
+
+
+let noActiveProduct = Product(ID: 0, title: "Please Select a product to barter", userID: 0, image: "https://firebasestorage.googleapis.com/v0/b/dateswap-635d7.appspot.com/o/card_empty_dark.png?alt=media", description: "", lastUpdate: "", area: "", condition: .New, price: "0")

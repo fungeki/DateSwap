@@ -18,10 +18,12 @@ func getMyProducts(){
         DispatchQueue.main.async {
             do{
             let mProducts = try JSONDecoder().decode([ProductExpSQL].self, from: data)
-            gOnlineUserProducts = arrayProductsSQL2Local(array: mProducts)
+            gOnlineUserProducts = arrayProductsSQL2LocalForOnlineUser(array: mProducts)
                 if JustHUD.shared.isActive{
                    JustHUD.shared.hide()
                 }
+                print("amount of rows:")
+                print(gOnlineUserProducts.count)
 //                print(gOnlineUserProducts)
 //                guard let mController = controller else {
 //                    print("no controller")

@@ -37,6 +37,8 @@
 		8C521AE0215131DD00E081F3 /* SortArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C521ADF215131DD00E081F3 /* SortArray.swift */; };
 		8C521AE22154C85400E081F3 /* GetProductID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C521AE12154C85300E081F3 /* GetProductID.swift */; };
 		8C521AE42154E70A00E081F3 /* CharSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C521AE32154E70A00E081F3 /* CharSet.swift */; };
+		8C521AE72156525A00E081F3 /* TradingItemSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C521AE62156525A00E081F3 /* TradingItemSelectionViewController.swift */; };
+		8C521AE92156545100E081F3 /* TradingItemSelectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C521AE82156545100E081F3 /* TradingItemSelectTableViewCell.swift */; };
 		8C5A3C1421412668003DC27C /* PushProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C1321412668003DC27C /* PushProfile.swift */; };
 		8C5A3C172142B839003DC27C /* GetMyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C162142B839003DC27C /* GetMyProfile.swift */; };
 		8C5A3C1A2142C5E7003DC27C /* LoggedInUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C192142C5E7003DC27C /* LoggedInUsers.swift */; };
@@ -109,6 +111,8 @@
 		8C521ADF215131DD00E081F3 /* SortArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortArray.swift; sourceTree = "<group>"; };
 		8C521AE12154C85300E081F3 /* GetProductID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductID.swift; sourceTree = "<group>"; };
 		8C521AE32154E70A00E081F3 /* CharSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharSet.swift; sourceTree = "<group>"; };
+		8C521AE62156525A00E081F3 /* TradingItemSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingItemSelectionViewController.swift; sourceTree = "<group>"; };
+		8C521AE82156545100E081F3 /* TradingItemSelectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingItemSelectTableViewCell.swift; sourceTree = "<group>"; };
 		8C5A3C1321412668003DC27C /* PushProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushProfile.swift; sourceTree = "<group>"; };
 		8C5A3C162142B839003DC27C /* GetMyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyProfile.swift; sourceTree = "<group>"; };
 		8C5A3C192142C5E7003DC27C /* LoggedInUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInUsers.swift; sourceTree = "<group>"; };
@@ -211,6 +215,15 @@
 			path = DBEdit;
 			sourceTree = "<group>";
 		};
+		8C521AE52156523A00E081F3 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				8C521AE62156525A00E081F3 /* TradingItemSelectionViewController.swift */,
+				8C521AE82156545100E081F3 /* TradingItemSelectTableViewCell.swift */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
 		8C5A3C0B214115D0003DC27C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +321,7 @@
 		8C9A100C20CA99140077B544 /* DateSwap */ = {
 			isa = PBXGroup;
 			children = (
+				8C521AE52156523A00E081F3 /* Popup */,
 				8C521AD8214E38FF00E081F3 /* DBEdit */,
 				8C521AD1214BDB5800E081F3 /* StorageUtils */,
 				8C521ACE214A3F5E00E081F3 /* My_Stall_Management */,
@@ -512,6 +526,7 @@
 				8C43223620E77FC60027FDA1 /* UIImageExtension.swift in Sources */,
 				8CBA6A7320E4C383008CD18B /* ProductCardUIView.swift in Sources */,
 				8CBA6A6720DEA708008CD18B /* Colors.swift in Sources */,
+				8C521AE92156545100E081F3 /* TradingItemSelectTableViewCell.swift in Sources */,
 				8CD4202C20D2827A006101A1 /* ProfileTableViewCell.swift in Sources */,
 				8C521ADC214ECA6700E081F3 /* LoadingDialog.swift in Sources */,
 				8C9A101020CA99140077B544 /* ViewController.swift in Sources */,
@@ -561,6 +576,7 @@
 				8C521ADE214FB30400E081F3 /* Alertdialog.swift in Sources */,
 				8C9A101620CA99140077B544 /* DateSwap.xcdatamodeld in Sources */,
 				8C5A3C272143F6CD003DC27C /* CicularTransition.swift in Sources */,
+				8C521AE72156525A00E081F3 /* TradingItemSelectionViewController.swift in Sources */,
 				8C2EB31420FE30BE00527D6F /* ReviewViewController.swift in Sources */,
 				8C5A3C232143E324003DC27C /* SwipeInteractionController.swift in Sources */,
 				8CBA6A6F20DEC2A2008CD18B /* PriceSliderUISlider.swift in Sources */,

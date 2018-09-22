@@ -9,13 +9,13 @@
 import UIKit
 import FirebaseStorage
 
-class EditMyProductsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
+class EditMyProductsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, UITextFieldDelegate {
     var price: Int = 0
-    @IBAction func toPrice(_ sender: ProductEditTextfield) {
-        guard let newPrice = sender.text else {return}
-        price = (newPrice as NSString).integerValue
-        sender.text = "\(String(describing: sender.text))$"
-    }
+//    @IBAction func toPrice(_ sender: ProductEditTextfield) {
+//        guard let newPrice = sender.text else {return}
+//        price = (newPrice as NSString).integerValue
+//        sender.text = "\(String(describing: sender.text))$"
+//    }
     @IBOutlet weak var estimatedPriceUITextField: ProductEditTextfield!
     
     var edit = false
@@ -60,14 +60,14 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         
         
     }
-    
-    //Calls this function when the tap is recognized.
-    func dismissKeyboard() {
-    //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        descriptionUITextView.endEditing(true)
-        productTitleUITextField.endEditing(true)
-        estimatedPriceUITextField.endEditing(true)
-    }
+//
+//    //Calls this function when the tap is recognized.
+//    func dismissKeyboard() {
+//    //Causes the view (or one of its embedded text fields) to resign the first responder status.
+//        descriptionUITextView.endEditing(true)
+//        productTitleUITextField.endEditing(true)
+//        estimatedPriceUITextField.endEditing(true)
+//    }
     
     
     //change colors HERE //and the initialize
@@ -77,10 +77,11 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         descriptionUITextView.layer.borderColor = brown()
         productTitleUITextField.layer.borderColor = brown()
         descriptionUITextView.layer.borderWidth = 4
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-        descriptionUITextView.addGestureRecognizer(tap)
-        productTitleUITextField.addGestureRecognizer(tap)
-        estimatedPriceUITextField.addGestureRecognizer(tap)
+        productTitleUITextField.delegate = self
+        estimatedPriceUITextField.delegate = self
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+//        tap.cancelsTouchesInView = false
+//        descriptionUITextView.addGestureRecognizer(tap)
 //        maxPriceUISlider.maximumTrackTintColor  = UIColor.init(cgColor: grayTwo())
 //        minPriceUISlider.minimumTrackTintColor = UIColor.init(cgColor: grayTwo())
 //        minPriceUISlider.maximumTrackTintColor = UIColor.init(cgColor: mediumOrange())
@@ -107,13 +108,22 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         price = (inputThisProduct.price as NSString).integerValue
         descriptionUITextView.textColor = UIColor.brown
     }
-
+    
+    
     func textViewDidEndEditing(_ textView: UITextView) {
     if textView.text.isEmpty {
         textView.text = placeholerDescription
         textView.textColor = UIColor.lightGray
     }
-}
+        
+    }
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+    if text == "\n" {
+        textView.resignFirstResponder()
+        return false
+    }
+        return true
+    }
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == UIColor.lightGray {
             textView.text = nil
@@ -121,24 +131,31 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         }
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
     func backToMyStall(){
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "onlineUserStall") as! ProductOverviewViewController
         self.present(newViewController, animated: true, completion: nil)
     }
     @IBAction func SaveProduct(_ sender: Any) {
+        
         let pleaseFill = "Please fill in all the fields"
         let set =  charSetForInput.inverted
-        
+        if !edit && !didEditPic {
+            popAlert(title: "No Photo", message: pleaseFill, view: self)
+            print("product photo empty")
+            return
+        }
         guard let tempTitle = productTitleUITextField.text else {
             popAlert(title: "No Title", message: pleaseFill, view: self)
             print("product title text field empty")
             return
         }
         
-        var trimmedString = tempTitle.trimmingCharacters(in: .whitespacesAndNewlines)
-        trimmedString = trimmedString.trimmingCharacters(in: .illegalCharacters)
-        trimmedString = trimmedString.trimmingCharacters(in: .punctuationCharacters)
+        let trimmedString = tempTitle.trimmingCharacters(in: .whitespacesAndNewlines)
         if trimmedString.count < 5 {
             popAlert(title: "Description Too Short", message: pleaseFill, view: self)
             print("name too short")

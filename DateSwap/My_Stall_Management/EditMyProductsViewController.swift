@@ -174,7 +174,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         }
 
         mPrice = mPrice.trimmingCharacters(in: .whitespacesAndNewlines)
-        mPrice = mPrice.trimmingCharacters(in: .symbols)
+       // mPrice = mPrice.trimmingCharacters(in: .symbols)
         if !CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: mPrice)){
             popAlert(title: "Invalid Price", message: "please fill in only numbers", view: self)
             print("bad input in price")

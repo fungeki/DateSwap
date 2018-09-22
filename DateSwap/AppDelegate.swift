@@ -15,6 +15,8 @@ import FirebaseStorage
 
 import FirebaseStorage
 
+//var fbToken: AccessToken?
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
@@ -76,6 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         FirebaseApp.configure()
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
+     //   SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
        // print(Auth.auth().currentUser?.displayName)
         currentUser = Auth.auth().currentUser
 //        if currentUser != nil{

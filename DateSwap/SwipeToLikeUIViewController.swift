@@ -119,6 +119,7 @@ class SwipeToLikeUIViewController: UIViewController {
                     let display2 = self.displayProducts[tempProdNum]
                     self.nextProductUIImage.sd_setImage(with: URL(string: display2.image))
                     self.generalView.isUserInteractionEnabled = true
+                    self.productCardUIView.layer.zPosition = .greatestFiniteMagnitude
                     JustHUD.shared.hide()
                 }catch {
                     print(error)

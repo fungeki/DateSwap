@@ -14,8 +14,12 @@ class TradingItemSelectionViewController: UIViewController {
     @IBOutlet weak var productsUITableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        if gOnlineUserProducts.count < 6{
         productTVheightNSConstraint.constant  = CGFloat(gOnlineUserProducts.count * 120 + 32)
-        // Do any additional setup after loading the view.
+        } else {
+            productTVheightNSConstraint.constant  = CGFloat(5 * 120 + 32)
+        }
+            // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

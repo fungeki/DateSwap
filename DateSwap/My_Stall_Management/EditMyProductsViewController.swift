@@ -161,12 +161,14 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         }
 
         mPrice = mPrice.trimmingCharacters(in: .whitespacesAndNewlines)
-        mPrice = mPrice.trimmingCharacters(in: .symbols)
+       // mPrice = mPrice.trimmingCharacters(in: .symbols)
         if !CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: mPrice)){
             popAlert(title: "Invalid Price", message: "please fill in only numbers", view: self)
             print("bad input in price")
             return
         }
+        
+guard let mUpPrice = Int(mPrice) else {return}
         
         guard let myCondition = condition else {
             popAlert(title: "No Condition", message: pleaseFill, view: self)
@@ -191,7 +193,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
                     print("link error")
                     return}
                 let mUpUrl =  "\(upURL)&token=397b7f94-d217-4cf6-8eef-27e4af33430e"
-                var myNewProduct = ProductExpSQL(id: 0, userid: gOnlineUser.ID, title: upTitle, image: mUpUrl, description: mDescription, lastupdate: "", area: "", condition: myCondition, price: Int(mPrice)!)
+                var myNewProduct = ProductExpSQL(id: 0, userid: gOnlineUser.ID, title: upTitle, image: mUpUrl, description: mDescription, lastupdate: "", area: "", condition: myCondition, price: mUpPrice)
                 if self.edit {
                     myNewProduct.id = self.product!.ID
                     editProduct(myProductInSQL: myNewProduct, controller: self)

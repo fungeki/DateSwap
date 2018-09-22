@@ -8,7 +8,7 @@
 
 import Foundation
 
-func pushProduct(uploadThis: ProductExpSQL){
+func pushProduct(uploadThis: ProductExpSQL, controller: EditMyProductsViewController){
     let strToUp = "http://dateswap.herokuapp.com/addproduct?userid=\(gOnlineUser.ID)&title=\(uploadThis.title)&image=\(uploadThis.image)&description=\(uploadThis.description)&lastupdate=NOW()&condition=\(uploadThis.condition)&price=\(uploadThis.price)"
     guard let escapedStr = strToUp.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
         print("failed encoding string")
@@ -19,11 +19,9 @@ func pushProduct(uploadThis: ProductExpSQL){
     }
     URLSession.shared.dataTask(with: objUrl) { (data, res, err) in
         DispatchQueue.main.async {
-            
-            do{
-               JustHUD.shared.hide()
-            }catch {
-            }
+               gOnlineUserProducts.insert(productSQL2Local(product: uploadThis), at: 0)
+               getProductID(userid: gOnlineUser.ID, title: uploadThis.title, controller: controller)
+//               controller.backToMyStall()
         }
         }.resume()
 }

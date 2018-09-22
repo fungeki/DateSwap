@@ -16,4 +16,5 @@ var gOnlineUserProducts = [Product]()
 var gItemPlaceholder : Product?
 //other user's profile:
 var gUserProfile : Profile?
-//user's stall:
+//online user's active item:
+var gActiveProduct = noActiveProduct

@@ -82,10 +82,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
        // print(Auth.auth().currentUser?.displayName)
         currentUser = Auth.auth().currentUser
         if currentUser != nil{
+            getMyProfile()
 //            let storyboard = UIStoryboard(name: "Main", bundle: nil)
 //            let initialViewController = storyboard.instantiateViewController(withIdentifier: "swipeViewController")
 //            self.window?.rootViewController = initialViewController
 //            self.window?.makeKeyAndVisible()
+            
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let initialViewController = storyboard.instantiateViewController(withIdentifier: "loginViewController")

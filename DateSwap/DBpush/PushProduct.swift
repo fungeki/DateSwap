@@ -21,7 +21,7 @@ func pushProduct(uploadThis: ProductExpSQL, controller: EditMyProductsViewContro
         DispatchQueue.main.async {
                gOnlineUserProducts.insert(productSQL2Local(product: uploadThis), at: 0)
                getProductID(userid: gOnlineUser.ID, title: uploadThis.title, controller: controller)
-//               controller.backToMyStall()
+               controller.backToMyStall()
         }
         }.resume()
 }

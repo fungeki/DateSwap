@@ -81,12 +81,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
      //   SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
        // print(Auth.auth().currentUser?.displayName)
         currentUser = Auth.auth().currentUser
-//        if currentUser != nil{
+        if currentUser != nil{
 //            let storyboard = UIStoryboard(name: "Main", bundle: nil)
 //            let initialViewController = storyboard.instantiateViewController(withIdentifier: "swipeViewController")
 //            self.window?.rootViewController = initialViewController
 //            self.window?.makeKeyAndVisible()
-//        }
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "loginViewController")
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+        }
+        
         return true
     }
 

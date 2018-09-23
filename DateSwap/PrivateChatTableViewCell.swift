@@ -12,6 +12,8 @@ class PrivateChatTableViewCell: UITableViewCell {
 
     @IBOutlet weak var profileLeftSenderConditionUIButton: ConditionUIButton!
     @IBOutlet weak var messagePrivateChatEditableLableUILable: EditableLableUILabel!
+    var isItMe: Bool?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,4 +25,17 @@ class PrivateChatTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        guard let itIsMe = isItMe else {
+            print("nobody speaks damnit")
+            return
+        }
+        if itIsMe {
+        messagePrivateChatEditableLableUILable.roundCorners(corners: [.topLeft, .topRight, .bottomLeft], radius: 20)
+        } else {
+            messagePrivateChatEditableLableUILable.roundCorners(corners: [.topLeft, .topRight, .bottomRight], radius: 20)
+        }
+
+    }
 }

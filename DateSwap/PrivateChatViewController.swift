@@ -42,9 +42,9 @@ extension PrivateChatViewController : UITableViewDelegate, UITableViewDataSource
         let modelMsg = messages[indexPath.row]
         cell.messagePrivateChatEditableLableUILable.text = modelMsg.text
         cell.messagePrivateChatEditableLableUILable.numberOfLines = 0
-        cell.messagePrivateChatEditableLableUILable.layer.masksToBounds = true
-        cell.profileLeftSenderConditionUIButton.layer.masksToBounds = true
-        //cell.messagePrivateChatEditableLableUILable.layer.cornerRadius = 20
+//        cell.messagePrivateChatEditableLableUILable.layer.masksToBounds = true
+//        cell.profileLeftSenderConditionUIButton.layer.masksToBounds = true
+//        cell.messagePrivateChatEditableLableUILable.layer.cornerRadius = 20
         cell.profileLeftSenderConditionUIButton.layer.cornerRadius = cell.profileLeftSenderConditionUIButton.frame.height/2
         cell.selectionStyle = .none
         
@@ -53,15 +53,16 @@ extension PrivateChatViewController : UITableViewDelegate, UITableViewDataSource
             cell.messagePrivateChatEditableLableUILable.layer.backgroundColor = lightOrangeOpacityManual(alphaColor: 0.40)
             cell.profileLeftSenderConditionUIButton.isHidden = true
 //            cell.messagePrivateChatEditableLableUILable.roundCorners(corners: [.topLeft, .topRight, .bottomLeft], radius: 20)
-         
-            
+//
+            cell.isItMe = true
         }else{
-             countMessage = countMessage + 1
+             //countMessage = countMessage + 1
             cell.messagePrivateChatEditableLableUILable.layer.backgroundColor = grayTwo()
-            if (countMessage > 1  ){
+            //if (countMessage > 1  ){
                 cell.profileLeftSenderConditionUIButton.isHidden = true
                 countMessage = 0
-            }
+            cell.isItMe = false
+           // }
        
 //            cell.messagePrivateChatEditableLableUILable.roundCorners(corners: [.topLeft, .topRight, .bottomRight], radius: 20)
         }

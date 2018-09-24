@@ -62,6 +62,7 @@ extension TradingItemSelectionViewController: UITableViewDelegate, UITableViewDa
         cell.priceUIButton.setTitle("\(model.price)$", for: .disabled)
         cell.descriptionUILabel.text = model.description
         cell.productTitleUILabel.text = model.title
+        cell.priceUIButton.addJeansEffect(UIColor.black.cgColor)
         
         return cell
     }

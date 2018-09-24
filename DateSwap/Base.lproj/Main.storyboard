@@ -194,7 +194,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRm-7s-KPP" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
-                                        <rect key="frame" x="321" y="418" width="30" height="37"/>
+                                        <rect key="frame" x="321" y="419" width="30" height="36"/>
                                         <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="21"/>
                                         <state key="normal">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

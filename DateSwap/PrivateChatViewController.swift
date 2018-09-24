@@ -40,6 +40,7 @@ extension PrivateChatViewController : UITableViewDelegate, UITableViewDataSource
     
         
         let modelMsg = messages[indexPath.row]
+    
         cell.leftSenderMessagePrivateChatEditableLableUILable.text = modelMsg.text
         cell.rightSenderMessagePrivateChatEditableLableUILable.text = modelMsg.text
         cell.leftSenderMessagePrivateChatEditableLableUILable.numberOfLines = 0
@@ -50,12 +51,10 @@ extension PrivateChatViewController : UITableViewDelegate, UITableViewDataSource
         cell.profileLeftSenderConditionUIButton.layer.cornerRadius = cell.profileLeftSenderConditionUIButton.frame.height/2
         cell.selectionStyle = .none
         
-        var test : Int = messages.count
-        var testt : Int = messages[indexPath.row + 1]
         
-        if ((Int(messages[indexPath.row + 1])  != 5) || ((messages[indexPath.row + 1]) != messages.count + 1)){
-            
-        }
+        
+        
+   
         
         if (modelMsg.senderID == "5"){
             cell.rightSenderMessagePrivateChatEditableLableUILable.layer.backgroundColor = lightOrangeOpacityManual(alphaColor: 0.40)
@@ -67,6 +66,11 @@ extension PrivateChatViewController : UITableViewDelegate, UITableViewDataSource
                 countMessage = 0
             cell.rightSenderMessagePrivateChatEditableLableUILable.isHidden = true
             cell.isItMe = false
+            
+            if indexPath.row + 1 <  messages.count {
+                
+                cell.profileLeftSenderConditionUIButton.isHidden = true
+            }
         }
         
         return cell

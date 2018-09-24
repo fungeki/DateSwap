@@ -40,31 +40,33 @@ extension PrivateChatViewController : UITableViewDelegate, UITableViewDataSource
     
         
         let modelMsg = messages[indexPath.row]
-        cell.messagePrivateChatEditableLableUILable.text = modelMsg.text
-        cell.messagePrivateChatEditableLableUILable.numberOfLines = 0
+        cell.leftSenderMessagePrivateChatEditableLableUILable.text = modelMsg.text
+        cell.rightSenderMessagePrivateChatEditableLableUILable.text = modelMsg.text
+        cell.leftSenderMessagePrivateChatEditableLableUILable.numberOfLines = 0
+        cell.rightSenderMessagePrivateChatEditableLableUILable.numberOfLines = 0
 //        cell.messagePrivateChatEditableLableUILable.layer.masksToBounds = true
 //        cell.profileLeftSenderConditionUIButton.layer.masksToBounds = true
 //        cell.messagePrivateChatEditableLableUILable.layer.cornerRadius = 20
         cell.profileLeftSenderConditionUIButton.layer.cornerRadius = cell.profileLeftSenderConditionUIButton.frame.height/2
         cell.selectionStyle = .none
         
+        var test : Int = messages.count
+        var testt : Int = messages[indexPath.row + 1]
+        
+        if ((Int(messages[indexPath.row + 1])  != 5) || ((messages[indexPath.row + 1]) != messages.count + 1)){
+            
+        }
+        
         if (modelMsg.senderID == "5"){
-           
-            cell.messagePrivateChatEditableLableUILable.layer.backgroundColor = lightOrangeOpacityManual(alphaColor: 0.40)
+            cell.rightSenderMessagePrivateChatEditableLableUILable.layer.backgroundColor = lightOrangeOpacityManual(alphaColor: 0.40)
             cell.profileLeftSenderConditionUIButton.isHidden = true
-//            cell.messagePrivateChatEditableLableUILable.roundCorners(corners: [.topLeft, .topRight, .bottomLeft], radius: 20)
-//
+            cell.leftSenderMessagePrivateChatEditableLableUILable.isHidden = true
             cell.isItMe = true
         }else{
-             //countMessage = countMessage + 1
-            cell.messagePrivateChatEditableLableUILable.layer.backgroundColor = grayTwo()
-            //if (countMessage > 1  ){
-                cell.profileLeftSenderConditionUIButton.isHidden = true
+            cell.leftSenderMessagePrivateChatEditableLableUILable.layer.backgroundColor = grayTwo()
                 countMessage = 0
+            cell.rightSenderMessagePrivateChatEditableLableUILable.isHidden = true
             cell.isItMe = false
-           // }
-       
-//            cell.messagePrivateChatEditableLableUILable.roundCorners(corners: [.topLeft, .topRight, .bottomRight], radius: 20)
         }
         
         return cell

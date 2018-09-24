@@ -10,8 +10,9 @@ import UIKit
 
 class PrivateChatTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var rightSenderMessagePrivateChatEditableLableUILable: EditableLableUILabel!
     @IBOutlet weak var profileLeftSenderConditionUIButton: ConditionUIButton!
-    @IBOutlet weak var messagePrivateChatEditableLableUILable: EditableLableUILabel!
+    @IBOutlet weak var leftSenderMessagePrivateChatEditableLableUILable: EditableLableUILabel!
     var isItMe: Bool?
     
     override func awakeFromNib() {
@@ -32,9 +33,9 @@ class PrivateChatTableViewCell: UITableViewCell {
             return
         }
         if itIsMe {
-        messagePrivateChatEditableLableUILable.roundCorners(corners: [.topLeft, .topRight, .bottomLeft], radius: 20)
+        rightSenderMessagePrivateChatEditableLableUILable.roundCorners(corners: [.topLeft, .topRight, .bottomLeft], radius: 20)
         } else {
-            messagePrivateChatEditableLableUILable.roundCorners(corners: [.topLeft, .topRight, .bottomRight], radius: 20)
+            leftSenderMessagePrivateChatEditableLableUILable.roundCorners(corners: [.topLeft, .topRight, .bottomRight], radius: 20)
         }
 
     }

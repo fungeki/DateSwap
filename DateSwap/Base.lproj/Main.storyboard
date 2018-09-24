@@ -2395,6 +2395,7 @@
                                             <outlet property="headerUILabel" destination="9aa-bJ-qVX" id="SJJ-fe-jle"/>
                                             <outlet property="itemUserMessagesUIImageView" destination="QEm-pM-8dJ" id="5LS-Uz-KOj"/>
                                             <outlet property="messagesConditionUIButton" destination="6Hi-GC-69O" id="ipd-Kv-NsJ"/>
+                                            <segue destination="DXX-nk-cDo" kind="show" id="fU9-nD-96n"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -2502,8 +2503,8 @@
                                                     </constraints>
                                                     <state key="normal" image="the_rob.jpg"/>
                                                 </button>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYn-Q6-61N" customClass="EditableLableUILabel" customModule="DateSwap" customModuleProvider="target">
-                                                    <rect key="frame" x="58" y="11" width="294" height="28"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LeftSender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYn-Q6-61N" customClass="EditableLableUILabel" customModule="DateSwap" customModuleProvider="target">
+                                                    <rect key="frame" x="60" y="11" width="85" height="28"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -2516,20 +2517,31 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RightSender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hnd-fs-UvN" customClass="EditableLableUILabel" customModule="DateSwap" customModuleProvider="target">
+                                                    <rect key="frame" x="272" y="0.0" width="95" height="50"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="Hnd-fs-UvN" firstAttribute="top" secondItem="KeM-M5-Wcy" secondAttribute="top" id="7gy-Mw-2CX"/>
                                                 <constraint firstAttribute="bottom" secondItem="nTD-9v-2EY" secondAttribute="bottom" id="7pC-Dj-rR8"/>
+                                                <constraint firstItem="Hnd-fs-UvN" firstAttribute="bottom" secondItem="KeM-M5-Wcy" secondAttribute="bottom" constant="6" id="9wr-XT-ayV"/>
+                                                <constraint firstItem="Hnd-fs-UvN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KeM-M5-Wcy" secondAttribute="leading" constant="60" id="C5A-GV-Tf2"/>
                                                 <constraint firstItem="FYn-Q6-61N" firstAttribute="bottom" secondItem="KeM-M5-Wcy" secondAttribute="bottomMargin" constant="6" id="Exm-9l-t2V"/>
+                                                <constraint firstAttribute="trailing" secondItem="Hnd-fs-UvN" secondAttribute="trailing" constant="8" id="McO-fy-vzN"/>
                                                 <constraint firstItem="FYn-Q6-61N" firstAttribute="top" secondItem="KeM-M5-Wcy" secondAttribute="topMargin" id="QOf-S8-WSF"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="FYn-Q6-61N" secondAttribute="trailing" constant="8" id="aov-1J-AGJ"/>
+                                                <constraint firstItem="FYn-Q6-61N" firstAttribute="leading" secondItem="KeM-M5-Wcy" secondAttribute="leading" constant="60" id="Wzq-Ji-C1y"/>
                                                 <constraint firstItem="nTD-9v-2EY" firstAttribute="width" secondItem="KeM-M5-Wcy" secondAttribute="width" multiplier="0.112" id="ftP-9s-x8v"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FYn-Q6-61N" secondAttribute="trailing" constant="8" id="mRS-4a-5l0"/>
                                                 <constraint firstItem="nTD-9v-2EY" firstAttribute="leading" secondItem="KeM-M5-Wcy" secondAttribute="leading" constant="8" id="nrF-wd-OuU"/>
-                                                <constraint firstItem="FYn-Q6-61N" firstAttribute="leading" secondItem="nTD-9v-2EY" secondAttribute="trailing" constant="8" id="xQg-L5-ntX"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="messagePrivateChatEditableLableUILable" destination="FYn-Q6-61N" id="Fa0-A4-CJj"/>
+                                            <outlet property="leftSenderMessagePrivateChatEditableLableUILable" destination="FYn-Q6-61N" id="Fa0-A4-CJj"/>
                                             <outlet property="profileLeftSenderConditionUIButton" destination="nTD-9v-2EY" id="kyf-gL-xjp"/>
+                                            <outlet property="rightSenderMessagePrivateChatEditableLableUILable" destination="Hnd-fs-UvN" id="Fbk-AA-ydF"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -2643,6 +2655,6 @@
         <segue reference="Iz9-zz-nbz"/>
         <segue reference="kt3-VZ-zyo"/>
         <segue reference="8ru-sp-3Bw"/>
-        <segue reference="aog-RI-IjN"/>
+        <segue reference="bdW-D8-QTA"/>
     </inferredMetricsTieBreakers>
 </document>

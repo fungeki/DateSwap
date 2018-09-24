@@ -11,11 +11,7 @@ import FirebaseStorage
 
 class EditMyProductsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, UITextFieldDelegate {
     var price: Int = 0
-//    @IBAction func toPrice(_ sender: ProductEditTextfield) {
-//        guard let newPrice = sender.text else {return}
-//        price = (newPrice as NSString).integerValue
-//        sender.text = "\(String(describing: sender.text))$"
-//    }
+
     @IBOutlet weak var estimatedPriceUITextField: ProductEditTextfield!
     
     var edit = false
@@ -49,6 +45,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         super.viewDidLoad()
     
         initialize()
+        
         // Do any additional setup after loading the view.
     }
     override func didReceiveMemoryWarning() {
@@ -60,16 +57,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         
         
     }
-//
-//    //Calls this function when the tap is recognized.
-//    func dismissKeyboard() {
-//    //Causes the view (or one of its embedded text fields) to resign the first responder status.
-//        descriptionUITextView.endEditing(true)
-//        productTitleUITextField.endEditing(true)
-//        estimatedPriceUITextField.endEditing(true)
-//    }
-    
-    
+ 
     //change colors HERE //and the initialize
     
     func initialize (){
@@ -79,15 +67,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         descriptionUITextView.layer.borderWidth = 4
         productTitleUITextField.delegate = self
         estimatedPriceUITextField.delegate = self
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-//        tap.cancelsTouchesInView = false
-//        descriptionUITextView.addGestureRecognizer(tap)
-//        maxPriceUISlider.maximumTrackTintColor  = UIColor.init(cgColor: grayTwo())
-//        minPriceUISlider.minimumTrackTintColor = UIColor.init(cgColor: grayTwo())
-//        minPriceUISlider.maximumTrackTintColor = UIColor.init(cgColor: mediumOrange())
-//        minPriceUISlider.thumbTintColor = UIColor.init(cgColor: mediumOrange())
-//        maxPriceUISlider.minimumTrackTintColor = UIColor.init(cgColor: mediumOrange())
-//        maxPriceUISlider.thumbTintColor = UIColor.init(cgColor: mediumOrange())
+
         headerLabel.text = pageHeader
         conditionSelectionTableView.isHidden = true
         guard let inputThisProduct = product else {
@@ -108,7 +88,6 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         price = (inputThisProduct.price as NSString).integerValue
         descriptionUITextView.textColor = UIColor.brown
     }
-    
     
     func textViewDidEndEditing(_ textView: UITextView) {
     if textView.text.isEmpty {
@@ -213,7 +192,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         metadata.contentType = "image/jpg"
         let mProductsStorageRefNow = productsStorageRef.child("\(gOnlineUser.ID)/\(String(upTitle.prefix(5)))/pic.jpg")
         JustHUD.shared.showInView(view: self.superviewUIView, withHeader: "Loading", andFooter: "Please wait...")
-        if didEditPic {
+        if didEditPic{
         guard let imageRefData = mImage2Upload else {
             print("no image")
             return
@@ -237,7 +216,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
             
         } else if edit{
             guard let inputThisProd = self.product else {return}
-            let myEditedProduct = ProductExpSQL(id: inputThisProd.ID, userid: gOnlineUser.ID, title: upTitle, image: inputThisProd.image, description: mDescription, lastupdate: "", area: "", condition: myCondition, price: Int(mPrice)!)
+            let myEditedProduct = ProductExpSQL(id: inputThisProd.ID, userid: gOnlineUser.ID, title: upTitle, image: inputThisProd.image, description: mDescription, lastupdate: "", area: "", condition: myCondition, price: mUpPrice)
             editProduct(myProductInSQL: myEditedProduct, controller: self)
         } else{
             backToMyStall()
@@ -248,16 +227,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     @IBAction func onclickDropdownConditionUIButton(_ sender: ConditionUIButton) {
         dropdownAnimation(toggle: conditionSelectionTableView.isHidden)
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-  
+
     func dropdownAnimation(toggle: Bool){
         if toggle{
             UIView.animate(withDuration: 0.3) {
@@ -274,7 +244,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
         
-        var actionSheet =  UIAlertController(title: "Photo Source", message: "Please choose which source", preferredStyle: .actionSheet)
+        let actionSheet =  UIAlertController(title: "Photo Source", message: "Please choose which source", preferredStyle: .actionSheet)
         actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action) in
             imagePickerController.sourceType = .camera
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -389,5 +359,44 @@ extension EditMyProductsViewController: UITableViewDelegate, UITableViewDataSour
 //
 //
 //        }
+//    @objc func keyboardWillShow(notification: NSNotification) {
+//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+//            if self.view.frame.origin.y == 0{
+//                self.view.frame.origin.y -= keyboardSize.height
+//            }
+//        }
+//    }
+//
+//    @objc func keyboardWillHide(notification: NSNotification) {
+//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+//            if self.view.frame.origin.y != 0{
+//                self.view.frame.origin.y += keyboardSize.height
+//            }
+//        }
+//    }
+//        NotificationCenter.default.addObserver(self, selector: #selector(EditMyProductsViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(EditMyProductsViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+//        tap.cancelsTouchesInView = false
+//        descriptionUITextView.addGestureRecognizer(tap)
+//        maxPriceUISlider.maximumTrackTintColor  = UIColor.init(cgColor: grayTwo())
+//        minPriceUISlider.minimumTrackTintColor = UIColor.init(cgColor: grayTwo())
+//        minPriceUISlider.maximumTrackTintColor = UIColor.init(cgColor: mediumOrange())
+//        minPriceUISlider.thumbTintColor = UIColor.init(cgColor: mediumOrange())
+//        maxPriceUISlider.minimumTrackTintColor = UIColor.init(cgColor: mediumOrange())
+//        maxPriceUISlider.thumbTintColor = UIColor.init(cgColor: mediumOrange())
+//    @IBAction func toPrice(_ sender: ProductEditTextfield) {
+//        guard let newPrice = sender.text else {return}
+//        price = (newPrice as NSString).integerValue
+//        sender.text = "\(String(describing: sender.text))$"
+//    }
+//
+//    //Calls this function when the tap is recognized.
+//    func dismissKeyboard() {
+//    //Causes the view (or one of its embedded text fields) to resign the first responder status.
+//        descriptionUITextView.endEditing(true)
+//        productTitleUITextField.endEditing(true)
+//        estimatedPriceUITextField.endEditing(true)
+//    }
 
 

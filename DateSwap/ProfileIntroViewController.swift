@@ -16,7 +16,8 @@ class ProfileIntroViewController: UIViewController {
     @IBOutlet weak var profilechainsawUIButton: UIButton!
     @IBOutlet weak var userNameUILabel: UILabel!
     @IBOutlet weak var addEditDatesUIButton: UIButton!
-    @IBOutlet weak var profileIntroUIImageView: UIImageView!
+    @IBOutlet weak var profileIntroUIButton: UIButton!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,9 @@ class ProfileIntroViewController: UIViewController {
     }
 
     func initialize(){
-        profileIntroUIImageView.sd_setImage(with: URL(string: gOnlineUser.pic))
+        
+        profileIntroUIButton.sd_setImage(with: URL(string: gOnlineUser.pic), for: .normal)
+
         userNameUILabel.text = gOnlineUser.nickname
         // print(mProfile)
         //print(profileSQL)
@@ -97,7 +100,7 @@ class ProfileIntroViewController: UIViewController {
       //  editProfileUIButton.setTitle("Edit Profile\nmore text", for: .normal)
 
         
-        profileIntroUIImageView.layer.cornerRadius = profileIntroUIImageView.frame.height/2
+        profileIntroUIButton.layer.cornerRadius = profileIntroUIButton.frame.height/2
     }
     /*
     // MARK: - Navigation

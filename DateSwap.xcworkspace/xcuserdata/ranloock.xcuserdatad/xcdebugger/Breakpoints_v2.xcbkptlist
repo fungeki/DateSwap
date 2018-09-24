@@ -121,7 +121,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/AppDelegate.swift"
-            timestampString = "559482240.866201"
+            timestampString = "559490529.056595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "15"
@@ -217,12 +217,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/SwipeToLikeUIViewController.swift"
-            timestampString = "559482240.86637"
+            timestampString = "559510884.772531"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "getProduct()"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "displayActiveProduct()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -233,11 +233,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/SwipeToLikeUIViewController.swift"
-            timestampString = "559482240.867088"
+            timestampString = "559510884.773258"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "initialize()"
             landmarkType = "7">
          </BreakpointContent>
@@ -249,11 +249,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/SwipeToLikeUIViewController.swift"
-            timestampString = "559482240.868372"
+            timestampString = "559510884.7742341"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "getProduct()"
             landmarkType = "7">
          </BreakpointContent>
@@ -265,11 +265,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/SwipeToLikeUIViewController.swift"
-            timestampString = "559482240.868788"
+            timestampString = "559510884.775084"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "getProduct()"
             landmarkType = "7">
             <Locations>
@@ -313,11 +313,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/SwipeToLikeUIViewController.swift"
-            timestampString = "559482240.869099"
+            timestampString = "559510884.775579"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "getProduct()"
             landmarkType = "7">
          </BreakpointContent>
@@ -345,7 +345,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/AppDelegate.swift"
-            timestampString = "559482240.869422"
+            timestampString = "559490529.057109"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
@@ -441,11 +441,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/SwipeToLikeUIViewController.swift"
-            timestampString = "559482240.86994"
+            timestampString = "559510884.776086"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "258"
-            endingLineNumber = "258"
+            startingLineNumber = "264"
+            endingLineNumber = "264"
             landmarkName = "panCard(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -457,11 +457,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/SwipeToLikeUIViewController.swift"
-            timestampString = "559482240.870826"
+            timestampString = "559510884.776668"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
             landmarkName = "initialize()"
             landmarkType = "7">
          </BreakpointContent>
@@ -473,11 +473,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/SwipeToLikeUIViewController.swift"
-            timestampString = "559482240.871335"
+            timestampString = "559510884.77759"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
             landmarkName = "initialize()"
             landmarkType = "7">
          </BreakpointContent>
@@ -489,11 +489,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/SwipeToLikeUIViewController.swift"
-            timestampString = "559482240.871796"
+            timestampString = "559510884.778452"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "getProduct()"
             landmarkType = "7">
          </BreakpointContent>
@@ -505,11 +505,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/SwipeToLikeUIViewController.swift"
-            timestampString = "559482240.872269"
+            timestampString = "559510884.778783"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "getProduct()"
             landmarkType = "7">
          </BreakpointContent>
@@ -521,27 +521,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/My_Stall_Management/EditMyProductsViewController.swift"
-            timestampString = "559482240.872763"
+            timestampString = "559490529.0575269"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "255"
-            endingLineNumber = "255"
-            landmarkName = "EditMyProductsViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DateSwap/My_Stall_Management/EditMyProductsViewController.swift"
-            timestampString = "559482240.872875"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "textViewDidEndEditing(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -553,7 +537,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/Popup/TradingItemSelectionViewController.swift"
-            timestampString = "559319150.4081841"
+            timestampString = "559490529.057585"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "5"
@@ -646,11 +630,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/Popup/TradingItemSelectionViewController.swift"
-            timestampString = "559319150.408249"
+            timestampString = "559490529.0576299"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -662,11 +646,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/SwipeToLikeUIViewController.swift"
-            timestampString = "559482240.873383"
+            timestampString = "559510884.77917"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DateSwap/SwipeToLikeUIViewController.swift"
+            timestampString = "559510884.779804"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "displayActiveProduct()"
             landmarkType = "7">
          </BreakpointContent>
@@ -678,12 +678,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/SwipeToLikeUIViewController.swift"
-            timestampString = "559482240.874963"
+            timestampString = "559510884.780345"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "displayActiveProduct()"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -694,27 +694,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/SwipeToLikeUIViewController.swift"
-            timestampString = "559482240.875509"
+            timestampString = "559510884.78091"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "displayActiveProduct()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DateSwap/SwipeToLikeUIViewController.swift"
-            timestampString = "559482240.876066"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "displayActiveProduct()"
             landmarkType = "7">
          </BreakpointContent>
@@ -726,12 +710,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/My_Stall_Management/EditMyProductsViewController.swift"
-            timestampString = "559482240.876524"
+            timestampString = "559490529.057861"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "textViewDidBeginEditing(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DateSwap/SwipeToLikeUIViewController.swift"
+            timestampString = "559510884.781435"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

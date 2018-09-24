@@ -90,7 +90,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "loginViewController")
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "profileViewController")
             self.window?.rootViewController = initialViewController
             self.window?.makeKeyAndVisible()
         }

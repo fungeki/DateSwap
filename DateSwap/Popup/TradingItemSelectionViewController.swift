@@ -19,6 +19,11 @@ class TradingItemSelectionViewController: UIViewController {
         } else {
             productTVheightNSConstraint.constant  = CGFloat(5 * 120 + 32)
         }
+        print("online user products:")
+        print(gOnlineUserProducts)
+        if gOnlineUserProducts[0].userID == 0 {
+            productsUITableView.allowsSelection = false
+        }
             // Do any additional setup after loading the view.
     }
 
@@ -54,7 +59,7 @@ extension TradingItemSelectionViewController: UITableViewDelegate, UITableViewDa
         cell.itemUIImageView.sd_setImage(with: URL(string: model.image))
         cell.itemUIImageView.layer.cornerRadius = cell.itemUIImageView.frame.height / 2
         cell.priceUIButton.isEnabled = false
-        cell.priceUIButton.setTitle(model.price, for: .disabled)
+        cell.priceUIButton.setTitle("\(model.price)$", for: .disabled)
         cell.descriptionUILabel.text = model.description
         cell.productTitleUILabel.text = model.title
         
@@ -62,11 +67,19 @@ extension TradingItemSelectionViewController: UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        JustHUD.shared.showInView(view: self.view, withHeader: "Loading", andFooter: "please wait")
         gActiveProduct = gOnlineUserProducts[indexPath.row]
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "activeProduct"), object: self)
-        dismiss(animated: true) {
-            
-        }
         
+        let strURL = "http://dateswap.herokuapp.com/updateprofileactive?id=\(gOnlineUser.ID)&active=\(indexPath.row)"
+        guard let objStr = URL(string: strURL) else {return}
+        URLSession.shared.dataTask(with: objStr) { (data, res, err) in
+            DispatchQueue.main.async {
+                JustHUD.shared.hide()
+                self.dismiss(animated: true) {
+                    
+                }
+            }
+        }
     }
 }

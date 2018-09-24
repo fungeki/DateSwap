@@ -100,7 +100,7 @@ extension ProductOverviewViewController: UITableViewDelegate, UITableViewDataSou
         cell.descriptionUILabel.numberOfLines = 2
         cell.descriptionUILabel .sizeToFit()
         cell.priceUIButton.isEnabled = false
-        cell.priceUIButton.setTitle(product.price, for: .disabled)
+        cell.priceUIButton.setTitle("\(product.price)$", for: .disabled)
         cell.conditionUIButton.setTitle(returnCondition(product.condition), for: .disabled)
         let str = product.description
         let start = str.startIndex

@@ -1216,7 +1216,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1" text="description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHQ-KY-Y0P">
-                                                            <rect key="frame" x="141" y="36" width="207" height="49"/>
+                                                            <rect key="frame" x="141" y="36" width="207" height="53"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -1228,7 +1228,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7JP-yn-TMY">
-                                                            <rect key="frame" x="177" y="89" width="135" height="20"/>
+                                                            <rect key="frame" x="177" y="93" width="135" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="Azg-Ky-Vwh"/>
                                                             </constraints>
@@ -1241,7 +1241,7 @@
                                                     <constraints>
                                                         <constraint firstItem="7JP-yn-TMY" firstAttribute="leading" secondItem="W3y-Qi-qPC" secondAttribute="trailing" constant="48" id="0VY-C2-KEH"/>
                                                         <constraint firstAttribute="trailingMargin" secondItem="3d3-JD-J8b" secondAttribute="trailing" constant="12" id="2t4-HL-Wmi"/>
-                                                        <constraint firstItem="7JP-yn-TMY" firstAttribute="bottom" secondItem="mH1-3B-2Xe" secondAttribute="bottomMargin" id="6Iy-bW-I04"/>
+                                                        <constraint firstItem="7JP-yn-TMY" firstAttribute="bottom" secondItem="mH1-3B-2Xe" secondAttribute="bottomMargin" constant="4" id="6Iy-bW-I04"/>
                                                         <constraint firstItem="3d3-JD-J8b" firstAttribute="leading" secondItem="W3y-Qi-qPC" secondAttribute="trailing" constant="12" id="7hX-ES-Fta"/>
                                                         <constraint firstItem="W3y-Qi-qPC" firstAttribute="bottom" secondItem="mH1-3B-2Xe" secondAttribute="bottomMargin" constant="4" id="8fc-OU-B50"/>
                                                         <constraint firstAttribute="trailingMargin" secondItem="7JP-yn-TMY" secondAttribute="trailing" constant="48" id="E5G-0c-RP0"/>

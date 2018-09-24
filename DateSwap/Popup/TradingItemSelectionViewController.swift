@@ -14,10 +14,10 @@ class TradingItemSelectionViewController: UIViewController {
     @IBOutlet weak var productsUITableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        if gOnlineUserProducts.count < 6{
+        if gOnlineUserProducts.count < 5{
         productTVheightNSConstraint.constant  = CGFloat(gOnlineUserProducts.count * 120 + 32)
         } else {
-            productTVheightNSConstraint.constant  = CGFloat(5 * 120 + 32)
+            productTVheightNSConstraint.constant  = CGFloat(4 * 120 + 32)
         }
         print("online user products:")
         print(gOnlineUserProducts)
@@ -62,6 +62,7 @@ extension TradingItemSelectionViewController: UITableViewDelegate, UITableViewDa
         cell.priceUIButton.setTitle("\(model.price)$", for: .disabled)
         cell.descriptionUILabel.text = model.description
         cell.productTitleUILabel.text = model.title
+        cell.priceUIButton.addJeansEffect(UIColor.black.cgColor)
         
         return cell
     }
@@ -71,7 +72,8 @@ extension TradingItemSelectionViewController: UITableViewDelegate, UITableViewDa
         gActiveProduct = gOnlineUserProducts[indexPath.row]
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "activeProduct"), object: self)
         
-        let strURL = "http://dateswap.herokuapp.com/updateprofileactive?id=\(gOnlineUser.ID)&active=\(indexPath.row)"
+        let strURL = "http://dateswap.herokuapp.com/updateprofileactive?id=\(gOnlineUser.ID)&active=\(gActiveProduct.ID)"
+        print(strURL)
         guard let objStr = URL(string: strURL) else {return}
         URLSession.shared.dataTask(with: objStr) { (data, res, err) in
             DispatchQueue.main.async {
@@ -80,6 +82,6 @@ extension TradingItemSelectionViewController: UITableViewDelegate, UITableViewDa
                     
                 }
             }
-        }
+        }.resume()
     }
 }

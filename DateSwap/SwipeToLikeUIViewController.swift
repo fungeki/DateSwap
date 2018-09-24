@@ -46,7 +46,7 @@ class SwipeToLikeUIViewController: UIViewController {
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "activeProduct"), object: nil, queue: OperationQueue.main) { (notification) in
             self.displayActiveProduct()
         }
-        displayActiveProduct()
+//        displayActiveProduct()
         selectItemUIButton.layer.cornerRadius = selectItemUIButton.frame.height / 2
         myItemImageUIButton.layer.cornerRadius = myItemImageUIButton.frame.height / 2
         myItemNameUIButton.contentHorizontalAlignment = .left
@@ -135,7 +135,7 @@ class SwipeToLikeUIViewController: UIViewController {
                     self.generalView.isUserInteractionEnabled = true
                     self.productCardUIView.layer.zPosition = .greatestFiniteMagnitude
                     gProductPlaceholderPlace = 0
-                    JustHUD.shared.hide()
+                    getMyActiveProduct()
                 }catch {
                     print(error)
                 }

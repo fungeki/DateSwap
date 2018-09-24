@@ -41,9 +41,6 @@ func arrayProductsSQL2LocalForOnlineUser(array: [ProductExpSQL])->[Product]{
     var i = 0
     for pro in array{
         mProducts.append(productSQL2Local(product: pro))
-        if pro.id == gOnlineUser.activeProductID{
-            gActiveProduct = mProducts[i]
-        }
         i += 1
     }
     return mProducts

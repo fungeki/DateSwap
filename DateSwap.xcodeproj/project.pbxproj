@@ -59,6 +59,7 @@
 		8CBA6A7120E0E75C008CD18B /* DescriptionUITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBA6A7020E0E75C008CD18B /* DescriptionUITextView.swift */; };
 		8CBA6A7320E4C383008CD18B /* ProductCardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBA6A7220E4C383008CD18B /* ProductCardUIView.swift */; };
 		8CBA6A7520E4C7C6008CD18B /* SwipeToLikeUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBA6A7420E4C7C6008CD18B /* SwipeToLikeUIViewController.swift */; };
+		8CC91BCA21598F6500BD57C9 /* GetMyActiveProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC91BC921598F6500BD57C9 /* GetMyActiveProduct.swift */; };
 		8CCCCD472143F9F900D1C84F /* OHCircleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCCCD462143F9F900D1C84F /* OHCircleSegue.swift */; };
 		8CCCCD49214439D800D1C84F /* GetMyProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCCCD48214439D800D1C84F /* GetMyProducts.swift */; };
 		8CD4202820D2824C006101A1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD4202720D2824C006101A1 /* ProfileViewController.swift */; };
@@ -137,6 +138,7 @@
 		8CBA6A7020E0E75C008CD18B /* DescriptionUITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionUITextView.swift; sourceTree = "<group>"; };
 		8CBA6A7220E4C383008CD18B /* ProductCardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardUIView.swift; sourceTree = "<group>"; };
 		8CBA6A7420E4C7C6008CD18B /* SwipeToLikeUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeToLikeUIViewController.swift; sourceTree = "<group>"; };
+		8CC91BC921598F6500BD57C9 /* GetMyActiveProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyActiveProduct.swift; sourceTree = "<group>"; };
 		8CCCCD462143F9F900D1C84F /* OHCircleSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OHCircleSegue.swift; sourceTree = "<group>"; };
 		8CCCCD48214439D800D1C84F /* GetMyProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyProducts.swift; sourceTree = "<group>"; };
 		8CD4202720D2824C006101A1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				8C5A3C162142B839003DC27C /* GetMyProfile.swift */,
 				8CCCCD48214439D800D1C84F /* GetMyProducts.swift */,
 				8C521AE12154C85300E081F3 /* GetProductID.swift */,
+				8CC91BC921598F6500BD57C9 /* GetMyActiveProduct.swift */,
 			);
 			path = DBget;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CC91BCA21598F6500BD57C9 /* GetMyActiveProduct.swift in Sources */,
 				8CBA6A6920DEADDB008CD18B /* ConditionSelectionTableViewCell.swift in Sources */,
 				8CE62D0720D93D4900AA167D /* ProductOverviewTableViewCell.swift in Sources */,
 				8C43223620E77FC60027FDA1 /* UIImageExtension.swift in Sources */,

@@ -107,3 +107,4 @@ var products:[Product] = [p1 , p2 , p3, p4, p5]
 
 
 let noActiveProduct = Product(ID: 0, title: "Please Select a product to barter", userID: 0, image: "https://firebasestorage.googleapis.com/v0/b/dateswap-635d7.appspot.com/o/card_empty_dark.png?alt=media", description: "", lastUpdate: "", area: "", condition: .New, price: "0")
+let noProductToSwipe = Product(ID: 0, title: "No more items", userID: 0, image: "https://firebasestorage.googleapis.com/v0/b/dateswap-635d7.appspot.com/o/card_empty_dark.png?alt=media", description: "", lastUpdate: "", area: "", condition: .New, price: "0")

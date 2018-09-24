@@ -67,6 +67,7 @@ class SwipeToLikeUIViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         guard let detailsVC =  segue.destination as? ViewController else {return}
         // detailsVC.displayProduct = sender as! Product
         gItemPlaceholder = sender as? Product
@@ -98,6 +99,9 @@ class SwipeToLikeUIViewController: UIViewController {
                 do{
                     let mProducts = try JSONDecoder().decode([ProductExpSQL].self, from: data)
                     self.displayProducts = arrayProductsSQL2Local(array: mProducts)
+                    if self.displayProducts.count == 0 {
+                        self.displayProducts.append(noProductToSwipe)
+                    }
                     self.display = self.displayProducts[0]
                     if let isPicked = gItemPlaceholder {
                         self.mainImageUIImageView.sd_setImage(with: URL(string: self.displayProducts[0].image))
@@ -113,7 +117,7 @@ class SwipeToLikeUIViewController: UIViewController {
                     }
                     self.initialize()
                     var tempProdNum = 1
-                    if tempProdNum > self.displayProducts.count{
+                    if tempProdNum >= self.displayProducts.count{
                         tempProdNum = 0
                     }
                     let display2 = self.displayProducts[tempProdNum]
@@ -140,7 +144,9 @@ class SwipeToLikeUIViewController: UIViewController {
             currentProduct = 0
         }
         display = displayProducts[currentProduct]
+        if displayProducts.count > 1 || displayProducts[0].ID != 0{
         gItemPlaceholder = displayProducts[currentProduct]
+        }
         
         conditionMainImageUIButton.isEnabled = false
         
@@ -161,6 +167,9 @@ class SwipeToLikeUIViewController: UIViewController {
     }
     
     @objc func myviewTapped(_ sender: UITapGestureRecognizer) {
+        if displayProducts[0].ID == 0{
+            return
+        }
         self.performSegue(withIdentifier: "detailsSegue", sender: display)
     }
     
@@ -184,6 +193,9 @@ class SwipeToLikeUIViewController: UIViewController {
     var didGo = true
     
     @IBAction func panCard(_ sender: UIPanGestureRecognizer) {
+        if displayProducts[0].ID == 0 {
+            return
+        }
         let card = sender.view!
         let point = sender.translation(in: view)
         let xFromCenter = card.center.x - view.center.x

@@ -19,7 +19,11 @@ func pushProduct(uploadThis: ProductExpSQL, controller: EditMyProductsViewContro
     }
     URLSession.shared.dataTask(with: objUrl) { (data, res, err) in
         DispatchQueue.main.async {
+            if gOnlineUserProducts[0].userID == 0{
+                gOnlineUserProducts[0] = productSQL2Local(product: uploadThis)
+            } else {
                gOnlineUserProducts.insert(productSQL2Local(product: uploadThis), at: 0)
+            }
                getProductID(userid: gOnlineUser.ID, title: uploadThis.title, controller: controller)
                controller.backToMyStall()
         }

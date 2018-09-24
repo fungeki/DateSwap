@@ -72,7 +72,8 @@ extension TradingItemSelectionViewController: UITableViewDelegate, UITableViewDa
         gActiveProduct = gOnlineUserProducts[indexPath.row]
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "activeProduct"), object: self)
         
-        let strURL = "http://dateswap.herokuapp.com/updateprofileactive?id=\(gOnlineUser.ID)&active=\(indexPath.row)"
+        let strURL = "http://dateswap.herokuapp.com/updateprofileactive?id=\(gOnlineUser.ID)&active=\(gActiveProduct.ID)"
+        print(strURL)
         guard let objStr = URL(string: strURL) else {return}
         URLSession.shared.dataTask(with: objStr) { (data, res, err) in
             DispatchQueue.main.async {
@@ -81,6 +82,6 @@ extension TradingItemSelectionViewController: UITableViewDelegate, UITableViewDa
                     
                 }
             }
-        }
+        }.resume()
     }
 }

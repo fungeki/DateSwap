@@ -45,8 +45,9 @@ extension PrivateChatViewController : UITableViewDelegate, UITableViewDataSource
         cell.rightSenderMessagePrivateChatEditableLableUILable.text = modelMsg.text
         cell.leftSenderMessagePrivateChatEditableLableUILable.numberOfLines = 0
         cell.rightSenderMessagePrivateChatEditableLableUILable.numberOfLines = 0
-//        cell.messagePrivateChatEditableLableUILable.layer.masksToBounds = true
-//        cell.profileLeftSenderConditionUIButton.layer.masksToBounds = true
+        cell.rightSenderMessagePrivateChatEditableLableUILable.layer.masksToBounds = true
+        cell.leftSenderMessagePrivateChatEditableLableUILable.layer.masksToBounds = true
+//       cell.profileLeftSenderConditionUIButton.layer.masksToBounds = true
 //        cell.messagePrivateChatEditableLableUILable.layer.cornerRadius = 20
         cell.profileLeftSenderConditionUIButton.layer.cornerRadius = cell.profileLeftSenderConditionUIButton.frame.height/2
         cell.selectionStyle = .none

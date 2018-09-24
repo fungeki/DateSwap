@@ -42,7 +42,7 @@ class SwipeToLikeUIViewController: UIViewController {
     @IBOutlet weak var mainImageUIImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        JustHUD.shared.showInView(view: generalView, withHeader: "Loading", andFooter: "One Moment")
+        
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "activeProduct"), object: nil, queue: OperationQueue.main) { (notification) in
             self.displayActiveProduct()
         }
@@ -55,7 +55,16 @@ class SwipeToLikeUIViewController: UIViewController {
         if let mTransfer = transfer {
             mainImageUIImageView.sd_setImage(with: URL(string: mTransfer.image))
         }
-        getProduct()
+        if gProductPlaceholderPlace < 0 {
+            JustHUD.shared.showInView(view: generalView, withHeader: "Loading", andFooter: "One Moment")
+            getProduct()
+        } else {
+            displayProducts = gProductsDisplayedPlaceholder
+            currentProduct = gProductPlaceholderPlace
+            generalView.isUserInteractionEnabled = true
+            initialize()
+        }
+        
 //        prepareSlider()
         mainTitleMainImageUIButton.numberOfLines = 0
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SwipeToLikeUIViewController.myviewTapped(_:)))
@@ -102,19 +111,20 @@ class SwipeToLikeUIViewController: UIViewController {
                     if self.displayProducts.count == 0 {
                         self.displayProducts.append(noProductToSwipe)
                     }
+                    gProductsDisplayedPlaceholder = self.displayProducts
                     self.display = self.displayProducts[0]
-                    if let isPicked = gItemPlaceholder {
-                        self.mainImageUIImageView.sd_setImage(with: URL(string: self.displayProducts[0].image))
-                        self.displayProducts.insert(isPicked, at: self.displayProducts.startIndex)
-                        self.productCardUIView.layer.zPosition = .greatestFiniteMagnitude
-                        self.initialize()
-                        if JustHUD.shared.isActive{
-                            JustHUD.shared.hide()
-                        }
-                        self.generalView.isUserInteractionEnabled = true
-                        
-                        return
-                    }
+//                    if let isPicked = gItemPlaceholder {
+//                        self.mainImageUIImageView.sd_setImage(with: URL(string: self.displayProducts[0].image))
+//                        self.displayProducts.insert(isPicked, at: self.displayProducts.startIndex)
+//                        self.productCardUIView.layer.zPosition = .greatestFiniteMagnitude
+//                        self.initialize()
+//                        if JustHUD.shared.isActive{
+//                            JustHUD.shared.hide()
+//                        }
+//                        self.generalView.isUserInteractionEnabled = true
+//
+//                        return
+//                    }
                     self.initialize()
                     var tempProdNum = 1
                     if tempProdNum >= self.displayProducts.count{
@@ -124,6 +134,7 @@ class SwipeToLikeUIViewController: UIViewController {
                     self.nextProductUIImage.sd_setImage(with: URL(string: display2.image))
                     self.generalView.isUserInteractionEnabled = true
                     self.productCardUIView.layer.zPosition = .greatestFiniteMagnitude
+                    gProductPlaceholderPlace = 0
                     JustHUD.shared.hide()
                 }catch {
                     print(error)
@@ -143,6 +154,7 @@ class SwipeToLikeUIViewController: UIViewController {
         if currentProduct == displayProducts.count{
             currentProduct = 0
         }
+        gProductPlaceholderPlace = currentProduct
         display = displayProducts[currentProduct]
         if displayProducts.count > 1 || displayProducts[0].ID != 0{
         gItemPlaceholder = displayProducts[currentProduct]

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileIntroViewController: UIViewController {
+class ProfileIntroViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var myRating = 0
 
     @IBOutlet weak var editProfileUIButton: UIButton!
@@ -75,7 +75,46 @@ class ProfileIntroViewController: UIViewController {
         
     }
     
+    @IBAction func changePhoto(_ sender: Any) {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        
+        let actionSheet =  UIAlertController(title: "Photo Source", message: "Please choose which source", preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action) in
+            imagePickerController.sourceType = .camera
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                self.present(imagePickerController, animated: true, completion: nil)
+            }
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: { (action) in
+            imagePickerController.sourceType = .photoLibrary
+            imagePickerController.allowsEditing = true
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+                self.present(imagePickerController, animated: true, completion: nil)
+            }
+        }))
+        actionSheet.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: { (action) in
+            
+        }))
+        self.present(actionSheet, animated: true) {
+            
+        }
 
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+    let compressedImage = resizeImage(image)
+    profileIntroUIButton.setImage(compressedImage, for: .normal)
+    profileIntroUIButton.layer.cornerRadius = profileIntroUIButton.frame.height / 2
+    let imageToUp = UIImageJPEGRepresentation(compressedImage, 1)! as NSData
+    
+    picker.dismiss(animated: true, completion: nil)
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLayoutSubviews() {
         //Edit Profile - Button
         

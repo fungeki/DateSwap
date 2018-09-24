@@ -50,9 +50,6 @@
                                 <state key="normal" title="Edit Profile">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="WFw-bC-hNf" kind="show" id="WqK-ZH-4Lh"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3je-yZ-OO7">
                                 <rect key="frame" x="172.5" y="32" width="30" height="32.5"/>
@@ -92,7 +89,7 @@
                                 </constraints>
                                 <state key="normal" image="card_empty_light"/>
                                 <connections>
-                                    <segue destination="WFw-bC-hNf" kind="show" id="Ljx-72-Gs3"/>
+                                    <action selector="changePhoto:" destination="ADP-5w-IKA" eventType="touchUpInside" id="2PD-Bs-oib"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2597,65 +2594,6 @@
             </objects>
             <point key="canvasLocation" x="-63" y="-1498"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="kjh-XY-rEB">
-            <objects>
-                <viewController id="WFw-bC-hNf" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2KB-S0-Zbf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nl-5g-hs0">
-                                <rect key="frame" x="0.0" y="49" width="375" height="2"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="2" id="akc-vz-m2r"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYe-yi-apn">
-                                <rect key="frame" x="146.5" y="24.5" width="82.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.98431372549999996" green="0.80077177720000003" blue="0.4268952654" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTY-z0-yfe">
-                                <rect key="frame" x="329" y="20" width="34" height="30"/>
-                                <state key="normal" title="Save">
-                                    <color key="titleColor" red="0.28905671830000002" green="0.63317435980000003" blue="0.20536994929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQb-bY-dha">
-                                <rect key="frame" x="12" y="19" width="48" height="30"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="ADP-5w-IKA" kind="show" id="20r-a0-eIy"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="KTY-z0-yfe" firstAttribute="centerY" secondItem="sYe-yi-apn" secondAttribute="centerY" id="4JG-wp-UXt"/>
-                            <constraint firstItem="0Pe-8h-dFy" firstAttribute="trailing" secondItem="KTY-z0-yfe" secondAttribute="trailing" constant="12" id="Eu4-FI-V1F"/>
-                            <constraint firstItem="3nl-5g-hs0" firstAttribute="leading" secondItem="2KB-S0-Zbf" secondAttribute="leading" id="IFi-7P-KZM"/>
-                            <constraint firstItem="cQb-bY-dha" firstAttribute="centerY" secondItem="sYe-yi-apn" secondAttribute="centerY" id="Jsl-QQ-uR5"/>
-                            <constraint firstAttribute="trailing" secondItem="3nl-5g-hs0" secondAttribute="trailing" id="LZg-N1-lVm"/>
-                            <constraint firstItem="3nl-5g-hs0" firstAttribute="top" secondItem="sYe-yi-apn" secondAttribute="bottom" constant="4" id="coD-OR-72U"/>
-                            <constraint firstItem="cQb-bY-dha" firstAttribute="leading" secondItem="0Pe-8h-dFy" secondAttribute="leading" constant="12" id="gwo-A4-KjG"/>
-                            <constraint firstItem="3nl-5g-hs0" firstAttribute="top" secondItem="0Pe-8h-dFy" secondAttribute="top" constant="29" id="k8a-TZ-UrZ"/>
-                            <constraint firstItem="sYe-yi-apn" firstAttribute="centerX" secondItem="0Pe-8h-dFy" secondAttribute="centerX" id="ySQ-9A-ycw"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="0Pe-8h-dFy"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dx1-Re-CCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="647" y="-1506"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Dni-va-ppK">
             <objects>
@@ -2703,13 +2641,11 @@
         <image name="the_rob.jpg" width="1000" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WqK-ZH-4Lh"/>
         <segue reference="YR3-E1-jR6"/>
         <segue reference="T9f-jv-ihH"/>
         <segue reference="Iz9-zz-nbz"/>
         <segue reference="kt3-VZ-zyo"/>
         <segue reference="8ru-sp-3Bw"/>
-        <segue reference="Zwd-T0-hKu"/>
-        <segue reference="20r-a0-eIy"/>
+        <segue reference="aog-RI-IjN"/>
     </inferredMetricsTieBreakers>
 </document>

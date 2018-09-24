@@ -11,7 +11,7 @@ import FirebaseStorage
 
 class EditMyProductsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, UITextFieldDelegate {
     var price: Int = 0
-
+    
     @IBOutlet weak var estimatedPriceUITextField: ProductEditTextfield!
     
     var edit = false
@@ -43,7 +43,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     override func viewDidLoad() {
         
         super.viewDidLoad()
-    
+        
         initialize()
         
         // Do any additional setup after loading the view.
@@ -57,7 +57,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         
         
     }
- 
+    
     //change colors HERE //and the initialize
     
     func initialize (){
@@ -67,7 +67,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         descriptionUITextView.layer.borderWidth = 4
         productTitleUITextField.delegate = self
         estimatedPriceUITextField.delegate = self
-
+        
         headerLabel.text = pageHeader
         conditionSelectionTableView.isHidden = true
         guard let inputThisProduct = product else {
@@ -82,7 +82,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         descriptionUITextView.text = inputThisProduct.description
         dropDownConditionUIButton.setTitle(returnCondition(inputThisProduct.condition), for: .normal)
         addANewPhotoUIButton.setTitle("", for: .normal)
-//        addANewPhotoUIButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+        //        addANewPhotoUIButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
         addANewPhotoUIButton.sd_setBackgroundImage(with: URL(string: inputThisProduct.image), for: .normal)
         addANewPhotoUIButton.layer.cornerRadius = 20
         price = (inputThisProduct.price as NSString).integerValue
@@ -90,17 +90,17 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
-    if textView.text.isEmpty {
-        textView.text = placeholerDescription
-        textView.textColor = UIColor.lightGray
-    }
+        if textView.text.isEmpty {
+            textView.text = placeholerDescription
+            textView.textColor = UIColor.lightGray
+        }
         
     }
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-    if text == "\n" {
-        textView.resignFirstResponder()
-        return false
-    }
+        if text == "\n" {
+            textView.resignFirstResponder()
+            return false
+        }
         return true
     }
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -160,7 +160,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
             print("no description")
             return
         }
-
+        
         mDescription = mDescription.components(separatedBy: set).joined()
         mDescription = mDescription.trimmingCharacters(in: .whitespacesAndNewlines)
         guard var mPrice = estimatedPriceUITextField.text else {
@@ -168,9 +168,9 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
             print("no price")
             return
         }
-
+        
         mPrice = mPrice.trimmingCharacters(in: .whitespacesAndNewlines)
-       // mPrice = mPrice.trimmingCharacters(in: .symbols)
+        // mPrice = mPrice.trimmingCharacters(in: .symbols)
         if !CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: mPrice)){
             popAlert(title: "Invalid Price", message: "please fill in only numbers", view: self)
             print("bad input in price")
@@ -193,26 +193,26 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         let mProductsStorageRefNow = productsStorageRef.child("\(gOnlineUser.ID)/\(String(upTitle.prefix(5)))/pic.jpg")
         JustHUD.shared.showInView(view: self.superviewUIView, withHeader: "Loading", andFooter: "Please wait...")
         if didEditPic{
-        guard let imageRefData = mImage2Upload else {
-            print("no image")
-            return
-        }
+            guard let imageRefData = mImage2Upload else {
+                print("no image")
+                return
+            }
             
-        mProductsStorageRefNow.putData(imageRefData as Data, metadata: metadata) { ( meta, err) in
-            mProductsStorageRefNow.downloadURL { (url, err) in
-                guard let upURL = url else {
-                    print("link error")
-                    return}
-                let mUpUrl =  "\(upURL)&token=397b7f94-d217-4cf6-8eef-27e4af33430e"
-                var myNewProduct = ProductExpSQL(id: 0, userid: gOnlineUser.ID, title: upTitle, image: mUpUrl, description: mDescription, lastupdate: "", area: "", condition: myCondition, price: mUpPrice)
-                if self.edit {
-                    myNewProduct.id = self.product!.ID
-                    editProduct(myProductInSQL: myNewProduct, controller: self)
-                } else {
-                    pushProduct(uploadThis: myNewProduct, controller: self)
+            mProductsStorageRefNow.putData(imageRefData as Data, metadata: metadata) { ( meta, err) in
+                mProductsStorageRefNow.downloadURL { (url, err) in
+                    guard let upURL = url else {
+                        print("link error")
+                        return}
+                    let mUpUrl =  "\(upURL)&token=397b7f94-d217-4cf6-8eef-27e4af33430e"
+                    var myNewProduct = ProductExpSQL(id: 0, userid: gOnlineUser.ID, title: upTitle, image: mUpUrl, description: mDescription, lastupdate: "", area: "", condition: myCondition, price: mUpPrice)
+                    if self.edit {
+                        myNewProduct.id = self.product!.ID
+                        editProduct(myProductInSQL: myNewProduct, controller: self)
+                    } else {
+                        pushProduct(uploadThis: myNewProduct, controller: self)
+                    }
                 }
             }
-        }
             
         } else if edit{
             guard let inputThisProd = self.product else {return}
@@ -227,7 +227,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     @IBAction func onclickDropdownConditionUIButton(_ sender: ConditionUIButton) {
         dropdownAnimation(toggle: conditionSelectionTableView.isHidden)
     }
-
+    
     func dropdownAnimation(toggle: Bool){
         if toggle{
             UIView.animate(withDuration: 0.3) {
@@ -248,79 +248,74 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action) in
             imagePickerController.sourceType = .camera
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            self.present(imagePickerController, animated: true, completion: nil)
-}
-}))
+                self.present(imagePickerController, animated: true, completion: nil)
+            }
+        }))
         actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: { (action) in
             imagePickerController.sourceType = .photoLibrary
             imagePickerController.allowsEditing = true
             if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
-            self.present(imagePickerController, animated: true, completion: nil)
+                self.present(imagePickerController, animated: true, completion: nil)
             }
-}))
- actionSheet.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: { (action) in
-    
-}))
+        }))
+        actionSheet.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: { (action) in
+            
+        }))
         self.present(actionSheet, animated: true) {
             
-}
-//        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-//        var imagePicker = UIImagePickerController()
-//        imagePicker.delegate = self
-//        imagePicker.sourceType = .photoLibrary;
-//        imagePicker.allowsEditing = true
-//        present(imagePicker, animated: true, completion: nil)
+        }
+        
     }
-
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-    let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-    let compressedImage = resizeImage(image)
-    addANewPhotoUIButton.setTitle("", for: .normal)
-    addANewPhotoUIButton.setBackgroundImage(compressedImage, for: .normal)
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        let compressedImage = resizeImage(image)
+        addANewPhotoUIButton.setTitle("", for: .normal)
+        addANewPhotoUIButton.setBackgroundImage(compressedImage, for: .normal)
         addANewPhotoUIButton.layer.cornerRadius = 20
         mImage2Upload = UIImageJPEGRepresentation(compressedImage, 1)! as NSData
-    didEditPic = true
-    picker.dismiss(animated: true, completion: nil)
-}
+        didEditPic = true
+        picker.dismiss(animated: true, completion: nil)
+    }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
-}
-
-
+    }
     
     
     
-
     
-//    @IBAction func maxPriceChangeAction(_ sender: PriceSliderUISlider) {
-//        
-//        let newPrice = Double(price)
-//        let newValue = Double(sender.value)
-//        if newValue < 0.0 {
-//            maxPriceRangeUILabel.text = "max \(price)$"
-//            return
-//        } else if newValue > 1.0 {
-//            maxPriceRangeUILabel.text = "Unlimited"
-//return
-//        }
-//        let maxDisplay = Int(newPrice + (newValue * newPrice))
-//        maxPriceRangeUILabel.text = "max \(maxDisplay)$"
-//        
-//    }
-//    
-//    @IBAction func minPriceChangeAction(_ sender: PriceSliderUISlider) {
-//        let newPrice = Double(price)
-//        let newValue = Double(sender.value)
-//        if newValue < 0.0{
-//            minPriceRangeUILabel.text = "any price"
-//return
-//        } else if newValue > 1.0 {
-//            minPriceRangeUILabel.text = "min \(price)$"
-//            return
-//        }
-//        let maxDisplay = Int(newPrice * newValue)
-//        minPriceRangeUILabel.text = "min \(maxDisplay)$"
-//    }
+    
+    
+    
+    //    @IBAction func maxPriceChangeAction(_ sender: PriceSliderUISlider) {
+    //
+    //        let newPrice = Double(price)
+    //        let newValue = Double(sender.value)
+    //        if newValue < 0.0 {
+    //            maxPriceRangeUILabel.text = "max \(price)$"
+    //            return
+    //        } else if newValue > 1.0 {
+    //            maxPriceRangeUILabel.text = "Unlimited"
+    //return
+    //        }
+    //        let maxDisplay = Int(newPrice + (newValue * newPrice))
+    //        maxPriceRangeUILabel.text = "max \(maxDisplay)$"
+    //
+    //    }
+    //
+    //    @IBAction func minPriceChangeAction(_ sender: PriceSliderUISlider) {
+    //        let newPrice = Double(price)
+    //        let newValue = Double(sender.value)
+    //        if newValue < 0.0{
+    //            minPriceRangeUILabel.text = "any price"
+    //return
+    //        } else if newValue > 1.0 {
+    //            minPriceRangeUILabel.text = "min \(price)$"
+    //            return
+    //        }
+    //        let maxDisplay = Int(newPrice * newValue)
+    //        minPriceRangeUILabel.text = "min \(maxDisplay)$"
+    //    }
     
 }
 

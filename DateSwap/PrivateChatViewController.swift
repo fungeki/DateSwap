@@ -67,10 +67,14 @@ extension PrivateChatViewController : UITableViewDelegate, UITableViewDataSource
             cell.rightSenderMessagePrivateChatEditableLableUILable.isHidden = true
             cell.isItMe = false
             
-            if indexPath.row + 1 <  messages.count {
-                
-                cell.profileLeftSenderConditionUIButton.isHidden = true
+            if indexPath.row + 1 < messages.count{
+                if messages[indexPath.row + 1].senderID == messages[indexPath.row].senderID{
+                    cell.profileLeftSenderConditionUIButton.isHidden = true
+                    
+                }
             }
+            
+            
         }
         
         return cell

@@ -33,7 +33,7 @@ func productSQL2Local(product: ProductExpSQL)->Product{
         date = temp
     }
     let mCondition = ProductCondition(rawValue: product.condition)
-    let mCategory = Category(rawValue: product.category)
+    let mCategory = Category.init(id: product.category)
     let mPrice = String(product.price)
     return Product(ID: product.id, title: product.title, userID: product.userid, image: product.image, description: product.description, lastUpdate: date, area: product.area, condition: mCondition!, price: mPrice, category: mCategory!)
 }
@@ -77,36 +77,73 @@ enum ProductCondition: Int{
     case Damaged = 4
 }
 
-enum Category: Int{
-    case toys = 0
-    case books = 1
-    case garage = 2
-    case hobbies = 3
-    case clothing = 4
-    case family = 5
-    case home = 6
-    case misc = -1
-}
-
-func returnCategory(_ category: Category)->String{
-    switch category{
-    case .garage:
-        return "Garage Sale & Misc"
-    case .toys:
-        return "Toys & Babies"
-    case .books:
-        return "Books & Entertainment"
-    case .hobbies:
-        return "Hobbies & Collectibles"
-    case .family:
-        return "Family & Pets"
-    case .home:
-        return "Home & Garden"
-    case .clothing:
-        return "Clothing & Accessories"
-    case .misc:
-        return "misc"
+enum Category: String{
+    case toys = "Toys & Babies"
+    case books = "Books & Entertainment"
+    case garage = "Garage Sale & Misc"
+    case hobbies = "Hobbies & Collectibles"
+    case clothing = "Clothing & Accessories"
+    case family = "Family & Pets"
+    case home = "Home & Garden"
+    case misc = "misc"
+    
+    static let allValues = [toys, books, garage, hobbies, clothing, family, home]
+    
+    init?(id : Int) {
+        switch id {
+        case 1:
+            self = .garage
+            break
+        case 2:
+            self = .toys
+            break
+        case 3:
+            self = .books
+            break
+        case 4:
+            self = .hobbies
+            break
+        case 5:
+            self = .clothing
+            break
+        case 6:
+            self = .family
+            break
+        case 7:
+            self = .home
+            break
+        default:
+            self = .misc
+        }
     }
+    func returnCategoryNum()->Int{
+        switch self{
+        case .garage:
+            return 1
+        case .toys:
+            return 2
+        case .books:
+            return 3
+        case .hobbies:
+            return 4
+        case .family:
+            return 6
+        case .home:
+            return 7
+        case .clothing:
+            return 5
+        case .misc:
+            return -1
+        }
+    }
+
+}
+func returnCategoryArray()->[String]{
+    var mCategories = [String]()
+    for category in Category.allValues {
+        mCategories.append(category.rawValue)
+    }
+    return mCategories
 }
 
 func returnCondition(_ condition: ProductCondition)->String{
@@ -126,6 +163,7 @@ func returnCondition(_ condition: ProductCondition)->String{
 func returnConditionArray()->[String]{
     return ["New", "Used", "Renewed", "Like New", "Damaged"]
 }
+
 
 
 let p1 = Product(ID: 1, title: "Cat sebastian robinzon shokoi hashlishi", userID: 2, image: "https://i.imgflip.com/q633e.jpg", description: "A meow (American English) or miaow (British English; /miˈaʊ/),[1] is a vocalization of cats. They have diverse tones and are sometimes chattered, murmured or whispered. Adult cats rarely meow to each other, so an adult cat meowing to human beings is probably a post-domestication extension of meowing by kittens, a call for attention.", lastUpdate: "02/01/2001", area: "far", condition: .Damaged, price: "500", category: .books)

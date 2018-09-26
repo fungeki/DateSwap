@@ -11,3 +11,4 @@ import Foundation
 
  var gProductPlaceholderPlace = -1
  var gProductsDisplayedPlaceholder = [Product]()
+ var gSwipeState = 0

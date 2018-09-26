@@ -25,6 +25,15 @@ class ProfileIntroViewController: UIViewController, UIImagePickerControllerDeleg
 
     }
 
+    @IBAction func toMarket(_ sender: Any) {
+        if gSwipeState == 0 {
+            performSegue(withIdentifier: "toMarketFromProf", sender: nil)
+        } else {
+            performSegue(withIdentifier: "toSwipesFromProf", sender: nil)
+        }
+    }
+    
+    
     func initialize(){
         
         profileIntroUIButton.sd_setImage(with: URL(string: gOnlineUser.pic), for: .normal)

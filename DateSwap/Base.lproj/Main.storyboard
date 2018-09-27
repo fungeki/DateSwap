@@ -50,6 +50,9 @@
                                 <state key="normal" title="Edit Profile">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="editNickname:" destination="ADP-5w-IKA" eventType="touchUpInside" id="Zo2-Ym-q5o"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3je-yZ-OO7">
                                 <rect key="frame" x="172.5" y="32" width="30" height="32.5"/>
@@ -387,12 +390,6 @@
                                     <constraint firstAttribute="width" secondItem="It5-1v-RUl" secondAttribute="height" multiplier="243:40" id="KbF-ne-ziX"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ECv-ui-Vd5">
-                                <rect key="frame" x="78" y="27" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="ECv-ui-Vd5" secondAttribute="height" multiplier="1:1" id="LZO-HR-XwZ"/>
-                                </constraints>
-                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XMG-9U-z33">
                                 <rect key="frame" x="0.0" y="102" width="375" height="565"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -652,6 +649,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ECv-ui-Vd5">
+                                <rect key="frame" x="74" y="27" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ECv-ui-Vd5" secondAttribute="height" multiplier="1:1" id="LZO-HR-XwZ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -697,7 +700,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6V-s7-7Ao" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2548" y="-2273"/>
+            <point key="canvasLocation" x="2753" y="-2273"/>
         </scene>
         <!--Product Overview View Controller-->
         <scene sceneID="fXP-fV-DCt">
@@ -1703,6 +1706,9 @@
                                     <constraint firstAttribute="width" secondItem="1QX-f3-IPg" secondAttribute="height" multiplier="246:43" id="59g-Rf-7DO"/>
                                 </constraints>
                                 <state key="normal" image="ic_rating_long_tail_empty"/>
+                                <connections>
+                                    <action selector="comingSoon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="98i-J5-1DT"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_empty_dark" translatesAutoresizingMaskIntoConstraints="NO" id="wtw-RP-UbP">
                                 <rect key="frame" x="12" y="32" width="60" height="60"/>
@@ -2545,7 +2551,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aeg-9i-xaM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-63" y="-1498"/>
+            <point key="canvasLocation" x="713" y="-1498"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Dni-va-ppK">
@@ -2597,9 +2603,9 @@
         <segue reference="uvr-YS-l9e"/>
         <segue reference="e4U-9M-CBC"/>
         <segue reference="Iz9-zz-nbz"/>
-        <segue reference="dQM-QC-zqP"/>
+        <segue reference="Thj-PC-krd"/>
         <segue reference="kt3-VZ-zyo"/>
-        <segue reference="lgx-p1-4Ua"/>
-        <segue reference="dke-he-rSD"/>
+        <segue reference="8ru-sp-3Bw"/>
+        <segue reference="24G-q1-b9S"/>
     </inferredMetricsTieBreakers>
 </document>

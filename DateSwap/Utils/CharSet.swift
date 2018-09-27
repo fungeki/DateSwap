@@ -8,4 +8,4 @@
 
 import Foundation
 
-let charSetForInput = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ 0123456789,.")
+let charSetForInput = CharacterSet.urlQueryAllowed

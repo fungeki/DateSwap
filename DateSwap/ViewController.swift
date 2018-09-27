@@ -71,7 +71,7 @@ class ViewController: UIViewController {
             performSegue(withIdentifier: "fromInfoToSwipe", sender: nil)
         }
     }
-    
+
     func retrieveUser(){
         let urlString = "http://dateswap.herokuapp.com/getaprofile?id=\(displayProduct.userID)"
         guard let urlObj = URL(string: urlString) else {
@@ -139,6 +139,9 @@ class ViewController: UIViewController {
         userProfileImageUIImageView.layer.borderColor = UIColor.white.cgColor
         
         
+    }
+    @IBAction func comingSoon(_ sender: Any) {
+        popAlert(title: "Coming Soon", message: "stay tuned :)", view: self)
     }
     
     @IBAction func touserStallAction(_ sender: Any) {

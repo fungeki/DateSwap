@@ -23,6 +23,12 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb251216918800499</string>
+			</array>
+		</dict>
+		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
@@ -44,7 +50,7 @@
 	<key>FacebookAppID</key>
 	<string>251216918800499</string>
 	<key>FacebookDisplayName</key>
-	<string>DateSwap</string>
+	<string>Bartrade</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>

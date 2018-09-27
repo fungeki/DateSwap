@@ -47,7 +47,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ju-gb-Y2E">
                                 <rect key="frame" x="30" y="402.5" width="315" height="67"/>
                                 <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="30"/>
-                                <state key="normal" title="Edit Profile">
+                                <state key="normal" title="Edit Nickname">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>

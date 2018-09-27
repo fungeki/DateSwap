@@ -10,15 +10,24 @@ import UIKit
 
 class MarketViewController: UIViewController {
     
+    @IBOutlet weak var categoryUILabel: UILabel!
     @IBOutlet weak var marketCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         if gProductsDisplayedPlaceholder.count == 0{
                 getProducts()
         }
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "category"), object: nil, queue: OperationQueue.main) { (notification) in
+            self.displayCategory()
+        }
         // Do any additional setup after loading the view.
     }
 
+    func displayCategory(){
+        categoryUILabel.text = gSelectedCategory
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

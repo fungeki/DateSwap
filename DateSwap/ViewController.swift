@@ -64,7 +64,14 @@ class ViewController: UIViewController {
         userStallUIButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         userStallUIButton.layer.cornerRadius = 15
     }
-    
+    @IBAction func back(_ sender: Any) {
+        if gSwipeState == 0{
+            performSegue(withIdentifier: "fromInfoToMarket", sender: nil)
+        } else {
+            performSegue(withIdentifier: "fromInfoToSwipe", sender: nil)
+        }
+    }
+
     func retrieveUser(){
         let urlString = "http://dateswap.herokuapp.com/getaprofile?id=\(displayProduct.userID)"
         guard let urlObj = URL(string: urlString) else {
@@ -133,12 +140,16 @@ class ViewController: UIViewController {
         
         
     }
+    @IBAction func comingSoon(_ sender: Any) {
+        popAlert(title: "Coming Soon", message: "stay tuned :)", view: self)
+    }
     
     @IBAction func touserStallAction(_ sender: Any) {
         
         self.performSegue(withIdentifier: "toStallSegue", sender: self)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let sender = sender else {return}
         guard let segueID = segue.identifier else {return}
         if segueID == "toStallSegue" {
         guard let detailsVC =  segue.destination as? ProfileViewController else {return}

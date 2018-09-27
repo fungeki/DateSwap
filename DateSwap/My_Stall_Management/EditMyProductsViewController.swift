@@ -13,7 +13,8 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     var price: Int = 0
     
     @IBOutlet weak var estimatedPriceUITextField: ProductEditTextfield!
-    
+    var mKeyboardSize: CGRect?
+    var wasKeyEdited = false
     var edit = false
     var didEditPic = false
     
@@ -44,9 +45,18 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         
         super.viewDidLoad()
         
+        toolbarsInit()
         initialize()
         
         // Do any additional setup after loading the view.
+    }
+    @objc func doneClick(){
+        
+        if self.view.frame.origin.y != 0 {
+            guard let keyboard = mKeyboardSize else {return}
+            self.view.frame.origin.y += keyboard.height
+        }
+        view.endEditing(true)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -57,8 +67,40 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         
         
     }
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+            if !wasKeyEdited{
+            mKeyboardSize = keyboardSize
+            wasKeyEdited = true
+            }
+        }
+        
+    }
     
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += keyboardSize.height
+            }
+        }
+    }
     //change colors HERE //and the initialize
+    
+    func toolbarsInit(){
+        NotificationCenter.default.addObserver(self, selector: #selector(EditMyProductsViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(EditMyProductsViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClick))
+        toolbar.setItems([flexibleSpace, doneButton], animated: true)
+        descriptionUITextView.inputAccessoryView = toolbar
+        productTitleUITextField.inputAccessoryView = toolbar
+        estimatedPriceUITextField.inputAccessoryView = toolbar
+    }
     
     func initialize (){
         descriptionUITextView.delegate = self
@@ -110,10 +152,10 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         }
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return false
-    }
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        self.view.endEditing(true)
+//        return false
+//    }
     func backToMyStall(){
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "onlineUserStall") as! ProductOverviewViewController
@@ -204,7 +246,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
                         print("link error")
                         return}
                     let mUpUrl =  "\(upURL)&token=397b7f94-d217-4cf6-8eef-27e4af33430e"
-                    var myNewProduct = ProductExpSQL(id: 0, userid: gOnlineUser.ID, title: upTitle, image: mUpUrl, description: mDescription, lastupdate: "", area: "", condition: myCondition, price: mUpPrice)
+                    var myNewProduct = ProductExpSQL(id: 0, userid: gOnlineUser.ID, title: upTitle, image: mUpUrl, description: mDescription, lastupdate: "", area: "", condition: myCondition, price: mUpPrice, category: -1)
                     if self.edit {
                         myNewProduct.id = self.product!.ID
                         editProduct(myProductInSQL: myNewProduct, controller: self)
@@ -216,7 +258,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
             
         } else if edit{
             guard let inputThisProd = self.product else {return}
-            let myEditedProduct = ProductExpSQL(id: inputThisProd.ID, userid: gOnlineUser.ID, title: upTitle, image: inputThisProd.image, description: mDescription, lastupdate: "", area: "", condition: myCondition, price: mUpPrice)
+            let myEditedProduct = ProductExpSQL(id: inputThisProd.ID, userid: gOnlineUser.ID, title: upTitle, image: inputThisProd.image, description: mDescription, lastupdate: "", area: "", condition: myCondition, price: mUpPrice, category: -1)
             editProduct(myProductInSQL: myEditedProduct, controller: self)
         } else{
             backToMyStall()

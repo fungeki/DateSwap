@@ -41,12 +41,13 @@ class SwipeToLikeUIViewController: UIViewController {
     
     @IBOutlet weak var mainImageUIImageView: UIImageView!
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "activeProduct"), object: nil, queue: OperationQueue.main) { (notification) in
             self.displayActiveProduct()
         }
-        displayActiveProduct()
+//        displayActiveProduct()
         selectItemUIButton.layer.cornerRadius = selectItemUIButton.frame.height / 2
         myItemImageUIButton.layer.cornerRadius = myItemImageUIButton.frame.height / 2
         myItemNameUIButton.contentHorizontalAlignment = .left
@@ -55,16 +56,13 @@ class SwipeToLikeUIViewController: UIViewController {
         if let mTransfer = transfer {
             mainImageUIImageView.sd_setImage(with: URL(string: mTransfer.image))
         }
-        if gProductPlaceholderPlace < 0 {
-            JustHUD.shared.showInView(view: generalView, withHeader: "Loading", andFooter: "One Moment")
-            getProduct()
-        } else {
+        
+        if gProductsDisplayedPlaceholder.count > 0{
             displayProducts = gProductsDisplayedPlaceholder
             currentProduct = gProductPlaceholderPlace
             generalView.isUserInteractionEnabled = true
             initialize()
         }
-        
 //        prepareSlider()
         mainTitleMainImageUIButton.numberOfLines = 0
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SwipeToLikeUIViewController.myviewTapped(_:)))
@@ -75,8 +73,19 @@ class SwipeToLikeUIViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func viewWillAppear(_ animated: Bool) {
         
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        if gProductPlaceholderPlace < 0 {
+            JustHUD.shared.showInView(view: generalView, withHeader: "Loading", andFooter: "One Moment")
+            getProduct()
+        }
+    }
+    
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let sender = sender else {return}
         guard let detailsVC =  segue.destination as? ViewController else {return}
         // detailsVC.displayProduct = sender as! Product
         gItemPlaceholder = sender as? Product
@@ -113,18 +122,6 @@ class SwipeToLikeUIViewController: UIViewController {
                     }
                     gProductsDisplayedPlaceholder = self.displayProducts
                     self.display = self.displayProducts[0]
-//                    if let isPicked = gItemPlaceholder {
-//                        self.mainImageUIImageView.sd_setImage(with: URL(string: self.displayProducts[0].image))
-//                        self.displayProducts.insert(isPicked, at: self.displayProducts.startIndex)
-//                        self.productCardUIView.layer.zPosition = .greatestFiniteMagnitude
-//                        self.initialize()
-//                        if JustHUD.shared.isActive{
-//                            JustHUD.shared.hide()
-//                        }
-//                        self.generalView.isUserInteractionEnabled = true
-//
-//                        return
-//                    }
                     self.initialize()
                     var tempProdNum = 1
                     if tempProdNum >= self.displayProducts.count{
@@ -135,7 +132,7 @@ class SwipeToLikeUIViewController: UIViewController {
                     self.generalView.isUserInteractionEnabled = true
                     self.productCardUIView.layer.zPosition = .greatestFiniteMagnitude
                     gProductPlaceholderPlace = 0
-                    JustHUD.shared.hide()
+                    getMyActiveProduct()
                 }catch {
                     print(error)
                 }
@@ -200,6 +197,7 @@ class SwipeToLikeUIViewController: UIViewController {
         mainImageUIImageView.layer.cornerRadius = productCardUIView.cornerRadius
     }
     
+
     
     var direction = 0
     var didGo = true

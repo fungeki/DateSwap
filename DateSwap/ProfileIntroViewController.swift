@@ -25,6 +25,15 @@ class ProfileIntroViewController: UIViewController, UIImagePickerControllerDeleg
 
     }
 
+    @IBAction func toMarket(_ sender: Any) {
+        if gSwipeState == 0 {
+            performSegue(withIdentifier: "toMarketFromProf", sender: nil)
+        } else {
+            performSegue(withIdentifier: "toSwipesFromProf", sender: nil)
+        }
+    }
+    
+    
     func initialize(){
         
         profileIntroUIButton.sd_setImage(with: URL(string: gOnlineUser.pic), for: .normal)
@@ -101,7 +110,45 @@ class ProfileIntroViewController: UIViewController, UIImagePickerControllerDeleg
         }
 
     }
-    
+    @IBAction func editNickname(_ sender: Any) {
+        //1. Create the alert controller.
+        let alert = UIAlertController(title: "Edit Nickname", message: "What would you like to be called?", preferredStyle: .alert)
+        
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextField { (textField) in
+            textField.text = gOnlineUser.nickname
+            textField.keyboardType = UIKeyboardType.asciiCapable
+        }
+        
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
+            let set = charSetForInput.inverted
+            guard var newNick = textField?.text else {
+                self.alertError(message: "Please Enter atleast five characters")
+                return}
+            newNick = newNick.components(separatedBy: set).joined()
+            newNick = newNick.trimmingCharacters(in: .whitespacesAndNewlines)
+            if newNick.count < 5 {
+                self.alertError(message: "Please Enter atleast five characters")
+                return
+            }
+            
+            JustHUD.shared.showInView(view: self.view, withHeader: "Loading", andFooter: "Please Wait")
+            editProfileNickname(newName: newNick)
+            self.userNameUILabel.text = newNick
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+            
+        }))
+        
+        // 4. Present the alert.
+        self.present(alert, animated: true, completion: nil)
+    }
+    func alertError(message: String){
+        popAlert(title: "Invalid Nickname", message: message, view: self)
+    }
+  
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
     let image = info[UIImagePickerControllerOriginalImage] as! UIImage
     let compressedImage = resizeImage(image)

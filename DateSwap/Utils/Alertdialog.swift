@@ -17,7 +17,18 @@ func popAlert(title: String, message: String, view: UIViewController){
     view.present(alert, animated: true, completion: nil)
 
 }
-
+func popAlert(title: String, message: String, view: UIViewController, acceptText: String, completion: @escaping (() -> Void)){
+    let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+    alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (action) in
+        alert.dismiss(animated: true)
+    }))
+    alert.addAction(UIAlertAction(title: acceptText, style: .default, handler: { (action) in
+        completion()
+    }))
+    
+    view.present(alert, animated: true, completion: nil)
+    
+}
 
 //    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
 //        switch action.style{

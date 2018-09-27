@@ -20,17 +20,8 @@ func getMyProducts(){
             let mProducts = try JSONDecoder().decode([ProductExpSQL].self, from: data)
             gOnlineUserProducts = arrayProductsSQL2LocalForOnlineUser(array: mProducts)
                 if JustHUD.shared.isActive{
-                   JustHUD.shared.hide()
+                    JustHUD.shared.hide()
                 }
-                print("amount of rows:")
-                print(gOnlineUserProducts.count)
-//                print(gOnlineUserProducts)
-//                guard let mController = controller else {
-//                    print("no controller")
-//                    return
-//                }
-//                print(mController)
-//                mController.backToMyStall()
 
             } catch {
                 guard let err = err else {return}

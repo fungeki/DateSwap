@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             pushUser(profileSQL: mFireuser)
             
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let swipeViewController = storyBoard.instantiateViewController(withIdentifier: "swipeViewController") as! SwipeToLikeUIViewController
+            let swipeViewController = storyBoard.instantiateViewController(withIdentifier: "marketVC") as! SwipeToLikeUIViewController
             self.window?.rootViewController = swipeViewController
             self.window?.makeKeyAndVisible()
         }
@@ -90,7 +90,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "profileViewController")
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "loginViewController")
             self.window?.rootViewController = initialViewController
             self.window?.makeKeyAndVisible()
         }

@@ -2550,10 +2550,10 @@
             </objects>
             <point key="canvasLocation" x="4089" y="-1498"/>
         </scene>
-        <!--Settings Table View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="Zfe-PF-okB">
             <objects>
-                <tableViewController id="bte-ZI-29B" customClass="SettingsTableViewController" customModule="DateSwap" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="bte-ZI-29B" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qE6-JF-mu6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

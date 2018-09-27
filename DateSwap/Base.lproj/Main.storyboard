@@ -1576,16 +1576,32 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="37z-Sw-Rj6"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="googleSignIn:" destination="t09-AK-euc" eventType="valueChanged" id="BSw-s7-38l"/>
+                                </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3U-ul-yGt" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="16" y="424" width="343" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="zTt-FT-gwt"/>
+                                </constraints>
+                                <state key="normal" title="FBLogin"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="fqf-Lz-Wm6" firstAttribute="top" secondItem="w3U-ul-yGt" secondAttribute="bottom" constant="16" id="5Tk-6I-674"/>
                             <constraint firstItem="Zno-6I-KYr" firstAttribute="bottom" secondItem="fqf-Lz-Wm6" secondAttribute="bottom" constant="137" id="HQy-uB-ksq"/>
                             <constraint firstItem="fqf-Lz-Wm6" firstAttribute="leading" secondItem="Zno-6I-KYr" secondAttribute="leading" constant="24" id="TIU-CK-gxA"/>
                             <constraint firstItem="Zno-6I-KYr" firstAttribute="trailing" secondItem="fqf-Lz-Wm6" secondAttribute="trailing" constant="24" id="b9Y-gd-qZV"/>
+                            <constraint firstItem="Zno-6I-KYr" firstAttribute="trailing" secondItem="w3U-ul-yGt" secondAttribute="trailing" constant="16" id="bzZ-1v-q10"/>
+                            <constraint firstItem="w3U-ul-yGt" firstAttribute="leading" secondItem="Zno-6I-KYr" secondAttribute="leading" constant="16" id="mkR-sJ-gC2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zno-6I-KYr"/>
                     </view>
+                    <connections>
+                        <outlet property="facebookLoginButton" destination="w3U-ul-yGt" id="J3K-St-M9R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kmS-jH-2qf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -138,6 +138,9 @@ class ProfileIntroViewController: UIViewController, UIImagePickerControllerDeleg
             editProfileNickname(newName: newNick)
             self.userNameUILabel.text = newNick
         }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+            
+        }))
         
         // 4. Present the alert.
         self.present(alert, animated: true, completion: nil)

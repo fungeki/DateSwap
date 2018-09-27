@@ -16,7 +16,7 @@ import FBSDKCoreKit
 
 import FirebaseStorage
 
-//var fbToken: AccessToken?
+var fbToken : FBSDKAccessToken?
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -85,14 +85,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        
+        if (FBSDKAccessToken.current() != nil) {
+            getMyProfile()
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "marketVC")
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+            // User is logged in, do work such as go to next view controller.
+        }
      //   SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
        // print(Auth.auth().currentUser?.displayName)
         currentUser = Auth.auth().currentUser
         if currentUser != nil{
             getMyProfile()
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "marketViewController")
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "marketVC")
             self.window?.rootViewController = initialViewController
             self.window?.makeKeyAndVisible()
             

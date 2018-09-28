@@ -85,23 +85,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        if (FBSDKAccessToken.current() != nil) {
-            getMyProfile()
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "marketVC")
-            self.window?.rootViewController = initialViewController
-            self.window?.makeKeyAndVisible()
-            // User is logged in, do work such as go to next view controller.
-        }
-     //   SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+//        if (FBSDKAccessToken.current() != nil) {
+//            getMyProfile()
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let initialViewController = storyboard.instantiateViewController(withIdentifier: "marketVC")
+//            self.window?.rootViewController = initialViewController
+//            self.window?.makeKeyAndVisible()
+//            // User is logged in, do work such as go to next view controller.
+//        }
+     //   SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptionshOptions)
        // print(Auth.auth().currentUser?.displayName)
         currentUser = Auth.auth().currentUser
         if currentUser != nil{
             getMyProfile()
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "marketVC")
-            self.window?.rootViewController = initialViewController
-            self.window?.makeKeyAndVisible()
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let initialViewController = storyboard.instantiateViewController(withIdentifier: "marketVC")
+//            self.window?.rootViewController = initialViewController
+//            self.window?.makeKeyAndVisible()
             
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)

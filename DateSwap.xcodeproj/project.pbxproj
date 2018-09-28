@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77423A46215E67670037E527 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77423A45215E67670037E527 /* SettingsTableViewController.swift */; };
 		777051DD20FE3AA800D7F54D /* NewMatchesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777051DC20FE3AA800D7F54D /* NewMatchesCollectionViewCell.swift */; };
 		777051DF20FE46B000D7F54D /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777051DE20FE46B000D7F54D /* MatchesViewController.swift */; };
 		77DDDC2B210138B800C0B13D /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDDC2A210138B800C0B13D /* MessagesTableViewCell.swift */; };
@@ -60,7 +61,6 @@
 		8CC91BD3215B840000BD57C9 /* GetDisplayItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC91BD2215B840000BD57C9 /* GetDisplayItems.swift */; };
 		8CC91BD9215C8D9F00BD57C9 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC91BD8215C8D9F00BD57C9 /* CategoriesViewController.swift */; };
 		8CC91BDD215C8DF700BD57C9 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC91BDC215C8DF700BD57C9 /* CategoriesTableViewCell.swift */; };
-		8CC91BE2215D4E1D00BD57C9 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC91BE1215D4E1D00BD57C9 /* SettingsTableViewController.swift */; };
 		8CC91BED215D828300BD57C9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CC91BEC215D828200BD57C9 /* GoogleService-Info.plist */; };
 		8CCCCD472143F9F900D1C84F /* OHCircleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCCCD462143F9F900D1C84F /* OHCircleSegue.swift */; };
 		8CCCCD49214439D800D1C84F /* GetMyProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCCCD48214439D800D1C84F /* GetMyProducts.swift */; };
@@ -86,6 +86,7 @@
 		3680421D48587E2FF1190ECE /* Pods_DateSwap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DateSwap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D92167A3509D274EBCE1F78 /* Pods-DateSwap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateSwap.release.xcconfig"; path = "Pods/Target Support Files/Pods-DateSwap/Pods-DateSwap.release.xcconfig"; sourceTree = "<group>"; };
 		772EBC7820E42E6C00BA762B /* Andale Mono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Andale Mono.ttf"; sourceTree = "<group>"; };
+		77423A45215E67670037E527 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		777051DC20FE3AA800D7F54D /* NewMatchesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMatchesCollectionViewCell.swift; sourceTree = "<group>"; };
 		777051DE20FE46B000D7F54D /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		77DDDC2A210138B800C0B13D /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
@@ -141,7 +142,6 @@
 		8CC91BD2215B840000BD57C9 /* GetDisplayItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDisplayItems.swift; sourceTree = "<group>"; };
 		8CC91BD8215C8D9F00BD57C9 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		8CC91BDC215C8DF700BD57C9 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
-		8CC91BE1215D4E1D00BD57C9 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		8CC91BE9215D683300BD57C9 /* DateSwap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DateSwap.entitlements; sourceTree = "<group>"; };
 		8CC91BEC215D828200BD57C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8CCCCD462143F9F900D1C84F /* OHCircleSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OHCircleSegue.swift; sourceTree = "<group>"; };
@@ -380,7 +380,7 @@
 		8CC91BE0215D4DE400BD57C9 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				8CC91BE1215D4E1D00BD57C9 /* SettingsTableViewController.swift */,
+				77423A45215E67670037E527 /* SettingsTableViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -589,7 +589,7 @@
 				8C521ADA214E391F00E081F3 /* EditProduct.swift in Sources */,
 				8CED7B30215938290064DBAF /* EditProfile.swift in Sources */,
 				8C7405F420D24CE700FF8E9C /* Product.swift in Sources */,
-				8CC91BE2215D4E1D00BD57C9 /* SettingsTableViewController.swift in Sources */,
+				77423A46215E67670037E527 /* SettingsTableViewController.swift in Sources */,
 				8CE62D0920DB830200AA167D /* ProfileIntroViewController.swift in Sources */,
 				8CED7B32215970110064DBAF /* Placeholders.swift in Sources */,
 				777051DF20FE46B000D7F54D /* MatchesViewController.swift in Sources */,

@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             pushUser(profileSQL: mFireuser)
             
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let swipeViewController = storyBoard.instantiateViewController(withIdentifier: "marketVC") as! SwipeToLikeUIViewController
+            let swipeViewController = storyBoard.instantiateViewController(withIdentifier: "marketVC") as! MarketViewController
             self.window?.rootViewController = swipeViewController
             self.window?.makeKeyAndVisible()
         }
@@ -129,6 +129,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        FBSDKAppEvents.activateApp()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

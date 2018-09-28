@@ -62,6 +62,7 @@
 		8CC91BD9215C8D9F00BD57C9 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC91BD8215C8D9F00BD57C9 /* CategoriesViewController.swift */; };
 		8CC91BDD215C8DF700BD57C9 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC91BDC215C8DF700BD57C9 /* CategoriesTableViewCell.swift */; };
 		8CC91BED215D828300BD57C9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CC91BEC215D828200BD57C9 /* GoogleService-Info.plist */; };
+		8CC91BEF215EBB8800BD57C9 /* Toasty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC91BEE215EBB8800BD57C9 /* Toasty.swift */; };
 		8CCCCD472143F9F900D1C84F /* OHCircleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCCCD462143F9F900D1C84F /* OHCircleSegue.swift */; };
 		8CCCCD49214439D800D1C84F /* GetMyProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCCCD48214439D800D1C84F /* GetMyProducts.swift */; };
 		8CD4202820D2824C006101A1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD4202720D2824C006101A1 /* ProfileViewController.swift */; };
@@ -144,6 +145,7 @@
 		8CC91BDC215C8DF700BD57C9 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		8CC91BE9215D683300BD57C9 /* DateSwap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DateSwap.entitlements; sourceTree = "<group>"; };
 		8CC91BEC215D828200BD57C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8CC91BEE215EBB8800BD57C9 /* Toasty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toasty.swift; sourceTree = "<group>"; };
 		8CCCCD462143F9F900D1C84F /* OHCircleSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OHCircleSegue.swift; sourceTree = "<group>"; };
 		8CCCCD48214439D800D1C84F /* GetMyProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyProducts.swift; sourceTree = "<group>"; };
 		8CD4202720D2824C006101A1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				8C521ADD214FB30400E081F3 /* Alertdialog.swift */,
 				8C521ADF215131DD00E081F3 /* SortArray.swift */,
 				8C521AE32154E70A00E081F3 /* CharSet.swift */,
+				8CC91BEE215EBB8800BD57C9 /* Toasty.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -575,6 +578,7 @@
 				8CEF6A3320D7A9DE007C39D5 /* ConditionUIButton.swift in Sources */,
 				8C5A3C172142B839003DC27C /* GetMyProfile.swift in Sources */,
 				8CBA6A7120E0E75C008CD18B /* DescriptionUITextView.swift in Sources */,
+				8CC91BEF215EBB8800BD57C9 /* Toasty.swift in Sources */,
 				8C521AE22154C85400E081F3 /* GetProductID.swift in Sources */,
 				8CE6897C2139ACE700208BEB /* PrivateChatViewController.swift in Sources */,
 				8C2EB31620FE4AD200527D6F /* ReviewTableViewCell.swift in Sources */,

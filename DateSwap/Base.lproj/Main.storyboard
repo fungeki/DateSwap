@@ -1208,7 +1208,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w48-In-Jtx" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
-                                <rect key="frame" x="271" y="79" width="96" height="30"/>
+                                <rect key="frame" x="288" y="79" width="79" height="30"/>
                                 <state key="normal" title="Categories"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="padding">
@@ -1220,8 +1220,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgk-Pn-HKN" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
-                                <rect key="frame" x="8" y="79" width="96" height="30"/>
-                                <state key="normal" title="Show Wishlist"/>
+                                <rect key="frame" x="8" y="79" width="79" height="30"/>
+                                <state key="normal" title="My Wishlist"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="padding">
                                         <real key="value" value="4"/>
@@ -1294,7 +1294,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1" verticalHuggingPriority="251" text="Featured" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rek-Y1-2PV">
-                                <rect key="frame" x="116" y="74" width="143" height="40"/>
+                                <rect key="frame" x="99" y="74" width="177" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Mhd-CJ-YTF"/>
                                 </constraints>
@@ -1742,6 +1742,9 @@
                                     <constraint firstAttribute="width" secondItem="Zul-7G-Fc4" secondAttribute="height" multiplier="1:1" id="Ep9-D7-IW9"/>
                                 </constraints>
                                 <state key="normal" image="ic_like_date"/>
+                                <connections>
+                                    <action selector="acceptProduct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mDh-D7-Vob"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZM-6U-uKw" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
                                 <rect key="frame" x="276" y="568" width="75" height="75"/>
@@ -3157,6 +3160,6 @@
         <segue reference="bwV-s2-wft"/>
         <segue reference="kt3-VZ-zyo"/>
         <segue reference="8ru-sp-3Bw"/>
-        <segue reference="FVg-4m-1hm"/>
+        <segue reference="dke-he-rSD"/>
     </inferredMetricsTieBreakers>
 </document>

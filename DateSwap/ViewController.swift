@@ -167,6 +167,9 @@ class ViewController: UIViewController {
             guard let backVC = segue.destination as? SwipeToLikeUIViewController else {return}
             backVC.transfer = displayProduct
             
+        } else if segueID == "fromInfoToMarket"{
+            guard let likeVC = segue.destination as? MarketViewController else {return}
+            likeVC.showSaveSegue = true
         }
 }
     
@@ -240,7 +243,11 @@ class ViewController: UIViewController {
 //                break
 //            }
 //        }
-
+    @IBAction func acceptProduct(_ sender: Any) {
+        performSegue(withIdentifier: "fromInfoToMarket", sender: true)
+    }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

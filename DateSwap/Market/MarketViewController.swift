@@ -10,6 +10,7 @@ import UIKit
 
 class MarketViewController: UIViewController {
     
+    var showSaveSegue: Bool?
     @IBOutlet weak var categoryUILabel: UILabel!
     @IBOutlet weak var marketCollectionView: UICollectionView!
     override func viewDidLoad() {
@@ -40,8 +41,14 @@ class MarketViewController: UIViewController {
             
         }
     }
+    override func viewDidAppear(_ animated: Bool) {
+        if showSaveSegue != nil {
+            showToast(message: "Saved your like !", controller: self, delay: 0.5, image: #imageLiteral(resourceName: "ic_like_date"))
+            }
+    }
     
 }
+
 
 extension MarketViewController: UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

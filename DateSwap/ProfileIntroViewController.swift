@@ -35,8 +35,8 @@ class ProfileIntroViewController: UIViewController, UIImagePickerControllerDeleg
     
     
     func initialize(){
+        editProfileUIButton.sizeToFit()
         
-        profileIntroUIButton.sd_setImage(with: URL(string: gOnlineUser.pic), for: .normal)
 
         userNameUILabel.text = gOnlineUser.nickname
         // print(mProfile)

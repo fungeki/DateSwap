@@ -9,26 +9,28 @@
 import UIKit
 
 class SettingsTableViewController: UITableViewController {
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
-    }
+    @IBOutlet weak var notificationProductEditTextfield: ProductEditTextfield!
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
-    }
-    
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Section \(section)"
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NickNameCell", for: indexPath)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        cell.textLabel?.text = "Section \(indexPath.section) Row \(indexPath.row)"
+        notificationProductEditTextfield.layer.cornerRadius = 20
+        notificationProductEditTextfield.layer.masksToBounds = true
         
-        return cell
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+        
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - Table view data source
+    
+   
 
 }

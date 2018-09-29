@@ -10,6 +10,7 @@
 		77423A46215E67670037E527 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77423A45215E67670037E527 /* SettingsTableViewController.swift */; };
 		777051DD20FE3AA800D7F54D /* NewMatchesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777051DC20FE3AA800D7F54D /* NewMatchesCollectionViewCell.swift */; };
 		777051DF20FE46B000D7F54D /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777051DE20FE46B000D7F54D /* MatchesViewController.swift */; };
+		77D4479D215EE07B00285AA8 /* testUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4479C215EE07B00285AA8 /* testUITableViewController.swift */; };
 		77DDDC2B210138B800C0B13D /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDDC2A210138B800C0B13D /* MessagesTableViewCell.swift */; };
 		77E09E1220E67A5400C3CEDE /* the_rob.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 77E09E1120E67A5400C3CEDE /* the_rob.jpg */; };
 		8C0EFEC9212B0A9200B3B8D7 /* CornerRadiusRounders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0EFEC8212B0A9200B3B8D7 /* CornerRadiusRounders.swift */; };
@@ -90,6 +91,7 @@
 		77423A45215E67670037E527 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		777051DC20FE3AA800D7F54D /* NewMatchesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMatchesCollectionViewCell.swift; sourceTree = "<group>"; };
 		777051DE20FE46B000D7F54D /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
+		77D4479C215EE07B00285AA8 /* testUITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testUITableViewController.swift; sourceTree = "<group>"; };
 		77DDDC2A210138B800C0B13D /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
 		77E09E1120E67A5400C3CEDE /* the_rob.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = the_rob.jpg; sourceTree = "<group>"; };
 		8C0EFEC8212B0A9200B3B8D7 /* CornerRadiusRounders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusRounders.swift; sourceTree = "<group>"; };
@@ -384,6 +386,7 @@
 			isa = PBXGroup;
 			children = (
 				77423A45215E67670037E527 /* SettingsTableViewController.swift */,
+				77D4479C215EE07B00285AA8 /* testUITableViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -597,6 +600,7 @@
 				8CE62D0920DB830200AA167D /* ProfileIntroViewController.swift in Sources */,
 				8CED7B32215970110064DBAF /* Placeholders.swift in Sources */,
 				777051DF20FE46B000D7F54D /* MatchesViewController.swift in Sources */,
+				77D4479D215EE07B00285AA8 /* testUITableViewController.swift in Sources */,
 				8C521AE0215131DD00E081F3 /* SortArray.swift in Sources */,
 				8C89A27E20DBD29200F900F5 /* EditMyProductsViewController.swift in Sources */,
 				8CE6897A2139ACA900208BEB /* PrivateChatTableViewCell.swift in Sources */,

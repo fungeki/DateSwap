@@ -150,13 +150,16 @@ class ViewController: UIViewController {
     @IBAction func comingSoon(_ sender: Any) {
         popAlert(title: "Coming Soon", message: "stay tuned :)", view: self)
     }
+    func moveToMarketWithToast(){
+        performSegue(withIdentifier: "fromInfoToMarket", sender: 0)
+    }
     
     @IBAction func touserStallAction(_ sender: Any) {
         
         self.performSegue(withIdentifier: "toStallSegue", sender: self)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let sender = sender else {return}
+        guard sender != nil else {return}
         guard let segueID = segue.identifier else {return}
         if segueID == "toStallSegue" {
         guard let detailsVC =  segue.destination as? ProfileViewController else {return}
@@ -167,9 +170,14 @@ class ViewController: UIViewController {
             guard let backVC = segue.destination as? SwipeToLikeUIViewController else {return}
             backVC.transfer = displayProduct
             
-        } else if segueID == "fromInfoToMarket"{
-            guard let likeVC = segue.destination as? MarketViewController else {return}
-            likeVC.showSaveSegue = true
+        } else if segueID == "fromInfoToItemSelect"{
+            guard let tradingVC = segue.destination as? TradingItemSelectionViewController else {return}
+            tradingVC.origin = self
+            
+        } else if segueID == "fromInfoToMarket" {
+            guard let marketVC = segue.destination as? MarketViewController else {return}
+            marketVC.showSaveSegue = true
+            
         }
 }
     
@@ -244,7 +252,12 @@ class ViewController: UIViewController {
 //            }
 //        }
     @IBAction func acceptProduct(_ sender: Any) {
-        performSegue(withIdentifier: "fromInfoToMarket", sender: true)
+        if gOnlineUserProducts[0].userID == 0{
+            popAlert(title: "No Items", message: "To barter, please enter an item", view: self)
+            
+        } else {
+            performSegue(withIdentifier: "fromInfoToItemSelect", sender: 0)
+        }
     }
     
     

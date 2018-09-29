@@ -10,14 +10,18 @@ import UIKit
 
 class TradingItemSelectionViewController: UIViewController {
 
+
+    var origin : ViewController?
+    @IBOutlet weak var selectMsgUIlabel: UILabel!
     @IBOutlet weak var productTVheightNSConstraint: NSLayoutConstraint!
     @IBOutlet weak var productsUITableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let msgHeight = Int(selectMsgUIlabel.frame.height)
         if gOnlineUserProducts.count < 5{
-        productTVheightNSConstraint.constant  = CGFloat(gOnlineUserProducts.count * 120 + 32)
+        productTVheightNSConstraint.constant  = CGFloat(gOnlineUserProducts.count * 120 + msgHeight + 4)
         } else {
-            productTVheightNSConstraint.constant  = CGFloat(4 * 120 + 32)
+            productTVheightNSConstraint.constant  = CGFloat(4 * 120 + msgHeight + 4)
         }
         print("online user products:")
         print(gOnlineUserProducts)
@@ -68,6 +72,13 @@ extension TradingItemSelectionViewController: UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if origin != nil {
+            self.dismiss(animated: true, completion: {
+                guard let targetVC =  self.origin else {return}
+                targetVC.moveToMarketWithToast()
+            })
+        } else {
+        
         JustHUD.shared.showInView(view: self.view, withHeader: "Loading", andFooter: "please wait")
         gActiveProduct = gOnlineUserProducts[indexPath.row]
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "activeProduct"), object: self)
@@ -82,6 +93,9 @@ extension TradingItemSelectionViewController: UITableViewDelegate, UITableViewDa
                     
                 }
             }
+    
+            
         }.resume()
     }
+}
 }

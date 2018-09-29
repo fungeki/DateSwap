@@ -98,10 +98,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         currentUser = Auth.auth().currentUser
         if currentUser != nil{
             getMyProfile()
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let initialViewController = storyboard.instantiateViewController(withIdentifier: "marketVC")
-//            self.window?.rootViewController = initialViewController
-//            self.window?.makeKeyAndVisible()
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "marketVC")
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
             
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)

@@ -72,8 +72,6 @@ PODS:
   - SDWebImage/Core (4.3.3)
 
 DEPENDENCIES:
-  - FBSDKCoreKit
-  - FBSDKLoginKit
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Storage
@@ -118,6 +116,6 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
 
-PODFILE CHECKSUM: 53d9322d9cc1ce0333cdba911ab0e63b128b6d8e
+PODFILE CHECKSUM: 801d80ef7964f29ec03d2b9b9cacce39653ef6a5
 
 COCOAPODS: 1.5.3

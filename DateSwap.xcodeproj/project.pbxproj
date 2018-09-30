@@ -75,6 +75,8 @@
 		8CE62D0B20DB84C000AA167D /* ugly_cats_06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8CE62D0A20DB84C000AA167D /* ugly_cats_06.jpg */; };
 		8CE6897A2139ACA900208BEB /* PrivateChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE689792139ACA800208BEB /* PrivateChatTableViewCell.swift */; };
 		8CE6897C2139ACE700208BEB /* PrivateChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE6897B2139ACE700208BEB /* PrivateChatViewController.swift */; };
+		8CEB7B2D2160E1E600F66F95 /* GetWishlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEB7B2C2160E1E600F66F95 /* GetWishlist.swift */; };
+		8CEB7B2F2160E46E00F66F95 /* GetProductByID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEB7B2E2160E46E00F66F95 /* GetProductByID.swift */; };
 		8CED7B30215938290064DBAF /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CED7B2F215938290064DBAF /* EditProfile.swift */; };
 		8CED7B32215970110064DBAF /* Placeholders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CED7B31215970110064DBAF /* Placeholders.swift */; };
 		8CEF6A2120D28793007C39D5 /* DetailsFromProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF6A2020D28793007C39D5 /* DetailsFromProfileViewController.swift */; };
@@ -160,6 +162,8 @@
 		8CE62D0A20DB84C000AA167D /* ugly_cats_06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ugly_cats_06.jpg; sourceTree = "<group>"; };
 		8CE689792139ACA800208BEB /* PrivateChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateChatTableViewCell.swift; sourceTree = "<group>"; };
 		8CE6897B2139ACE700208BEB /* PrivateChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateChatViewController.swift; sourceTree = "<group>"; };
+		8CEB7B2C2160E1E600F66F95 /* GetWishlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWishlist.swift; sourceTree = "<group>"; };
+		8CEB7B2E2160E46E00F66F95 /* GetProductByID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductByID.swift; sourceTree = "<group>"; };
 		8CED7B2F215938290064DBAF /* EditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
 		8CED7B31215970110064DBAF /* Placeholders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholders.swift; sourceTree = "<group>"; };
 		8CEF6A2020D28793007C39D5 /* DetailsFromProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsFromProfileViewController.swift; sourceTree = "<group>"; };
@@ -238,7 +242,6 @@
 		8C5A3C0B214115D0003DC27C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				8CC91BE9215D683300BD57C9 /* DateSwap.entitlements */,
 				8C9A101720CA99140077B544 /* Assets.xcassets */,
 				8CBA6A6E20DEC2A2008CD18B /* PriceSliderUISlider.swift */,
 				8C0EFECA2131CE0B00B3B8D7 /* EditableLableUILabel.swift */,
@@ -292,6 +295,8 @@
 				8C521AE12154C85300E081F3 /* GetProductID.swift */,
 				8CC91BC921598F6500BD57C9 /* GetMyActiveProduct.swift */,
 				8CC91BD2215B840000BD57C9 /* GetDisplayItems.swift */,
+				8CEB7B2C2160E1E600F66F95 /* GetWishlist.swift */,
+				8CEB7B2E2160E46E00F66F95 /* GetProductByID.swift */,
 			);
 			path = DBget;
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 		8C9A100C20CA99140077B544 /* DateSwap */ = {
 			isa = PBXGroup;
 			children = (
+				8CC91BE9215D683300BD57C9 /* DateSwap.entitlements */,
 				8CC91BF02160287900BD57C9 /* New Group */,
 				8CC91BE0215D4DE400BD57C9 /* Settings */,
 				8CC91BCB215B07EF00BD57C9 /* Market */,
@@ -602,6 +608,7 @@
 				8C2EB30C20FDEE8000527D6F /* Messages.swift in Sources */,
 				77DDDC2B210138B800C0B13D /* MessagesTableViewCell.swift in Sources */,
 				8CBA6A6B20DEBDF0008CD18B /* ProductEditTextfield.swift in Sources */,
+				8CEB7B2F2160E46E00F66F95 /* GetProductByID.swift in Sources */,
 				8C5A3C1A2142C5E7003DC27C /* LoggedInUsers.swift in Sources */,
 				8C5A3C1421412668003DC27C /* PushProfile.swift in Sources */,
 				8CEF6A2120D28793007C39D5 /* DetailsFromProfileViewController.swift in Sources */,
@@ -619,6 +626,7 @@
 				8CE6897A2139ACA900208BEB /* PrivateChatTableViewCell.swift in Sources */,
 				8C2EB31020FE2CE900527D6F /* KeyWords.swift in Sources */,
 				8C2EB31220FE2D4800527D6F /* UserLikes.swift in Sources */,
+				8CEB7B2D2160E1E600F66F95 /* GetWishlist.swift in Sources */,
 				8CD4202820D2824C006101A1 /* ProfileViewController.swift in Sources */,
 				8C521AD7214C267400E081F3 /* ResizeImage.swift in Sources */,
 				8CC91BF22160293200BD57C9 /* PushWish.swift in Sources */,

@@ -85,6 +85,7 @@ enum Category: String{
     case clothing = "Clothing & Accessories"
     case family = "Family & Pets"
     case home = "Home & Garden"
+    case wishlist = "Wish List"
     case misc = "misc"
     
     static let allValues = [toys, books, garage, hobbies, clothing, family, home]
@@ -112,6 +113,9 @@ enum Category: String{
         case 7:
             self = .home
             break
+        case 10:
+            self = .wishlist
+            break
         default:
             self = .misc
         }
@@ -134,6 +138,8 @@ enum Category: String{
             return 5
         case .misc:
             return -1
+        default:
+            return 10
         }
     }
 
@@ -177,3 +183,4 @@ var products:[Product] = [p1 , p2 , p3, p4, p5]
 
 let noActiveProduct = Product(ID: 0, title: "Please Select a product to barter", userID: 0, image: "https://firebasestorage.googleapis.com/v0/b/dateswap-635d7.appspot.com/o/card_empty_dark.png?alt=media", description: "", lastUpdate: "", area: "", condition: .New, price: "0", category: .misc)
 let noProductToSwipe = Product(ID: 0, title: "No more items", userID: 0, image: "https://firebasestorage.googleapis.com/v0/b/dateswap-635d7.appspot.com/o/card_empty_dark.png?alt=media", description: "", lastUpdate: "", area: "", condition: .New, price: "0", category: .misc)
+let emptyWishlist = Product(ID: 0, title: "Emppty Wish List", userID: 0, image: "https://firebasestorage.googleapis.com/v0/b/dateswap-635d7.appspot.com/o/card_empty_dark.png?alt=media", description: "", lastUpdate: "", area: "", condition: .New, price: "0", category: .misc)

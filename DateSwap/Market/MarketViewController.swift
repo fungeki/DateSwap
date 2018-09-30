@@ -46,8 +46,9 @@ class MarketViewController: UIViewController {
             showToast(message: "Saved your like !", controller: self, delay: 0.5, image: #imageLiteral(resourceName: "ic_like_date"))
             }
     }
-    
-}
+    @IBOutlet weak var showWishlist: ConditionUIButton!
+        
+    }
 
 
 extension MarketViewController: UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{

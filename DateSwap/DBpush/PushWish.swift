@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
-func pushWish(){
-    let strToUp = "http://dateswap.herokuapp.com/addwish?userid=\(gOnlineUser.ID)&prodid="
+func pushWish(product: Product, controller: UIViewController){
+    let strToUp = "http://dateswap.herokuapp.com/addwish?userid=\(gOnlineUser.ID)&prodid=\(product.ID)"
     guard let escapedStr = strToUp.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
         print("failed encoding string")
         return}
@@ -19,7 +20,10 @@ func pushWish(){
     }
     URLSession.shared.dataTask(with: objUrl) { (data, res, err) in
         DispatchQueue.main.async {
-            
+            if JustHUD.shared.isActive{
+                JustHUD.shared.hide()
+            }
+            showToast(message: "Saved to Wish List", controller: controller)
         }
         }.resume()
 }

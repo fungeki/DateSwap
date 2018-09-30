@@ -18,3 +18,6 @@ var gItemPlaceholder : Product?
 var gUserProfile : Profile?
 //online user's active item:
 var gActiveProduct = noActiveProduct
+//online user wishlist
+var gMyWishlist = [Wish]()
+var gMyWishlistProducts = [Product]()

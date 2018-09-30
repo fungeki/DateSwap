@@ -12,4 +12,6 @@ import Foundation
  var gProductPlaceholderPlace = -1
  var gProductsDisplayedPlaceholder = [Product]()
  var gSwipeState = 0
+ var gCategoryState = 0
  var gSelectedCategory = "Featured"
+

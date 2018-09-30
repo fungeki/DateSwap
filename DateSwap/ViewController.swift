@@ -77,7 +77,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func addToWishlist(_ sender: Any) {
-        showToast(message: "Saved to Wish List", controller: self)
+        pushWish(product: displayProduct, controller: self)
+        
     }
     func retrieveUser(){
         let urlString = "http://dateswap.herokuapp.com/getaprofile?id=\(displayProduct.userID)"

@@ -1208,7 +1208,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w48-In-Jtx" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
-                                <rect key="frame" x="288" y="79" width="79" height="30"/>
+                                <rect key="frame" x="292" y="79" width="75" height="30"/>
                                 <state key="normal" title="Categories"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="padding">
@@ -1220,8 +1220,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgk-Pn-HKN" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
-                                <rect key="frame" x="8" y="79" width="79" height="30"/>
-                                <state key="normal" title="My Wishlist"/>
+                                <rect key="frame" x="8" y="79" width="75" height="30"/>
+                                <state key="normal" title="Wish List"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="padding">
                                         <real key="value" value="4"/>
@@ -1294,7 +1294,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1" verticalHuggingPriority="251" text="Featured" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rek-Y1-2PV">
-                                <rect key="frame" x="99" y="74" width="177" height="40"/>
+                                <rect key="frame" x="95" y="74" width="185" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Mhd-CJ-YTF"/>
                                 </constraints>
@@ -1337,6 +1337,7 @@
                     <connections>
                         <outlet property="categoryUILabel" destination="rek-Y1-2PV" id="Koi-sz-OA3"/>
                         <outlet property="marketCollectionView" destination="23l-Jm-TIw" id="jVH-0e-rfR"/>
+                        <outlet property="showWishlist" destination="Qgk-Pn-HKN" id="ZHy-xF-mX5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fyN-7l-bJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3119,6 +3120,6 @@
         <segue reference="bwV-s2-wft"/>
         <segue reference="kt3-VZ-zyo"/>
         <segue reference="8ru-sp-3Bw"/>
-        <segue reference="FVg-4m-1hm"/>
+        <segue reference="dke-he-rSD"/>
     </inferredMetricsTieBreakers>
 </document>

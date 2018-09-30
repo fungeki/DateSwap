@@ -8,7 +8,7 @@
 
 import UIKit
 
-func getWishlist(completion: ((_ amount: Int) -> Void)? = nil){
+func getUserActiveWishlist(completion: ((_ amount: Int) -> Void)? = nil){
     let url = "http://dateswap.herokuapp.com/userwishactive?userid=\(gOnlineUser.ID)"
     guard let urlObj = URL(string: url) else {return}
     
@@ -19,33 +19,12 @@ func getWishlist(completion: ((_ amount: Int) -> Void)? = nil){
             guard let data = data else {return}
             
             do{
-                let mWishes = try JSONDecoder().decode([Wish].self, from: data)
-                if mWishes.count > 0 {
-                    var i = 0
-                    for wish in mWishes{
-                        getProductByID(id: wish.id, completion: { (prod) in
-                            gMyWishlistProducts.append(prod)
-                            i += 1
-                            if i == mWishes.count{
-                                if completion != nil {
-                                    gSelectedCategory = "Wish List"
-                                    gCategoryState = 10
-                                    completion!(mWishes.count)
-                                    return
-                                }
-                            }
-                        })
-                    }
-                } else {
-                    if completion != nil {
-                        gSelectedCategory = "Wish List"
-                        gCategoryState = 10
-                        completion!(mWishes.count)
-                        return
-                    }
+                let mProduct = try JSONDecoder().decode([ProductExpSQL].self, from: data)
+                let prod = arrayProductsSQL2LocalForOnlineUser(array: mProduct)
+                gMyWishlistProducts = prod
+                if completion != nil {
+                    completion!(prod.count)
                 }
-                
-                
                 
             }catch {
                 print(error)

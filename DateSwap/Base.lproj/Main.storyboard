@@ -1775,6 +1775,9 @@
                                         <real key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="shareITem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UNp-JL-Zk2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFX-bf-75U" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
                                 <rect key="frame" x="12" y="567.5" width="75" height="75"/>
@@ -3132,6 +3135,6 @@
         <segue reference="bwV-s2-wft"/>
         <segue reference="kt3-VZ-zyo"/>
         <segue reference="8ru-sp-3Bw"/>
-        <segue reference="dke-he-rSD"/>
+        <segue reference="FVg-4m-1hm"/>
     </inferredMetricsTieBreakers>
 </document>

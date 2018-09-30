@@ -261,6 +261,22 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func shareITem(_ sender: Any) {
+        let text = "Wow! you wont believe the item I found on Bartrade!"
+        guard let mItem = gItemPlaceholder else {return}
+        let url = URL(string: mItem.image)
+        if let data = try? Data(contentsOf: url!)
+        {
+            let image: UIImage = UIImage(data: data)!
+            let myWebsite = NSURL(string:"http://dateswap.herokuapp.com")
+            let shareAll = [text , image, myWebsite!] as [Any]
+            let activityViewController = UIActivityViewController(activityItems: shareAll, applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view
+            self.present(activityViewController, animated: true, completion: nil)
+        }
+        
+    }
+    
     
     
     override func didReceiveMemoryWarning() {

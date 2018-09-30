@@ -15,5 +15,6 @@ pod 'GoogleSignIn'
 pod 'FirebaseUI/Facebook'
 pod 'FBSDKCoreKit'
 pod 'FBSDKLoginKit'
+pod 'IQKeyboardManagerSwift', '5.0.0'
 
 end

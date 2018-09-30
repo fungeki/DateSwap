@@ -14,7 +14,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     
     @IBOutlet weak var estimatedPriceUITextField: ProductEditTextfield!
     var mKeyboardSize: CGRect?
-    var wasKeyEdited = false
+//    var wasKeyEdited = false
     var edit = false
     var didEditPic = false
     
@@ -45,7 +45,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         
         super.viewDidLoad()
         
-        toolbarsInit()
+//        toolbarsInit()
         initialize()
         
         // Do any additional setup after loading the view.
@@ -67,40 +67,40 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         
         
     }
-    @objc func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0{
-                self.view.frame.origin.y -= keyboardSize.height
-            }
-            if !wasKeyEdited{
-            mKeyboardSize = keyboardSize
-            wasKeyEdited = true
-            }
-        }
-        
-    }
-    
-    @objc func keyboardWillHide(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y != 0{
-                self.view.frame.origin.y += keyboardSize.height
-            }
-        }
-    }
+//    @objc func keyboardWillShow(notification: NSNotification) {
+//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+//            if self.view.frame.origin.y == 0{
+//                self.view.frame.origin.y -= keyboardSize.height
+//            }
+//            if !wasKeyEdited{
+//            mKeyboardSize = keyboardSize
+//            wasKeyEdited = true
+//            }
+//        }
+//
+//    }
+//
+//    @objc func keyboardWillHide(notification: NSNotification) {
+//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+//            if self.view.frame.origin.y != 0{
+//                self.view.frame.origin.y += keyboardSize.height
+//            }
+//        }
+//    }
     //change colors HERE //and the initialize
     
-    func toolbarsInit(){
-        NotificationCenter.default.addObserver(self, selector: #selector(EditMyProductsViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(EditMyProductsViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        let toolbar = UIToolbar()
-        toolbar.sizeToFit()
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClick))
-        toolbar.setItems([flexibleSpace, doneButton], animated: true)
-        descriptionUITextView.inputAccessoryView = toolbar
-        productTitleUITextField.inputAccessoryView = toolbar
-        estimatedPriceUITextField.inputAccessoryView = toolbar
-    }
+//    func toolbarsInit(){
+//        NotificationCenter.default.addObserver(self, selector: #selector(EditMyProductsViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(EditMyProductsViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+//        let toolbar = UIToolbar()
+//        toolbar.sizeToFit()
+//        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+//        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClick))
+//        toolbar.setItems([flexibleSpace, doneButton], animated: true)
+//        descriptionUITextView.inputAccessoryView = toolbar
+//        productTitleUITextField.inputAccessoryView = toolbar
+//        estimatedPriceUITextField.inputAccessoryView = toolbar
+//    }
     
     func initialize (){
         descriptionUITextView.delegate = self

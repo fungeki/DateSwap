@@ -13,6 +13,8 @@ import GoogleSignIn
 import FirebaseStorage
 import FBSDKLoginKit
 import FBSDKCoreKit
+import IQKeyboardManagerSwift
+
 
 import FirebaseStorage
 
@@ -82,6 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        IQKeyboardManager.sharedManager().enable = true
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)

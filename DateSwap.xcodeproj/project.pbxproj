@@ -436,8 +436,8 @@
 				8C9A100620CA99140077B544 /* Sources */,
 				8C9A100720CA99140077B544 /* Frameworks */,
 				8C9A100820CA99140077B544 /* Resources */,
-				B7EA2AE99F0AC31BBBC4752C /* [CP] Embed Pods Frameworks */,
-				34246DF82230AF7C9F99ADFF /* [CP] Copy Pods Resources */,
+				832F577B9572191EA85996F8 /* [CP] Embed Pods Frameworks */,
+				21DF94AB41794444E97D669A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -505,7 +505,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		34246DF82230AF7C9F99ADFF /* [CP] Copy Pods Resources */ = {
+		21DF94AB41794444E97D669A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -527,7 +527,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DateSwap/Pods-DateSwap-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B7EA2AE99F0AC31BBBC4752C /* [CP] Embed Pods Frameworks */ = {
+		832F577B9572191EA85996F8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -541,6 +541,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -553,6 +554,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);

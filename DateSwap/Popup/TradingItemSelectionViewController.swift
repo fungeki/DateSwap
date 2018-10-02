@@ -60,6 +60,7 @@ extension TradingItemSelectionViewController: UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "selectItemCell") as! TradingItemSelectTableViewCell
         let model = gOnlineUserProducts[indexPath.row]
+        cell.product = model
         cell.itemUIImageView.sd_setImage(with: URL(string: model.image))
         cell.itemUIImageView.layer.cornerRadius = cell.itemUIImageView.frame.height / 2
         cell.priceUIButton.isEnabled = false

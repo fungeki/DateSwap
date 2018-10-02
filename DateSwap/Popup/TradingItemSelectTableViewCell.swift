@@ -10,6 +10,7 @@ import UIKit
 
 class TradingItemSelectTableViewCell: UITableViewCell {
 
+    var product: Product!
     @IBOutlet weak var priceUIButton: UIButton!
     @IBOutlet weak var descriptionUILabel: UILabel!
     @IBOutlet weak var productTitleUILabel: UILabel!

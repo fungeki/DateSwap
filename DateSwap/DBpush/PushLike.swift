@@ -1,0 +1,33 @@
+//
+//  PushLike.swift
+//  DateSwap
+//
+//  Created by Ran Loock on 01/10/2018.
+//  Copyright © 2018 Trisk Quality. All rights reserved.
+//
+
+import Foundation
+
+func pushLike(myProdID: Int ,completion: (() -> Void)? = nil){
+    guard let mItem = gItemPlaceholder else {
+        print("item error - no item!")
+        return}
+    let strToUp = "http://dateswap.herokuapp.com/addlike?userid=\(gOnlineUser.ID)&myproductid=\(myProdID)&hisproductid=\(mItem.ID)"
+    guard let escapedStr = strToUp.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+        print("failed encoding string")
+        return}
+    guard let objUrl = URL(string: escapedStr) else {
+        print("failed to objectify url to string")
+        return
+    }
+    URLSession.shared.dataTask(with: objUrl) { (data, res, err) in
+        DispatchQueue.main.async {
+            if JustHUD.shared.isActive{
+                JustHUD.shared.hide()
+            }
+            if completion != nil{
+                completion!()
+            }
+        }
+    }.resume()
+}

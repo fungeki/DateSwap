@@ -57,7 +57,6 @@
 		8CC91BCA21598F6500BD57C9 /* GetMyActiveProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC91BC921598F6500BD57C9 /* GetMyActiveProduct.swift */; };
 		8CC91BCF215B083300BD57C9 /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC91BCE215B083300BD57C9 /* MarketViewController.swift */; };
 		8CC91BD1215B085500BD57C9 /* MarketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC91BD0215B085500BD57C9 /* MarketCollectionViewCell.swift */; };
-		8CC91BD3215B840000BD57C9 /* GetDisplayProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC91BD2215B840000BD57C9 /* GetDisplayProduct.swift */; };
 		8CC91BD9215C8D9F00BD57C9 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC91BD8215C8D9F00BD57C9 /* CategoriesViewController.swift */; };
 		8CC91BDD215C8DF700BD57C9 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC91BDC215C8DF700BD57C9 /* CategoriesTableViewCell.swift */; };
 		8CC91BE2215D4E1D00BD57C9 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC91BE1215D4E1D00BD57C9 /* SettingsTableViewController.swift */; };
@@ -78,6 +77,7 @@
 		8CEB7B2D2160E1E600F66F95 /* GetWishlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEB7B2C2160E1E600F66F95 /* GetWishlist.swift */; };
 		8CEB7B2F2160E46E00F66F95 /* GetProductByID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEB7B2E2160E46E00F66F95 /* GetProductByID.swift */; };
 		8CEB7B31216247FC00F66F95 /* PushLike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEB7B30216247FC00F66F95 /* PushLike.swift */; };
+		8CEB7B332163DAC200F66F95 /* GetDisplayProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEB7B322163DAC200F66F95 /* GetDisplayProduct.swift */; };
 		8CED7B30215938290064DBAF /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CED7B2F215938290064DBAF /* EditProfile.swift */; };
 		8CED7B32215970110064DBAF /* Placeholders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CED7B31215970110064DBAF /* Placeholders.swift */; };
 		8CEF6A2120D28793007C39D5 /* DetailsFromProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF6A2020D28793007C39D5 /* DetailsFromProfileViewController.swift */; };
@@ -144,7 +144,6 @@
 		8CC91BC921598F6500BD57C9 /* GetMyActiveProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyActiveProduct.swift; sourceTree = "<group>"; };
 		8CC91BCE215B083300BD57C9 /* MarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
 		8CC91BD0215B085500BD57C9 /* MarketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCollectionViewCell.swift; sourceTree = "<group>"; };
-		8CC91BD2215B840000BD57C9 /* GetDisplayProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDisplayProduct.swift; sourceTree = "<group>"; };
 		8CC91BD8215C8D9F00BD57C9 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		8CC91BDC215C8DF700BD57C9 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		8CC91BE1215D4E1D00BD57C9 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +165,7 @@
 		8CEB7B2C2160E1E600F66F95 /* GetWishlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWishlist.swift; sourceTree = "<group>"; };
 		8CEB7B2E2160E46E00F66F95 /* GetProductByID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductByID.swift; sourceTree = "<group>"; };
 		8CEB7B30216247FC00F66F95 /* PushLike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushLike.swift; sourceTree = "<group>"; };
+		8CEB7B322163DAC200F66F95 /* GetDisplayProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDisplayProduct.swift; sourceTree = "<group>"; };
 		8CED7B2F215938290064DBAF /* EditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
 		8CED7B31215970110064DBAF /* Placeholders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholders.swift; sourceTree = "<group>"; };
 		8CEF6A2020D28793007C39D5 /* DetailsFromProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsFromProfileViewController.swift; sourceTree = "<group>"; };
@@ -297,9 +297,9 @@
 				8CCCCD48214439D800D1C84F /* GetMyProducts.swift */,
 				8C521AE12154C85300E081F3 /* GetProductID.swift */,
 				8CC91BC921598F6500BD57C9 /* GetMyActiveProduct.swift */,
-				8CC91BD2215B840000BD57C9 /* GetDisplayProduct.swift */,
 				8CEB7B2C2160E1E600F66F95 /* GetWishlist.swift */,
 				8CEB7B2E2160E46E00F66F95 /* GetProductByID.swift */,
+				8CEB7B322163DAC200F66F95 /* GetDisplayProduct.swift */,
 			);
 			path = DBget;
 			sourceTree = "<group>";
@@ -608,6 +608,7 @@
 				8CEB7B2F2160E46E00F66F95 /* GetProductByID.swift in Sources */,
 				8C5A3C1A2142C5E7003DC27C /* LoggedInUsers.swift in Sources */,
 				8C5A3C1421412668003DC27C /* PushProfile.swift in Sources */,
+				8CEB7B332163DAC200F66F95 /* GetDisplayProduct.swift in Sources */,
 				8CEF6A2120D28793007C39D5 /* DetailsFromProfileViewController.swift in Sources */,
 				8CC91BCF215B083300BD57C9 /* MarketViewController.swift in Sources */,
 				8CC91BDD215C8DF700BD57C9 /* CategoriesTableViewCell.swift in Sources */,
@@ -647,7 +648,6 @@
 				8C521ADE214FB30400E081F3 /* Alertdialog.swift in Sources */,
 				8C9A101620CA99140077B544 /* DateSwap.xcdatamodeld in Sources */,
 				8C5A3C272143F6CD003DC27C /* CicularTransition.swift in Sources */,
-				8CC91BD3215B840000BD57C9 /* GetDisplayProduct.swift in Sources */,
 				8C521AE72156525A00E081F3 /* TradingItemSelectionViewController.swift in Sources */,
 				8C2EB31420FE30BE00527D6F /* ReviewViewController.swift in Sources */,
 				8C5A3C232143E324003DC27C /* SwipeInteractionController.swift in Sources */,

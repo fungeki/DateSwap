@@ -139,7 +139,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
         cell.itemName.text = product.title
         cell.conditionUIButton.isEnabled = false
         cell.conditionUIButton.setTitle(returnCondition(product.condition), for: .disabled)
-        var str = product.description
+        let str = product.description
         let start = str.startIndex
         var end = str.endIndex
         var suffix = ""

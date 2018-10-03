@@ -8,8 +8,9 @@
 
 import Foundation
 
-struct UserLikes {
-    var ID: String
-    var productID: String
-    var userID: String
+struct Like: Decodable {
+    var id: Int
+    var myproductid: Int
+    var hisproductid: Int
+    var status: Int
 }

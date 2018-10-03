@@ -10,6 +10,7 @@ import UIKit
 
 class MarketViewController: UIViewController {
     
+    var isMatch = false
     var showSaveSegue: Bool?
     @IBOutlet weak var categoryUILabel: UILabel!
     @IBOutlet weak var marketCollectionView: UICollectionView!
@@ -48,7 +49,12 @@ class MarketViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         if showSaveSegue != nil {
-            showToast(message: "Saved your like !", controller: self, delay: 0.5, image: #imageLiteral(resourceName: "ic_like_date"))
+if isMatch{
+showToast(message: "A New Match!!", controller: self, delay: 2, image: #imageLiteral(resourceName: "ic_love_color"))
+} else {
+showToast(message: "Saved your Offer !", controller: self, delay: 0.5, image: #imageLiteral(resourceName: "ic_like_date"))
+}
+            
         }
     }
     @IBAction func displayMyWishlist(_ sender: Any) {

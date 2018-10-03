@@ -8,7 +8,7 @@
 
 import Foundation
 
-func pushLike(myProdID: Int ,completion: (() -> Void)? = nil){
+func pushLike(myProdID: Int ,completion: ((_ data: Like) -> Void)? = nil){
     guard let mItem = gItemPlaceholder else {
         print("item error - no item!")
         return}
@@ -22,12 +22,11 @@ func pushLike(myProdID: Int ,completion: (() -> Void)? = nil){
     }
     URLSession.shared.dataTask(with: objUrl) { (data, res, err) in
         DispatchQueue.main.async {
-            if JustHUD.shared.isActive{
-                JustHUD.shared.hide()
-            }
+            let myLike = Like(id: 0, myproductid: myProdID, hisproductid: mItem.ID, status: 0)
             if completion != nil{
-                completion!()
+                    completion!(myLike)
+                }
+            
             }
-        }
-    }.resume()
+        }.resume()
 }

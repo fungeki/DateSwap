@@ -14,4 +14,3 @@ import Foundation
  var gSwipeState = 0
  var gCategoryState = 0
  var gSelectedCategory = "Featured"
-

@@ -151,8 +151,8 @@ class ViewController: UIViewController {
     @IBAction func comingSoon(_ sender: Any) {
         popAlert(title: "Coming Soon", message: "stay tuned :)", view: self)
     }
-    func moveToMarketWithToast(){
-        performSegue(withIdentifier: "fromInfoToMarket", sender: 0)
+    func moveToMarketWithToast(matched: Bool){
+        performSegue(withIdentifier: "fromInfoToMarket", sender: matched)
     }
     
     @IBAction func touserStallAction(_ sender: Any) {
@@ -177,7 +177,9 @@ class ViewController: UIViewController {
             
         } else if segueID == "fromInfoToMarket" {
             guard let marketVC = segue.destination as? MarketViewController else {return}
+            guard let sender = sender else {return}
             marketVC.showSaveSegue = true
+            marketVC.isMatch = sender as! Bool
             
         }
 }
@@ -257,7 +259,8 @@ class ViewController: UIViewController {
             popAlert(title: "No Items", message: "To barter, please enter an item", view: self)
             
         } else {
-            performSegue(withIdentifier: "fromInfoToItemSelect", sender: 0)
+            self.performSegue(withIdentifier: "fromInfoToItemSelect", sender: 0)
+            
         }
     }
     

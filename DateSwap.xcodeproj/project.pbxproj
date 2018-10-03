@@ -20,6 +20,8 @@
 		8C2EB31220FE2D4800527D6F /* UserLikes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB31120FE2D4800527D6F /* UserLikes.swift */; };
 		8C2EB31420FE30BE00527D6F /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB31320FE30BE00527D6F /* ReviewViewController.swift */; };
 		8C2EB31620FE4AD200527D6F /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB31520FE4AD200527D6F /* ReviewTableViewCell.swift */; };
+		8C38C2D32165189F002DB101 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C38C2D22165189F002DB101 /* Match.swift */; };
+		8C38C2D5216529C0002DB101 /* CheckMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C38C2D4216529C0002DB101 /* CheckMatch.swift */; };
 		8C4321ED20E4D3740027FDA1 /* AndaleMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C4321EB20E4D3730027FDA1 /* AndaleMono.ttf */; };
 		8C43223420E67AD60027FDA1 /* RelationUISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43223320E67AD60027FDA1 /* RelationUISlider.swift */; };
 		8C43223620E77FC60027FDA1 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43223520E77FC60027FDA1 /* UIImageExtension.swift */; };
@@ -105,6 +107,8 @@
 		8C2EB31120FE2D4800527D6F /* UserLikes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLikes.swift; sourceTree = "<group>"; };
 		8C2EB31320FE30BE00527D6F /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		8C2EB31520FE4AD200527D6F /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
+		8C38C2D22165189F002DB101 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		8C38C2D4216529C0002DB101 /* CheckMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckMatch.swift; sourceTree = "<group>"; };
 		8C4321EB20E4D3730027FDA1 /* AndaleMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AndaleMono.ttf; sourceTree = "<group>"; };
 		8C43223320E67AD60027FDA1 /* RelationUISlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationUISlider.swift; sourceTree = "<group>"; };
 		8C43223520E77FC60027FDA1 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
@@ -194,6 +198,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8C38C2CE2165037D002DB101 /* DBCheck */ = {
+			isa = PBXGroup;
+			children = (
+				8C38C2D4216529C0002DB101 /* CheckMatch.swift */,
+			);
+			path = DBCheck;
+			sourceTree = "<group>";
+		};
 		8C4321E820E4D3410027FDA1 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +287,7 @@
 				8C2EB31120FE2D4800527D6F /* UserLikes.swift */,
 				8C2EB30B20FDEE7F00527D6F /* Messages.swift */,
 				8CC91BF32160297200BD57C9 /* Wish.swift */,
+				8C38C2D22165189F002DB101 /* Match.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -354,6 +367,7 @@
 				8C521ACE214A3F5E00E081F3 /* My_Stall_Management */,
 				8C5A3C1B2143DAAD003DC27C /* TransitionAnimation */,
 				8C5A3C182142C5CB003DC27C /* Globals */,
+				8C38C2CE2165037D002DB101 /* DBCheck */,
 				8C5A3C152142B73B003DC27C /* DBget */,
 				8C5A3C1221412655003DC27C /* DBpush */,
 				8CDC7B1A2139522700CFADEA /* Login */,
@@ -594,6 +608,7 @@
 				8C521AE92156545100E081F3 /* TradingItemSelectTableViewCell.swift in Sources */,
 				8CD4202C20D2827A006101A1 /* ProfileTableViewCell.swift in Sources */,
 				8C521ADC214ECA6700E081F3 /* LoadingDialog.swift in Sources */,
+				8C38C2D32165189F002DB101 /* Match.swift in Sources */,
 				8C9A101020CA99140077B544 /* ViewController.swift in Sources */,
 				8CEF6A3320D7A9DE007C39D5 /* ConditionUIButton.swift in Sources */,
 				8C5A3C172142B839003DC27C /* GetMyProfile.swift in Sources */,
@@ -652,6 +667,7 @@
 				8C2EB31420FE30BE00527D6F /* ReviewViewController.swift in Sources */,
 				8C5A3C232143E324003DC27C /* SwipeInteractionController.swift in Sources */,
 				8CC91BD9215C8D9F00BD57C9 /* CategoriesViewController.swift in Sources */,
+				8C38C2D5216529C0002DB101 /* CheckMatch.swift in Sources */,
 				8CBA6A6F20DEC2A2008CD18B /* PriceSliderUISlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -74,10 +74,24 @@ extension TradingItemSelectionViewController: UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if origin != nil {
-            self.dismiss(animated: true, completion: {
-                guard let targetVC =  self.origin else {return}
-                targetVC.moveToMarketWithToast()
+            JustHUD.shared.showInView(view: self.view, withHeader: "Loading", andFooter: "Please Wait")
+            pushLike(myProdID: gOnlineUserProducts[indexPath.row].ID, completion: { (likesDis) in
+                checkMatch(like: likesDis, completion: { (likes) in
+                    var didMatch = false
+                    if likes.count > 0{
+                       didMatch = true
+                    }
+                    JustHUD.shared.hide()
+                    self.dismiss(animated: true, completion: {
+                        
+                        guard let targetVC =  self.origin else {return}
+                        targetVC.moveToMarketWithToast(matched: didMatch)
+                    })
+                })
+            
+            
             })
+            
         } else {
         
         JustHUD.shared.showInView(view: self.view, withHeader: "Loading", andFooter: "please wait")

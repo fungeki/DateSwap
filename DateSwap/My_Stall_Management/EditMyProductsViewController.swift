@@ -12,6 +12,7 @@ import FirebaseStorage
 class EditMyProductsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, UITextFieldDelegate {
     var price: Int = 0
     
+    @IBOutlet weak var imageUICV: UICollectionView!
     @IBOutlet weak var estimatedPriceUITextField: ProductEditTextfield!
     var mKeyboardSize: CGRect?
 //    var wasKeyEdited = false
@@ -34,7 +35,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     @IBOutlet weak var dropDownMenu: UIStackView!
     @IBOutlet weak var conditionSelectionTableView: UITableView!
     @IBOutlet weak var dropDownConditionUIButton: ConditionUIButton!
-    @IBOutlet weak var addANewPhotoUIButton: UIButton!
+//    @IBOutlet weak var addANewPhotoUIButton: UIButton!
     @IBOutlet weak var headerLabel: UILabel!
     var product: Product?
     var locationOfProduct : Int?
@@ -63,7 +64,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         // Dispose of any resources that can be recreated.
     }
     override func viewDidLayoutSubviews() {
-        addANewPhotoUIButton.addJeansEffect(color: lightOrange(), cornerRadius: 20, lineWidth: 2, lineDashPattern: [9,9])
+       
         
         
     }
@@ -123,11 +124,11 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         estimatedPriceUITextField.text = inputThisProduct.price
         descriptionUITextView.text = inputThisProduct.description
         dropDownConditionUIButton.setTitle(returnCondition(inputThisProduct.condition), for: .normal)
-        addANewPhotoUIButton.setTitle("", for: .normal)
+//        addANewPhotoUIButton.setTitle("", for: .normal)
         //        addANewPhotoUIButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
-        addANewPhotoUIButton.sd_setBackgroundImage(with: URL(string: inputThisProduct.image), for: .normal)
-        addANewPhotoUIButton.layer.cornerRadius = 20
-        price = (inputThisProduct.price as NSString).integerValue
+//        addANewPhotoUIButton.sd_setBackgroundImage(with: URL(string: inputThisProduct.image), for: .normal)
+//        addANewPhotoUIButton.layer.cornerRadius = 20
+//        price = (inputThisProduct.price as NSString).integerValue
         descriptionUITextView.textColor = UIColor.brown
     }
     
@@ -312,9 +313,9 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         let compressedImage = resizeImage(image)
-        addANewPhotoUIButton.setTitle("", for: .normal)
-        addANewPhotoUIButton.setBackgroundImage(compressedImage, for: .normal)
-        addANewPhotoUIButton.layer.cornerRadius = 20
+//        addANewPhotoUIButton.setTitle("", for: .normal)
+//        addANewPhotoUIButton.setBackgroundImage(compressedImage, for: .normal)
+//        addANewPhotoUIButton.layer.cornerRadius = 20
         mImage2Upload = UIImageJPEGRepresentation(compressedImage, 1)! as NSData
         didEditPic = true
         picker.dismiss(animated: true, completion: nil)
@@ -377,6 +378,26 @@ extension EditMyProductsViewController: UITableViewDelegate, UITableViewDataSour
         dropDownConditionUIButton.setTitle("\(conditionListing[indexPath.row])", for: .normal)
         dropdownAnimation(toggle: conditionSelectionTableView.isHidden)
         condition = indexPath.row
+    }
+    
+}
+
+extension EditMyProductsViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imagesCell", for: indexPath) as! AddImageCollectionViewCell
+        cell.itemImageUIImage.layer.cornerRadius = 20
+        return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if indexPath.row == 0{
+           return CGSize(width: self.imageUICV.frame.width, height: 200)
+        }
+        return CGSize(width: self.view.frame.width / 3 - 1, height: 100)
+        
     }
     
 }

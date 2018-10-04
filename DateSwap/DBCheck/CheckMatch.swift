@@ -18,7 +18,8 @@ func checkMatch(like: Like ,completion: ((_ data: [Like]) -> Void)? = nil){
         DispatchQueue.main.async {
             guard let data = data else {return}
             do{
-                let mLike = try JSONDecoder().decode([Like].self, from: data)
+                var mLike = try JSONDecoder().decode([Like].self, from: data)
+                mLike.append(like)
                 if completion != nil{
                     completion!(mLike)
                 }

@@ -78,7 +78,7 @@ extension TradingItemSelectionViewController: UITableViewDelegate, UITableViewDa
             pushLike(myProdID: gOnlineUserProducts[indexPath.row].ID, completion: { (likesDis) in
                 checkMatch(like: likesDis, completion: { (likes) in
                     var didMatch = false
-                    if likes.count > 0{
+                    if likes.count > 1{
                        didMatch = true
                     }
                     JustHUD.shared.hide()

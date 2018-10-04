@@ -521,11 +521,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/My_Stall_Management/EditMyProductsViewController.swift"
-            timestampString = "560279678.610231"
+            timestampString = "560359720.733255"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "textViewDidEndEditing(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -537,7 +537,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/Popup/TradingItemSelectionViewController.swift"
-            timestampString = "560279678.610292"
+            timestampString = "560359720.7333471"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "5"
@@ -630,7 +630,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/Popup/TradingItemSelectionViewController.swift"
-            timestampString = "560279678.610346"
+            timestampString = "560359720.733403"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "57"
@@ -710,11 +710,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/My_Stall_Management/EditMyProductsViewController.swift"
-            timestampString = "560279678.610466"
+            timestampString = "560359720.7335089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "textViewDidBeginEditing(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -726,7 +726,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/Popup/TradingItemSelectionViewController.swift"
-            timestampString = "560279678.61051"
+            timestampString = "560359720.733572"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "95"
@@ -774,7 +774,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DateSwap/Popup/TradingItemSelectionViewController.swift"
-            timestampString = "560279678.6105601"
+            timestampString = "560359720.733622"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "76"
@@ -860,6 +860,22 @@
             endingLineNumber = "27"
             landmarkName = "getMyActiveProduct()"
             landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DateSwap/My_Stall_Management/EditMyProductsViewController.swift"
+            timestampString = "560359720.733707"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "doneClick()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

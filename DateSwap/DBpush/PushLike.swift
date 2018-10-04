@@ -13,10 +13,8 @@ func pushLike(myProdID: Int ,completion: ((_ data: Like) -> Void)? = nil){
         print("item error - no item!")
         return}
     let strToUp = "http://dateswap.herokuapp.com/addlike?userid=\(gOnlineUser.ID)&myproductid=\(myProdID)&hisproductid=\(mItem.ID)"
-    guard let escapedStr = strToUp.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
-        print("failed encoding string")
-        return}
-    guard let objUrl = URL(string: escapedStr) else {
+
+    guard let objUrl = URL(string: strToUp) else {
         print("failed to objectify url to string")
         return
     }

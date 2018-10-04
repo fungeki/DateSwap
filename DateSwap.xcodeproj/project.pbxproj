@@ -22,6 +22,8 @@
 		8C2EB31620FE4AD200527D6F /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2EB31520FE4AD200527D6F /* ReviewTableViewCell.swift */; };
 		8C38C2D32165189F002DB101 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C38C2D22165189F002DB101 /* Match.swift */; };
 		8C38C2D5216529C0002DB101 /* CheckMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C38C2D4216529C0002DB101 /* CheckMatch.swift */; };
+		8C38C2D721657820002DB101 /* PushMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C38C2D621657820002DB101 /* PushMatch.swift */; };
+		8C38C2D9216659EE002DB101 /* AddImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C38C2D8216659EE002DB101 /* AddImageCollectionViewCell.swift */; };
 		8C4321ED20E4D3740027FDA1 /* AndaleMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C4321EB20E4D3730027FDA1 /* AndaleMono.ttf */; };
 		8C43223420E67AD60027FDA1 /* RelationUISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43223320E67AD60027FDA1 /* RelationUISlider.swift */; };
 		8C43223620E77FC60027FDA1 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43223520E77FC60027FDA1 /* UIImageExtension.swift */; };
@@ -109,6 +111,8 @@
 		8C2EB31520FE4AD200527D6F /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		8C38C2D22165189F002DB101 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		8C38C2D4216529C0002DB101 /* CheckMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckMatch.swift; sourceTree = "<group>"; };
+		8C38C2D621657820002DB101 /* PushMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushMatch.swift; sourceTree = "<group>"; };
+		8C38C2D8216659EE002DB101 /* AddImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		8C4321EB20E4D3730027FDA1 /* AndaleMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AndaleMono.ttf; sourceTree = "<group>"; };
 		8C43223320E67AD60027FDA1 /* RelationUISlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationUISlider.swift; sourceTree = "<group>"; };
 		8C43223520E77FC60027FDA1 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
@@ -229,6 +233,7 @@
 				8C89A27D20DBD29200F900F5 /* EditMyProductsViewController.swift */,
 				8CBA6A6820DEADDB008CD18B /* ConditionSelectionTableViewCell.swift */,
 				8CE62D0620D93D4900AA167D /* ProductOverviewTableViewCell.swift */,
+				8C38C2D8216659EE002DB101 /* AddImageCollectionViewCell.swift */,
 			);
 			path = My_Stall_Management;
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 				8C521A9F2146ED4B00E081F3 /* PushProduct.swift */,
 				8CC91BF12160293200BD57C9 /* PushWish.swift */,
 				8CEB7B30216247FC00F66F95 /* PushLike.swift */,
+				8C38C2D621657820002DB101 /* PushMatch.swift */,
 			);
 			path = DBpush;
 			sourceTree = "<group>";
@@ -605,6 +611,7 @@
 				8CC91BF42160297200BD57C9 /* Wish.swift in Sources */,
 				8CBA6A7320E4C383008CD18B /* ProductCardUIView.swift in Sources */,
 				8CBA6A6720DEA708008CD18B /* Colors.swift in Sources */,
+				8C38C2D9216659EE002DB101 /* AddImageCollectionViewCell.swift in Sources */,
 				8C521AE92156545100E081F3 /* TradingItemSelectTableViewCell.swift in Sources */,
 				8CD4202C20D2827A006101A1 /* ProfileTableViewCell.swift in Sources */,
 				8C521ADC214ECA6700E081F3 /* LoadingDialog.swift in Sources */,
@@ -620,6 +627,7 @@
 				8C2EB30C20FDEE8000527D6F /* Messages.swift in Sources */,
 				77DDDC2B210138B800C0B13D /* MessagesTableViewCell.swift in Sources */,
 				8CBA6A6B20DEBDF0008CD18B /* ProductEditTextfield.swift in Sources */,
+				8C38C2D721657820002DB101 /* PushMatch.swift in Sources */,
 				8CEB7B2F2160E46E00F66F95 /* GetProductByID.swift in Sources */,
 				8C5A3C1A2142C5E7003DC27C /* LoggedInUsers.swift in Sources */,
 				8C5A3C1421412668003DC27C /* PushProfile.swift in Sources */,

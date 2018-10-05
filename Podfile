@@ -6,7 +6,15 @@ target 'DateSwap' do
   use_frameworks!
 
   # Pods for DateSwap
-
+  pod 'SDWebImage'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
+  pod 'GoogleSignIn'
+  pod 'FirebaseUI/Facebook'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'IQKeyboardManagerSwift', '5.0.0'
 
 
 end

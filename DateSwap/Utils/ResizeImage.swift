@@ -11,11 +11,11 @@ import UIKit
 func resizeImage(_ image: UIImage) -> UIImage {
     var actualHeight = Float(image.size.height)
     var actualWidth = Float(image.size.width)
-    let maxHeight: Float = 300.0
+    let maxHeight: Float = 400.0
     let maxWidth: Float = 400.0
     var imgRatio: Float = actualWidth / actualHeight
     let maxRatio: Float = maxWidth / maxHeight
-    let compressionQuality: Float = 0.5
+    let compressionQuality: Float = 0.7
     //50 percent compression
     if actualHeight > maxHeight || actualWidth > maxWidth {
         if imgRatio < maxRatio {

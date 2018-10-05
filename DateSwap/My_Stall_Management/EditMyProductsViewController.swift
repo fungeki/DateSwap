@@ -12,12 +12,18 @@ import FirebaseStorage
 class EditMyProductsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, UITextFieldDelegate {
     var price: Int = 0
     
+    fileprivate var longPressGesture: UILongPressGestureRecognizer!
+
     @IBOutlet weak var imageUICV: UICollectionView!
     @IBOutlet weak var estimatedPriceUITextField: ProductEditTextfield!
     var mKeyboardSize: CGRect?
 //    var wasKeyEdited = false
     var edit = false
     var didEditPic = false
+    var isAdditionalPhotosEnabled = false
+    var numOfCellSelected = 0
+    var imagePlaceholderArray = [#imageLiteral(resourceName: "card_empty_dark"), #imageLiteral(resourceName: "card_empty_dark"), #imageLiteral(resourceName: "card_empty_dark"), #imageLiteral(resourceName: "card_empty_dark")]
+    var testing = [0,1,2,3]
     
     @IBOutlet var superviewUIView: UIView!
     var mImage2Upload : NSData?
@@ -44,21 +50,28 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     
     override func viewDidLoad() {
         
-        super.viewDidLoad()
         
+        super.viewDidLoad()
+        longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(self.handleLongGesture(gesture:)))
+        imageUICV.addGestureRecognizer(longPressGesture)
 //        toolbarsInit()
         initialize()
         
         // Do any additional setup after loading the view.
     }
-    @objc func doneClick(){
-        
-        if self.view.frame.origin.y != 0 {
-            guard let keyboard = mKeyboardSize else {return}
-            self.view.frame.origin.y += keyboard.height
-        }
-        view.endEditing(true)
+    func endEditing() {
+        self.descriptionUITextView.endEditing(true)
+        self.productTitleUITextField.endEditing(true)
+        self.estimatedPriceUITextField.endEditing(true)
     }
+//    @objc func doneClick(){
+//
+//        if self.view.frame.origin.y != 0 {
+//            guard let keyboard = mKeyboardSize else {return}
+//            self.view.frame.origin.y += keyboard.height
+//        }
+//        view.endEditing(true)
+//    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -68,6 +81,23 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         
         
     }
+    @objc func handleLongGesture(gesture: UILongPressGestureRecognizer) {
+        switch(gesture.state) {
+            
+        case .began:
+            guard let selectedIndexPath = imageUICV.indexPathForItem(at: gesture.location(in: imageUICV)) else {
+                break
+            }
+            imageUICV.beginInteractiveMovementForItem(at: selectedIndexPath)
+        case .changed:
+            imageUICV.updateInteractiveMovementTargetPosition(gesture.location(in: gesture.view!))
+        case .ended:
+            imageUICV.endInteractiveMovement()
+        default:
+            imageUICV.cancelInteractiveMovement()
+        }
+    }
+
 //    @objc func keyboardWillShow(notification: NSNotification) {
 //        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
 //            if self.view.frame.origin.y == 0{
@@ -105,9 +135,9 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     
     func initialize (){
         descriptionUITextView.delegate = self
-        descriptionUITextView.layer.borderColor = brown()
-        productTitleUITextField.layer.borderColor = brown()
-        descriptionUITextView.layer.borderWidth = 4
+//        descriptionUITextView.layer.borderColor = brown()
+//        productTitleUITextField.layer.borderColor = brown()
+//        descriptionUITextView.layer.borderWidth = 4
         productTitleUITextField.delegate = self
         estimatedPriceUITextField.delegate = self
         
@@ -129,7 +159,10 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
 //        addANewPhotoUIButton.sd_setBackgroundImage(with: URL(string: inputThisProduct.image), for: .normal)
 //        addANewPhotoUIButton.layer.cornerRadius = 20
 //        price = (inputThisProduct.price as NSString).integerValue
-        descriptionUITextView.textColor = UIColor.brown
+        if descriptionUITextView.text.count == 0{
+            descriptionUITextView.textColor = UIColor.lightGray
+            descriptionUITextView.text = placeholerDescription
+        }
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
@@ -268,6 +301,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     }
     
     @IBAction func onclickDropdownConditionUIButton(_ sender: ConditionUIButton) {
+        endEditing()
         dropdownAnimation(toggle: conditionSelectionTableView.isHidden)
     }
     
@@ -283,10 +317,10 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         }
     }
     
-    @IBAction func openPhotoLibrary(_ sender: Any) {
+    func openPhotoLibrary(imageNum: Int) {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
-        
+        let cell = self.imageUICV.cellForItem(at: IndexPath(item: self.numOfCellSelected, section: 0)) as! AddImageCollectionViewCell
         let actionSheet =  UIAlertController(title: "Photo Source", message: "Please choose which source", preferredStyle: .actionSheet)
         actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action) in
             imagePickerController.sourceType = .camera
@@ -301,6 +335,26 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
                 self.present(imagePickerController, animated: true, completion: nil)
             }
         }))
+        if imageNum > 0 && imagePlaceholderArray[imageNum] != #imageLiteral(resourceName: "card_empty_dark"){
+            actionSheet.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (action) in
+                self.imagePlaceholderArray[imageNum] = #imageLiteral(resourceName: "card_empty_dark")
+                self.imageUICV.reloadData()
+//                let mainCell = self.imageUICV.cellForItem(at: IndexPath(item: self.numOfCellSelected, section: 0)) as! AddImageCollectionViewCell
+//                guard let mainImage = mainCell.itemImageUIImage.image?.cgImage?.copy() else {
+//                    return
+//                }
+//                let newMainImage = UIImage(cgImage: mainImage, scale: mainCell.itemImageUIImage.image!.scale, orientation: mainCell.itemImageUIImage.image!.imageOrientation)
+//                guard let cellImage = cell.itemImageUIImage.image?.cgImage?.copy() else {
+//                    return
+//                }
+//                let newCellImage = UIImage(cgImage: cellImage, scale: cell.itemImageUIImage.image!.scale, orientation: cell.itemImageUIImage.image!.imageOrientation)
+//                self.imagePlaceholderArray[self.numOfCellSelected] = mainCell.storedImage
+//                self.imagePlaceholderArray[0] = cell.storedImage
+//                self.imageUICV.reloadData()
+
+
+            }))
+        }
         actionSheet.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: { (action) in
             
         }))
@@ -310,9 +364,16 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+   @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         let compressedImage = resizeImage(image)
+        let cell = imageUICV.cellForItem(at: IndexPath(item: numOfCellSelected, section: 0)) as! AddImageCollectionViewCell
+    cell.itemImageUIImage.image = compressedImage
+        cell.isFull = true
+        if numOfCellSelected == 0 {
+            isAdditionalPhotosEnabled = true
+        }
+    imagePlaceholderArray[numOfCellSelected] = compressedImage
 //        addANewPhotoUIButton.setTitle("", for: .normal)
 //        addANewPhotoUIButton.setBackgroundImage(compressedImage, for: .normal)
 //        addANewPhotoUIButton.layer.cornerRadius = 20
@@ -389,17 +450,50 @@ extension EditMyProductsViewController: UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imagesCell", for: indexPath) as! AddImageCollectionViewCell
+        cell.itemImageUIImage.image = imagePlaceholderArray[indexPath.item]
         cell.itemImageUIImage.layer.cornerRadius = 20
+        
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if indexPath.row == 0{
-           return CGSize(width: self.imageUICV.frame.width, height: 200)
+        if indexPath.item == 0{
+           return CGSize(width: self.imageUICV.frame.width, height: self.imageUICV.frame.height * (2.0 / 3.0))
         }
-        return CGSize(width: self.view.frame.width / 3 - 1, height: 100)
+        return CGSize(width: self.view.frame.width / 3 - 1, height: self.imageUICV.frame.height * (1.0 / 3.0))
         
     }
     
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        endEditing()
+        if indexPath.item > 0 && !isAdditionalPhotosEnabled{
+            popAlert(title: "No Main Image", message: "Please make sure to have a main image", view: self)
+            return
+        }
+        numOfCellSelected = indexPath.item
+        print("cell selected : \(numOfCellSelected)")
+        openPhotoLibrary(imageNum: indexPath.item)
+    }
+    func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let item = imagePlaceholderArray[sourceIndexPath.item]
+        imagePlaceholderArray.remove(at: sourceIndexPath.item)
+        imagePlaceholderArray.insert(item, at: destinationIndexPath.item)
+        if imagePlaceholderArray[0] == #imageLiteral(resourceName: "card_empty_dark") {
+            isAdditionalPhotosEnabled = false
+        }
+    }
+//    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+//        if indexPath.row > 0 {
+//            return true
+//        }
+//        return false
+//    }
+//    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+//        let item = tableView
+//    }
 }
 
 

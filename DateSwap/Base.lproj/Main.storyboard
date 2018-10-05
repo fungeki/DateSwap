@@ -908,15 +908,15 @@
             <objects>
                 <viewController id="8ec-TZ-yJL" customClass="EditMyProductsViewController" customModule="DateSwap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="60w-tW-LGx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wu1-Dl-ZMd">
-                                <rect key="frame" x="0.0" y="58" width="375" height="942"/>
+                                <rect key="frame" x="0.0" y="58" width="375" height="609"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Editing Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="434-lb-zsh">
-                                <rect key="frame" x="141" y="24" width="93" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Editing Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="434-lb-zsh">
+                                <rect key="frame" x="142" y="24" width="91" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.98431372549999996" green="0.80077177720000003" blue="0.4268952654" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -931,11 +931,11 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Date's name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bdb-qa-Uzj" customClass="ProductEditTextfield" customModule="DateSwap" customModuleProvider="target">
-                                <rect key="frame" x="24" y="740" width="327" height="65"/>
+                                <rect key="frame" x="24" y="690" width="327" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="QTg-M9-SGd"/>
                                 </constraints>
-                                <color key="textColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="0.65490196079999996" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
@@ -943,24 +943,15 @@
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeftRight">
-                                        <real key="value" value="10"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YYu-C3-eld">
-                                <rect key="frame" x="24" y="813" width="327" height="200"/>
+                                <rect key="frame" x="24" y="755" width="327" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="cW9-oO-5Jy"/>
+                                    <constraint firstAttribute="height" constant="150" id="cW9-oO-5Jy"/>
                                 </constraints>
                                 <color key="textColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -988,26 +979,17 @@
                                 </connections>
                             </textView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Estimated Price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3pE-Ua-ZvA" customClass="ProductEditTextfield" customModule="DateSwap" customModuleProvider="target">
-                                <rect key="frame" x="95" y="1021" width="185" height="30"/>
+                                <rect key="frame" x="24" y="906" width="327" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="185" id="JVb-Ab-ugo"/>
                                     <constraint firstAttribute="height" constant="30" id="NDa-hy-t4a"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="paddingCorners">
                                         <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
@@ -1020,8 +1002,24 @@
                                     <segue destination="nE1-GP-IDx" kind="show" id="8ru-sp-3Bw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGW-3m-lAO" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
+                                <rect key="frame" x="112.5" y="944" width="150" height="40"/>
+                                <color key="backgroundColor" red="0.28905671830000002" green="0.63317435980000003" blue="0.20536994929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hUB-bl-34s"/>
+                                    <constraint firstAttribute="width" constant="150" id="sDX-7d-2PC"/>
+                                </constraints>
+                                <state key="normal" title="SAVE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uXk-LH-vTS">
-                                <rect key="frame" x="24" y="367" width="327" height="365"/>
+                                <rect key="frame" x="24" y="325" width="327" height="365"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wv7-sh-0iv" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="65"/>
@@ -1050,7 +1048,7 @@
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ege-US-MIx">
                                         <rect key="frame" x="0.0" y="65" width="327" height="300"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="300" id="PBy-Un-1Qj"/>
                                         </constraints>
@@ -1063,8 +1061,8 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="327" height="54"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaT-Bc-Sgb" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
-                                                            <rect key="frame" x="39" y="13" width="249" height="30"/>
+                                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaT-Bc-Sgb" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
+                                                            <rect key="frame" x="15" y="13" width="297" height="30"/>
                                                             <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="17"/>
                                                             <state key="normal" title="Button">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1090,9 +1088,9 @@
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="LaT-Bc-Sgb" firstAttribute="top" secondItem="DaL-Vr-YFg" secondAttribute="topMargin" constant="2" id="13f-Ev-dqk"/>
-                                                        <constraint firstItem="LaT-Bc-Sgb" firstAttribute="leading" secondItem="DaL-Vr-YFg" secondAttribute="leadingMargin" constant="24" id="qMd-vT-m8n"/>
+                                                        <constraint firstItem="LaT-Bc-Sgb" firstAttribute="leading" secondItem="DaL-Vr-YFg" secondAttribute="leadingMargin" id="qMd-vT-m8n"/>
                                                         <constraint firstAttribute="bottomMargin" secondItem="LaT-Bc-Sgb" secondAttribute="bottom" id="smR-B9-eJ3"/>
-                                                        <constraint firstAttribute="trailingMargin" secondItem="LaT-Bc-Sgb" secondAttribute="trailing" constant="24" id="uRs-se-RWd"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="LaT-Bc-Sgb" secondAttribute="trailing" id="uRs-se-RWd"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
@@ -1118,11 +1116,8 @@
                                 </constraints>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pC2-yF-tjb">
-                                <rect key="frame" x="0.0" y="58" width="375" height="301"/>
+                                <rect key="frame" x="0.0" y="58" width="375" height="259"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="301" id="39x-8v-2eF"/>
-                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="1" id="bAa-PD-HhJ">
                                     <size key="itemSize" width="171" height="143"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -1163,6 +1158,7 @@
                         <constraints>
                             <constraint firstItem="3pE-Ua-ZvA" firstAttribute="centerX" secondItem="N9s-eb-Yau" secondAttribute="centerX" id="1KO-bj-eYw"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="bdb-qa-Uzj" secondAttribute="trailing" constant="24" id="1uh-4l-NTC"/>
+                            <constraint firstItem="3pE-Ua-ZvA" firstAttribute="width" secondItem="YYu-C3-eld" secondAttribute="width" id="6oQ-aP-p9Y"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="bottom" secondItem="Wu1-Dl-ZMd" secondAttribute="bottom" id="Dvc-Hh-ziv"/>
                             <constraint firstItem="Wu1-Dl-ZMd" firstAttribute="top" secondItem="Jxx-YV-3eP" secondAttribute="bottom" constant="8" id="IAQ-sj-8XH"/>
                             <constraint firstItem="Wu1-Dl-ZMd" firstAttribute="trailing" secondItem="N9s-eb-Yau" secondAttribute="trailing" id="NZV-Re-lkr"/>
@@ -1170,17 +1166,20 @@
                             <constraint firstItem="Wu1-Dl-ZMd" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" id="TWX-bf-phI"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="YYu-C3-eld" secondAttribute="trailing" constant="24" id="TnY-n7-lxH"/>
                             <constraint firstItem="uXk-LH-vTS" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="Tyw-vn-V1G"/>
+                            <constraint firstItem="HGW-3m-lAO" firstAttribute="centerX" secondItem="YYu-C3-eld" secondAttribute="centerX" id="V3f-bZ-PHf"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="pC2-yF-tjb" secondAttribute="trailing" id="VFd-IQ-T9l"/>
+                            <constraint firstItem="HGW-3m-lAO" firstAttribute="top" secondItem="3pE-Ua-ZvA" secondAttribute="bottom" constant="8" id="XSO-0Y-6bd"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="uXk-LH-vTS" secondAttribute="trailing" constant="24" id="Y9t-90-4Xh"/>
                             <constraint firstItem="Jxx-YV-3eP" firstAttribute="centerY" secondItem="Mcd-T8-spc" secondAttribute="centerY" id="Yzj-uL-G0V"/>
-                            <constraint firstItem="YYu-C3-eld" firstAttribute="top" secondItem="bdb-qa-Uzj" secondAttribute="bottom" constant="8" id="ea9-Qa-3gJ"/>
+                            <constraint firstItem="pC2-yF-tjb" firstAttribute="height" secondItem="N9s-eb-Yau" secondAttribute="height" multiplier="0.4" id="cTU-pP-mIl"/>
+                            <constraint firstItem="YYu-C3-eld" firstAttribute="top" secondItem="bdb-qa-Uzj" secondAttribute="bottom" id="ea9-Qa-3gJ"/>
                             <constraint firstItem="434-lb-zsh" firstAttribute="centerX" secondItem="N9s-eb-Yau" secondAttribute="centerX" id="gLo-e7-2Hl"/>
                             <constraint firstItem="YYu-C3-eld" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="hwF-E0-CQc"/>
                             <constraint firstItem="uXk-LH-vTS" firstAttribute="top" secondItem="pC2-yF-tjb" secondAttribute="bottom" constant="8" id="kVj-er-KIk"/>
                             <constraint firstItem="pC2-yF-tjb" firstAttribute="top" secondItem="Jxx-YV-3eP" secondAttribute="bottom" constant="8" id="lfo-fa-K9N"/>
                             <constraint firstItem="bdb-qa-Uzj" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="n6G-sM-8vd"/>
-                            <constraint firstItem="bdb-qa-Uzj" firstAttribute="top" secondItem="uXk-LH-vTS" secondAttribute="bottom" constant="8" id="oPM-k6-4wd"/>
-                            <constraint firstItem="3pE-Ua-ZvA" firstAttribute="top" secondItem="YYu-C3-eld" secondAttribute="bottom" constant="8" id="pdP-UB-bDE"/>
+                            <constraint firstItem="bdb-qa-Uzj" firstAttribute="top" secondItem="uXk-LH-vTS" secondAttribute="bottom" id="oPM-k6-4wd"/>
+                            <constraint firstItem="3pE-Ua-ZvA" firstAttribute="top" secondItem="YYu-C3-eld" secondAttribute="bottom" constant="1" id="pdP-UB-bDE"/>
                             <constraint firstItem="Jxx-YV-3eP" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="rjA-CT-l50"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="Mcd-T8-spc" secondAttribute="trailing" constant="24" id="uVi-vb-eQe"/>
                             <constraint firstItem="434-lb-zsh" firstAttribute="top" secondItem="N9s-eb-Yau" secondAttribute="top" constant="4" id="vtY-Qg-ZvB"/>
@@ -1188,7 +1187,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N9s-eb-Yau"/>
                     </view>
-                    <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="conditionSelectionTableView" destination="ege-US-MIx" id="6MX-7L-AFd"/>
                         <outlet property="descriptionUITextView" destination="YYu-C3-eld" id="A3u-39-NzH"/>
@@ -1203,7 +1201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ash-Ua-HFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1472.8" y="-424.58770614692656"/>
+            <point key="canvasLocation" x="1472.8" y="-425.03748125937034"/>
         </scene>
         <!--Market View Controller-->
         <scene sceneID="Xg7-K1-kHS">
@@ -3181,6 +3179,6 @@
         <segue reference="bwV-s2-wft"/>
         <segue reference="kt3-VZ-zyo"/>
         <segue reference="8ru-sp-3Bw"/>
-        <segue reference="Zwd-T0-hKu"/>
+        <segue reference="dke-he-rSD"/>
     </inferredMetricsTieBreakers>
 </document>

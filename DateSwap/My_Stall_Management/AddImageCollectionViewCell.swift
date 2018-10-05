@@ -10,6 +10,7 @@ import UIKit
 
 class AddImageCollectionViewCell: UICollectionViewCell {
     
-
+    
+    var isFull = false
     @IBOutlet weak var itemImageUIImage: UIImageView!
 }

@@ -1002,22 +1002,6 @@
                                     <segue destination="nE1-GP-IDx" kind="show" id="8ru-sp-3Bw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGW-3m-lAO" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
-                                <rect key="frame" x="112.5" y="944" width="150" height="40"/>
-                                <color key="backgroundColor" red="0.28905671830000002" green="0.63317435980000003" blue="0.20536994929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="hUB-bl-34s"/>
-                                    <constraint firstAttribute="width" constant="150" id="sDX-7d-2PC"/>
-                                </constraints>
-                                <state key="normal" title="SAVE">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uXk-LH-vTS">
                                 <rect key="frame" x="24" y="325" width="327" height="365"/>
                                 <subviews>
@@ -1166,9 +1150,7 @@
                             <constraint firstItem="Wu1-Dl-ZMd" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" id="TWX-bf-phI"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="YYu-C3-eld" secondAttribute="trailing" constant="24" id="TnY-n7-lxH"/>
                             <constraint firstItem="uXk-LH-vTS" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="Tyw-vn-V1G"/>
-                            <constraint firstItem="HGW-3m-lAO" firstAttribute="centerX" secondItem="YYu-C3-eld" secondAttribute="centerX" id="V3f-bZ-PHf"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="pC2-yF-tjb" secondAttribute="trailing" id="VFd-IQ-T9l"/>
-                            <constraint firstItem="HGW-3m-lAO" firstAttribute="top" secondItem="3pE-Ua-ZvA" secondAttribute="bottom" constant="8" id="XSO-0Y-6bd"/>
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="uXk-LH-vTS" secondAttribute="trailing" constant="24" id="Y9t-90-4Xh"/>
                             <constraint firstItem="Jxx-YV-3eP" firstAttribute="centerY" secondItem="Mcd-T8-spc" secondAttribute="centerY" id="Yzj-uL-G0V"/>
                             <constraint firstItem="pC2-yF-tjb" firstAttribute="height" secondItem="N9s-eb-Yau" secondAttribute="height" multiplier="0.4" id="cTU-pP-mIl"/>

@@ -66,3 +66,54 @@ func showToast(message : String, controller: UIViewController, delay: TimeInterv
         img.removeFromSuperview()
     })
 }
+
+
+func showMatchToast(controller: UIViewController, delay: TimeInterval) {
+    
+    let img = UIImageView(frame: CGRect(x: controller.view.frame.size.width / 4, y: controller.view.frame.size.height / 4 + 40, width: controller.view.frame.width / 2, height: controller.view.frame.size.height / 2))
+    img.image = #imageLiteral(resourceName: "ic_its_a_match")
+    img.alpha = 1.0
+    img.clipsToBounds = true
+    img.contentMode = .scaleAspectFit
+    img.layer.cornerRadius = controller.view.frame.size.height / 4
+    controller.view.addSubview(img)
+    
+//    let star1 = UIImageView(frame: CGRect(x: controller.view.frame.size.width / 4, y: controller.view.frame.size.height / 2 - img.frame.size.height / 4 + 40, width: 25, height: 25))
+//    star1.image = #imageLiteral(resourceName: "ic_match_star")
+//    star1.alpha = 1.0
+//    star1.transform = CGAffineTransform(rotationAngle: 45.0)
+//    star1.clipsToBounds = true
+//    star1.contentMode = .scaleAspectFit
+//    controller.view.addSubview(star1)
+//
+//    let star2 = UIImageView(frame: CGRect(x: controller.view.frame.size.width / 4 + 25, y: controller.view.frame.size.height / 2 - img.frame.size.height / 4 + 25, width: 50, height: 50))
+//    star2.image = #imageLiteral(resourceName: "ic_match_star")
+//    star2.alpha = 1.0
+//    star2.transform = CGAffineTransform(rotationAngle: 45.0)
+//    star2.clipsToBounds = true
+//    star2.contentMode = .scaleAspectFit
+//    controller.view.addSubview(star1)
+    
+    UIView.animate(withDuration: 2.5, delay: delay, options: .curveEaseOut, animations: {
+        img.alpha = 0.0
+    }, completion: {(isCompleted) in
+        img.removeFromSuperview()
+    })
+}
+
+func showOfferToast(controller: UIViewController, delay: TimeInterval) {
+    
+    let img = UIImageView(frame: CGRect(x: controller.view.frame.size.width / 4, y: controller.view.frame.size.height / 4 + 40, width: controller.view.frame.width / 2, height: controller.view.frame.size.height / 2))
+    img.image = #imageLiteral(resourceName: "ic_offer_delivered")
+    img.alpha = 1.0
+    img.clipsToBounds = true
+    img.contentMode = .scaleAspectFit
+    img.layer.cornerRadius = controller.view.frame.size.height / 4
+    controller.view.addSubview(img)
+    
+    UIView.animate(withDuration: 2.5, delay: delay, options: .curveEaseOut, animations: {
+        img.alpha = 0.0
+    }, completion: {(isCompleted) in
+        img.removeFromSuperview()
+    })
+}

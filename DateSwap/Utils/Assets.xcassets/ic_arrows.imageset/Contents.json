@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "ic_match_star.pdf",
+      "filename" : "icons8-data_in_both_directions.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "icons8-data_in_both_directions-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "icons8-data_in_both_directions-2.png",
       "scale" : "3x"
     }
   ],

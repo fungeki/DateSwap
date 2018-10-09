@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import Firebase
 import FirebaseStorage
+import FirebaseDatabase
 
 // Get a reference to the storage service using the default Firebase App
 let storage = Storage.storage()
@@ -19,3 +20,5 @@ let storageRef = storage.reference()
 //referneces to child Storages
 let productsStorageRef = storageRef.child("products")
 let usersStorageRef = storageRef.child("users")
+
+var dataRef: DatabaseReference!

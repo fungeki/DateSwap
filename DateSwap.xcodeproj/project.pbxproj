@@ -43,6 +43,7 @@
 		8C5A3C1A2142C5E7003DC27C /* LoggedInUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C192142C5E7003DC27C /* LoggedInUsers.swift */; };
 		8C5A3C232143E324003DC27C /* SwipeInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C222143E324003DC27C /* SwipeInteractionController.swift */; };
 		8C5A3C272143F6CD003DC27C /* CicularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C262143F6CD003DC27C /* CicularTransition.swift */; };
+		8C664396216ACAC40010929D /* ProductsNotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C664395216ACAC40010929D /* ProductsNotificationTableViewCell.swift */; };
 		8C7405F420D24CE700FF8E9C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7405F320D24CE700FF8E9C /* Product.swift */; };
 		8C89A27E20DBD29200F900F5 /* EditMyProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C89A27D20DBD29200F900F5 /* EditMyProductsViewController.swift */; };
 		8C9A100E20CA99140077B544 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A100D20CA99140077B544 /* AppDelegate.swift */; };
@@ -78,6 +79,8 @@
 		8CE62D0B20DB84C000AA167D /* ugly_cats_06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8CE62D0A20DB84C000AA167D /* ugly_cats_06.jpg */; };
 		8CE6897A2139ACA900208BEB /* PrivateChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE689792139ACA800208BEB /* PrivateChatTableViewCell.swift */; };
 		8CE6897C2139ACE700208BEB /* PrivateChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE6897B2139ACE700208BEB /* PrivateChatViewController.swift */; };
+		8CE8D05C216AC10900A5807F /* OverviewNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8D05B216AC10900A5807F /* OverviewNotificationViewController.swift */; };
+		8CE8D05E216AC1F500A5807F /* ChatsOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8D05D216AC1F500A5807F /* ChatsOverviewTableViewCell.swift */; };
 		8CEB7B2D2160E1E600F66F95 /* GetWishlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEB7B2C2160E1E600F66F95 /* GetWishlist.swift */; };
 		8CEB7B2F2160E46E00F66F95 /* GetProductByID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEB7B2E2160E46E00F66F95 /* GetProductByID.swift */; };
 		8CEB7B31216247FC00F66F95 /* PushLike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEB7B30216247FC00F66F95 /* PushLike.swift */; };
@@ -132,6 +135,7 @@
 		8C5A3C192142C5E7003DC27C /* LoggedInUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInUsers.swift; sourceTree = "<group>"; };
 		8C5A3C222143E324003DC27C /* SwipeInteractionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeInteractionController.swift; sourceTree = "<group>"; };
 		8C5A3C262143F6CD003DC27C /* CicularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CicularTransition.swift; sourceTree = "<group>"; };
+		8C664395216ACAC40010929D /* ProductsNotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsNotificationTableViewCell.swift; sourceTree = "<group>"; };
 		8C7405F320D24CE700FF8E9C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		8C89A27D20DBD29200F900F5 /* EditMyProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMyProductsViewController.swift; sourceTree = "<group>"; };
 		8C9A100A20CA99140077B544 /* DateSwap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateSwap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +174,8 @@
 		8CE62D0A20DB84C000AA167D /* ugly_cats_06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ugly_cats_06.jpg; sourceTree = "<group>"; };
 		8CE689792139ACA800208BEB /* PrivateChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateChatTableViewCell.swift; sourceTree = "<group>"; };
 		8CE6897B2139ACE700208BEB /* PrivateChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateChatViewController.swift; sourceTree = "<group>"; };
+		8CE8D05B216AC10900A5807F /* OverviewNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewNotificationViewController.swift; sourceTree = "<group>"; };
+		8CE8D05D216AC1F500A5807F /* ChatsOverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsOverviewTableViewCell.swift; sourceTree = "<group>"; };
 		8CEB7B2C2160E1E600F66F95 /* GetWishlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWishlist.swift; sourceTree = "<group>"; };
 		8CEB7B2E2160E46E00F66F95 /* GetProductByID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductByID.swift; sourceTree = "<group>"; };
 		8CEB7B30216247FC00F66F95 /* PushLike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushLike.swift; sourceTree = "<group>"; };
@@ -366,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				8CC91BE9215D683300BD57C9 /* DateSwap.entitlements */,
+				8CE8D059216AC02F00A5807F /* NotificationCenter */,
 				8CC91BE0215D4DE400BD57C9 /* Settings */,
 				8CC91BCB215B07EF00BD57C9 /* Market */,
 				8C521AE52156523A00E081F3 /* Popup */,
@@ -429,6 +436,24 @@
 				8CDC7B1B2139524200CFADEA /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		8CE8D059216AC02F00A5807F /* NotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				8CE8D05A216AC04C00A5807F /* Overview */,
+			);
+			path = NotificationCenter;
+			sourceTree = "<group>";
+		};
+		8CE8D05A216AC04C00A5807F /* Overview */ = {
+			isa = PBXGroup;
+			children = (
+				8CE8D05B216AC10900A5807F /* OverviewNotificationViewController.swift */,
+				8CE8D05D216AC1F500A5807F /* ChatsOverviewTableViewCell.swift */,
+				8C664395216ACAC40010929D /* ProductsNotificationTableViewCell.swift */,
+			);
+			path = Overview;
 			sourceTree = "<group>";
 		};
 		A80EBDB51CA566EF2B44C45D /* Pods */ = {
@@ -610,7 +635,9 @@
 				8CE62D0720D93D4900AA167D /* ProductOverviewTableViewCell.swift in Sources */,
 				8C43223620E77FC60027FDA1 /* UIImageExtension.swift in Sources */,
 				8CC91BD1215B085500BD57C9 /* MarketCollectionViewCell.swift in Sources */,
+				8C664396216ACAC40010929D /* ProductsNotificationTableViewCell.swift in Sources */,
 				8CC91BF42160297200BD57C9 /* Wish.swift in Sources */,
+				8CE8D05C216AC10900A5807F /* OverviewNotificationViewController.swift in Sources */,
 				8CBA6A7320E4C383008CD18B /* ProductCardUIView.swift in Sources */,
 				8CBA6A6720DEA708008CD18B /* Colors.swift in Sources */,
 				8C38C2D9216659EE002DB101 /* AddImageCollectionViewCell.swift in Sources */,
@@ -652,6 +679,7 @@
 				8CEB7B2D2160E1E600F66F95 /* GetWishlist.swift in Sources */,
 				8CD4202820D2824C006101A1 /* ProfileViewController.swift in Sources */,
 				8C521AD7214C267400E081F3 /* ResizeImage.swift in Sources */,
+				8CE8D05E216AC1F500A5807F /* ChatsOverviewTableViewCell.swift in Sources */,
 				8CC91BF22160293200BD57C9 /* PushWish.swift in Sources */,
 				8CEB7B31216247FC00F66F95 /* PushLike.swift in Sources */,
 				8C2EB30220EBA91200527D6F /* Profile.swift in Sources */,

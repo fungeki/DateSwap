@@ -48,4 +48,9 @@ func grayTwo()-> CGColor{
     return color
 }
 
+func placeholerColor()-> CGColor{
+    let color = UIColor(red: 199.0 / 255.0, green: 199.0 / 255.0, blue: 205.0 / 255.0, alpha: 1.0).cgColor
+    return color
+}
+
 

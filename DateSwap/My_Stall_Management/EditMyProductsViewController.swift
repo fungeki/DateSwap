@@ -57,6 +57,11 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
 //        toolbarsInit()
         initialize()
         
+        dropDownConditionUIButton.layer.cornerRadius = dropDownConditionUIButton.frame.height/2
+        dropDownConditionUIButton.layer.masksToBounds = true
+        
+       
+        
         // Do any additional setup after loading the view.
     }
     func endEditing() {
@@ -78,6 +83,14 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     }
     override func viewDidLayoutSubviews() {
        
+        productTitleUITextField.layer.cornerRadius = productTitleUITextField.frame.size.height/2
+        productTitleUITextField.layer.masksToBounds = true
+        
+        estimatedPriceUITextField.layer.cornerRadius = estimatedPriceUITextField.frame.size.height/2
+        estimatedPriceUITextField.layer.masksToBounds = true
+        
+        estimatedPriceUITextField.attributedPlaceholder = NSAttributedString(string: "Estimated Price",attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+        
         
         
     }
@@ -145,7 +158,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         conditionSelectionTableView.isHidden = true
         guard let inputThisProduct = product else {
             self.descriptionUITextView.text = placeholerDescription
-            self.descriptionUITextView.textColor = UIColor.lightGray
+            self.descriptionUITextView.textColor = UIColor(cgColor: placeholerColor())
             return}
         edit = true
         let conditionVal = inputThisProduct.condition
@@ -160,7 +173,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
 //        addANewPhotoUIButton.layer.cornerRadius = 20
 //        price = (inputThisProduct.price as NSString).integerValue
         if descriptionUITextView.text.count == 0{
-            descriptionUITextView.textColor = UIColor.lightGray
+            //descriptionUITextView.textColor = UIColor.lightGray
             descriptionUITextView.text = placeholerDescription
         }
     }
@@ -168,7 +181,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
             textView.text = placeholerDescription
-            textView.textColor = UIColor.lightGray
+            textView.textColor = UIColor(cgColor: placeholerColor())
         }
         
     }

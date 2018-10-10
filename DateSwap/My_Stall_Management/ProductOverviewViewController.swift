@@ -127,11 +127,11 @@ extension ProductOverviewViewController: UITableViewDelegate, UITableViewDataSou
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailsVC =  segue.destination as? EditMyProductsViewController else {return}
         if sender == nil {
-            detailsVC.pageHeader = "Add / Edit Item"
+            detailsVC.pageHeader = "ADD ITEM"
             detailsVC.product = nil
         }else{
             guard let product = sender as? Product else {return}
-            detailsVC.pageHeader = "Editing Date"
+            detailsVC.pageHeader = "EDITING ITEM"
             detailsVC.product = product
             detailsVC.edit = true
         }

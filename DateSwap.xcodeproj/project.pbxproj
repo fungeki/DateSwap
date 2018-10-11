@@ -46,6 +46,9 @@
 		8C5A3C1A2142C5E7003DC27C /* LoggedInUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C192142C5E7003DC27C /* LoggedInUsers.swift */; };
 		8C5A3C232143E324003DC27C /* SwipeInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C222143E324003DC27C /* SwipeInteractionController.swift */; };
 		8C5A3C272143F6CD003DC27C /* CicularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A3C262143F6CD003DC27C /* CicularTransition.swift */; };
+		8C5E9282216F84E200F7D06D /* NotificationsPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5E9281216F84E200F7D06D /* NotificationsPlaceholder.swift */; };
+		8C5E9284216F851600F7D06D /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5E9283216F851600F7D06D /* Notification.swift */; };
+		8C5E9286216F864300F7D06D /* GetMyNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5E9285216F864300F7D06D /* GetMyNotifications.swift */; };
 		8C7405F420D24CE700FF8E9C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7405F320D24CE700FF8E9C /* Product.swift */; };
 		8C89A27E20DBD29200F900F5 /* EditMyProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C89A27D20DBD29200F900F5 /* EditMyProductsViewController.swift */; };
 		8C9A100E20CA99140077B544 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A100D20CA99140077B544 /* AppDelegate.swift */; };
@@ -138,6 +141,9 @@
 		8C5A3C192142C5E7003DC27C /* LoggedInUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInUsers.swift; sourceTree = "<group>"; };
 		8C5A3C222143E324003DC27C /* SwipeInteractionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeInteractionController.swift; sourceTree = "<group>"; };
 		8C5A3C262143F6CD003DC27C /* CicularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CicularTransition.swift; sourceTree = "<group>"; };
+		8C5E9281216F84E200F7D06D /* NotificationsPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsPlaceholder.swift; sourceTree = "<group>"; };
+		8C5E9283216F851600F7D06D /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		8C5E9285216F864300F7D06D /* GetMyNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyNotifications.swift; sourceTree = "<group>"; };
 		8C7405F320D24CE700FF8E9C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		8C89A27D20DBD29200F900F5 /* EditMyProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMyProductsViewController.swift; sourceTree = "<group>"; };
 		8C9A100A20CA99140077B544 /* DateSwap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateSwap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -317,6 +323,7 @@
 				8C2EB30B20FDEE7F00527D6F /* Messages.swift */,
 				8CC91BF32160297200BD57C9 /* Wish.swift */,
 				8C38C2D22165189F002DB101 /* Match.swift */,
+				8C5E9283216F851600F7D06D /* Notification.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -343,6 +350,7 @@
 				8CEB7B2C2160E1E600F66F95 /* GetWishlist.swift */,
 				8CEB7B2E2160E46E00F66F95 /* GetProductByID.swift */,
 				8CEB7B322163DAC200F66F95 /* GetDisplayProduct.swift */,
+				8C5E9285216F864300F7D06D /* GetMyNotifications.swift */,
 			);
 			path = DBget;
 			sourceTree = "<group>";
@@ -353,6 +361,7 @@
 				8C5A3C192142C5E7003DC27C /* LoggedInUsers.swift */,
 				8C521ACF214BCE8400E081F3 /* StorageReference.swift */,
 				8CED7B31215970110064DBAF /* Placeholders.swift */,
+				8C5E9281216F84E200F7D06D /* NotificationsPlaceholder.swift */,
 			);
 			path = Globals;
 			sourceTree = "<group>";
@@ -649,10 +658,12 @@
 				8C5A3C172142B839003DC27C /* GetMyProfile.swift in Sources */,
 				8CBA6A7120E0E75C008CD18B /* DescriptionUITextView.swift in Sources */,
 				8CC91BEF215EBB8800BD57C9 /* Toasty.swift in Sources */,
+				8C5E9286216F864300F7D06D /* GetMyNotifications.swift in Sources */,
 				8C521AE22154C85400E081F3 /* GetProductID.swift in Sources */,
 				8CE6897C2139ACE700208BEB /* PrivateChatViewController.swift in Sources */,
 				8C2EB31620FE4AD200527D6F /* ReviewTableViewCell.swift in Sources */,
 				8C2EB30C20FDEE8000527D6F /* Messages.swift in Sources */,
+				8C5E9284216F851600F7D06D /* Notification.swift in Sources */,
 				77DDDC2B210138B800C0B13D /* MessagesTableViewCell.swift in Sources */,
 				8CBA6A6B20DEBDF0008CD18B /* ProductEditTextfield.swift in Sources */,
 				8C38C2D721657820002DB101 /* PushMatch.swift in Sources */,
@@ -692,6 +703,7 @@
 				8C2EB30E20FE2C1500527D6F /* Rating.swift in Sources */,
 				8C9A100E20CA99140077B544 /* AppDelegate.swift in Sources */,
 				777051DD20FE3AA800D7F54D /* NewMatchesCollectionViewCell.swift in Sources */,
+				8C5E9282216F84E200F7D06D /* NotificationsPlaceholder.swift in Sources */,
 				8C521AE42154E70A00E081F3 /* CharSet.swift in Sources */,
 				8C0EFECB2131CE0B00B3B8D7 /* EditableLableUILabel.swift in Sources */,
 				8CEF6A3120D7A5C6007C39D5 /* JeansEffect.swift in Sources */,

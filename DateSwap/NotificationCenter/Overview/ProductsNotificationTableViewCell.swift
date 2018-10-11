@@ -10,6 +10,10 @@ import UIKit
 
 class ProductsNotificationTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var myItemUIImageView: UIImageView!
+    
+    @IBOutlet weak var productTitleUILabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

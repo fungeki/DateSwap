@@ -23,6 +23,7 @@ class OverviewNotificationViewController: UIViewController {
 //    var relationHeight: CGFloat = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        GetMyNotifications()
 //        let realOrigin = self.view.convert(chatsTable.frame.origin, to: self.view)
 //         let heightOrigin = view.frame.maxY - (chatsTable.frame.height + realOrigin.y)
 //        relationHeight = (heightOrigin + chatsTable.frame.height) / chatsTable.frame.height

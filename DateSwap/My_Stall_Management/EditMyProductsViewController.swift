@@ -465,6 +465,7 @@ extension EditMyProductsViewController: UICollectionViewDelegate, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imagesCell", for: indexPath) as! AddImageCollectionViewCell
         cell.itemImageUIImage.image = imagePlaceholderArray[indexPath.item]
         cell.itemImageUIImage.layer.cornerRadius = 20
+        cell.itemImageUIImage.addJeansEffect(color: lightOrange(), cornerRadius: 20, lineWidth: 2, lineDashPattern: [9,9])
         
         return cell
     }

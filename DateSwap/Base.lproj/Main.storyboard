@@ -3310,15 +3310,15 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysM-Ag-TRK" customClass="EditableLableUILabel" customModule="DateSwap" customModuleProvider="target">
-                                                    <rect key="frame" x="237" y="14" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysM-Ag-TRK" customClass="EditableLableUILabel" customModule="DateSwap" customModuleProvider="target">
+                                                    <rect key="frame" x="268.5" y="14" width="10.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="ysM-Ag-TRK" firstAttribute="top" secondItem="iAe-kt-87Y" secondAttribute="topMargin" constant="3" id="0yk-Z7-2Ix"/>
                                                 <constraint firstItem="l8a-kb-8NI" firstAttribute="leading" secondItem="iAe-kt-87Y" secondAttribute="leading" constant="12" id="41U-42-Rit"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Fib-yd-a2w" secondAttribute="trailing" constant="8" id="45M-JP-kJs"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="9JF-Kg-f46" secondAttribute="bottom" constant="4" id="7QE-U3-MlM"/>
@@ -3330,6 +3330,7 @@
                                                 <constraint firstItem="1qT-sU-gky" firstAttribute="top" secondItem="iAe-kt-87Y" secondAttribute="topMargin" constant="4" id="X6s-Rd-EVM"/>
                                                 <constraint firstItem="l8a-kb-8NI" firstAttribute="centerY" secondItem="iAe-kt-87Y" secondAttribute="centerY" id="eC4-zG-eJK"/>
                                                 <constraint firstItem="FRC-3c-7oX" firstAttribute="top" secondItem="l8a-kb-8NI" secondAttribute="top" id="fWM-tg-02m"/>
+                                                <constraint firstItem="1qT-sU-gky" firstAttribute="leading" secondItem="ysM-Ag-TRK" secondAttribute="trailing" constant="14" id="wFV-QP-lqe"/>
                                                 <constraint firstItem="l8a-kb-8NI" firstAttribute="height" secondItem="iAe-kt-87Y" secondAttribute="height" multiplier="0.8" id="zjq-2W-pc0"/>
                                             </constraints>
                                         </tableViewCellContentView>

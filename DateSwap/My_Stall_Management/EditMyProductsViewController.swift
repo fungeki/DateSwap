@@ -13,7 +13,6 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     var price: Int = 0
     
     fileprivate var longPressGesture: UILongPressGestureRecognizer!
-
     @IBOutlet weak var imageUICV: UICollectionView!
     @IBOutlet weak var estimatedPriceUITextField: ProductEditTextfield!
     var mKeyboardSize: CGRect?
@@ -60,6 +59,9 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         dropDownConditionUIButton.layer.cornerRadius = dropDownConditionUIButton.frame.height/2
         dropDownConditionUIButton.layer.masksToBounds = true
         
+      
+      
+        
        
         
         // Do any additional setup after loading the view.
@@ -82,9 +84,15 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         // Dispose of any resources that can be recreated.
     }
     override func viewDidLayoutSubviews() {
+        
        
+        
+         conditionSelectionTableView.rowHeight = 50.0
+       
+        
         productTitleUITextField.layer.cornerRadius = productTitleUITextField.frame.size.height/2
         productTitleUITextField.layer.masksToBounds = true
+        
         
         estimatedPriceUITextField.layer.cornerRadius = estimatedPriceUITextField.frame.size.height/2
         estimatedPriceUITextField.layer.masksToBounds = true
@@ -443,9 +451,36 @@ extension EditMyProductsViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = conditionSelectionTableView.dequeueReusableCell(withIdentifier: "conditionChoiceCell", for: indexPath) as! ConditionSelectionTableViewCell
+        
+        let choiceCondition = conditionListing[indexPath.row]
         cell.selectionStyle = .none
         cell.conditionNameUIButton.isEnabled = false
         cell.conditionNameUIButton.setTitle("\(conditionListing[indexPath.row])",for: .disabled)
+        
+        
+        cell.conditionNameUIButton.layer.cornerRadius = 15.0
+        cell.backgroundColor = UIColor.clear
+        
+        switch choiceCondition{
+        case "New":
+                 cell.conditionNameUIButton.backgroundColor = UIColor.black
+                cell.conditionNameUIButton.borderWidth = 3
+                cell.conditionNameUIButton.borderColor = UIColor.brown
+            break
+            
+        case "Like New":
+                 cell.conditionNameUIButton.backgroundColor = UIColor.black
+                cell.conditionNameUIButton.borderWidth = 3
+                cell.conditionNameUIButton.borderColor = UIColor.brown
+            break
+        default:
+            cell.conditionNameUIButton.backgroundColor = UIColor.orange
+            cell.conditionNameUIButton.borderWidth = 3
+            cell.conditionNameUIButton.borderColor = UIColor.brown
+        }
+        
+    
+        
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -460,22 +495,23 @@ extension EditMyProductsViewController: UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4
     }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if indexPath.item == 0{
+            return CGSize(width: self.imageUICV.frame.width, height: self.imageUICV.frame.height * (2.0 / 3.0))
+        }
+        return CGSize(width: self.view.frame.width / 3 - 1, height: self.imageUICV.frame.height * (1.0 / 3.0))
+        
+    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imagesCell", for: indexPath) as! AddImageCollectionViewCell
         cell.itemImageUIImage.image = imagePlaceholderArray[indexPath.item]
         cell.itemImageUIImage.layer.cornerRadius = 20
-        cell.itemImageUIImage.addJeansEffect(color: lightOrange(), cornerRadius: 20, lineWidth: 2, lineDashPattern: [9,9])
+        cell.itemImageUIImage.addJeansEffect(color: grayFour(), cornerRadius: 20, lineWidth: 2, lineDashPattern: [9,9])
         
         return cell
     }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if indexPath.item == 0{
-           return CGSize(width: self.imageUICV.frame.width, height: self.imageUICV.frame.height * (2.0 / 3.0))
-        }
-        return CGSize(width: self.view.frame.width / 3 - 1, height: self.imageUICV.frame.height * (1.0 / 3.0))
-        
-    }
+   
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

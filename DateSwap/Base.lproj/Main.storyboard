@@ -1042,29 +1042,26 @@
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ege-US-MIx">
                                         <rect key="frame" x="0.0" y="65" width="327" height="300"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="300" id="PBy-Un-1Qj"/>
                                         </constraints>
                                         <color key="separatorColor" red="0.94136577079999995" green="0.62133409939999995" blue="0.1478117447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="conditionChoiceCell" rowHeight="54" id="4iB-ZI-S4n" customClass="ConditionSelectionTableViewCell" customModule="DateSwap" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="327" height="54"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="conditionChoiceCell" rowHeight="30" id="4iB-ZI-S4n" customClass="ConditionSelectionTableViewCell" customModule="DateSwap" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="327" height="30"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4iB-ZI-S4n" id="DaL-Vr-YFg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="54"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="30"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaT-Bc-Sgb" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
-                                                            <rect key="frame" x="15" y="13" width="297" height="30"/>
-                                                            <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="17"/>
+                                                            <rect key="frame" x="15" y="13" width="297" height="6"/>
+                                                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                                             <state key="normal" title="Button">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
                                                             <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="20"/>
-                                                                </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                                     <real key="value" value="6"/>
                                                                 </userDefinedRuntimeAttribute>
@@ -1079,9 +1076,18 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </button>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_symbal_new" translatesAutoresizingMaskIntoConstraints="NO" id="RoC-SC-hJA">
+                                                            <rect key="frame" x="0.0" y="6" width="18" height="18"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="RoC-SC-hJA" secondAttribute="height" multiplier="1:1" id="89V-1m-o3c"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="LaT-Bc-Sgb" firstAttribute="top" secondItem="DaL-Vr-YFg" secondAttribute="topMargin" constant="2" id="13f-Ev-dqk"/>
+                                                        <constraint firstAttribute="bottom" secondItem="RoC-SC-hJA" secondAttribute="bottom" constant="6" id="E4G-X2-DXh"/>
+                                                        <constraint firstItem="RoC-SC-hJA" firstAttribute="leading" secondItem="DaL-Vr-YFg" secondAttribute="leading" id="GIw-5F-Kt0"/>
+                                                        <constraint firstItem="RoC-SC-hJA" firstAttribute="top" secondItem="DaL-Vr-YFg" secondAttribute="top" constant="6" id="oag-lU-guG"/>
                                                         <constraint firstItem="LaT-Bc-Sgb" firstAttribute="leading" secondItem="DaL-Vr-YFg" secondAttribute="leadingMargin" id="qMd-vT-m8n"/>
                                                         <constraint firstAttribute="bottomMargin" secondItem="LaT-Bc-Sgb" secondAttribute="bottom" id="smR-B9-eJ3"/>
                                                         <constraint firstAttribute="trailingMargin" secondItem="LaT-Bc-Sgb" secondAttribute="trailing" id="uRs-se-RWd"/>
@@ -3366,6 +3372,7 @@
         <image name="ic_rating_star_empty" width="21" height="20"/>
         <image name="ic_settings" width="25" height="25"/>
         <image name="ic_share" width="127" height="127"/>
+        <image name="ic_symbal_new" width="91" height="91"/>
         <image name="ic_to_detail" width="25" height="25"/>
         <image name="ic_userStall_color" width="69" height="69"/>
         <image name="ic_wishlist" width="127" height="127"/>

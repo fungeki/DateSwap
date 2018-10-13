@@ -932,7 +932,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Date's name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bdb-qa-Uzj" customClass="ProductEditTextfield" customModule="DateSwap" customModuleProvider="target">
-                                <rect key="frame" x="24" y="713" width="327" height="40"/>
+                                <rect key="frame" x="24" y="768.5" width="327" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="QTg-M9-SGd"/>
                                 </constraints>
@@ -955,7 +955,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textView opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YYu-C3-eld">
-                                <rect key="frame" x="24" y="765" width="327" height="90"/>
+                                <rect key="frame" x="24" y="820.5" width="327" height="90"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="cW9-oO-5Jy"/>
@@ -985,7 +985,7 @@
                                 </connections>
                             </textView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Estimated Price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3pE-Ua-ZvA" customClass="ProductEditTextfield" customModule="DateSwap" customModuleProvider="target">
-                                <rect key="frame" x="24" y="867" width="285" height="40"/>
+                                <rect key="frame" x="24" y="922.5" width="285" height="40"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="NDa-hy-t4a"/>
@@ -1010,7 +1010,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uXk-LH-vTS">
-                                <rect key="frame" x="24" y="336" width="327" height="365"/>
+                                <rect key="frame" x="24" y="391.5" width="327" height="365"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wv7-sh-0iv" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="65"/>
@@ -1111,13 +1111,12 @@
                                     <constraint firstItem="ege-US-MIx" firstAttribute="top" secondItem="Wv7-sh-0iv" secondAttribute="bottom" id="Cnt-cY-cQY"/>
                                     <constraint firstAttribute="trailing" secondItem="ege-US-MIx" secondAttribute="trailing" id="KLs-rh-hvw"/>
                                     <constraint firstItem="ege-US-MIx" firstAttribute="leading" secondItem="uXk-LH-vTS" secondAttribute="leading" id="O2D-2j-RzI"/>
-                                    <constraint firstItem="Wv7-sh-0iv" firstAttribute="top" secondItem="uXk-LH-vTS" secondAttribute="top" id="WIK-sN-WFK"/>
                                     <constraint firstAttribute="trailing" secondItem="Wv7-sh-0iv" secondAttribute="trailing" id="dHa-U8-qAe"/>
                                     <constraint firstItem="Wv7-sh-0iv" firstAttribute="top" secondItem="uXk-LH-vTS" secondAttribute="top" id="gem-2W-kwe"/>
                                 </constraints>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pC2-yF-tjb">
-                                <rect key="frame" x="24" y="69" width="327" height="259"/>
+                                <rect key="frame" x="24" y="69" width="327" height="310.5"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="1" id="bAa-PD-HhJ">
                                     <size key="itemSize" width="171" height="143"/>
@@ -1134,7 +1133,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_empty_dark" translatesAutoresizingMaskIntoConstraints="NO" id="msa-UN-R3R">
-                                                    <rect key="frame" x="8" y="8" width="155" height="127"/>
+                                                    <rect key="frame" x="8" y="16" width="155" height="119"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -1142,7 +1141,7 @@
                                             <constraint firstItem="msa-UN-R3R" firstAttribute="leading" secondItem="Hx6-rE-j1z" secondAttribute="leadingMargin" id="0Bf-1u-bWf"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="msa-UN-R3R" secondAttribute="bottom" id="O2h-PO-Q0w"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="msa-UN-R3R" secondAttribute="trailing" id="Yc2-eN-tQV"/>
-                                            <constraint firstItem="msa-UN-R3R" firstAttribute="top" secondItem="Hx6-rE-j1z" secondAttribute="topMargin" id="iux-dv-jeC"/>
+                                            <constraint firstItem="msa-UN-R3R" firstAttribute="top" secondItem="Hx6-rE-j1z" secondAttribute="topMargin" constant="8" id="iux-dv-jeC"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="itemImageUIImage" destination="msa-UN-R3R" id="Ri8-YR-jFw"/>
@@ -1155,7 +1154,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6j-My-6md">
-                                <rect key="frame" x="321" y="869" width="19" height="36"/>
+                                <rect key="frame" x="321" y="924.5" width="19" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1184,13 +1183,13 @@
                             <constraint firstItem="N9s-eb-Yau" firstAttribute="trailing" secondItem="uXk-LH-vTS" secondAttribute="trailing" constant="24" id="Y9t-90-4Xh"/>
                             <constraint firstItem="Bm5-AC-gjw" firstAttribute="width" secondItem="60w-tW-LGx" secondAttribute="width" multiplier="0.04" id="Ysp-hI-YpY"/>
                             <constraint firstItem="Jxx-YV-3eP" firstAttribute="centerY" secondItem="434-lb-zsh" secondAttribute="centerY" id="Yzj-uL-G0V"/>
-                            <constraint firstItem="pC2-yF-tjb" firstAttribute="height" secondItem="N9s-eb-Yau" secondAttribute="height" multiplier="0.4" id="cTU-pP-mIl"/>
+                            <constraint firstItem="pC2-yF-tjb" firstAttribute="height" secondItem="N9s-eb-Yau" secondAttribute="height" multiplier="0.48" id="cTU-pP-mIl"/>
                             <constraint firstItem="YYu-C3-eld" firstAttribute="top" secondItem="bdb-qa-Uzj" secondAttribute="bottom" constant="12" id="ea9-Qa-3gJ"/>
                             <constraint firstItem="K6j-My-6md" firstAttribute="centerY" secondItem="3pE-Ua-ZvA" secondAttribute="centerY" id="fpj-Mu-0LL"/>
                             <constraint firstItem="434-lb-zsh" firstAttribute="centerX" secondItem="N9s-eb-Yau" secondAttribute="centerX" id="gLo-e7-2Hl"/>
                             <constraint firstItem="Bm5-AC-gjw" firstAttribute="trailing" secondItem="434-lb-zsh" secondAttribute="leading" constant="-10" id="hQe-DD-hLa"/>
                             <constraint firstItem="YYu-C3-eld" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="hwF-E0-CQc"/>
-                            <constraint firstItem="uXk-LH-vTS" firstAttribute="top" secondItem="pC2-yF-tjb" secondAttribute="bottom" constant="8" id="kVj-er-KIk"/>
+                            <constraint firstItem="uXk-LH-vTS" firstAttribute="top" secondItem="pC2-yF-tjb" secondAttribute="bottom" constant="12" id="kVj-er-KIk"/>
                             <constraint firstItem="pC2-yF-tjb" firstAttribute="top" secondItem="Jxx-YV-3eP" secondAttribute="bottom" constant="8" id="lfo-fa-K9N"/>
                             <constraint firstItem="bdb-qa-Uzj" firstAttribute="leading" secondItem="N9s-eb-Yau" secondAttribute="leading" constant="24" id="n6G-sM-8vd"/>
                             <constraint firstItem="bdb-qa-Uzj" firstAttribute="top" secondItem="uXk-LH-vTS" secondAttribute="bottom" constant="12" id="oPM-k6-4wd"/>

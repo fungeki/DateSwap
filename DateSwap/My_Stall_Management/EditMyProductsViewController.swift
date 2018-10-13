@@ -21,7 +21,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     var didEditPic = false
     var isAdditionalPhotosEnabled = false
     var numOfCellSelected = 0
-    var imagePlaceholderArray = [#imageLiteral(resourceName: "card_empty_dark"), #imageLiteral(resourceName: "card_empty_dark"), #imageLiteral(resourceName: "card_empty_dark"), #imageLiteral(resourceName: "card_empty_dark")]
+    var imagePlaceholderArray = [#imageLiteral(resourceName: "ic_main_photo_empty"), #imageLiteral(resourceName: "ic_photo_empty"), #imageLiteral(resourceName: "ic_photo_empty"), #imageLiteral(resourceName: "ic_photo_empty")]
     var imageSymbalConditionArray = [#imageLiteral(resourceName: "ic_symbal_new"),#imageLiteral(resourceName: "ic_symbal_like_new"),#imageLiteral(resourceName: "ic_cymbal_renewed"),#imageLiteral(resourceName: "ic_symbal_used"),#imageLiteral(resourceName: "ic_symbal_damaged")]
     var testing = [0,1,2,3]
     
@@ -415,9 +415,9 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
                 self.present(imagePickerController, animated: true, completion: nil)
             }
         }))
-        if imageNum > 0 && imagePlaceholderArray[imageNum] != #imageLiteral(resourceName: "card_empty_dark"){
+        if imageNum > 0 && imagePlaceholderArray[imageNum] != #imageLiteral(resourceName: "ic_photo_empty"){
             actionSheet.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (action) in
-                self.imagePlaceholderArray[imageNum] = #imageLiteral(resourceName: "card_empty_dark")
+                self.imagePlaceholderArray[imageNum] = #imageLiteral(resourceName: "ic_photo_empty")
                 self.imageUICV.reloadData()
 //                let mainCell = self.imageUICV.cellForItem(at: IndexPath(item: self.numOfCellSelected, section: 0)) as! AddImageCollectionViewCell
 //                guard let mainImage = mainCell.itemImageUIImage.image?.cgImage?.copy() else {
@@ -586,7 +586,7 @@ extension EditMyProductsViewController: UICollectionViewDelegate, UICollectionVi
         if indexPath.item == 0{
             return CGSize(width: self.imageUICV.frame.width, height: self.imageUICV.frame.height * (2.0 / 3.0))
         }
-        return CGSize(width: self.view.frame.width / 3 - 1, height: self.imageUICV.frame.height * (1.0 / 3.0))
+        return CGSize(width: self.view.frame.width / 3.5, height: self.imageUICV.frame.height * (1.0 / 3.0))
         
     }
     
@@ -594,7 +594,8 @@ extension EditMyProductsViewController: UICollectionViewDelegate, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imagesCell", for: indexPath) as! AddImageCollectionViewCell
         cell.itemImageUIImage.image = imagePlaceholderArray[indexPath.item]
         cell.itemImageUIImage.layer.cornerRadius = 20
-        cell.itemImageUIImage.addJeansEffect(color: grayFour(), cornerRadius: 20, lineWidth: 2, lineDashPattern: [9,9])
+//        cell.itemImageUIImage.addJeansEffect(color: grayFour(), cornerRadius: 20, lineWidth: 2, lineDashPattern: [9,9])
+        
         
         return cell
     }
@@ -616,11 +617,34 @@ extension EditMyProductsViewController: UICollectionViewDelegate, UICollectionVi
     }
     func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let item = imagePlaceholderArray[sourceIndexPath.item]
+       
         imagePlaceholderArray.remove(at: sourceIndexPath.item)
         imagePlaceholderArray.insert(item, at: destinationIndexPath.item)
-        if imagePlaceholderArray[0] == #imageLiteral(resourceName: "card_empty_dark") {
+        
+        if (imagePlaceholderArray[0] == #imageLiteral(resourceName: "ic_photo_empty") ) || (imagePlaceholderArray[0] == #imageLiteral(resourceName: "ic_main_photo_empty") ){
             isAdditionalPhotosEnabled = false
         }
+        
+        if imagePlaceholderArray[0] == #imageLiteral(resourceName: "ic_photo_empty") {
+            imagePlaceholderArray[0] = #imageLiteral(resourceName: "ic_main_photo_empty")
+        }
+        
+        
+        
+//        if imagePlaceholderArray[1] == #imageLiteral(resourceName: "ic_main_photo_empty"){
+//            imagePlaceholderArray[1] = #imageLiteral(resourceName: "ic_photo_empty")
+//        }
+//
+//        if imagePlaceholderArray[2] == #imageLiteral(resourceName: "ic_main_photo_empty"){
+//            imagePlaceholderArray[2] = #imageLiteral(resourceName: "ic_photo_empty")
+//        }
+//        if imagePlaceholderArray[3] == #imageLiteral(resourceName: "ic_main_photo_empty"){
+//            imagePlaceholderArray[3] = #imageLiteral(resourceName: "ic_photo_empty")
+//        }
+        
+     
+        
+
     }
 //    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
 //        if indexPath.row > 0 {

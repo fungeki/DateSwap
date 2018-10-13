@@ -10,6 +10,7 @@ import UIKit
 
 class ConditionSelectionTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var symbalConditionUIImageView: UIImageView!
     @IBOutlet weak var conditionNameUIButton: ConditionUIButton!
     override func awakeFromNib() {
         super.awakeFromNib()

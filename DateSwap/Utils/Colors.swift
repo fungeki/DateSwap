@@ -8,6 +8,11 @@
 
 import UIKit
 
+func freeColor(redColor:CGFloat, greenColor:CGFloat, blueColor:CGFloat, alphaColor:CGFloat)-> CGColor{
+    let color = UIColor(red: redColor / 255.0, green: greenColor / 255.0, blue: blueColor / 255.0, alpha: alphaColor).cgColor
+    return color
+}
+
 func mediumOrange()-> CGColor{
     let color = UIColor(red: 239.0 / 255.0, green: 156.0 / 255.0, blue: 34.0 / 255.0, alpha: 1.0).cgColor
     return color

@@ -1095,6 +1095,7 @@
                                                 </tableViewCellContentView>
                                                 <connections>
                                                     <outlet property="conditionNameUIButton" destination="LaT-Bc-Sgb" id="VyZ-yZ-5T6"/>
+                                                    <outlet property="symbalConditionUIImageView" destination="RoC-SC-hJA" id="I8E-f9-zRP"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>

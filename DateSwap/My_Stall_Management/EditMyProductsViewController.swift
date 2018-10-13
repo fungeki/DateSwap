@@ -22,6 +22,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     var isAdditionalPhotosEnabled = false
     var numOfCellSelected = 0
     var imagePlaceholderArray = [#imageLiteral(resourceName: "card_empty_dark"), #imageLiteral(resourceName: "card_empty_dark"), #imageLiteral(resourceName: "card_empty_dark"), #imageLiteral(resourceName: "card_empty_dark")]
+    var imageSymbalConditionArray = [#imageLiteral(resourceName: "ic_symbal_new"),#imageLiteral(resourceName: "ic_symbal_like_new"),#imageLiteral(resourceName: "ic_cymbal_renewed"),#imageLiteral(resourceName: "ic_symbal_used"),#imageLiteral(resourceName: "ic_symbal_damaged")]
     var testing = [0,1,2,3]
     
     @IBOutlet var superviewUIView: UIView!
@@ -59,11 +60,9 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         dropDownConditionUIButton.layer.cornerRadius = dropDownConditionUIButton.frame.height/2
         dropDownConditionUIButton.layer.masksToBounds = true
         
-      
-      
         
-       
         
+
         // Do any additional setup after loading the view.
     }
     func endEditing() {
@@ -85,9 +84,65 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     }
     override func viewDidLayoutSubviews() {
         
+        switch dropDownConditionUIButton.currentTitle{
+        case "New"?:
+          
+            dropDownConditionUIButton.backgroundColor = UIColor(cgColor: freeColor(redColor: 250.0, greenColor: 170.0, blueColor: 27.0, alphaColor: 1.0))
+            
+            dropDownConditionUIButton.borderColor = UIColor(cgColor: freeColor(redColor: 252.0, greenColor: 196.0, blueColor: 96.0, alphaColor: 1.0))
+            
+            break
+        case "Like New"?:
+            
+            dropDownConditionUIButton.backgroundColor = UIColor(cgColor: freeColor(redColor: 204.0, greenColor: 129.0, blueColor: 39.0, alphaColor: 1.0))
+           
+            dropDownConditionUIButton.borderColor = UIColor(cgColor: freeColor(redColor: 219.0, greenColor: 167.0, blueColor: 104.0, alphaColor: 1.0))
+           
+            
+            break
+            
+        case "Refurbished"?:
+            
+            dropDownConditionUIButton.backgroundColor = UIColor(cgColor: freeColor(redColor: 127.0, greenColor: 76.0, blueColor: 8.0, alphaColor: 1.0))
+            
+            dropDownConditionUIButton.borderColor = UIColor(cgColor: freeColor(redColor: 166.0, greenColor: 130.0, blueColor: 83.0, alphaColor: 1.0))
+            
+            
+            break
+            
+        case "Used"?:
+            
+            dropDownConditionUIButton.backgroundColor = UIColor(cgColor: freeColor(redColor: 68.0, greenColor: 42.0, blueColor: 14.0, alphaColor: 1.0))
+            
+            dropDownConditionUIButton.borderColor = UIColor(cgColor: freeColor(redColor: 124.0, greenColor: 106.0, blueColor: 87.0, alphaColor: 1.0))
+            
+            
+            break
+            
+        case "Damaged"?:
+            
+            dropDownConditionUIButton.backgroundColor = UIColor(cgColor: freeColor(redColor: 8.0, greenColor: 6.0, blueColor: 18.0, alphaColor: 1.0))
+            
+            dropDownConditionUIButton.borderColor = UIColor(cgColor: freeColor(redColor: 83.0, greenColor: 81.0, blueColor: 90.0, alphaColor: 1.0))
+            
+            
+            break
+            
+        case .none:
+            dropDownConditionUIButton.backgroundColor = UIColor(cgColor: freeColor(redColor: 250.0, greenColor: 170.0, blueColor: 27.0, alphaColor: 1.0))
+            
+            dropDownConditionUIButton.borderColor = UIColor(cgColor: freeColor(redColor: 252.0, greenColor: 196.0, blueColor: 96.0, alphaColor: 1.0))
+        case .some(_):
+            dropDownConditionUIButton.backgroundColor = UIColor(cgColor: freeColor(redColor: 250.0, greenColor: 170.0, blueColor: 27.0, alphaColor: 1.0))
+            
+            dropDownConditionUIButton.borderColor = UIColor(cgColor: freeColor(redColor: 252.0, greenColor: 196.0, blueColor: 96.0, alphaColor: 1.0))
+        }
+//        if dropDownConditionUIButton.currentTitle == "New" {
+//            dropDownConditionUIButton.backgroundColor = UIColor.black
+//        }
        
         
-         conditionSelectionTableView.rowHeight = 50.0
+         conditionSelectionTableView.rowHeight = 55.0
        
         
         productTitleUITextField.layer.cornerRadius = productTitleUITextField.frame.size.height/2
@@ -175,6 +230,10 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         estimatedPriceUITextField.text = inputThisProduct.price
         descriptionUITextView.text = inputThisProduct.description
         dropDownConditionUIButton.setTitle(returnCondition(inputThisProduct.condition), for: .normal)
+        
+       
+        
+        
 //        addANewPhotoUIButton.setTitle("", for: .normal)
         //        addANewPhotoUIButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
 //        addANewPhotoUIButton.sd_setBackgroundImage(with: URL(string: inputThisProduct.image), for: .normal)
@@ -458,25 +517,53 @@ extension EditMyProductsViewController: UITableViewDelegate, UITableViewDataSour
         cell.conditionNameUIButton.setTitle("\(conditionListing[indexPath.row])",for: .disabled)
         
         
-        cell.conditionNameUIButton.layer.cornerRadius = 15.0
+        cell.conditionNameUIButton.layer.cornerRadius = 18.0
         cell.backgroundColor = UIColor.clear
         
         switch choiceCondition{
         case "New":
-                 cell.conditionNameUIButton.backgroundColor = UIColor.black
-                cell.conditionNameUIButton.borderWidth = 3
-                cell.conditionNameUIButton.borderColor = UIColor.brown
+            cell.conditionNameUIButton.backgroundColor = UIColor(cgColor: freeColor(redColor: 250.0, greenColor: 170.0, blueColor: 27.0, alphaColor: 1.0))
+                cell.conditionNameUIButton.borderWidth = 4
+                cell.conditionNameUIButton.borderColor = UIColor(cgColor: freeColor(redColor: 252.0, greenColor: 196.0, blueColor: 96.0, alphaColor: 1.0))
+            cell.symbalConditionUIImageView.image = imageSymbalConditionArray[0]
+            
             break
             
         case "Like New":
-                 cell.conditionNameUIButton.backgroundColor = UIColor.black
-                cell.conditionNameUIButton.borderWidth = 3
-                cell.conditionNameUIButton.borderColor = UIColor.brown
+            cell.conditionNameUIButton.backgroundColor = UIColor(cgColor: freeColor(redColor: 204.0, greenColor: 129.0, blueColor: 39.0, alphaColor: 1.0))
+            cell.conditionNameUIButton.borderWidth = 4
+            cell.conditionNameUIButton.borderColor = UIColor(cgColor: freeColor(redColor: 219.0, greenColor: 167.0, blueColor: 104.0, alphaColor: 1.0))
+            cell.symbalConditionUIImageView.image = imageSymbalConditionArray[1]
             break
+            
+        case "Refurbished":
+            cell.conditionNameUIButton.backgroundColor = UIColor(cgColor: freeColor(redColor: 127.0, greenColor: 76.0, blueColor: 8.0, alphaColor: 1.0))
+            cell.conditionNameUIButton.borderWidth = 4
+            cell.conditionNameUIButton.borderColor = UIColor(cgColor: freeColor(redColor: 166.0, greenColor: 130.0, blueColor: 83.0, alphaColor: 1.0))
+             cell.symbalConditionUIImageView.image = imageSymbalConditionArray[2]
+            break
+            
+        case "Used":
+            cell.conditionNameUIButton.backgroundColor = UIColor(cgColor: freeColor(redColor: 68.0, greenColor: 42.0, blueColor: 14.0, alphaColor: 1.0))
+            cell.conditionNameUIButton.borderWidth = 4
+            cell.conditionNameUIButton.borderColor = UIColor(cgColor: freeColor(redColor: 124.0, greenColor: 106.0, blueColor: 87.0, alphaColor: 1.0))
+             cell.symbalConditionUIImageView.image = imageSymbalConditionArray[3]
+            break
+            
+        case "Damaged":
+            cell.conditionNameUIButton.backgroundColor = UIColor(cgColor: freeColor(redColor: 8.0, greenColor: 6.0, blueColor: 18.0, alphaColor: 1.0))
+            cell.conditionNameUIButton.borderWidth = 4
+            cell.conditionNameUIButton.borderColor = UIColor(cgColor: freeColor(redColor: 83.0, greenColor: 81.0, blueColor: 90.0, alphaColor: 1.0))
+             cell.symbalConditionUIImageView.image = imageSymbalConditionArray[4]
+            
+        
+            
+            break
+            
         default:
-            cell.conditionNameUIButton.backgroundColor = UIColor.orange
-            cell.conditionNameUIButton.borderWidth = 3
-            cell.conditionNameUIButton.borderColor = UIColor.brown
+            cell.conditionNameUIButton.backgroundColor = UIColor(cgColor: freeColor(redColor: 250.0, greenColor: 170.0, blueColor: 27.0, alphaColor: 1.0))
+            cell.conditionNameUIButton.borderWidth = 4
+            cell.conditionNameUIButton.borderColor = UIColor(cgColor: freeColor(redColor: 252.0, greenColor: 196.0, blueColor: 96.0, alphaColor: 1.0))
         }
         
     

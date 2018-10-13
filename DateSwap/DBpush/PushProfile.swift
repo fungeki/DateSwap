@@ -15,7 +15,7 @@ import FirebaseStorage
 func pushUser(profileSQL: ProfileSQL){
     let nickname = profileSQL.nickname
     let email = profileSQL.email
-    var pic = profileSQL.pic
+    let pic = profileSQL.pic
     let urlString = "http://dateswap.herokuapp.com/addprofile?nickname=\(nickname)&pic=\(pic)&email=\(email)"
 
 //    print(urlString)

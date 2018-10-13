@@ -10,9 +10,16 @@ import UIKit
 
 class ProductsNotificationTableViewCell: UITableViewCell {
 
+    
+    var offers = [Like]()
     @IBOutlet weak var myItemUIImageView: UIImageView!
     
     @IBOutlet weak var productTitleUILabel: UILabel!
+    
+    @IBOutlet weak var chatsNotificationLabel: EditableLableUILabel!
+    
+    @IBOutlet weak var offersNotifiactionLabel: EditableLableUILabel!
+    @IBOutlet weak var matchesNotificationsLabel: EditableLableUILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

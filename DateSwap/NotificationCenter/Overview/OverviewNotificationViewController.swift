@@ -15,15 +15,18 @@ class OverviewNotificationViewController: UIViewController {
     @IBOutlet weak var chatExpensionUIButton: ConditionUIButton!
     @IBOutlet weak var itemNotificationUILabel: UILabel!
     
-    
+    var notifications = [Notification]()
     @IBOutlet weak var notificationTable: UITableView!
     var isChatFull = false
     var chatsAmount = 2
-    var notificationAmount = 5
+    var notificationAmount = gOnlineUserProducts.count
 //    var relationHeight: CGFloat = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        GetMyNotifications()
+        JustHUD.shared.showInView(view: self.view, withHeader: "Loading", andFooter: "Please wait")
+        GetMyNotifications { (res) in
+            self.notifications = res
+        }
 //        let realOrigin = self.view.convert(chatsTable.frame.origin, to: self.view)
 //         let heightOrigin = view.frame.maxY - (chatsTable.frame.height + realOrigin.y)
 //        relationHeight = (heightOrigin + chatsTable.frame.height) / chatsTable.frame.height
@@ -87,7 +90,15 @@ extension OverviewNotificationViewController: UITableViewDelegate, UITableViewDa
         }
         
         //for product table
-        let cell = tableView.dequeueReusableCell(withIdentifier: "notificationCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "notificationCell", for: indexPath) as! ProductsNotificationTableViewCell
+        let notificationModel = notifications[indexPath.row]
+        cell.offers = notificationModel.offers
+        cell.chatsNotificationLabel.layer.cornerRadius = cell.chatsNotificationLabel.frame.height / 2.0 + 1
+        cell.offersNotifiactionLabel.layer.cornerRadius = cell.offersNotifiactionLabel.frame.height / 2.0 + 1
+        cell.matchesNotificationsLabel.layer.cornerRadius = cell.matchesNotificationsLabel.frame.height / 2.0 + 1
+        
+        cell.myItemUIImageView.sd_setImage(with: URL(string: notificationModel.image))
+        
         return cell
     }
     

@@ -8,7 +8,7 @@
 
 import Foundation
 
-func GetMyNotifications(completion: (()->Void)? = nil){
+func GetMyNotifications(completion: ((_ notifications: [Notification])->Void)? = nil){
     let strToUp = "http://dateswap.herokuapp.com/notificationsforuser?userid=\(gOnlineUser.ID)"
     guard let urlObj = URL(string: strToUp) else {return}
     
@@ -17,7 +17,9 @@ func GetMyNotifications(completion: (()->Void)? = nil){
             guard let data = data else {return}
             do{
                 let mNotifications = try JSONDecoder().decode([Notification].self, from: data)
-                print(mNotifications)
+                if completion != nil{
+                    completion!(mNotifications)
+                }
             }catch{
                 guard let err = err else {return}
                  print(err)

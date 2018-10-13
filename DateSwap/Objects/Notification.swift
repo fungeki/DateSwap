@@ -9,16 +9,8 @@
 import Foundation
 
 
-struct Offer: Decodable{
-    var id: Int
-    var userid: Int
-    var myproductid: Int
-    var hisproductid: Int
-    var status: Int
-}
-
-
 struct Notification: Decodable {
     var id: Int
-    var offers: [Offer]
+    var image: String
+    var offers: [Like]
 }

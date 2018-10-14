@@ -3024,13 +3024,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BarTrade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycb-wR-clG">
-                                                    <rect key="frame" x="140" y="99" width="96.5" height="22.5"/>
+                                                    <rect key="frame" x="139.5" y="99" width="96.5" height="22.5"/>
                                                     <fontDescription key="fontDescription" name="AndaleMono" family="Andale Mono" pointSize="20"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 0.1.0 beta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GG5-wo-CDA">
-                                                    <rect key="frame" x="134.5" y="125.5" width="107.5" height="16"/>
+                                                    <rect key="frame" x="133.5" y="125.5" width="107.5" height="16"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -3168,6 +3168,9 @@
                                     <constraint firstAttribute="width" secondItem="SPT-gD-QfI" secondAttribute="height" multiplier="72:73" id="ion-11-cbB"/>
                                 </constraints>
                                 <state key="normal" image="ic_logo_grey"/>
+                                <connections>
+                                    <segue destination="tpv-WR-PzH" kind="show" id="O57-2j-Eqr"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent Chats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AmW-5l-1kv">
                                 <rect key="frame" x="12" y="74.5" width="107" height="20.5"/>
@@ -3289,13 +3292,105 @@
                                                         <constraint firstAttribute="width" secondItem="l8a-kb-8NI" secondAttribute="height" multiplier="1:1" id="DJq-bz-gNl"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1" verticalHuggingPriority="251" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRC-3c-7oX">
+                                                    <rect key="frame" x="96" y="10" width="114.5" height="40"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matches" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fib-yd-a2w">
+                                                    <rect key="frame" x="293" y="41.5" width="59" height="18"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qT-sU-gky">
+                                                    <rect key="frame" x="293" y="15" width="40" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9JF-Kg-f46">
+                                                    <rect key="frame" x="293" y="67" width="43" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysM-Ag-TRK" customClass="EditableLableUILabel" customModule="DateSwap" customModuleProvider="target">
+                                                    <rect key="frame" x="276" y="15" width="9" height="18"/>
+                                                    <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="additionToTopDown">
+                                                            <real key="value" value="-3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Z0-Kb-eoA" customClass="EditableLableUILabel" customModule="DateSwap" customModuleProvider="target">
+                                                    <rect key="frame" x="276" y="67.5" width="9" height="18"/>
+                                                    <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="additionToTopDown">
+                                                            <real key="value" value="-3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4G-mU-Okq" customClass="EditableLableUILabel" customModule="DateSwap" customModuleProvider="target">
+                                                    <rect key="frame" x="275" y="41.5" width="10" height="18"/>
+                                                    <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="additionToTopDown">
+                                                            <real key="value" value="-3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="i4G-mU-Okq" firstAttribute="centerY" secondItem="Fib-yd-a2w" secondAttribute="centerY" id="1a3-rh-zVX"/>
                                                 <constraint firstItem="l8a-kb-8NI" firstAttribute="leading" secondItem="iAe-kt-87Y" secondAttribute="leading" constant="12" id="41U-42-Rit"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Fib-yd-a2w" secondAttribute="trailing" constant="8" id="45M-JP-kJs"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="9JF-Kg-f46" secondAttribute="bottom" constant="4" id="7QE-U3-MlM"/>
+                                                <constraint firstItem="9JF-Kg-f46" firstAttribute="leading" secondItem="Fib-yd-a2w" secondAttribute="leading" id="8yc-J1-UgJ"/>
+                                                <constraint firstItem="FRC-3c-7oX" firstAttribute="leading" secondItem="l8a-kb-8NI" secondAttribute="trailing" constant="4" id="Aez-M3-H1H"/>
+                                                <constraint firstItem="1qT-sU-gky" firstAttribute="leading" secondItem="Fib-yd-a2w" secondAttribute="leading" id="Aoo-q0-sEn"/>
+                                                <constraint firstItem="1qT-sU-gky" firstAttribute="leading" secondItem="ysM-Ag-TRK" secondAttribute="trailing" constant="8" id="DJU-Wf-zPh"/>
+                                                <constraint firstItem="FRC-3c-7oX" firstAttribute="height" secondItem="l8a-kb-8NI" secondAttribute="height" multiplier="0.5" id="EbB-Hq-MWI"/>
+                                                <constraint firstItem="Fib-yd-a2w" firstAttribute="leading" secondItem="i4G-mU-Okq" secondAttribute="trailing" constant="8" id="IfT-dN-046"/>
+                                                <constraint firstItem="Fib-yd-a2w" firstAttribute="centerY" secondItem="iAe-kt-87Y" secondAttribute="centerY" id="KMP-YK-YvJ"/>
+                                                <constraint firstItem="1qT-sU-gky" firstAttribute="top" secondItem="iAe-kt-87Y" secondAttribute="topMargin" constant="4" id="X6s-Rd-EVM"/>
                                                 <constraint firstItem="l8a-kb-8NI" firstAttribute="centerY" secondItem="iAe-kt-87Y" secondAttribute="centerY" id="eC4-zG-eJK"/>
+                                                <constraint firstItem="FRC-3c-7oX" firstAttribute="top" secondItem="l8a-kb-8NI" secondAttribute="top" id="fWM-tg-02m"/>
+                                                <constraint firstItem="ysM-Ag-TRK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FRC-3c-7oX" secondAttribute="trailing" constant="4" id="ie1-0K-mSc"/>
+                                                <constraint firstItem="0Z0-Kb-eoA" firstAttribute="centerY" secondItem="9JF-Kg-f46" secondAttribute="centerY" id="l3H-3t-Glc"/>
+                                                <constraint firstItem="9JF-Kg-f46" firstAttribute="leading" secondItem="0Z0-Kb-eoA" secondAttribute="trailing" constant="8" id="oeb-x5-tuf"/>
+                                                <constraint firstItem="ysM-Ag-TRK" firstAttribute="centerY" secondItem="1qT-sU-gky" secondAttribute="centerY" id="uI5-m9-q2W"/>
                                                 <constraint firstItem="l8a-kb-8NI" firstAttribute="height" secondItem="iAe-kt-87Y" secondAttribute="height" multiplier="0.8" id="zjq-2W-pc0"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="chatsNotificationLabel" destination="ysM-Ag-TRK" id="EJw-Nc-oBF"/>
+                                            <outlet property="matchesNotificationsLabel" destination="i4G-mU-Okq" id="zyO-nQ-euX"/>
+                                            <outlet property="myItemUIImageView" destination="l8a-kb-8NI" id="LLx-jR-Eg6"/>
+                                            <outlet property="offersNotifiactionLabel" destination="0Z0-Kb-eoA" id="oGz-kx-FZz"/>
+                                            <outlet property="productTitleUILabel" destination="FRC-3c-7oX" id="jCX-Ia-ou9"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -3385,7 +3480,7 @@
         <segue reference="YR3-E1-jR6"/>
         <segue reference="T9f-jv-ihH"/>
         <segue reference="BU3-fu-hbY"/>
-        <segue reference="xak-bg-gAZ"/>
+        <segue reference="O57-2j-Eqr"/>
         <segue reference="kt3-VZ-zyo"/>
         <segue reference="8ru-sp-3Bw"/>
         <segue reference="Zwd-T0-hKu"/>

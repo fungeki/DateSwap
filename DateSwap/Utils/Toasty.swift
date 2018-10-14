@@ -38,6 +38,22 @@ func showToast(message : String, controller: UIViewController, delay: TimeInterv
     })
 }
 
+func showToast(controller: UIViewController, delay: TimeInterval, image: UIImage, duration: TimeInterval) {
+    
+    let img = UIImageView(frame: CGRect(x: controller.view.frame.size.width/2 - 100, y: controller.view.frame.size.height / 2 - 100, width: 200, height: 200))
+    img.image = image
+    img.alpha = 1.0
+    img.clipsToBounds = true
+    img.contentMode = .scaleAspectFit
+    controller.view.addSubview(img)
+    UIView.animate(withDuration: duration, delay: delay, options: .curveEaseOut, animations: {
+        img.alpha = 0.0
+    }, completion: {(isCompleted) in
+        img.removeFromSuperview()
+    })
+    
+}
+
 func showToast(message : String, controller: UIViewController, delay: TimeInterval, image: UIImage) {
     
     let img = UIImageView(frame: CGRect(x: controller.view.frame.size.width/2 - 75, y: controller.view.frame.size.height / 2 - 20, width: 175, height: 40))
@@ -65,4 +81,5 @@ func showToast(message : String, controller: UIViewController, delay: TimeInterv
         toastLabel.removeFromSuperview()
         img.removeFromSuperview()
     })
+
 }

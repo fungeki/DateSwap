@@ -50,9 +50,10 @@ class MarketViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         if showSaveSegue != nil {
 if isMatch{
-showToast(message: "A New Match!!", controller: self, delay: 2, image: #imageLiteral(resourceName: "ic_love_color"))
+//showToast(message: "A New Match!!", controller: self, delay: 2, image: #imageLiteral(resourceName: "ic_love_color"))
+showToast(controller: self, delay: 0.5, image: #imageLiteral(resourceName: "ic_its_a_match"), duration: 2.5)
 } else {
-showToast(message: "Saved your Offer !", controller: self, delay: 0.5, image: #imageLiteral(resourceName: "ic_like_date"))
+showToast(controller: self, delay: 0.5, image: #imageLiteral(resourceName: "ic_offer_delivered"), duration: 2.5)
 }
             
         }

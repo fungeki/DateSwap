@@ -20,7 +20,7 @@ func pushLike(myProdID: Int ,completion: ((_ data: Like) -> Void)? = nil){
     }
     URLSession.shared.dataTask(with: objUrl) { (data, res, err) in
         DispatchQueue.main.async {
-            let myLike = Like(id: 0, myproductid: myProdID, hisproductid: mItem.ID, status: 0)
+            let myLike = Like(id: 0, userid: gOnlineUser.ID, myproductid: myProdID, hisproductid: mItem.ID, status: 0)
             if completion != nil{
                     completion!(myLike)
                 }

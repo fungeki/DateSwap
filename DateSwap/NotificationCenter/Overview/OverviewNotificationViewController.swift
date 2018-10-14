@@ -15,14 +15,20 @@ class OverviewNotificationViewController: UIViewController {
     @IBOutlet weak var chatExpensionUIButton: ConditionUIButton!
     @IBOutlet weak var itemNotificationUILabel: UILabel!
     
-    
+    var notifications = [Notification]()
     @IBOutlet weak var notificationTable: UITableView!
     var isChatFull = false
     var chatsAmount = 2
-    var notificationAmount = 5
+    var notificationAmount = gOnlineUserProducts.count
 //    var relationHeight: CGFloat = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        JustHUD.shared.showInView(view: self.view, withHeader: "Loading", andFooter: "Please wait")
+        GetMyNotifications { (res) in
+            JustHUD.shared.hide()
+            self.notifications = res
+            self.notificationTable.reloadData()
+        }
 //        let realOrigin = self.view.convert(chatsTable.frame.origin, to: self.view)
 //         let heightOrigin = view.frame.maxY - (chatsTable.frame.height + realOrigin.y)
 //        relationHeight = (heightOrigin + chatsTable.frame.height) / chatsTable.frame.height
@@ -49,12 +55,12 @@ class OverviewNotificationViewController: UIViewController {
                 self.notificationTable.transform = effect
                 self.itemNotificationUILabel.transform = effect
             }, completion: { (true) in
-                self.notificationAmount = 0
-                self.notificationTable.reloadData()
+//                self.notificationAmount = 0
+                self.notificationTable.isHidden = true
             })
         } else {
-            self.notificationAmount = 5
-            self.notificationTable.reloadData()
+          //  self.notificationAmount = 5
+            self.notificationTable.isHidden = false
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 2, options: .curveLinear, animations: {
                 let effect = CGAffineTransform(translationX: 0, y: 0)
                 self.notificationTable.transform = effect
@@ -86,7 +92,36 @@ extension OverviewNotificationViewController: UITableViewDelegate, UITableViewDa
         }
         
         //for product table
-        let cell = tableView.dequeueReusableCell(withIdentifier: "notificationCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "notificationCell", for: indexPath) as! ProductsNotificationTableViewCell
+        cell.chatsNotificationLabel.layer.cornerRadius = cell.chatsNotificationLabel.frame.height / 2.0
+        cell.offersNotifiactionLabel.layer.cornerRadius = cell.offersNotifiactionLabel.frame.height / 2.0
+        cell.matchesNotificationsLabel.layer.cornerRadius = cell.matchesNotificationsLabel.frame.height / 2.0
+        
+        if notifications.count == 0 {
+            return cell
+        }
+        let notificationModel = notifications[indexPath.row]
+        let offersModel = notificationModel.offers
+        var offersCount = 0
+        var matchesCount = 0
+        for offer in offersModel {
+            switch offer.status{
+            case 0:
+                offersCount += 1
+                break
+            case 2:
+                matchesCount += 1
+                break
+            default:
+                break
+            }
+        }
+        cell.matchesNotificationsLabel.text = "\(matchesCount)"
+        cell.offersNotifiactionLabel.text = "\(offersCount)"
+        cell.offers = offersModel
+        
+        cell.myItemUIImageView.sd_setImage(with: URL(string: notificationModel.image))
+        
         return cell
     }
     

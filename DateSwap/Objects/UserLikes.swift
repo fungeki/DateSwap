@@ -10,6 +10,7 @@ import Foundation
 
 struct Like: Decodable {
     var id: Int
+    var userid: Int
     var myproductid: Int
     var hisproductid: Int
     var status: Int

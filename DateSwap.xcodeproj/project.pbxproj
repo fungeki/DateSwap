@@ -94,6 +94,7 @@
 		8CEF6A3120D7A5C6007C39D5 /* JeansEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF6A3020D7A5C6007C39D5 /* JeansEffect.swift */; };
 		8CEF6A3320D7A9DE007C39D5 /* ConditionUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF6A3220D7A9DE007C39D5 /* ConditionUIButton.swift */; };
 		8CEF6A3520D933F6007C39D5 /* ProductOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF6A3420D933F6007C39D5 /* ProductOverviewViewController.swift */; };
+		8CFD0A002173706300107710 /* OffersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFD09FF2173706300107710 /* OffersCollectionViewCell.swift */; };
 		BA4B6D5C20AB98E45DC6E894 /* Pods_DateSwap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3680421D48587E2FF1190ECE /* Pods_DateSwap.framework */; };
 /* End PBXBuildFile section */
 
@@ -192,6 +193,7 @@
 		8CEF6A3020D7A5C6007C39D5 /* JeansEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeansEffect.swift; sourceTree = "<group>"; };
 		8CEF6A3220D7A9DE007C39D5 /* ConditionUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionUIButton.swift; sourceTree = "<group>"; };
 		8CEF6A3420D933F6007C39D5 /* ProductOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductOverviewViewController.swift; sourceTree = "<group>"; };
+		8CFD09FF2173706300107710 /* OffersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +275,7 @@
 		8C52CC76216E3AB4006D90CA /* NotificationCenter */ = {
 			isa = PBXGroup;
 			children = (
+				8CFD09FE21736FAB00107710 /* ProductNotification */,
 				8C52CC77216E3AB4006D90CA /* Overview */,
 			);
 			path = NotificationCenter;
@@ -463,6 +466,14 @@
 				8CDC7B1B2139524200CFADEA /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		8CFD09FE21736FAB00107710 /* ProductNotification */ = {
+			isa = PBXGroup;
+			children = (
+				8CFD09FF2173706300107710 /* OffersCollectionViewCell.swift */,
+			);
+			path = ProductNotification;
 			sourceTree = "<group>";
 		};
 		A80EBDB51CA566EF2B44C45D /* Pods */ = {
@@ -716,6 +727,7 @@
 				8C521AE72156525A00E081F3 /* TradingItemSelectionViewController.swift in Sources */,
 				8C2EB31420FE30BE00527D6F /* ReviewViewController.swift in Sources */,
 				8C5A3C232143E324003DC27C /* SwipeInteractionController.swift in Sources */,
+				8CFD0A002173706300107710 /* OffersCollectionViewCell.swift in Sources */,
 				8CC91BD9215C8D9F00BD57C9 /* CategoriesViewController.swift in Sources */,
 				8C38C2D5216529C0002DB101 /* CheckMatch.swift in Sources */,
 				8CBA6A6F20DEC2A2008CD18B /* PriceSliderUISlider.swift in Sources */,

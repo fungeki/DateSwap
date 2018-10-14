@@ -77,6 +77,15 @@ enum ProductCondition: Int{
     case Damaged = 4
 }
 
+enum DeliveredStatus: String{
+    case active = "Active"
+    case hold = "Hold"
+    case deleted = ""
+    
+    case delivered = "Delivered"
+    
+}
+
 enum Category: String{
     case toys = "Toys & Babies"
     case books = "Books & Entertainment"
@@ -169,6 +178,7 @@ func returnCondition(_ condition: ProductCondition)->String{
 func returnConditionArray()->[String]{
     return ["New", "Like New", "Refurbished", "Used", "Damaged"]
 }
+
 
 
 

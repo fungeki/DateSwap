@@ -1261,14 +1261,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w48-In-Jtx" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w48-In-Jtx" customClass="ConditionUIButton" customModule="DateSwap" customModuleProvider="target">
                                 <rect key="frame" x="292" y="79" width="75" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="6hG-4Q-AxA"/>
+                                </constraints>
                                 <state key="normal" title="Categories"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
-                                        <real key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="arZ-55-W4o" kind="presentation" id="3cd-4K-BR4"/>
                                 </connections>
@@ -3477,12 +3475,13 @@
         <image name="the_rob.jpg" width="1000" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YR3-E1-jR6"/>
-        <segue reference="T9f-jv-ihH"/>
+        <segue reference="GrW-QJ-cVB"/>
+        <segue reference="gC6-e3-Ukh"/>
+        <segue reference="e4U-9M-CBC"/>
         <segue reference="BU3-fu-hbY"/>
         <segue reference="O57-2j-Eqr"/>
         <segue reference="kt3-VZ-zyo"/>
         <segue reference="8ru-sp-3Bw"/>
-        <segue reference="Zwd-T0-hKu"/>
+        <segue reference="dke-he-rSD"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -594,6 +594,8 @@ extension EditMyProductsViewController: UICollectionViewDelegate, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imagesCell", for: indexPath) as! AddImageCollectionViewCell
         cell.itemImageUIImage.image = imagePlaceholderArray[indexPath.item]
         cell.itemImageUIImage.layer.cornerRadius = 20
+ //       cell.itemImageUIImage.layoutSubviews()
+//        cell.didChangeLocation = true
 //        cell.itemImageUIImage.addJeansEffect(color: grayFour(), cornerRadius: 20, lineWidth: 2, lineDashPattern: [9,9])
         
         
@@ -620,7 +622,11 @@ extension EditMyProductsViewController: UICollectionViewDelegate, UICollectionVi
        
         imagePlaceholderArray.remove(at: sourceIndexPath.item)
         imagePlaceholderArray.insert(item, at: destinationIndexPath.item)
-        
+////        let destinationItem = collectionView.cellForItem(at: destinationIndexPath) as! AddImageCollectionViewCell
+//let destinationItem = self.imageUICV.cellForItem(at: destinationIndexPath) as! AddImageCollectionViewCell
+//        destinationItem.didChangeLocation = true
+//        let originItem = self.imageUICV.cellForItem(at: sourceIndexPath) as! AddImageCollectionViewCell
+  //      originItem.didChangeLocation = false
         if (imagePlaceholderArray[0] == #imageLiteral(resourceName: "ic_photo_empty") ) || (imagePlaceholderArray[0] == #imageLiteral(resourceName: "ic_main_photo_empty") ){
             isAdditionalPhotosEnabled = false
         }
@@ -628,7 +634,6 @@ extension EditMyProductsViewController: UICollectionViewDelegate, UICollectionVi
         if imagePlaceholderArray[0] == #imageLiteral(resourceName: "ic_photo_empty") {
             imagePlaceholderArray[0] = #imageLiteral(resourceName: "ic_main_photo_empty")
         }
-        
         
         
 //        if imagePlaceholderArray[1] == #imageLiteral(resourceName: "ic_main_photo_empty"){

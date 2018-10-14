@@ -80,9 +80,35 @@ enum ProductCondition: Int{
 enum DeliveredStatus: String{
     case active = "Active"
     case hold = "Hold"
+    case pending = "Pending"
+    case delivered = "Delivered"
+    case revision = "Under Revision"
     case deleted = ""
     
-    case delivered = "Delivered"
+    static let allValues = [active, hold, pending, delivered, revision]
+    static let selectableValues = [active, hold]
+    
+    init?(id: Int){
+        switch id {
+        case 0:
+            self = .active
+            break
+        case 1:
+            self = .hold
+            break
+        case 2:
+            self = .pending
+            break
+        case 3:
+            self = .delivered
+            break
+        case 4:
+            self = .revision
+            break
+        default:
+            self = .deleted
+        }
+    }
     
 }
 

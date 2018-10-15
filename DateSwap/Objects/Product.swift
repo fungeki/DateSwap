@@ -77,6 +77,41 @@ enum ProductCondition: Int{
     case Damaged = 4
 }
 
+enum DeliveredStatus: String{
+    case active = "Active"
+    case hold = "Hold"
+    case pending = "Pending"
+    case delivered = "Delivered"
+    case revision = "Under Revision"
+    case deleted = ""
+    
+    static let allValues = [active, hold, pending, delivered, revision]
+    static let selectableValues = [active, hold]
+    
+    init?(id: Int){
+        switch id {
+        case 0:
+            self = .active
+            break
+        case 1:
+            self = .hold
+            break
+        case 2:
+            self = .pending
+            break
+        case 3:
+            self = .delivered
+            break
+        case 4:
+            self = .revision
+            break
+        default:
+            self = .deleted
+        }
+    }
+    
+}
+
 enum Category: String{
     case toys = "Toys & Babies"
     case books = "Books & Entertainment"
@@ -169,6 +204,7 @@ func returnCondition(_ condition: ProductCondition)->String{
 func returnConditionArray()->[String]{
     return ["New", "Like New", "Refurbished", "Used", "Damaged"]
 }
+
 
 
 

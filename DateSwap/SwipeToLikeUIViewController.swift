@@ -21,6 +21,13 @@ class SwipeToLikeUIViewController: UIViewController {
 //    let thumbBack = imageResizeForSlider( #imageLiteral(resourceName: "ic_backMatch_color"))
 
 
+    @IBAction func customSwitchTappe(_ sender: UISwitch) {
+        if sender.isOn == false {
+            self.performSegue(withIdentifier: "marketVC", sender: nil)
+        }
+        
+    }
+    @IBOutlet weak var customSwitch: UISwitch!
     @IBOutlet weak var selectItemUIButton: UIButton!
     @IBOutlet weak var myItemNameUIButton: UIButton!
 

@@ -15,8 +15,13 @@ class MarketViewController: UIViewController {
     @IBOutlet weak var categoryUILabel: UILabel!
     @IBOutlet weak var marketCollectionView: UICollectionView!
     @IBOutlet weak var wishlistUIButton: ConditionUIButton!
+    @IBOutlet weak var customSwitch: UISwitch!
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
+        
         if gProductsDisplayedPlaceholder.count == 0{
             getProducts()
         }
@@ -30,6 +35,17 @@ class MarketViewController: UIViewController {
 }
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func customSwitchTapped(_ sender: UISwitch) {
+        
+        //marketVC  swipeViewController
+        if sender.isOn == true {
+      self.performSegue(withIdentifier: "swipeViewController", sender: nil)
+    }
+
+       
+}
+
     
     func displayCategory(){
         categoryUILabel.text = gSelectedCategory

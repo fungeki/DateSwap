@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7707397D21751AD500D37EE1 /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7707397C21751AD500D37EE1 /* CustomSwitch.swift */; };
 		777051DD20FE3AA800D7F54D /* NewMatchesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777051DC20FE3AA800D7F54D /* NewMatchesCollectionViewCell.swift */; };
 		777051DF20FE46B000D7F54D /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777051DE20FE46B000D7F54D /* MatchesViewController.swift */; };
 		77DDDC2B210138B800C0B13D /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDDC2A210138B800C0B13D /* MessagesTableViewCell.swift */; };
@@ -102,6 +103,7 @@
 		0424395E2B652DEE286339C2 /* Pods-DateSwap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateSwap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DateSwap/Pods-DateSwap.debug.xcconfig"; sourceTree = "<group>"; };
 		3680421D48587E2FF1190ECE /* Pods_DateSwap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DateSwap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D92167A3509D274EBCE1F78 /* Pods-DateSwap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateSwap.release.xcconfig"; path = "Pods/Target Support Files/Pods-DateSwap/Pods-DateSwap.release.xcconfig"; sourceTree = "<group>"; };
+		7707397C21751AD500D37EE1 /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomSwitch.swift; path = Utils/CustomSwitch.swift; sourceTree = "<group>"; };
 		772EBC7820E42E6C00BA762B /* Andale Mono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Andale Mono.ttf"; sourceTree = "<group>"; };
 		777051DC20FE3AA800D7F54D /* NewMatchesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMatchesCollectionViewCell.swift; sourceTree = "<group>"; };
 		777051DE20FE46B000D7F54D /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
@@ -428,6 +430,7 @@
 				8C0EFEC8212B0A9200B3B8D7 /* CornerRadiusRounders.swift */,
 				8C9A101920CA99140077B544 /* LaunchScreen.storyboard */,
 				8C9A101120CA99140077B544 /* Main.storyboard */,
+				7707397C21751AD500D37EE1 /* CustomSwitch.swift */,
 				8CD4202720D2824C006101A1 /* ProfileViewController.swift */,
 				8C9A100F20CA99140077B544 /* ViewController.swift */,
 				8CBA6A7420E4C7C6008CD18B /* SwipeToLikeUIViewController.swift */,
@@ -715,6 +718,7 @@
 				8C9A100E20CA99140077B544 /* AppDelegate.swift in Sources */,
 				777051DD20FE3AA800D7F54D /* NewMatchesCollectionViewCell.swift in Sources */,
 				8C5E9282216F84E200F7D06D /* NotificationsPlaceholder.swift in Sources */,
+				7707397D21751AD500D37EE1 /* CustomSwitch.swift in Sources */,
 				8C521AE42154E70A00E081F3 /* CharSet.swift in Sources */,
 				8C0EFECB2131CE0B00B3B8D7 /* EditableLableUILabel.swift in Sources */,
 				8CEF6A3120D7A5C6007C39D5 /* JeansEffect.swift in Sources */,

@@ -51,6 +51,8 @@ class SwipeToLikeUIViewController: UIViewController {
         
         super.viewDidLoad()
         
+        
+        
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "activeProduct"), object: nil, queue: OperationQueue.main) { (notification) in
             self.displayActiveProduct()
         }

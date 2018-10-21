@@ -360,7 +360,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
                         print("link error")
                         return}
                     let mUpUrl =  "\(upURL)&token=397b7f94-d217-4cf6-8eef-27e4af33430e"
-                    var myNewProduct = ProductExpSQL(id: 0, userid: gOnlineUser.ID, title: upTitle, image: mUpUrl, description: mDescription, lastupdate: "", area: "", condition: myCondition, price: mUpPrice, category: -1)
+                    var myNewProduct = ProductExpSQL(id: 0, userid: gOnlineUser.ID, title: upTitle, image: mUpUrl, description: mDescription, lastupdate: "", area: "", condition: myCondition, price: mUpPrice, category: -1, delivered: 0)
                     if self.edit {
                         myNewProduct.id = self.product!.ID
                         editProduct(myProductInSQL: myNewProduct, controller: self)
@@ -372,7 +372,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
             
         } else if edit{
             guard let inputThisProd = self.product else {return}
-            let myEditedProduct = ProductExpSQL(id: inputThisProd.ID, userid: gOnlineUser.ID, title: upTitle, image: inputThisProd.image, description: mDescription, lastupdate: "", area: "", condition: myCondition, price: mUpPrice, category: -1)
+            let myEditedProduct = ProductExpSQL(id: inputThisProd.ID, userid: gOnlineUser.ID, title: upTitle, image: inputThisProd.image, description: mDescription, lastupdate: "", area: "", condition: myCondition, price: mUpPrice, category: -1, delivered: 0)
             editProduct(myProductInSQL: myEditedProduct, controller: self)
         } else{
             backToMyStall()

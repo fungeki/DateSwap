@@ -28,6 +28,7 @@
 		8C4321ED20E4D3740027FDA1 /* AndaleMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C4321EB20E4D3730027FDA1 /* AndaleMono.ttf */; };
 		8C43223420E67AD60027FDA1 /* RelationUISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43223320E67AD60027FDA1 /* RelationUISlider.swift */; };
 		8C43223620E77FC60027FDA1 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43223520E77FC60027FDA1 /* UIImageExtension.swift */; };
+		8C47A43821770F7B0066AD18 /* ProductNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C47A43721770F7B0066AD18 /* ProductNotificationViewController.swift */; };
 		8C521AA02146ED4B00E081F3 /* PushProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C521A9F2146ED4B00E081F3 /* PushProduct.swift */; };
 		8C521AD0214BCE8400E081F3 /* StorageReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C521ACF214BCE8400E081F3 /* StorageReference.swift */; };
 		8C521AD7214C267400E081F3 /* ResizeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C521AD6214C267400E081F3 /* ResizeImage.swift */; };
@@ -51,6 +52,7 @@
 		8C5E9284216F851600F7D06D /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5E9283216F851600F7D06D /* Notification.swift */; };
 		8C5E9286216F864300F7D06D /* GetMyNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5E9285216F864300F7D06D /* GetMyNotifications.swift */; };
 		8C7405F420D24CE700FF8E9C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7405F320D24CE700FF8E9C /* Product.swift */; };
+		8C8089E7217C5B3800E34243 /* ChatsFromProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8089E6217C5B3800E34243 /* ChatsFromProductCollectionViewCell.swift */; };
 		8C89A27E20DBD29200F900F5 /* EditMyProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C89A27D20DBD29200F900F5 /* EditMyProductsViewController.swift */; };
 		8C9A100E20CA99140077B544 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A100D20CA99140077B544 /* AppDelegate.swift */; };
 		8C9A101020CA99140077B544 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A100F20CA99140077B544 /* ViewController.swift */; };
@@ -125,6 +127,7 @@
 		8C4321EB20E4D3730027FDA1 /* AndaleMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AndaleMono.ttf; sourceTree = "<group>"; };
 		8C43223320E67AD60027FDA1 /* RelationUISlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationUISlider.swift; sourceTree = "<group>"; };
 		8C43223520E77FC60027FDA1 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		8C47A43721770F7B0066AD18 /* ProductNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductNotificationViewController.swift; sourceTree = "<group>"; };
 		8C521A9F2146ED4B00E081F3 /* PushProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushProduct.swift; sourceTree = "<group>"; };
 		8C521ACF214BCE8400E081F3 /* StorageReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageReference.swift; sourceTree = "<group>"; };
 		8C521AD6214C267400E081F3 /* ResizeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizeImage.swift; sourceTree = "<group>"; };
@@ -148,6 +151,7 @@
 		8C5E9283216F851600F7D06D /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		8C5E9285216F864300F7D06D /* GetMyNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyNotifications.swift; sourceTree = "<group>"; };
 		8C7405F320D24CE700FF8E9C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		8C8089E6217C5B3800E34243 /* ChatsFromProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsFromProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		8C89A27D20DBD29200F900F5 /* EditMyProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMyProductsViewController.swift; sourceTree = "<group>"; };
 		8C9A100A20CA99140077B544 /* DateSwap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateSwap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C9A100D20CA99140077B544 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -475,6 +479,8 @@
 			isa = PBXGroup;
 			children = (
 				8CFD09FF2173706300107710 /* OffersCollectionViewCell.swift */,
+				8C47A43721770F7B0066AD18 /* ProductNotificationViewController.swift */,
+				8C8089E6217C5B3800E34243 /* ChatsFromProductCollectionViewCell.swift */,
 			);
 			path = ProductNotification;
 			sourceTree = "<group>";
@@ -655,6 +661,7 @@
 			files = (
 				8CC91BCA21598F6500BD57C9 /* GetMyActiveProduct.swift in Sources */,
 				8CBA6A6920DEADDB008CD18B /* ConditionSelectionTableViewCell.swift in Sources */,
+				8C8089E7217C5B3800E34243 /* ChatsFromProductCollectionViewCell.swift in Sources */,
 				8CE62D0720D93D4900AA167D /* ProductOverviewTableViewCell.swift in Sources */,
 				8C43223620E77FC60027FDA1 /* UIImageExtension.swift in Sources */,
 				8CC91BD1215B085500BD57C9 /* MarketCollectionViewCell.swift in Sources */,
@@ -679,6 +686,7 @@
 				8C2EB30C20FDEE8000527D6F /* Messages.swift in Sources */,
 				8C5E9284216F851600F7D06D /* Notification.swift in Sources */,
 				77DDDC2B210138B800C0B13D /* MessagesTableViewCell.swift in Sources */,
+				8C47A43821770F7B0066AD18 /* ProductNotificationViewController.swift in Sources */,
 				8CBA6A6B20DEBDF0008CD18B /* ProductEditTextfield.swift in Sources */,
 				8C38C2D721657820002DB101 /* PushMatch.swift in Sources */,
 				8C52CC7B216E3AB5006D90CA /* ChatsOverviewTableViewCell.swift in Sources */,

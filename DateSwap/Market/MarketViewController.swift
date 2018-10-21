@@ -32,7 +32,7 @@ class MarketViewController: UIViewController {
         displayCategory()
         if gSelectedCategory == "Wish List"{
             wishlistUIButton.setTitle("Featured", for: .normal)
-}
+        }
         // Do any additional setup after loading the view.
     }
     

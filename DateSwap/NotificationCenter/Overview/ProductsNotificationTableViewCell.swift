@@ -10,7 +10,7 @@ import UIKit
 
 class ProductsNotificationTableViewCell: UITableViewCell {
 
-    
+    var prodTitle = ""
     var offers = [Like]()
     @IBOutlet weak var myItemUIImageView: UIImageView!
     

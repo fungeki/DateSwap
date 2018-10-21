@@ -28,6 +28,7 @@ class OverviewNotificationViewController: UIViewController {
             JustHUD.shared.hide()
             self.notifications = res
             self.notificationTable.reloadData()
+            print(self.notifications)
         }
 //        let realOrigin = self.view.convert(chatsTable.frame.origin, to: self.view)
 //         let heightOrigin = view.frame.maxY - (chatsTable.frame.height + realOrigin.y)
@@ -70,6 +71,14 @@ class OverviewNotificationViewController: UIViewController {
                 self.chatExpensionUIButton.setTitle("More Chats", for: .normal)
                 self.chatsTable.reloadData()
             })
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toItemNotificationSegue" {
+            let vc = segue.destination as! ProductNotificationViewController
+            vc.myNotification = sender as! Notification
+            
         }
     }
 
@@ -119,11 +128,16 @@ extension OverviewNotificationViewController: UITableViewDelegate, UITableViewDa
         cell.matchesNotificationsLabel.text = "\(matchesCount)"
         cell.offersNotifiactionLabel.text = "\(offersCount)"
         cell.offers = offersModel
-        
+        cell.prodTitle = notificationModel.title
         cell.myItemUIImageView.sd_setImage(with: URL(string: notificationModel.image))
         
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView.tag != 0{  //produt table
+        let notificationToCheck = notifications[indexPath.row]
+        performSegue(withIdentifier: "toItemNotificationSegue", sender: notificationToCheck)
+        }
+    }
     
 }

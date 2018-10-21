@@ -6,7 +6,7 @@
 //  Copyright © 2018 Trisk Quality. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct ProductExpSQL: Decodable{
     var id: Int
@@ -78,6 +78,22 @@ enum ProductCondition: Int{
     case Refurbished = 2
     case LikeNew = 3
     case Damaged = 4
+    
+    func returnImage() -> UIImage{
+        switch self.rawValue{
+        case 0:
+            return #imageLiteral(resourceName: "ic_symbal_new")
+        case 1:
+            return #imageLiteral(resourceName: "ic_symbal_used")
+        case 2:
+            return #imageLiteral(resourceName: "ic_cymbal_renewed")
+        case 3:
+            return #imageLiteral(resourceName: "ic_symbal_like_new")
+        default:
+            return #imageLiteral(resourceName: "ic_symbal_damaged")
+        }
+    }
+    
 }
 
 enum DeliveredStatus: String{

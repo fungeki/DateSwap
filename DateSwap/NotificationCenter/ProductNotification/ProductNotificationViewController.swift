@@ -10,9 +10,18 @@ import UIKit
 
 class ProductNotificationViewController: UIViewController {
 
+    @IBOutlet weak var conditionImageUIImage: UIImageView!
+    @IBOutlet weak var myProductImageUIImage: UIImageView!
+    @IBOutlet weak var notificationAmountLabel: EditableLableUILabel!
+    @IBOutlet weak var productPriceUILabel: EditableLableUILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        productPriceUILabel.layer.cornerRadius = productPriceUILabel.frame.size.height / 2
+        guard let price = productPriceUILabel.text else {return}
+        productPriceUILabel.text = "$\(price)"
+        notificationAmountLabel.layer.cornerRadius = notificationAmountLabel.frame.size.height / 2
+        myProductImageUIImage.layer.cornerRadius = 20
+        
         // Do any additional setup after loading the view.
     }
 
@@ -36,11 +45,12 @@ class ProductNotificationViewController: UIViewController {
 
 extension ProductNotificationViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "offersCell", for: indexPath) as! OffersCollectionViewCell
+        return cell
     }
     
     

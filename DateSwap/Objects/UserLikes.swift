@@ -15,3 +15,13 @@ struct Like: Decodable {
     var hisproductid: Int
     var status: Int
 }
+
+struct Offer: Decodable {
+    var id: Int
+    var userid: Int
+    var myproductid: Int
+    var hisproductid: Int
+    var status: Int
+    var image: String
+    var title: String
+}

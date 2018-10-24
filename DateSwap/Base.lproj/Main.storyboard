@@ -3502,7 +3502,7 @@
                                             <constraint firstItem="hA4-cy-2sU" firstAttribute="height" secondItem="pkd-BP-vun" secondAttribute="height" multiplier="0.65" id="kLF-X3-M8k"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="OfferCollectionUIImage" destination="hA4-cy-2sU" id="iaj-OL-Xl5"/>
+                                            <outlet property="offerCollectionUIImage" destination="hA4-cy-2sU" id="iaj-OL-Xl5"/>
                                             <outlet property="productTitleUILabel" destination="5Of-3x-WNI" id="x4h-bC-HAy"/>
                                         </connections>
                                     </collectionViewCell>
@@ -3552,14 +3552,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
-                                        <real key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="additionToTopDown">
-                                        <real key="value" value="-6"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPy-b8-P99" customClass="EditableLableUILabel" customModule="DateSwap" customModuleProvider="target">
                                 <rect key="frame" x="8" y="225.5" width="10.5" height="29"/>
@@ -3570,14 +3562,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
-                                        <real key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="additionToTopDown">
-                                        <real key="value" value="-8"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_symbal_used" translatesAutoresizingMaskIntoConstraints="NO" id="jtU-4H-rUV">
                                 <rect key="frame" x="166.5" y="225.5" width="28.5" height="28.5"/>
@@ -3585,7 +3569,7 @@
                                     <constraint firstAttribute="width" secondItem="jtU-4H-rUV" secondAttribute="height" multiplier="1:1" id="hWl-Yv-rMV"/>
                                 </constraints>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="l48-CV-29G">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="l48-CV-29G">
                                 <rect key="frame" x="0.0" y="346" width="375" height="133.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="2" id="qVY-L6-rbO">
@@ -3759,6 +3743,7 @@
                         <outlet property="itemNameUILabel" destination="QxB-d5-cHG" id="3yG-dk-Jry"/>
                         <outlet property="myProductImageUIImage" destination="2Bv-9u-hld" id="Kcm-Sd-HL3"/>
                         <outlet property="notificationAmountLabel" destination="iPy-b8-P99" id="rRY-8Z-QW4"/>
+                        <outlet property="offerUICollectionView" destination="KiH-Fj-kr3" id="7r4-Gf-zP4"/>
                         <outlet property="productPriceUILabel" destination="I2i-Km-587" id="igX-8i-hJH"/>
                         <outlet property="statusUIButton" destination="H5z-nG-Z1l" id="oy5-UN-8ru"/>
                     </connections>

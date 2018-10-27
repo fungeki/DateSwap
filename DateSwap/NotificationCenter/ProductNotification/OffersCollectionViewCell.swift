@@ -9,7 +9,7 @@
 import UIKit
 
 class OffersCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var OfferCollectionUIImage: UIImageView!
+    @IBOutlet weak var offerCollectionUIImage: UIImageView!
     
     
     @IBOutlet weak var productTitleUILabel: UILabel!

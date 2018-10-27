@@ -11,6 +11,7 @@ import UIKit
 class ProductNotificationViewController: UIViewController {
     
     var myNotification: Notification!
+    var myOffers = [Offer]()
     @IBOutlet weak var itemNameUILabel: UILabel!
     @IBOutlet weak var editItemUIButton: UIButton!
     @IBOutlet weak var statusUIButton: UIButton!
@@ -18,12 +19,15 @@ class ProductNotificationViewController: UIViewController {
     @IBOutlet weak var myProductImageUIImage: UIImageView!
     @IBOutlet weak var notificationAmountLabel: EditableLableUILabel!
     @IBOutlet weak var productPriceUILabel: EditableLableUILabel!
+    @IBOutlet weak var offerUICollectionView: UICollectionView!
     
     
-    
+    override func viewDidAppear(_ animated: Bool) {
+        getNotifications()
+        offerUICollectionView.reloadData()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
         initialize()
         // Do any additional setup after loading the view.
     }
@@ -32,7 +36,6 @@ class ProductNotificationViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     func initialize(){
         productPriceUILabel.layer.cornerRadius = productPriceUILabel.layer.frame.size.height / 2
         guard let price = productPriceUILabel.text else {return}
@@ -46,6 +49,15 @@ class ProductNotificationViewController: UIViewController {
         priceCompleted.append("$")
         productPriceUILabel.text = priceCompleted
         notificationAmountLabel.text = String(checkRedNotifications(array: myNotification.offers))
+        
+    }
+    
+    func getNotifications(){
+        JustHUD.shared.showInView(view: self.view, withHeader: "Loading", andFooter: "please wait")
+        getMyItemOffers(myItemID: myNotification.id) { (notification) in
+            self.myOffers = notification.offers
+            JustHUD.shared.hide()
+        }
     }
     override func viewDidLayoutSubviews() {
         notificationAmountLabel.layer.cornerRadius = notificationAmountLabel.layer.frame.size.height / 2
@@ -73,11 +85,17 @@ class ProductNotificationViewController: UIViewController {
 
 extension ProductNotificationViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView.tag == 0{
+            return myOffers.count
+        }
         return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "offersCell", for: indexPath) as! OffersCollectionViewCell
+        let model = myOffers[indexPath.row]
+        let imageURL = URL(string: model.image)
+        cell.offerCollectionUIImage.sd_setImage(with: imageURL)
         return cell
     }
     

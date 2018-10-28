@@ -31,5 +31,5 @@ func getMyItemOffers(myItemID: Int,completion: ((_ notifications: NotificationWi
             }
             
         }
-    }
+    }.resume()
 }

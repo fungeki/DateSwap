@@ -21,7 +21,6 @@ struct Notification: Decodable {
 struct NotificationWithPic: Decodable {
     var id: Int
     var title: String
-    var image: String
     var price: Int
     var delivered: Int
     var offers: [Offer]

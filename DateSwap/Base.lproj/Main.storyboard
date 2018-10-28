@@ -3332,7 +3332,7 @@
                                                             <real key="value" value="4"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="additionToTopDown">
-                                                            <real key="value" value="-3"/>
+                                                            <real key="value" value="-2"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
@@ -3347,7 +3347,7 @@
                                                             <real key="value" value="4"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="additionToTopDown">
-                                                            <real key="value" value="-3"/>
+                                                            <real key="value" value="-2"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
@@ -3362,7 +3362,7 @@
                                                             <real key="value" value="4"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="additionToTopDown">
-                                                            <real key="value" value="-3"/>
+                                                            <real key="value" value="-2"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
@@ -3463,46 +3463,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KiH-Fj-kr3">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KiH-Fj-kr3">
                                 <rect key="frame" x="0.0" y="521.5" width="375" height="133.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="0.0" id="AjQ-AB-AV5">
-                                    <size key="itemSize" width="118" height="137"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="4" minimumInteritemSpacing="6" id="AjQ-AB-AV5">
+                                    <size key="itemSize" width="110" height="137"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="offersCell" id="pkd-BP-vun" customClass="OffersCollectionViewCell" customModule="DateSwap" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="118" height="137"/>
+                                        <rect key="frame" x="0.0" y="-2" width="110" height="137"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="118" height="137"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="137"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_empty_dark" translatesAutoresizingMaskIntoConstraints="NO" id="hA4-cy-2sU">
-                                                    <rect key="frame" x="0.0" y="0.0" width="118" height="89"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="90.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Of-3x-WNI">
-                                                    <rect key="frame" x="12" y="93" width="94" height="32"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <rect key="frame" x="8" y="90.5" width="94" height="38.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gs2-wv-gry" customClass="EditableLableUILabel" customModule="DateSwap" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="33" height="17"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="bottomMargin" secondItem="5Of-3x-WNI" secondAttribute="bottom" constant="4" id="3uI-0h-oKs"/>
-                                            <constraint firstItem="hA4-cy-2sU" firstAttribute="top" secondItem="pkd-BP-vun" secondAttribute="top" id="A0J-Y0-7ja"/>
-                                            <constraint firstAttribute="trailing" secondItem="hA4-cy-2sU" secondAttribute="trailing" id="BWx-eh-qid"/>
-                                            <constraint firstItem="5Of-3x-WNI" firstAttribute="top" secondItem="hA4-cy-2sU" secondAttribute="bottom" constant="4" id="HI3-uz-zUr"/>
-                                            <constraint firstItem="5Of-3x-WNI" firstAttribute="leading" secondItem="pkd-BP-vun" secondAttribute="leadingMargin" constant="4" id="QAx-T7-4bU"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="5Of-3x-WNI" secondAttribute="trailing" constant="4" id="V86-rS-Pc2"/>
-                                            <constraint firstItem="hA4-cy-2sU" firstAttribute="leading" secondItem="pkd-BP-vun" secondAttribute="leading" id="XhY-of-vgI"/>
-                                            <constraint firstItem="hA4-cy-2sU" firstAttribute="height" secondItem="pkd-BP-vun" secondAttribute="height" multiplier="0.65" id="kLF-X3-M8k"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="5Of-3x-WNI" secondAttribute="bottom" id="3uI-0h-oKs"/>
+                                            <constraint firstItem="gs2-wv-gry" firstAttribute="leading" secondItem="pkd-BP-vun" secondAttribute="leading" id="LvD-FX-w85"/>
+                                            <constraint firstItem="5Of-3x-WNI" firstAttribute="leading" secondItem="pkd-BP-vun" secondAttribute="leadingMargin" id="QAx-T7-4bU"/>
+                                            <constraint firstItem="gs2-wv-gry" firstAttribute="top" secondItem="pkd-BP-vun" secondAttribute="top" id="T9X-Hg-NLm"/>
+                                            <constraint firstAttribute="trailing" secondItem="hA4-cy-2sU" secondAttribute="trailing" id="Tn1-Pa-OuK"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="5Of-3x-WNI" secondAttribute="trailing" id="V86-rS-Pc2"/>
+                                            <constraint firstItem="hA4-cy-2sU" firstAttribute="leading" secondItem="pkd-BP-vun" secondAttribute="leading" id="ZAu-ag-k9L"/>
+                                            <constraint firstItem="hA4-cy-2sU" firstAttribute="height" secondItem="pkd-BP-vun" secondAttribute="height" multiplier="0.66" id="kF5-p6-jaq"/>
+                                            <constraint firstItem="5Of-3x-WNI" firstAttribute="top" secondItem="hA4-cy-2sU" secondAttribute="bottom" id="koM-KV-YWv"/>
+                                            <constraint firstItem="hA4-cy-2sU" firstAttribute="top" secondItem="pkd-BP-vun" secondAttribute="top" id="ppM-CP-xNv"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="offerCollectionUIImage" destination="hA4-cy-2sU" id="iaj-OL-Xl5"/>
+                                            <outlet property="priceUIlabel" destination="gs2-wv-gry" id="5HA-2B-dfG"/>
                                             <outlet property="productTitleUILabel" destination="5Of-3x-WNI" id="x4h-bC-HAy"/>
                                         </connections>
                                     </collectionViewCell>
@@ -3573,24 +3588,24 @@
                                 <rect key="frame" x="0.0" y="346" width="375" height="133.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="2" id="qVY-L6-rbO">
-                                    <size key="itemSize" width="118" height="129"/>
+                                    <size key="itemSize" width="110" height="129"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CAZ-S6-d6a" customClass="ChatsFromProductCollectionViewCell" customModule="DateSwap" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="2.5" width="118" height="129"/>
+                                        <rect key="frame" x="0.0" y="2.5" width="110" height="129"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="118" height="129"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="129"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_empty_dark" translatesAutoresizingMaskIntoConstraints="NO" id="hR3-xw-6UN">
-                                                    <rect key="frame" x="0.0" y="0.0" width="118" height="84"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="84"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4H5-eL-HRS">
-                                                    <rect key="frame" x="12" y="88" width="94" height="29"/>
+                                                    <rect key="frame" x="12" y="88" width="86" height="29"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -3677,6 +3692,11 @@
                                 <rect key="frame" x="203.5" y="161" width="163.5" height="56.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Status"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Mh-OY-oGh">
                                 <rect key="frame" x="253.5" y="225.5" width="63" height="30"/>
@@ -3741,6 +3761,7 @@
                         <outlet property="offerUICollectionView" destination="KiH-Fj-kr3" id="7r4-Gf-zP4"/>
                         <outlet property="productPriceUILabel" destination="I2i-Km-587" id="igX-8i-hJH"/>
                         <outlet property="statusUIButton" destination="H5z-nG-Z1l" id="oy5-UN-8ru"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toItemDetail" id="Uxy-ur-2sc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gYz-au-LT8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3783,11 +3804,11 @@
     <inferredMetricsTieBreakers>
         <segue reference="v98-Z4-PHR"/>
         <segue reference="YR3-E1-jR6"/>
-        <segue reference="e4U-9M-CBC"/>
-        <segue reference="BU3-fu-hbY"/>
-        <segue reference="O57-2j-Eqr"/>
+        <segue reference="Uxy-ur-2sc"/>
+        <segue reference="Lft-hY-zuO"/>
+        <segue reference="bwV-s2-wft"/>
         <segue reference="kt3-VZ-zyo"/>
         <segue reference="8ru-sp-3Bw"/>
-        <segue reference="Zwd-T0-hKu"/>
+        <segue reference="FVg-4m-1hm"/>
     </inferredMetricsTieBreakers>
 </document>

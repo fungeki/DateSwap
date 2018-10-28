@@ -66,13 +66,15 @@ class ProductNotificationViewController: UIViewController {
                 case .active:
                         self.statusUIButton.setTitleColor(UIColor.green, for: .normal)
                 default:
-                    self.statusUIButton.setTitleColor(UIColor.black, for: .normal) 
+                    self.statusUIButton.setTitleColor(UIColor.black, for: .normal)
                 }
             }
             
             JustHUD.shared.hide()
         }
     }
+    
+
     override func viewDidLayoutSubviews() {
         notificationAmountLabel.layer.cornerRadius = notificationAmountLabel.layer.frame.size.height / 2
         myProductImageUIImage.layer.cornerRadius = productPriceUILabel.layer.frame.size.height / 2

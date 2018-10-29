@@ -50,6 +50,7 @@ func grayFour()-> CGColor{
 
 func grayTwo()-> CGColor{
     let color = UIColor(red: 230.0 / 255.0, green: 230.0 / 255.0, blue: 230.0 / 255.0, alpha: 1.0).cgColor
+    
     return color
 }
 

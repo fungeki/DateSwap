@@ -11,18 +11,25 @@ import UIKit
 class PrivateChatViewController: UIViewController {
         var countMessage = 0
 
+    @IBOutlet weak var hisImageUIView: UIImageView!
+    @IBOutlet weak var myItemUIImage: UIImageView!
     @IBOutlet weak var tablePrivateChatUITableView: UITableView!
+    
+    
     override func viewDidLoad() {
-        
-        
         super.viewDidLoad()
         
         tablePrivateChatUITableView.estimatedRowHeight = 44.0
         tablePrivateChatUITableView.rowHeight = UITableViewAutomaticDimension
-
+        
         // Do any additional setup after loading the view.
     }
 
+    override func viewDidLayoutSubviews() {
+        hisImageUIView.layer.cornerRadius = 20
+        myItemUIImage.layer.cornerRadius = 20
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

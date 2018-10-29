@@ -13,4 +13,13 @@ class OffersCollectionViewCell: UICollectionViewCell {
     
     
     @IBOutlet weak var productTitleUILabel: UILabel!
+    @IBOutlet weak var priceUIlabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    override func layoutSubviews() {
+        offerCollectionUIImage.layer.cornerRadius = priceUIlabel.layer.frame.height / 2.0
+        priceUIlabel.layer.cornerRadius = priceUIlabel.layer.frame.height / 2.0
+    }
 }

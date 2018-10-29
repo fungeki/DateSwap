@@ -24,4 +24,5 @@ struct Offer: Decodable {
     var status: Int
     var image: String
     var title: String
+    var price: Int
 }

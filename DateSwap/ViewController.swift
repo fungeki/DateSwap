@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var wishlistUIButton: ConditionUIButton!
     @IBOutlet weak var shareUIButton: ConditionUIButton!
+    var origin = 0
     var displayProduct = p1
     var thisUser = u1
 //    let thumbImageLike = imageResizeForSlider(#imageLiteral(resourceName: "ic_love_color"))

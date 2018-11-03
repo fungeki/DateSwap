@@ -13,6 +13,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     var price: Int = 0
     
     fileprivate var longPressGesture: UILongPressGestureRecognizer!
+    @IBOutlet weak var settingScrollUIScrollView: UIScrollView!
     @IBOutlet weak var imageUICV: UICollectionView!
     @IBOutlet weak var estimatedPriceUITextField: ProductEditTextfield!
     var mKeyboardSize: CGRect?
@@ -24,6 +25,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     var imagePlaceholderArray = [#imageLiteral(resourceName: "ic_main_photo_empty"), #imageLiteral(resourceName: "ic_photo_empty"), #imageLiteral(resourceName: "ic_photo_empty"), #imageLiteral(resourceName: "ic_photo_empty")]
     var imageSymbalConditionArray = [#imageLiteral(resourceName: "ic_symbal_new"),#imageLiteral(resourceName: "ic_symbal_like_new"),#imageLiteral(resourceName: "ic_cymbal_renewed"),#imageLiteral(resourceName: "ic_symbal_used"),#imageLiteral(resourceName: "ic_symbal_damaged")]
     var testing = [0,1,2,3]
+    
     
     @IBOutlet var superviewUIView: UIView!
     var mImage2Upload : NSData?
@@ -52,6 +54,7 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
         
         
         super.viewDidLoad()
+        
         longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(self.handleLongGesture(gesture:)))
         imageUICV.addGestureRecognizer(longPressGesture)
 //        toolbarsInit()
@@ -383,16 +386,21 @@ class EditMyProductsViewController: UIViewController, UIImagePickerControllerDel
     @IBAction func onclickDropdownConditionUIButton(_ sender: ConditionUIButton) {
         endEditing()
         dropdownAnimation(toggle: conditionSelectionTableView.isHidden)
+        
     }
     
     func dropdownAnimation(toggle: Bool){
         if toggle{
             UIView.animate(withDuration: 0.3) {
                 self.conditionSelectionTableView.isHidden = false
+                self.settingScrollUIScrollView.contentInset.top += -70
+                //self.settingScrollUIScrollView.scrollIndicatorInsets.top += -50
             }
         } else {
             UIView.animate(withDuration: 0.3) {
                 self.conditionSelectionTableView.isHidden = true
+                self.settingScrollUIScrollView.contentInset.top += 70
+                self.settingScrollUIScrollView.contentInset.bottom += -70
             }
         }
     }
